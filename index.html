@@ -1,230 +1,355 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broken Boy | Official Website</title>
 
-  <title>Broken Boy | AI Art Gallery</title>
-  <meta name="description" content="Broken Boy - Explore creative AI generated images and digital art.">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+body{
+  background:#08090d;
+  color:white;
+}
 
-    body {
-      background: #0b0b0f;
-      color: white;
-    }
+header{
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#11131a;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #252832;
+}
 
-    header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
-      position: sticky;
-      top: 0;
-      background: rgba(11,11,15,0.95);
-      z-index: 10;
-    }
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+nav a{
+  color:#ddd;
+  text-decoration:none;
+  margin-left:18px;
+}
 
-    nav a {
-      color: #ddd;
-      text-decoration: none;
-      margin-left: 15px;
-      font-size: 14px;
-    }
+.hero{
+  text-align:center;
+  padding:60px 20px;
+  background:linear-gradient(180deg,#151722,#08090d);
+}
 
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-      background: linear-gradient(135deg, #11111a, #17121f);
-    }
+.profile{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #fff;
+  margin-bottom:20px;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-    }
+.hero h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
 
-    .hero p {
-      color: #aaa;
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
-    }
+.hero p{
+  color:#aaa;
+  font-size:17px;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 25px;
-      border-radius: 30px;
-      background: #ffffff;
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.buttons{
+  margin-top:25px;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  margin:6px;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  background:#222631;
+  border:1px solid #383d49;
+}
 
-    section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 35px;
-    }
+.telegram{
+  background:#168bd0;
+  border:none;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:50px 20px;
+}
 
-    .card {
-      background: #15151c;
-      border-radius: 15px;
-      overflow: hidden;
-      border: 1px solid #252530;
-    }
+.title{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:28px;
+}
 
-    .card img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
+.about{
+  text-align:center;
+  color:#bbb;
+  line-height:1.8;
+  font-size:17px;
+}
 
-    .card p {
-      padding: 15px;
-      color: #aaa;
-    }
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+}
 
-    .about {
-      text-align: center;
-      color: #aaa;
-      max-width: 700px;
-      line-height: 1.8;
-      margin: auto;
-    }
+.gallery img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:15px;
+  background:#15171e;
+}
 
-    .telegram {
-      text-align: center;
-      background: #121219;
-      border-radius: 20px;
-      padding: 45px 20px;
-    }
+.edit-box{
+  background:#11131a;
+  padding:25px;
+  border-radius:18px;
+  border:1px solid #292d37;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-      border-top: 1px solid #222;
-    }
+input{
+  width:100%;
+  padding:13px;
+  margin:8px 0;
+  border-radius:10px;
+  border:1px solid #343946;
+  background:#08090d;
+  color:white;
+}
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 40px;
-      }
+button{
+  padding:13px 20px;
+  border:0;
+  border-radius:10px;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+  margin-top:8px;
+}
 
-      nav a {
-        margin-left: 8px;
-        font-size: 12px;
-      }
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+  border-top:1px solid #22252d;
+}
+
+@media(max-width:600px){
+  header{
+    padding:15px;
+  }
+
+  nav a{
+    margin-left:8px;
+    font-size:13px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">Broken Boy</div>
+<header>
+  <div class="logo">💔 Broken Boy</div>
 
-    <nav>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#home">होम</a>
+    <a href="#gallery">फोटो</a>
+    <a href="#about">मेरे बारे में</a>
+  </nav>
+</header>
 
-  <div class="hero">
-    <h1>Broken Boy</h1>
-    <p>
-      Welcome to my creative world of AI generated images,
-      digital art and unique visual creations.
+<div class="hero" id="home">
+
+  <img
+    id="profileImage"
+    class="profile"
+    src="https://via.placeholder.com/300"
+    alt="Profile">
+
+  <h1 id="profileName">Broken Boy</h1>
+
+  <p id="profileBio">
+    मेरी दुनिया, मेरी कहानी 💔
+  </p>
+
+  <div class="buttons">
+
+    <a
+      class="btn telegram"
+      href="https://t.me/"
+      target="_blank">
+      ✈️ Telegram
+    </a>
+
+    <a
+      class="btn"
+      href="#gallery">
+      🖼️ मेरी फोटो
+    </a>
+
+  </div>
+</div>
+
+
+<section id="about">
+
+  <h2 class="title">मेरे बारे में</h2>
+
+  <div class="about">
+
+    <p id="aboutText">
+      स्वागत है मेरी आधिकारिक वेबसाइट पर।
+      यहाँ मेरी तस्वीरें, सोशल लिंक और मेरी पसंद की चीजें मिलेंगी।
     </p>
 
-    <a class="button" href="#gallery">Explore Gallery</a>
   </div>
 
-  <section id="gallery">
-    <h2>AI Art Gallery</h2>
+</section>
 
-    <div class="gallery">
 
-      <div class="card">
-        <img src="https://placehold.co/600x600/15151c/ffffff?text=AI+ART+1" alt="AI Art 1">
-        <p>AI Creation #01</p>
-      </div>
+<section id="gallery">
 
-      <div class="card">
-        <img src="https://placehold.co/600x600/15151c/ffffff?text=AI+ART+2" alt="AI Art 2">
-        <p>AI Creation #02</p>
-      </div>
+  <h2 class="title">🖼️ फोटो गैलरी</h2>
 
-      <div class="card">
-        <img src="https://placehold.co/600x600/15151c/ffffff?text=AI+ART+3" alt="AI Art 3">
-        <p>AI Creation #03</p>
-      </div>
+  <div class="gallery" id="galleryBox">
 
-      <div class="card">
-        <img src="https://placehold.co/600x600/15151c/ffffff?text=AI+ART+4" alt="AI Art 4">
-        <p>AI Creation #04</p>
-      </div>
+    <img src="https://via.placeholder.com/500x600" alt="Photo">
 
-    </div>
-  </section>
+    <img src="https://via.placeholder.com/500x600" alt="Photo">
 
-  <section id="about">
-    <h2>About Broken Boy</h2>
+    <img src="https://via.placeholder.com/500x600" alt="Photo">
 
-    <p class="about">
-      Broken Boy is a creative AI art project where imagination
-      meets technology. Explore unique AI generated images and
-      digital visual creations.
-    </p>
-  </section>
+  </div>
 
-  <section id="contact">
-    <div class="telegram">
-      <h2>Join Me on Telegram</h2>
+  <br>
 
-      <p class="about">
-        Follow Broken Boy for new AI creations and updates.
-      </p>
+  <input
+    type="file"
+    id="photoInput"
+    accept="image/*"
+    multiple>
 
-      <a class="button"
-         href="https://t.me/Brokenboy221716"
-         target="_blank">
-        Join Telegram
-      </a>
-    </div>
-  </section>
+</section>
 
-  <footer>
-    © 2026 Broken Boy. All Rights Reserved.
-  </footer>
+
+<section>
+
+  <h2 class="title">✏️ प्रोफाइल एडिट</h2>
+
+  <div class="edit-box">
+
+    <input
+      id="nameInput"
+      type="text"
+      placeholder="अपना नाम">
+
+    <input
+      id="bioInput"
+      type="text"
+      placeholder="अपना Bio">
+
+    <input
+      id="telegramInput"
+      type="text"
+      placeholder="Telegram Username">
+
+    <button onclick="saveProfile()">
+      प्रोफाइल सेव करें
+    </button>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 Broken Boy — All Rights Reserved
+</footer>
+
+
+<script>
+
+function saveProfile(){
+
+  let name =
+    document.getElementById("nameInput").value;
+
+  let bio =
+    document.getElementById("bioInput").value;
+
+  let telegram =
+    document.getElementById("telegramInput").value;
+
+  if(name){
+    document.getElementById("profileName").innerText = name;
+  }
+
+  if(bio){
+    document.getElementById("profileBio").innerText = bio;
+  }
+
+  if(telegram){
+    document.querySelector(".telegram").href =
+      "https://t.me/" + telegram.replace("@","");
+  }
+
+  alert("प्रोफाइल अपडेट हो गई ✅");
+}
+
+
+document
+.getElementById("photoInput")
+.addEventListener("change",function(event){
+
+  let files = event.target.files;
+
+  for(let file of files){
+
+    let reader = new FileReader();
+
+    reader.onload = function(e){
+
+      let img = document.createElement("img");
+
+      img.src = e.target.result;
+
+      document
+      .getElementById("galleryBox")
+      .appendChild(img);
+
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+});
+
+</script>
 
 </body>
 </html>
