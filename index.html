@@ -9,6 +9,7 @@
 <meta name="description" content="Broken Boy Official Website - AI Images, Creative Gallery and Digital Creator">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,7 +18,7 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#05070b;
     color:white;
     line-height:1.6;
@@ -27,7 +28,7 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(5,7,11,0.95);
+    background:rgba(5,7,11,.95);
     border-bottom:1px solid #222;
     padding:15px 6%;
 }
@@ -193,38 +194,6 @@ section{
     transform:scale(1.03);
 }
 
-/* GALLERY VIEWER */
-
-.lightbox{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:9999;
-    background:rgba(0,0,0,0.93);
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-.lightbox img{
-    max-width:95%;
-    max-height:90vh;
-    object-fit:contain;
-    border-radius:15px;
-    box-shadow:0 0 30px rgba(255,255,255,0.15);
-}
-
-.close{
-    position:absolute;
-    top:10px;
-    right:20px;
-    color:white;
-    font-size:45px;
-    line-height:1;
-    cursor:pointer;
-    z-index:10000;
-}
-
 .contact{
     text-align:center;
 }
@@ -254,6 +223,41 @@ footer{
     color:white;
     text-decoration:none;
     margin:8px;
+}
+
+/* BIG IMAGE VIEWER */
+
+#lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.96);
+    z-index:99999;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+#bigImage{
+    max-width:95%;
+    max-height:88vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:12px;
+}
+
+#closeButton{
+    position:absolute;
+    top:10px;
+    right:18px;
+    color:white;
+    font-size:48px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:100000;
 }
 
 @media(max-width:700px){
@@ -292,23 +296,25 @@ footer{
         height:240px;
     }
 
-    .lightbox img{
+    #bigImage{
         max-width:96%;
         max-height:82vh;
     }
 
-    .close{
-        top:8px;
-        right:15px;
-        font-size:40px;
+    #closeButton{
+        top:5px;
+        right:12px;
+        font-size:42px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="nav">
 
 <div class="logo">💔 Broken <span>Boy</span></div>
@@ -322,7 +328,9 @@ footer{
 </nav>
 
 </div>
+
 </header>
+
 
 <!-- HOME -->
 
@@ -330,7 +338,9 @@ footer{
 
 <div>
 
-<img src="IMG_20251021_094837.jpg" alt="Broken Boy" class="profile">
+<img src="IMG_20251021_094837.jpg"
+     alt="Broken Boy"
+     class="profile">
 
 <h1>Broken Boy</h1>
 
@@ -354,13 +364,16 @@ AI Images • Creative Gallery • Digital Creator
 
 </section>
 
+
 <!-- ABOUT -->
 
 <section id="about">
 
 <h2 class="title">About Me</h2>
 
-<p class="subtitle">Welcome to the official Broken Boy website</p>
+<p class="subtitle">
+Welcome to the official Broken Boy website
+</p>
 
 <div class="about">
 
@@ -386,39 +399,51 @@ future projects देखने को मिलेंगे।
 
 </section>
 
+
 <!-- SERVICES -->
 
 <section id="services">
 
 <h2 class="title">What I Create</h2>
 
-<p class="subtitle">Creative digital content</p>
+<p class="subtitle">
+Creative digital content
+</p>
 
 <div class="cards">
 
 <div class="card">
 <h3>🤖 AI Images</h3>
-<p>Creative और realistic AI generated images.</p>
+<p>
+Creative और realistic AI generated images.
+</p>
 </div>
 
 <div class="card">
 <h3>🎨 Photo Editing</h3>
-<p>Creative photo edits और visual designs.</p>
+<p>
+Creative photo edits और visual designs.
+</p>
 </div>
 
 <div class="card">
 <h3>🎬 Creative Content</h3>
-<p>Visual content और cinematic concepts.</p>
+<p>
+Visual content और cinematic concepts.
+</p>
 </div>
 
 <div class="card">
 <h3>📱 Social Media</h3>
-<p>Social media के लिए creative visuals.</p>
+<p>
+Social media के लिए creative visuals.
+</p>
 </div>
 
 </div>
 
 </section>
+
 
 <!-- GALLERY -->
 
@@ -426,31 +451,43 @@ future projects देखने को मिलेंगे।
 
 <h2 class="title">My Gallery</h2>
 
-<p class="subtitle">My latest creative work</p>
+<p class="subtitle">
+My latest creative work
+</p>
 
 <div class="gallery">
 
-<img src="IMG_20251021_094837.jpg" alt="Broken Boy Image">
+<img src="IMG_20251021_094837.jpg"
+     alt="Broken Boy Image"
+     onclick="openImage(this)">
 
-<img src="file_0000000081788211a203dc50290b078d.png" alt="Creative Image">
+<img src="file_0000000081788211a203dc50290b078d.png"
+     alt="Creative Image"
+     onclick="openImage(this)">
 
-<img src="file_00000000c4e48211affc8c65d7debc2f.png" alt="AI Image">
+<img src="file_00000000c4e48211affc8c65d7debc2f.png"
+     alt="AI Image"
+     onclick="openImage(this)">
 
-<img src="IMG_20251021_094837.jpg" alt="Digital Artwork">
+<img src="IMG_20251021_094837.jpg"
+     alt="Digital Artwork"
+     onclick="openImage(this)">
 
 </div>
 
 </section>
 
-<!-- GALLERY VIEWER -->
 
-<div class="lightbox" id="lightbox">
+<!-- BIG IMAGE VIEWER -->
 
-<span class="close" id="closeBtn">&times;</span>
+<div id="lightbox">
 
-<img id="lightboxImg" src="" alt="Gallery Image">
+<span id="closeButton" onclick="closeImage()">×</span>
+
+<img id="bigImage" src="" alt="Large Gallery Image">
 
 </div>
+
 
 <!-- CONTACT -->
 
@@ -458,7 +495,9 @@ future projects देखने को मिलेंगे।
 
 <h2 class="title">Contact</h2>
 
-<p class="subtitle">Connect with Broken Boy</p>
+<p class="subtitle">
+Connect with Broken Boy
+</p>
 
 <div class="contact-box">
 
@@ -480,9 +519,12 @@ For creative work, collaborations and updates.
 
 </section>
 
+
 <footer>
 
-<p>© 2026 Broken Boy. All Rights Reserved.</p>
+<p>
+© 2026 Broken Boy. All Rights Reserved.
+</p>
 
 <div class="social">
 
@@ -495,39 +537,32 @@ For creative work, collaborations and updates.
 
 </footer>
 
+
+<!-- JAVASCRIPT -->
+
 <script>
 
-/* Gallery Viewer */
+function openImage(image){
 
-const galleryImages = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightboxImg");
-const closeBtn = document.getElementById("closeBtn");
+    document.getElementById("lightbox").style.display = "flex";
 
-galleryImages.forEach(function(img){
+    document.getElementById("bigImage").src = image.src;
 
-    img.addEventListener("click", function(){
+}
 
-        lightbox.style.display = "flex";
-        lightboxImg.src = this.src;
+function closeImage(){
 
-    });
+    document.getElementById("lightbox").style.display = "none";
 
-});
+    document.getElementById("bigImage").src = "";
 
-closeBtn.addEventListener("click", function(){
+}
 
-    lightbox.style.display = "none";
-    lightboxImg.src = "";
+document.getElementById("lightbox").addEventListener("click", function(event){
 
-});
+    if(event.target === this){
 
-lightbox.addEventListener("click", function(event){
-
-    if(event.target === lightbox){
-
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
+        closeImage();
 
     }
 
