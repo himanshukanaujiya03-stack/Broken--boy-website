@@ -186,10 +186,43 @@ section{
     border-radius:15px;
     border:1px solid #292d38;
     transition:.3s;
+    cursor:pointer;
 }
 
 .gallery img:hover{
     transform:scale(1.03);
+}
+
+/* GALLERY VIEWER */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,0.93);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+    border-radius:15px;
+    box-shadow:0 0 30px rgba(255,255,255,0.15);
+}
+
+.close{
+    position:absolute;
+    top:10px;
+    right:20px;
+    color:white;
+    font-size:45px;
+    line-height:1;
+    cursor:pointer;
+    z-index:10000;
 }
 
 .contact{
@@ -258,6 +291,17 @@ footer{
     .gallery img{
         height:240px;
     }
+
+    .lightbox img{
+        max-width:96%;
+        max-height:82vh;
+    }
+
+    .close{
+        top:8px;
+        right:15px;
+        font-size:40px;
+    }
 }
 </style>
 </head>
@@ -279,7 +323,6 @@ footer{
 
 </div>
 </header>
-
 
 <!-- HOME -->
 
@@ -310,7 +353,6 @@ AI Images • Creative Gallery • Digital Creator
 </div>
 
 </section>
-
 
 <!-- ABOUT -->
 
@@ -343,7 +385,6 @@ future projects देखने को मिलेंगे।
 </div>
 
 </section>
-
 
 <!-- SERVICES -->
 
@@ -379,7 +420,6 @@ future projects देखने को मिलेंगे।
 
 </section>
 
-
 <!-- GALLERY -->
 
 <section id="gallery">
@@ -394,7 +434,7 @@ future projects देखने को मिलेंगे।
 
 <img src="file_0000000081788211a203dc50290b078d.png" alt="Creative Image">
 
-<img src="file_00000000c4e48211affc8c65d7debc2f.png"  alt="AI Image">
+<img src="file_00000000c4e48211affc8c65d7debc2f.png" alt="AI Image">
 
 <img src="IMG_20251021_094837.jpg" alt="Digital Artwork">
 
@@ -402,6 +442,15 @@ future projects देखने को मिलेंगे।
 
 </section>
 
+<!-- GALLERY VIEWER -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="close" id="closeBtn">&times;</span>
+
+<img id="lightboxImg" src="" alt="Gallery Image">
+
+</div>
 
 <!-- CONTACT -->
 
@@ -431,7 +480,6 @@ For creative work, collaborations and updates.
 
 </section>
 
-
 <footer>
 
 <p>© 2026 Broken Boy. All Rights Reserved.</p>
@@ -446,6 +494,46 @@ For creative work, collaborations and updates.
 </div>
 
 </footer>
+
+<script>
+
+/* Gallery Viewer */
+
+const galleryImages = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeBtn = document.getElementById("closeBtn");
+
+galleryImages.forEach(function(img){
+
+    img.addEventListener("click", function(){
+
+        lightbox.style.display = "flex";
+        lightboxImg.src = this.src;
+
+    });
+
+});
+
+closeBtn.addEventListener("click", function(){
+
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+
+});
+
+lightbox.addEventListener("click", function(event){
+
+    if(event.target === lightbox){
+
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
