@@ -1,485 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<head>
-  <meta name="google-site-verification" content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug" />
-
-  <!-- बाकी आपका code -->
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Broken AI | AI Images</title>
+
+<title>Broken AI | AI Images, Sad Shayari & Cinematic Art</title>
+
+<meta name="description" content="Broken AI - AI Images, Sad Shayari, Cinematic Art और Creative Images की दुनिया।">
+<meta name="keywords" content="Broken AI, AI Images, Sad Shayari, Cinematic Art, AI Art, Hindi Shayari">
+<meta name="author" content="Broken AI">
+
+<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<meta name="google-site-verification" content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
+
+<meta property="og:title" content="Broken AI | AI Images">
+<meta property="og:description" content="AI Images • Sad Shayari • Cinematic Art">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
+
+<link rel="canonical" href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
 
 <style>
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
   scroll-behavior:smooth;
 }
 
 body{
-  background:#050505;
-  color:#fff;
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
+  background:#05070b;
+  color:#f5f7fb;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
 }
 
 header{
   position:sticky;
   top:0;
-  z-index:999;
-  background:rgba(5,5,5,.88);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:16px 20px;
+  z-index:1000;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
+  padding:16px 6%;
+  background:rgba(5,7,11,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #1c2635;
 }
 
 .logo{
-  font-size:25px;
+  font-size:28px;
   font-weight:900;
-  letter-spacing:1px;
+  letter-spacing:-1px;
 }
 
 .logo span{
-  color:#aaa;
+  color:#159cff;
 }
 
 nav{
   display:flex;
-  gap:20px;
+  gap:18px;
 }
 
 nav a{
-  color:#bbb;
-  font-size:14px;
-  transition:.3s;
+  color:#cbd5e1;
+  text-decoration:none;
+  font-weight:600;
 }
 
 nav a:hover{
-  color:#fff;
+  color:#159cff;
 }
 
 .hero{
-  min-height:88vh;
+  min-height:520px;
   display:flex;
-  align-items:center;
+  flex-direction:column;
   justify-content:center;
-  text-align:center;
-  padding:80px 20px;
-  position:relative;
+  padding:70px 6%;
   background:
-    radial-gradient(circle at 50% 30%,rgba(255,255,255,.12),transparent 30%),
-    linear-gradient(180deg,#101010,#050505);
-}
-
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 20% 30%,rgba(255,255,255,.06),transparent 25%),
-    radial-gradient(circle at 80% 70%,rgba(255,255,255,.05),transparent 25%);
-  pointer-events:none;
-}
-
-.hero-content{
-  position:relative;
-  max-width:850px;
-  animation:fadeUp 1s ease;
+    linear-gradient(90deg,rgba(5,8,14,.96),rgba(5,8,14,.55)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
 
 .badge{
   display:inline-block;
-  padding:8px 15px;
-  border:1px solid #333;
-  border-radius:50px;
-  color:#bbb;
-  font-size:13px;
-  margin-bottom:20px;
-  background:#111;
+  width:max-content;
+  padding:8px 14px;
+  border:1px solid #21405e;
+  border-radius:30px;
+  color:#69bdff;
+  background:#0b1724;
+  margin-bottom:18px;
+  font-size:14px;
 }
 
 .hero h1{
-  font-size:clamp(50px,10vw,100px);
-  line-height:.95;
-  font-weight:900;
-  letter-spacing:-4px;
+  font-size:clamp(48px,9vw,92px);
+  line-height:1;
+  margin-bottom:18px;
 }
 
 .hero h1 span{
-  color:#777;
+  color:#159cff;
 }
 
 .hero p{
-  margin:25px auto;
-  max-width:650px;
-  color:#aaa;
-  line-height:1.7;
-  font-size:17px;
+  color:#cbd5e1;
+  font-size:20px;
+  margin-bottom:10px;
 }
 
 .buttons{
   display:flex;
-  gap:12px;
-  justify-content:center;
   flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
 }
 
 .btn{
-  border:none;
-  padding:14px 23px;
-  border-radius:12px;
-  font-weight:bold;
+  display:inline-block;
+  border:0;
   cursor:pointer;
-  transition:.3s;
-  background:#fff;
-  color:#000;
+  text-decoration:none;
+  background:#159cff;
+  color:white;
+  padding:13px 20px;
+  border-radius:11px;
+  font-weight:800;
+  transition:.2s;
 }
 
 .btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 30px rgba(255,255,255,.15);
+  transform:translateY(-2px);
+  filter:brightness(1.1);
 }
 
-.btn.dark{
-  background:#151515;
-  color:#fff;
-  border:1px solid #333;
+.btn.secondary{
+  background:#111b28;
+  border:1px solid #294057;
 }
 
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
+.section{
+  padding:55px 6%;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:35px;
-}
-
-.section-title h2{
-  font-size:38px;
+  font-size:34px;
   margin-bottom:10px;
 }
 
-.section-title p{
-  color:#888;
+.section-subtitle{
+  color:#94a3b8;
+  margin-bottom:25px;
 }
-
-/* PROFILE */
 
 .profile{
   display:flex;
   align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  text-align:center;
+  gap:22px;
+  background:#0b111a;
+  border:1px solid #1e3045;
+  border-radius:18px;
+  padding:22px;
 }
 
-.profile-img{
-  width:180px;
-  height:180px;
+.profile img{
+  width:100px;
+  height:100px;
   border-radius:50%;
   object-fit:cover;
-  border:4px solid #222;
-  box-shadow:0 0 40px rgba(255,255,255,.1);
-  background:#111;
-  margin-bottom:20px;
+  border:3px solid #159cff;
 }
 
 .profile h2{
-  font-size:32px;
+  margin-bottom:4px;
 }
 
 .profile p{
-  color:#999;
-  margin:10px 0 20px;
+  color:#94a3b8;
 }
 
-.profile input{
-  display:none;
+.profile button{
+  margin-top:10px;
 }
 
-/* SEARCH */
-
-.search-box{
-  max-width:650px;
-  margin:0 auto 35px;
-  position:relative;
+.tools{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:25px 0;
 }
 
-.search-box input{
-  width:100%;
-  padding:17px 20px;
-  border-radius:15px;
-  border:1px solid #292929;
-  background:#101010;
-  color:#fff;
+.search{
+  flex:1;
+  min-width:220px;
+  padding:14px 16px;
+  background:#0b121c;
+  border:1px solid #26364b;
+  border-radius:11px;
+  color:white;
   outline:none;
-  font-size:15px;
 }
 
-.search-box input:focus{
-  border-color:#666;
+.search:focus{
+  border-color:#159cff;
 }
 
-/* GALLERY */
-
-.gallery{
+.grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:20px;
 }
 
 .card{
-  background:#101010;
-  border:1px solid #202020;
-  border-radius:18px;
   overflow:hidden;
-  transition:.35s;
+  background:#0b111a;
+  border:1px solid #1d2c40;
+  border-radius:16px;
+  transition:.25s;
 }
 
 .card:hover{
-  transform:translateY(-7px);
-  border-color:#444;
+  transform:translateY(-5px);
+  border-color:#159cff;
 }
 
 .card img{
   width:100%;
-  height:270px;
+  height:280px;
   object-fit:cover;
   display:block;
 }
 
 .card-content{
-  padding:18px;
+  padding:16px;
 }
 
-.card-content h3{
-  margin-bottom:8px;
+.card h3{
+  margin-bottom:5px;
 }
 
-.card-content p{
-  color:#888;
-  font-size:14px;
+.card p{
+  color:#94a3b8;
 }
 
-/* UPLOAD */
-
-.upload-box{
-  max-width:650px;
-  margin:auto;
-  padding:35px;
+.empty{
+  width:100%;
+  padding:45px 20px;
   text-align:center;
-  border:1px dashed #444;
-  border-radius:20px;
-  background:#0d0d0d;
+  color:#94a3b8;
+  border:1px dashed #29394d;
+  border-radius:15px;
 }
-
-.upload-box p{
-  color:#888;
-  margin:12px 0 20px;
-}
-
-#fileInput{
-  display:none;
-}
-
-.upload-btn{
-  display:inline-block;
-  background:#fff;
-  color:#000;
-  padding:14px 22px;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-/* INFO */
 
 .info-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:25px;
 }
 
 .info{
-  padding:30px;
-  background:#0d0d0d;
-  border:1px solid #202020;
-  border-radius:18px;
-  transition:.3s;
+  background:#0b111a;
+  border:1px solid #1d2c40;
+  border-radius:16px;
+  padding:25px;
 }
 
-.info:hover{
-  transform:translateY(-5px);
-  border-color:#444;
-}
-
-.icon{
+.info .icon{
   font-size:35px;
-  margin-bottom:15px;
-}
-
-.info h3{
   margin-bottom:10px;
 }
 
-.info p{
-  color:#888;
-  line-height:1.6;
+.info h3{
+  margin-bottom:8px;
 }
 
-/* SHAYARI */
+.info p{
+  color:#94a3b8;
+}
 
 .shayari{
-  text-align:center;
-  max-width:750px;
-  margin:auto;
-}
-
-.quote{
-  background:#0e0e0e;
-  border:1px solid #222;
+  background:linear-gradient(135deg,#0b111a,#101b2a);
+  border:1px solid #1d3045;
   border-radius:18px;
   padding:30px;
-  margin-bottom:15px;
-  color:#ccc;
-  line-height:1.8;
-  font-size:17px;
-}
-
-/* ABOUT */
-
-.about{
-  max-width:800px;
-  margin:auto;
   text-align:center;
-  color:#999;
-  line-height:1.8;
+  font-size:21px;
+  color:#dbeafe;
 }
-
-/* FOOTER */
 
 footer{
-  border-top:1px solid #1d1d1d;
-  padding:35px 20px;
+  padding:35px 6%;
   text-align:center;
-  color:#666;
+  border-top:1px solid #1b2635;
+  color:#94a3b8;
 }
 
-footer strong{
+footer b{
   color:#fff;
+  font-size:20px;
 }
 
-.social{
-  margin-top:15px;
+small{
+  display:block;
+  margin-top:8px;
 }
 
-.social a{
-  display:inline-block;
-  margin:5px;
-  padding:10px 15px;
-  background:#111;
-  border:1px solid #222;
-  border-radius:10px;
-  color:#aaa;
-}
-
-.social a:hover{
-  color:#fff;
-  border-color:#555;
-}
-
-/* TOAST */
-
-.toast{
-  position:fixed;
-  left:50%;
-  bottom:25px;
-  transform:translateX(-50%) translateY(100px);
-  background:#fff;
-  color:#000;
-  padding:13px 20px;
-  border-radius:12px;
-  font-weight:bold;
-  opacity:0;
-  transition:.3s;
-  z-index:2000;
-}
-
-.toast.show{
-  opacity:1;
-  transform:translateX(-50%) translateY(0);
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
+@media(max-width:650px){
+  header{
+    padding:14px 5%;
   }
-  to{
-    opacity:1;
-    transform:translateY(0);
+
+  .logo{
+    font-size:23px;
   }
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
 
   nav{
-    display:none;
+    gap:9px;
+  }
+
+  nav a{
+    font-size:13px;
   }
 
   .hero{
-    min-height:80vh;
+    min-height:470px;
+    padding:55px 5%;
   }
 
-  .hero h1{
-    letter-spacing:-2px;
+  .hero p{
+    font-size:17px;
   }
 
-  .gallery{
-    grid-template-columns:1fr;
+  .section{
+    padding:40px 5%;
   }
 
-  .info-grid{
-    grid-template-columns:1fr;
+  .profile{
+    flex-direction:column;
+    text-align:center;
   }
 
   .card img{
-    height:240px;
-  }
-
-  .container{
-    padding:55px 15px;
-  }
-
-  .section-title h2{
-    font-size:30px;
-  }
-
-  .profile-img{
-    width:150px;
-    height:150px;
+    height:250px;
   }
 }
 </style>
@@ -488,193 +358,110 @@ footer strong{
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">Broken <span>AI</span></div>
+  <div class="logo">Broken <span>AI</span></div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#profile">Profile</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#shayari">Shayari</a>
-      <a href="#about">About</a>
-    </nav>
-  </div>
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#upload">Upload</a>
+    <a href="https://t.me/Brokenboy221716" target="_blank">Telegram</a>
+  </nav>
 </header>
 
+<section class="hero">
+  <div class="badge">✨ Welcome to Broken AI</div>
 
-<!-- HERO -->
+  <h1>Broken <span>AI</span></h1>
 
-<section class="hero" id="home">
-  <div class="hero-content">
+  <p>AI Images • Sad Shayari • Cinematic Art</p>
 
-    <div class="badge">✦ AI CREATIVE WORLD</div>
+  <p>“खामोशियों को तस्वीरों में बदलते हैं…” 🖤</p>
 
-    <h1>Broken <span>AI</span></h1>
+  <div class="buttons">
+    <a class="btn" href="#upload">🖼️ Upload Image</a>
 
-    <p>
-      AI Images • Sad Shayari • Cinematic Art
-      <br>
-      Create, explore and share beautiful visual stories.
-    </p>
-
-    <div class="buttons">
-
-      <a href="#upload" class="btn">
-        📤 Upload Image
-      </a>
-
-      <a
-        href="https://t.me/Brokenboy221716"
-        target="_blank"
-        class="btn dark">
-        ✈️ Join Telegram
-      </a>
-
-    </div>
-
+    <a class="btn secondary"
+       href="https://t.me/Brokenboy221716"
+       target="_blank">
+       ✈️ Join Telegram
+    </a>
   </div>
 </section>
 
-
-<!-- PROFILE -->
-
-<section class="container" id="profile">
-
-  <div class="section-title">
-    <h2>My Profile</h2>
-    <p>Welcome to Broken AI</p>
-  </div>
+<section class="section">
 
   <div class="profile">
+    <img id="profileImage"
+         src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80"
+         alt="Broken AI Profile">
 
-    <img
-      id="profileImage"
-      class="profile-img"
-      alt="Profile Photo"
-      src=""
-    >
+    <div>
+      <h2>Broken AI Creator</h2>
+      <p>AI Art • Creative Images • Shayari</p>
 
-    <h2>Broken AI</h2>
+      <button class="btn secondary" id="profileBtn">
+        📷 Choose Profile Photo
+      </button>
 
-    <p>
-      Creator • AI Art • Cinematic Images
-    </p>
-
-    <label for="profileInput" class="btn">
-      📷 Choose Profile Photo
-    </label>
-
-    <input
-      type="file"
-      id="profileInput"
-      accept="image/*"
-    >
-
+      <input type="file"
+             id="profileFile"
+             accept="image/*"
+             hidden>
+    </div>
   </div>
 
 </section>
 
+<section class="section" id="upload">
 
-<!-- GALLERY -->
+  <h2 class="section-title">AI Image Gallery</h2>
 
-<section class="container" id="gallery">
+  <p class="section-subtitle">
+    अपनी AI images upload करें और gallery में देखें।
+  </p>
 
-  <div class="section-title">
-    <h2>AI Image Gallery</h2>
-    <p>Explore the Broken AI collection</p>
-  </div>
-
-  <div class="search-box">
+  <div class="tools">
     <input
-      type="text"
+      class="search"
       id="search"
-      placeholder="🔍 Search images..."
+      type="search"
+      placeholder="🔍 AI image खोजें..."
     >
-  </div>
 
-  <div class="gallery" id="galleryGrid">
-
-    <div class="card" data-name="cinematic boy">
-      <img
-        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
-        alt="Cinematic"
-      >
-      <div class="card-content">
-        <h3>Cinematic Boy</h3>
-        <p>AI cinematic portrait</p>
-      </div>
-    </div>
-
-    <div class="card" data-name="sad night">
-      <img
-        src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"
-        alt="Night"
-      >
-      <div class="card-content">
-        <h3>Sad Night</h3>
-        <p>Dark cinematic atmosphere</p>
-      </div>
-    </div>
-
-    <div class="card" data-name="sunset">
-      <img
-        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
-        alt="Sunset"
-      >
-      <div class="card-content">
-        <h3>Golden Sunset</h3>
-        <p>Beautiful cinematic scene</p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- UPLOAD -->
-
-<section class="container" id="upload">
-
-  <div class="section-title">
-    <h2>Upload Your Image</h2>
-    <p>Add your favourite AI artwork</p>
-  </div>
-
-  <div class="upload-box">
-
-    <div style="font-size:45px;">🖼️</div>
-
-    <h3>Upload Image</h3>
-
-    <p>
-      Select an image from your phone.
-      It will appear in your gallery.
-    </p>
-
-    <label for="fileInput" class="upload-btn">
-      📤 Select Image
-    </label>
+    <button class="btn" id="uploadBtn">
+      + नई AI Image Upload
+    </button>
 
     <input
       type="file"
-      id="fileInput"
+      id="file"
       accept="image/*"
+      hidden
     >
+  </div>
 
+  <div class="grid" id="grid"></div>
+
+</section>
+
+<section class="section">
+
+  <h2 class="section-title">Sad Shayari</h2>
+
+  <p class="section-subtitle">
+    दिल की बात कुछ शब्दों में...
+  </p>
+
+  <div class="shayari">
+    “कुछ तस्वीरें सिर्फ तस्वीरें नहीं होतीं,<br>
+    उनमें हमारी अधूरी कहानी छुपी होती है…” 🖤
   </div>
 
 </section>
 
+<section class="section">
 
-<!-- INFO -->
-
-<section class="container">
-
-  <div class="section-title">
-    <h2>What We Create</h2>
-    <p>Creative content from Broken AI</p>
-  </div>
+  <h2 class="section-title">Cinematic Art</h2>
 
   <div class="info-grid">
 
@@ -682,8 +469,7 @@ footer strong{
       <div class="icon">🤖</div>
       <h3>AI Images</h3>
       <p>
-        Creative AI-inspired portraits,
-        characters and beautiful visual concepts.
+        Creative और unique AI generated images का collection।
       </p>
     </div>
 
@@ -691,8 +477,7 @@ footer strong{
       <div class="icon">💔</div>
       <h3>Sad Shayari</h3>
       <p>
-        Emotional lines and deep thoughts
-        for every broken heart.
+        दिल को छू जाने वाली emotional और sad shayari।
       </p>
     </div>
 
@@ -700,8 +485,7 @@ footer strong{
       <div class="icon">🎬</div>
       <h3>Cinematic Art</h3>
       <p>
-        Dark, aesthetic and cinematic
-        visual stories.
+        Dark, cinematic और शानदार visual artwork।
       </p>
     </div>
 
@@ -709,302 +493,217 @@ footer strong{
 
 </section>
 
+<section class="section" id="about">
 
-<!-- SHAYARI -->
+  <h2 class="section-title">About Broken AI</h2>
 
-<section class="container" id="shayari">
+  <p class="section-subtitle">
+    Broken AI एक creative platform है जहाँ AI Images,
+    Sad Shayari और Cinematic Art एक साथ मिलते हैं।
+  </p>
 
-  <div class="section-title">
-    <h2>Sad Shayari</h2>
-    <p>Some feelings cannot be explained</p>
-  </div>
-
-  <div class="shayari">
-
-    <div class="quote">
-      "कुछ लोग दिल में ऐसे उतर जाते हैं,
-      फिर चाहे दूर चले जाएं,
-      यादों से कभी दूर नहीं जाते।"
-    </div>
-
-    <div class="quote">
-      "खामोशी भी बहुत कुछ कहती है,
-      बस समझने वाला चाहिए।"
-    </div>
-
-    <div class="quote">
-      "जिसे अपना समझा,
-      वही सबसे ज्यादा अजनबी निकला।"
-    </div>
-
-  </div>
+  <a class="btn"
+     href="https://t.me/Brokenboy221716"
+     target="_blank">
+     ✈️ Telegram से जुड़ें
+  </a>
 
 </section>
-
-
-<!-- ABOUT -->
-
-<section class="container" id="about">
-
-  <div class="section-title">
-    <h2>About Broken AI</h2>
-  </div>
-
-  <div class="about">
-
-    <p>
-      <strong>Broken AI</strong> is a creative space for
-      AI images, cinematic art and emotional content.
-      Our goal is to create a unique visual experience
-      where creativity meets emotion.
-    </p>
-
-    <br>
-
-    <p>
-      Follow us on Telegram for more updates,
-      images and creative content.
-    </p>
-
-    <br>
-
-    <a
-      href="https://t.me/Brokenboy221716"
-      target="_blank"
-      class="btn">
-      ✈️ Contact on Telegram
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
 
 <footer>
 
+  <b>Broken AI</b>
+
   <div>
-    © 2026 <strong>Broken AI</strong>
+    AI Images • Sad Shayari • Cinematic Art
   </div>
 
-  <div class="social">
-
-    <a
-      href="https://t.me/Brokenboy221716"
-      target="_blank">
-      Telegram
-    </a>
-
-    <a href="#home">
-      Back to Top ↑
-    </a>
-
-  </div>
+  <small>
+    © 2026 Broken AI • All Rights Reserved
+  </small>
 
 </footer>
 
-
-<div class="toast" id="toast">
-  Image Added Successfully ✓
-</div>
-
-
 <script>
 
-/* PROFILE PHOTO */
+/* =========================
+   IMAGE GALLERY
+========================= */
 
-const profileInput =
-document.getElementById("profileInput");
+const grid = document.getElementById("grid");
+const file = document.getElementById("file");
+const search = document.getElementById("search");
+const uploadBtn = document.getElementById("uploadBtn");
 
-const profileImage =
-document.getElementById("profileImage");
-
-const savedProfile =
-localStorage.getItem("brokenAIProfile");
-
-if(savedProfile){
-  profileImage.src = savedProfile;
-}else{
-  profileImage.src =
-  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&q=80";
-}
-
-profileInput.addEventListener("change", function(){
-
-  const file = this.files[0];
-
-  if(!file) return;
-
-  const reader = new FileReader();
-
-  reader.onload = function(e){
-
-    profileImage.src = e.target.result;
-
-    localStorage.setItem(
-      "brokenAIProfile",
-      e.target.result
-    );
-
-    showToast("Profile Photo Saved ✓");
-  };
-
-  reader.readAsDataURL(file);
-
-});
-
-
-/* IMAGE UPLOAD */
-
-const fileInput =
-document.getElementById("fileInput");
-
-const galleryGrid =
-document.getElementById("galleryGrid");
-
-fileInput.addEventListener("change", function(){
-
-  const file = this.files[0];
-
-  if(!file) return;
-
-  const reader = new FileReader();
-
-  reader.onload = function(e){
-
-    const card =
-    document.createElement("div");
-
-    card.className = "card";
-
-    card.setAttribute(
-      "data-name",
-      file.name.toLowerCase()
-    );
-
-    card.innerHTML = `
-      <img src="${e.target.result}" alt="Uploaded Image">
-
-      <div class="card-content">
-        <h3>My AI Image</h3>
-        <p>Uploaded to Broken AI</p>
-      </div>
-    `;
-
-    galleryGrid.prepend(card);
-
-    saveImage(e.target.result);
-
-    showToast("Image Added Successfully ✓");
-  };
-
-  reader.readAsDataURL(file);
-
-});
-
-
-/* SAVE IMAGE */
-
-function saveImage(image){
-
-  let images =
-  JSON.parse(
-    localStorage.getItem("brokenAIImages") || "[]"
-  );
-
-  images.unshift(image);
-
-  if(images.length > 20){
-    images = images.slice(0,20);
-  }
-
-  localStorage.setItem(
-    "brokenAIImages",
-    JSON.stringify(images)
-  );
-}
-
-
-/* LOAD SAVED IMAGES */
-
-const savedImages =
-JSON.parse(
+let images = JSON.parse(
   localStorage.getItem("brokenAIImages") || "[]"
 );
 
-savedImages.forEach(function(image){
+function render(){
 
-  const card =
-  document.createElement("div");
+  grid.innerHTML = "";
 
-  card.className = "card";
+  const query = search.value.toLowerCase().trim();
 
-  card.setAttribute(
-    "data-name",
-    "uploaded ai image"
+  const filtered = images.filter(item =>
+    (item.title || "").toLowerCase().includes(query) ||
+    (item.caption || "").toLowerCase().includes(query)
   );
 
-  card.innerHTML = `
-    <img src="${image}" alt="Uploaded Image">
+  if(filtered.length === 0){
 
-    <div class="card-content">
-      <h3>My AI Image</h3>
-      <p>Saved Image</p>
-    </div>
-  `;
+    const empty = document.createElement("div");
 
-  galleryGrid.prepend(card);
+    empty.className = "empty";
 
-});
+    empty.textContent =
+      "अभी कोई image नहीं है। ऊपर से अपनी AI image upload करें।";
 
+    grid.appendChild(empty);
 
-/* SEARCH */
+    return;
+  }
 
-const search =
-document.getElementById("search");
+  filtered.forEach(item => {
 
-search.addEventListener("input", function(){
+    const card = document.createElement("article");
+    card.className = "card";
 
-  const value =
-  this.value.toLowerCase();
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = item.title || "Broken AI Image";
+    img.loading = "lazy";
 
-  const cards =
-  document.querySelectorAll(".card");
+    const content = document.createElement("div");
+    content.className = "card-content";
 
-  cards.forEach(function(card){
+    const title = document.createElement("h3");
+    title.textContent =
+      item.title || "Broken AI Image";
 
-    const name =
-    card.getAttribute("data-name") || "";
+    const caption = document.createElement("p");
+    caption.textContent =
+      item.caption || "AI Cinematic Art 🖤";
 
-    if(name.includes(value)){
-      card.style.display = "";
-    }else{
-      card.style.display = "none";
-    }
+    content.appendChild(title);
+    content.appendChild(caption);
+
+    card.appendChild(img);
+    card.appendChild(content);
+
+    grid.appendChild(card);
 
   });
 
+}
+
+uploadBtn.addEventListener("click", () => {
+  file.click();
+});
+
+file.addEventListener("change", () => {
+
+  const selected = file.files[0];
+
+  if(!selected) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+
+    images.unshift({
+      src: reader.result,
+      title: selected.name.split(".")[0],
+      caption: "मेरी नई AI Image 🖤"
+    });
+
+    try{
+
+      localStorage.setItem(
+        "brokenAIImages",
+        JSON.stringify(images)
+      );
+
+      render();
+
+    }catch(error){
+
+      alert(
+        "Image बहुत बड़ी है। छोटी image upload करें।"
+      );
+
+    }
+
+  };
+
+  reader.readAsDataURL(selected);
+
+});
+
+search.addEventListener("input", render);
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+const profileImage =
+  document.getElementById("profileImage");
+
+const profileBtn =
+  document.getElementById("profileBtn");
+
+const profileFile =
+  document.getElementById("profileFile");
+
+const savedProfile =
+  localStorage.getItem("brokenAIProfile");
+
+if(savedProfile){
+  profileImage.src = savedProfile;
+}
+
+profileBtn.addEventListener("click", () => {
+  profileFile.click();
+});
+
+profileFile.addEventListener("change", () => {
+
+  const selected = profileFile.files[0];
+
+  if(!selected) return;
+
+  const reader = new FileReader();
+
+  reader.onload = () => {
+
+    try{
+
+      localStorage.setItem(
+        "brokenAIProfile",
+        reader.result
+      );
+
+      profileImage.src = reader.result;
+
+    }catch(error){
+
+      alert(
+        "Photo बहुत बड़ी है। छोटी photo चुनें।"
+      );
+
+    }
+
+  };
+
+  reader.readAsDataURL(selected);
+
 });
 
 
-/* TOAST */
+/* INITIAL LOAD */
 
-function showToast(message){
-
-  const toast =
-  document.getElementById("toast");
-
-  toast.textContent = message;
-
-  toast.classList.add("show");
-
-  setTimeout(function(){
-
-    toast.classList.remove("show");
-
-  },2500);
-}
+render();
 
 </script>
 
