@@ -4,599 +4,1583 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Broken Boy | Official Website</title>
-
-<meta name="description" content="Broken Boy Official Website - AI Images, Creative Gallery and Digital Creator">
+<title>💔 Broken Boy</title>
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#05070b;
-    color:white;
-    line-height:1.6;
+  font-family:Arial,sans-serif;
+  background:#05070b;
+  color:#fff;
+  line-height:1.6;
 }
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(5,7,11,.95);
-    border-bottom:1px solid #222;
-    padding:15px 6%;
-}
-
-.nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    max-width:1200px;
-    margin:auto;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#080b12;
+  border-bottom:1px solid #222;
+  padding:15px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:bold;
+  font-size:24px;
+  font-weight:bold;
+  color:#ff304f;
 }
 
-.logo span{
-    color:#ff304f;
+nav{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
 nav a{
-    color:#ddd;
-    text-decoration:none;
-    margin-left:22px;
-    font-size:16px;
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
 }
 
 nav a:hover{
-    color:#ff304f;
-}
-
-.hero{
-    min-height:90vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:50px 20px;
-    background:radial-gradient(circle at top,#202532 0%,#080a0f 45%,#05070b 100%);
-}
-
-.profile{
-    width:145px;
-    height:145px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid white;
-    box-shadow:0 0 30px rgba(255,48,79,.4);
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:55px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    color:#aaa;
-    font-size:20px;
-    max-width:700px;
-    margin:auto;
-}
-
-.buttons{
-    margin-top:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    margin:7px;
-    border-radius:30px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    background:#ff304f;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    opacity:.85;
-}
-
-.btn.dark{
-    background:#20232d;
-    border:1px solid #444;
+  color:#ff304f;
 }
 
 section{
-    padding:80px 7%;
-    max-width:1200px;
-    margin:auto;
+  padding:70px 6%;
 }
 
-.title{
-    text-align:center;
-    font-size:38px;
-    margin-bottom:15px;
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
-.subtitle{
-    text-align:center;
-    color:#999;
-    margin-bottom:45px;
+.hero-content{
+  max-width:750px;
 }
 
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    color:#bbb;
-    font-size:18px;
+.profile{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #ff304f;
+  box-shadow:0 0 30px #ff304f55;
+  margin-bottom:20px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+h1{
+  font-size:48px;
+  margin-bottom:10px;
 }
 
-.card{
-    background:#10131a;
-    border:1px solid #252936;
-    border-radius:18px;
-    padding:30px 20px;
-    text-align:center;
-    transition:.3s;
+h1 span{
+  color:#ff304f;
 }
 
-.card:hover{
-    transform:translateY(-7px);
-    border-color:#ff304f;
+.hero p{
+  color:#bbb;
+  font-size:18px;
 }
 
-.card h3{
-    margin:15px 0 8px;
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 22px;
+  border-radius:30px;
+  background:#ff304f;
+  color:#fff;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
 }
 
-.card p{
-    color:#999;
+.btn:hover{
+  opacity:.85;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-size:34px;
+}
+
+.section-title p{
+  color:#999;
+}
+
+.about-box,
+.service-box,
+.upload-box{
+  max-width:900px;
+  margin:auto;
+  background:#0c1018;
+  border:1px solid #222;
+  border-radius:18px;
+  padding:30px;
+}
+
+.about-box p{
+  color:#bbb;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service-box{
+  text-align:center;
+}
+
+.service-box h3{
+  color:#ff304f;
+  margin-bottom:10px;
+}
+
+.service-box p{
+  color:#aaa;
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.gallery img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-    border-radius:15px;
-    border:1px solid #292d38;
-    transition:.3s;
-    cursor:pointer;
+.card{
+  background:#0c1018;
+  border:1px solid #222;
+  border-radius:16px;
+  overflow:hidden;
+  transition:.3s;
 }
 
-.gallery img:hover{
-    transform:scale(1.03);
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#ff304f;
 }
 
-.contact{
-    text-align:center;
+.card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  cursor:pointer;
+  display:block;
 }
 
-.contact-box{
-    background:#10131a;
-    border:1px solid #292d38;
-    border-radius:20px;
-    padding:40px 20px;
-    max-width:700px;
-    margin:auto;
+.card-content{
+  padding:18px;
 }
 
-footer{
-    text-align:center;
-    padding:35px 20px;
-    background:#030407;
-    border-top:1px solid #222;
-    color:#777;
+.card-content h3{
+  margin-bottom:8px;
 }
 
-.social{
-    margin-top:20px;
+.prompt{
+  background:#05070b;
+  border:1px solid #222;
+  border-radius:10px;
+  padding:12px;
+  color:#aaa;
+  font-size:14px;
+  max-height:130px;
+  overflow:auto;
 }
 
-.social a{
-    color:white;
-    text-decoration:none;
-    margin:8px;
+.copy-btn,
+.delete-btn{
+  width:100%;
+  margin-top:12px;
+  padding:10px;
+  border:0;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
 }
 
-
-/* BIG IMAGE VIEWER */
-
-#lightbox{
-    display:none;
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.96);
-    z-index:99999;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+.copy-btn{
+  background:#222936;
+  color:#fff;
 }
 
-#bigImage{
-    max-width:90%;
-    max-height:85vh;
-    object-fit:contain;
-    border-radius:12px;
+.delete-btn{
+  background:#b00020;
+  color:#fff;
 }
 
-#closeButton{
-    position:absolute;
-    top:10px;
-    right:18px;
-    color:white;
-    font-size:48px;
-    font-weight:bold;
-    cursor:pointer;
+.upload-box{
+  max-width:700px;
+}
+
+input,
+textarea{
+  width:100%;
+  margin:8px 0 16px;
+  padding:13px;
+  border-radius:9px;
+  border:1px solid #333;
+  background:#05070b;
+  color:#fff;
+  outline:none;
+}
+
+textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+label{
+  font-weight:bold;
+}
+
+.preview{
+  display:none;
+  width:100%;
+  max-height:300px;
+  object-fit:contain;
+  margin:10px 0 20px;
+  border-radius:12px;
+}
+
+.status{
+  margin-top:15px;
+  color:#aaa;
+  text-align:center;
+}
+
+#adminPanel{
+  display:none;
+}
+
+#loginPanel{
+  max-width:500px;
+  margin:auto;
+}
+
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.94);
+  z-index:5000;
+  align-items:center;
+  justify-content:center;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:82vh;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:25px;
+  font-size:38px;
+  cursor:pointer;
+  color:#fff;
 }
 
 .arrow{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    color:white;
-    font-size:55px;
-    cursor:pointer;
-    padding:15px;
-    user-select:none;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:55px;
+  cursor:pointer;
+  color:#fff;
+  user-select:none;
+  padding:20px;
 }
 
-#prevButton{
-    left:10px;
+.prev{
+  left:10px;
 }
 
-#nextButton{
-    right:10px;
+.next{
+  right:10px;
 }
 
-@media(max-width:700px){
-
-    header{
-        padding:14px 4%;
-    }
-
-    .nav{
-        flex-direction:column;
-        gap:12px;
-    }
-
-    nav a{
-        margin:0 7px;
-        font-size:14px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    section{
-        padding:60px 5%;
-    }
-
-    .title{
-        font-size:30px;
-    }
-
-    .gallery img{
-        height:240px;
-    }
-
-    #bigImage{
-        max-width:90%;
-        max-height:80vh;
-    }
-
-    .arrow{
-        font-size:42px;
-    }
-
-    #closeButton{
-        font-size:42px;
-    }
+.counter{
+  position:absolute;
+  bottom:20px;
+  color:#aaa;
 }
 
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #222;
+  color:#777;
+}
+
+@media(max-width:800px){
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:38px;
+  }
+}
+
+@media(max-width:550px){
+  header{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav{
+    justify-content:center;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:50px 5%;
+  }
+
+  .card img{
+    height:330px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
+  <div class="logo">💔 Broken Boy</div>
 
-<div class="nav">
-
-<div class="logo">💔 Broken <span>Boy</span></div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</div>
-
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#upload">Upload</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 
 <!-- HOME -->
-
 <section class="hero" id="home">
+  <div class="hero-content">
 
-<div>
+    <img
+      class="profile"
+      src="IMG_20251021_094837.jpg"
+      alt="Broken Boy">
 
-<img src="IMG_20251021_094837.jpg"
-     alt="Broken Boy"
-     class="profile">
+    <h1>Welcome to <span>Broken Boy</span></h1>
 
-<h1>Broken Boy</h1>
+    <p>
+      AI Images • Creative Prompts • Editing • Digital Creativity
+    </p>
 
-<p>
-AI Images • Creative Gallery • Digital Creator
-</p>
+    <a
+      class="btn"
+      href="https://t.me/Brokenboy221716"
+      target="_blank">
+      📱 Join Telegram
+    </a>
 
-<div class="buttons">
-<a class="btn" href="https://t.me/Brokenboy221716" target="_blank">✈️ Telegram</a>
-
-<a class="btn dark" href="#gallery">
-🖼️ View Gallery
-</a>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
 
 <!-- ABOUT -->
-
 <section id="about">
 
-<h2 class="title">About Me</h2>
+  <div class="section-title">
+    <h2>About Me</h2>
+    <p>My creative world</p>
+  </div>
 
-<p class="subtitle">
-Welcome to the official Broken Boy website
-</p>
+  <div class="about-box">
 
-<div class="about">
+    <p>
+      Welcome to Broken Boy website.
+      यहाँ AI generated images, creative prompts,
+      editing ideas और digital creations share की जाती हैं।
+    </p>
 
-<p>Welcome to Broken Boy. ❤️</p>
-
-<br>
-
-<p>
-यह वेबसाइट AI images, creative edits, digital artwork
-और मेरी creative journey को showcase करने के लिए बनाई गई है।
-</p>
-
-<br>
-
-<p>
-यहाँ आपको अलग-अलग प्रकार की creative images और
-future projects देखने को मिलेंगे।
-</p>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="title">What I Create</h2>
-
-<p class="subtitle">Creative digital content</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>🤖 AI Images</h3>
-<p>Creative और realistic AI generated images.</p>
-</div>
-
-<div class="card">
-<h3>🎨 Photo Editing</h3>
-<p>Creative photo edits और visual designs.</p>
-</div>
-
-<div class="card">
-<h3>🎬 Creative Content</h3>
-<p>Visual content और cinematic concepts.</p>
-</div>
-
-<div class="card">
-<h3>📱 Social Media</h3>
-<p>Social media के लिए creative visuals.</p>
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
 <!-- GALLERY -->
-
 <section id="gallery">
 
-<h2 class="title">My Gallery</h2>
+  <div class="section-title">
+    <h2>🖼️ Gallery</h2>
+    <p>Images और उनके prompts</p>
+  </div>
 
-<p class="subtitle">My latest creative work</p>
+  <div class="gallery" id="galleryContainer">
 
-<div class="gallery">
+    <!-- Existing GitHub Images -->
 
-<img src="IMG_20251021_094837.jpg"
-     alt="Broken Boy Image"
-     onclick="openImage(0)">
+    <div class="card">
+      <img
+        src="IMG_20251021_094837.jpg"
+        onclick="openImage(0)"
+        alt="Image 1">
 
-<img src="file_0000000081788211a203dc50290b078d.png"
-     alt="Creative Image"
-     onclick="openImage(1)">
+      <div class="card-content">
+        <h3>Broken Boy Image</h3>
 
-<img src="file_00000000c4e48211affc8c65d7debc2f.png"
-     alt="AI Image"
-     onclick="openImage(2)">
+        <div class="prompt">
+          Create a realistic cinematic portrait of a young Indian boy,
+          dark aesthetic, emotional atmosphere, cinematic lighting,
+          realistic details, high quality, 4K.
+        </div>
 
-<img src="IMG_20251021_094837.jpg"
-     alt="Digital Artwork"
-     onclick="openImage(3)">
+        <button
+          class="copy-btn"
+          onclick="copyText(this)">
+          📋 Copy Prompt
+        </button>
+      </div>
+    </div>
 
-</div>
+
+    <div class="card">
+      <img
+        src="file_0000000081788211a203dc50290b078d.png"
+        onclick="openImage(1)"
+        alt="Image 2">
+
+      <div class="card-content">
+        <h3>Cinematic Boy</h3>
+
+        <div class="prompt">
+          A realistic young Indian boy standing alone in a cinematic
+          environment, dark outfit, soft dramatic lighting,
+          detailed face, realistic 3D style, 4K.
+        </div>
+
+        <button
+          class="copy-btn"
+          onclick="copyText(this)">
+          📋 Copy Prompt
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img
+        src="file_00000000c4e48211affc8c65d7debc2f.png"
+        onclick="openImage(2)"
+        alt="Image 3">
+
+      <div class="card-content">
+        <h3>AI Creative</h3>
+
+        <div class="prompt">
+          Create a highly detailed realistic cinematic image of a
+          stylish young Indian boy, natural pose, dark background,
+          professional photography, 4K quality.
+        </div>
+
+        <button
+          class="copy-btn"
+          onclick="copyText(this)">
+          📋 Copy Prompt
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img
+        src="IMG_20251021_094837.jpg"
+        onclick="openImage(3)"
+        alt="Image 4">
+
+      <div class="card-content">
+        <h3>Dark Aesthetic</h3>
+
+        <div class="prompt">
+          Realistic cinematic portrait of a young Indian boy,
+          black outfit, dark aesthetic, soft light, natural expression,
+          detailed skin texture, professional photography, 4K.
+        </div>
+
+        <button
+          class="copy-btn"
+          onclick="copyText(this)">
+          📋 Copy Prompt
+        </button>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- BIG IMAGE VIEWER -->
+<!-- UPLOAD -->
+<section id="upload">
 
-<div id="lightbox">
+  <div class="section-title">
+    <h2>🔐 Admin Upload</h2>
+    <p>अपनी image और prompt permanently add करो</p>
+  </div>
 
-<span id="closeButton" onclick="closeImage()">×</span>
 
-<span class="arrow" id="prevButton" onclick="previousImage()">‹</span>
+  <!-- LOGIN -->
+  <div class="upload-box" id="loginPanel">
 
-<img id="bigImage" src="" alt="Large Gallery Image">
+    <h2>Admin Login</h2>
 
-<span class="arrow" id="nextButton" onclick="nextImage()">›</span>
+    <br>
 
-</div>
+    <label>Email</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="Admin email">
+
+    <label>Password</label>
+    <input
+      type="password"
+      id="password"
+      placeholder="Admin password">
+
+    <button
+      class="btn"
+      onclick="login()">
+      🔐 Login
+    </button>
+
+    <div class="status" id="loginStatus"></div>
+
+  </div>
+
+
+  <!-- ADMIN PANEL -->
+  <div class="upload-box" id="adminPanel">
+
+    <h2>📤 Upload New Image</h2>
+
+    <br>
+
+    <label>Image</label>
+
+    <input
+      type="file"
+      id="imageInput"
+      accept="image/*"
+      onchange="previewImage()">
+
+    <img
+      id="preview"
+      class="preview"
+      alt="Preview">
+
+
+    <label>Image Title</label>
+
+    <input
+      type="text"
+      id="titleInput"
+      placeholder="Example: Sad Boy">
+
+
+    <label>Prompt</label>
+
+    <textarea
+      id="promptInput"
+      placeholder="अपना पूरा AI prompt यहाँ लिखो..."></textarea>
+
+
+    <button
+      class="btn"
+      onclick="uploadImage()">
+      🚀 Upload to Gallery
+    </button>
+
+    <button
+      class="delete-btn"
+      onclick="logout()">
+      Logout
+    </button>
+
+    <div
+      class="status"
+      id="uploadStatus">
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+  <div class="section-title">
+    <h2>⚡ Services</h2>
+  </div>
+
+  <div class="services">
+
+    <div class="service-box">
+      <h3>AI Images</h3>
+      <p>Creative AI image concepts और prompts.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Photo Editing</h3>
+      <p>Creative photo editing और design ideas.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Prompt Collection</h3>
+      <p>Images के साथ उनके useful AI prompts.</p>
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- CONTACT -->
-
 <section id="contact">
 
-<h2 class="title">Contact</h2>
+  <div class="section-title">
+    <h2>📱 Contact</h2>
+    <p>Telegram पर जुड़ो</p>
 
-<p class="subtitle">Connect with Broken Boy</p>
+    <a
+      class="btn"
+      href="https://t.me/Brokenboy221716"
+      target="_blank">
+      💬 Open Telegram
+    </a>
 
-<div class="contact-box">
-
-<h2>💔 Let's Connect</h2>
-
-<p style="color:#999;margin-top:10px;">
-For creative work, collaborations and updates.
-</p>
-
-<div class="buttons">
-
-<a class="btn" href="https://t.me/Brokenboy221716" target="_blank">✈️ Telegram</a>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
 <footer>
+  © 2026 💔 Broken Boy — All Rights Reserved
+</footer>
 
-<p>© 2026 Broken Boy. All Rights Reserved.</p>
 
-<div class="social">
+<!-- LIGHTBOX -->
+<div
+  class="lightbox"
+  id="lightbox"
+  onclick="closeOutside(event)">
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+  <span
+    class="close"
+    onclick="closeImage()">
+    ×
+  </span>
+
+  <span
+    class="arrow prev"
+    onclick="previousImage(event)">
+    ‹
+  </span>
+
+  <img
+    id="bigImage"
+    src=""
+    alt="Full Image">
+
+  <span
+    class="arrow next"
+    onclick="nextImage(event)">
+    ›
+  </span>
+
+  <div
+    class="counter"
+    id="counter">
+  </div>
 
 </div>
 
-</footer>
+
+<!-- FIREBASE -->
+<script type="module">
+
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+import {
+  getStorage,
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  deleteObject
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-storage.js";
+
+
+/* =====================================
+   🔥 APNI FIREBASE CONFIG YAHAN DALO
+   ===================================== */
+
+const firebaseConfig = {
+
+  apiKey: "PASTE_YOUR_API_KEY",
+
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+
+  projectId: "YOUR_PROJECT_ID",
+
+  storageBucket: "YOUR_STORAGE_BUCKET",
+
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+
+  appId: "YOUR_APP_ID"
+
+};
+
+
+/* =====================================
+   FIREBASE START
+   ===================================== */
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+const db = getFirestore(app);
+
+const storage = getStorage(app);
+
+
+/* =====================================
+   GALLERY DATA
+   ===================================== */
+
+window.galleryItems = [
+
+  {
+    src:"IMG_20251021_094837.jpg",
+    title:"Broken Boy Image",
+    prompt:"Create a realistic cinematic portrait of a young Indian boy, dark aesthetic, emotional atmosphere, cinematic lighting, realistic details, high quality, 4K."
+  },
+
+  {
+    src:"file_0000000081788211a203dc50290b078d.png",
+    title:"Cinematic Boy",
+    prompt:"A realistic young Indian boy standing alone in a cinematic environment, dark outfit, soft dramatic lighting, detailed face, realistic 3D style, 4K."
+  },
+
+  {
+    src:"file_00000000c4e48211affc8c65d7debc2f.png",
+    title:"AI Creative",
+    prompt:"Create a highly detailed realistic cinematic image of a stylish young Indian boy, natural pose, dark background, professional photography, 4K quality."
+  },
+
+  {
+    src:"IMG_20251021_094837.jpg",
+    title:"Dark Aesthetic",
+    prompt:"Realistic cinematic portrait of a young Indian boy, black outfit, dark aesthetic, soft light, natural expression, detailed skin texture, professional photography, 4K."
+  }
+
+];
+
+
+window.firebaseItems = [];
+
+
+/* =====================================
+   LOGIN
+   ===================================== */
+
+window.login = async function(){
+
+  const email =
+    document.getElementById("email").value.trim();
+
+  const password =
+    document.getElementById("password").value;
+
+  const status =
+    document.getElementById("loginStatus");
+
+  if(!email || !password){
+
+    status.textContent =
+      "Email और password दोनों भरें।";
+
+    return;
+  }
+
+  status.textContent =
+    "Login हो रहा है...";
+
+  try{
+
+    await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    status.textContent =
+      "Login successful!";
+
+  }catch(error){
+
+    status.textContent =
+      "Login failed: " + error.message;
+
+  }
+
+};
+
+
+/* =====================================
+   AUTH STATE
+   ===================================== */
+
+onAuthStateChanged(auth, async(user)=>{
+
+  const loginPanel =
+    document.getElementById("loginPanel");
+
+  const adminPanel =
+    document.getElementById("adminPanel");
+
+  if(user){
+
+    loginPanel.style.display="none";
+
+    adminPanel.style.display="block";
+
+  }else{
+
+    loginPanel.style.display="block";
+
+    adminPanel.style.display="none";
+
+  }
+
+  await loadFirebaseGallery();
+
+});
+
+
+/* =====================================
+   LOGOUT
+   ===================================== */
+
+window.logout = async function(){
+
+  await signOut(auth);
+
+};
+
+
+/* =====================================
+   PREVIEW
+   ===================================== */
+
+window.previewImage = function(){
+
+  const file =
+    document.getElementById("imageInput").files[0];
+
+  const preview =
+    document.getElementById("preview");
+
+  if(!file){
+
+    preview.style.display="none";
+
+    return;
+
+  }
+
+  const reader =
+    new FileReader();
+
+  reader.onload=function(e){
+
+    preview.src=e.target.result;
+
+    preview.style.display="block";
+
+  };
+
+  reader.readAsDataURL(file);
+
+};
+
+
+/* =====================================
+   UPLOAD IMAGE
+   ===================================== */
+
+window.uploadImage = async function(){
+
+  const user = auth.currentUser;
+
+  const file =
+    document.getElementById("imageInput").files[0];
+
+  const title =
+    document.getElementById("titleInput").value.trim();
+
+  const prompt =
+    document.getElementById("promptInput").value.trim();
+
+  const status =
+    document.getElementById("uploadStatus");
+
+
+  if(!user){
+
+    status.textContent =
+      "पहले Admin Login करें।";
+
+    return;
+
+  }
+
+
+  if(!file){
+
+    status.textContent =
+      "पहले image select करें।";
+
+    return;
+
+  }
+
+
+  if(!file.type.startsWith("image/")){
+
+    status.textContent =
+      "सिर्फ image file upload करें।";
+
+    return;
+
+  }
+
+
+  if(file.size > 10 * 1024 * 1024){
+
+    status.textContent =
+      "Image 10 MB से छोटी रखें।";
+
+    return;
+
+  }
+
+
+  if(!title){
+
+    status.textContent =
+      "Image title लिखें।";
+
+    return;
+
+  }
+
+
+  if(!prompt){
+
+    status.textContent =
+      "Prompt लिखें।";
+
+    return;
+
+  }
+
+
+  try{
+
+    status.textContent =
+      "Image upload हो रही है...";
+
+
+    const safeName =
+      file.name
+      .replace(/[^a-zA-Z0-9._-]/g,"_");
+
+
+    const filePath =
+      "gallery/" +
+      user.uid +
+      "/" +
+      Date.now() +
+      "_" +
+      safeName;
+
+
+    const storageRef =
+      ref(storage,filePath);
+
+
+    await uploadBytes(
+      storageRef,
+      file,
+      {
+        contentType:file.type
+      }
+    );
+
+
+    status.textContent =
+      "Image save हो रही है...";
+
+
+    const imageUrl =
+      await getDownloadURL(storageRef);
+
+
+    await addDoc(
+      collection(db,"gallery"),
+      {
+
+        title:title,
+
+        prompt:prompt,
+
+        imageUrl:imageUrl,
+
+        storagePath:filePath,
+
+        uid:user.uid,
+
+        createdAt:serverTimestamp()
+
+      }
+    );
+
+
+    status.textContent =
+      "✅ Image successfully Gallery में add हो गई!";
+
+
+    document.getElementById("imageInput").value="";
+
+    document.getElementById("titleInput").value="";
+
+    document.getElementById("promptInput").value="";
+
+    document.getElementById("preview").style.display="none";
+
+
+    await loadFirebaseGallery();
+
+
+  }catch(error){
+
+    console.error(error);
+
+    status.textContent =
+      "❌ Upload error: " + error.message;
+
+  }
+
+};
+
+
+/* =====================================
+   LOAD FIREBASE GALLERY
+   ===================================== */
+
+async function loadFirebaseGallery(){
+
+  try{
+
+    const snapshot =
+      await getDocs(
+        collection(db,"gallery")
+      );
+
+
+    window.firebaseItems = [];
+
+
+    snapshot.forEach((item)=>{
+
+      const data = item.data();
+
+      window.firebaseItems.push({
+
+        id:item.id,
+
+        src:data.imageUrl,
+
+        title:data.title || "Untitled",
+
+        prompt:data.prompt || "",
+
+        storagePath:data.storagePath || ""
+
+      });
+
+    });
+
+
+    window.firebaseItems.sort((a,b)=>{
+
+      return b.id.localeCompare(a.id);
+
+    });
+
+
+    renderFirebaseGallery();
+
+
+  }catch(error){
+
+    console.log(
+      "Firebase gallery अभी available नहीं है:",
+      error
+    );
+
+  }
+
+}
+
+
+/* =====================================
+   RENDER FIREBASE ITEMS
+   ===================================== */
+
+function renderFirebaseGallery(){
+
+  const container =
+    document.getElementById("galleryContainer");
+
+
+  document
+    .querySelectorAll(".firebase-card")
+    .forEach(el=>el.remove());
+
+
+  window.firebaseItems.forEach((item)=>{
+
+    const index =
+      window.galleryItems.length;
+
+
+    window.galleryItems.push({
+
+      src:item.src,
+
+      title:item.title,
+
+      prompt:item.prompt
+
+    });
+
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "card firebase-card";
+
+
+    card.innerHTML = `
+
+      <img
+        src="${escapeHtml(item.src)}"
+        alt="${escapeHtml(item.title)}"
+        onclick="openImage(${index})">
+
+      <div class="card-content">
+
+        <h3>
+          ${escapeHtml(item.title)}
+        </h3>
+
+        <div class="prompt">
+          ${escapeHtml(item.prompt)}
+        </div>
+
+        <button
+          class="copy-btn"
+          onclick="copyPromptText('${escapeJs(item.prompt)}')">
+          📋 Copy Prompt
+        </button>
+
+      </div>
+    `;
+
+
+    if(auth.currentUser){
+
+      const deleteButton =
+        document.createElement("button");
+
+      deleteButton.className =
+        "delete-btn";
+
+      deleteButton.textContent =
+        "🗑️ Delete";
+
+      deleteButton.onclick = () =>
+        deleteGalleryItem(item);
+
+
+      card
+        .querySelector(".card-content")
+        .appendChild(deleteButton);
+
+    }
+
+
+    container.appendChild(card);
+
+  });
+
+}
+
+
+/* =====================================
+   DELETE
+   ===================================== */
+
+async function deleteGalleryItem(item){
+
+  if(!auth.currentUser){
+
+    return;
+
+  }
+
+
+  const confirmDelete =
+    confirm(
+      "क्या इस image को delete करना है?"
+    );
+
+
+  if(!confirmDelete){
+
+    return;
+
+  }
+
+
+  try{
+
+    await deleteDoc(
+      doc(db,"gallery",item.id)
+    );
+
+
+    if(item.storagePath){
+
+      try{
+
+        await deleteObject(
+          ref(storage,item.storagePath)
+        );
+
+      }catch(storageError){
+
+        console.log(storageError);
+
+      }
+
+    }
+
+
+    await loadFirebaseGallery();
+
+
+    alert("Image delete हो गई।");
+
+
+  }catch(error){
+
+    alert(
+      "Delete error: " + error.message
+    );
+
+  }
+
+}
+
+
+/* =====================================
+   HTML SECURITY HELPERS
+   ===================================== */
+
+function escapeHtml(text){
+
+  return String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+function escapeJs(text){
+
+  return String(text)
+    .replace(/\\/g,"\\\\")
+    .replace(/'/g,"\\'")
+    .replace(/\n/g,"\\n")
+    .replace(/\r/g,"\\r");
+
+}
+
+
+/* =====================================
+   COPY PROMPT
+   ===================================== */
+
+window.copyText = async function(button){
+
+  const prompt =
+    button
+      .parentElement
+      .querySelector(".prompt")
+      .innerText;
+
+
+  await navigator.clipboard.writeText(prompt);
+
+
+  const old =
+    button.innerText;
+
+
+  button.innerText =
+    "✅ Copied!";
+
+
+  setTimeout(()=>{
+
+    button.innerText=old;
+
+  },1500);
+
+};
+
+
+window.copyPromptText = async function(text){
+
+  await navigator.clipboard.writeText(text);
+
+  alert("✅ Prompt copied!");
+
+};
+
+</script>
 
 
 <script>
 
-const images = [
-"IMG_20251021_094837.jpg",
-"file_0000000081788211a203dc50290b078d.png",
-"file_00000000c4e48211affc8c65d7debc2f.png",
-"IMG_20251021_094837.jpg"
-];
+/* =====================================
+   LIGHTBOX
+   ===================================== */
 
-let currentImage = 0;
+let currentImage=0;
 
-function openImage(index){
 
-    currentImage = index;
+window.openImage=function(index){
 
-    document.getElementById("lightbox").style.display = "flex";
+  currentImage=index;
 
-    document.getElementById("bigImage").src = images[currentImage];
+  showImage();
+
+  document
+    .getElementById("lightbox")
+    .style.display="flex";
+
+};
+
+
+function showImage(){
+
+  const item =
+    window.galleryItems[currentImage];
+
+
+  if(!item){
+
+    return;
+
+  }
+
+
+  document
+    .getElementById("bigImage")
+    .src=item.src;
+
+
+  document
+    .getElementById("counter")
+    .textContent=
+      (currentImage+1)
+      +" / "
+      +window.galleryItems.length;
 
 }
 
-function closeImage(){
 
-    document.getElementById("lightbox").style.display = "none";
+window.nextImage=function(event){
 
-    document.getElementById("bigImage").src = "";
+  if(event)
+    event.stopPropagation();
 
-}
 
-function nextImage(){
+  if(!window.galleryItems.length)
+    return;
 
-    currentImage++;
 
-    if(currentImage >= images.length){
-        currentImage = 0;
+  currentImage++;
+
+  if(
+    currentImage >=
+    window.galleryItems.length
+  ){
+
+    currentImage=0;
+
+  }
+
+
+  showImage();
+
+};
+
+
+window.previousImage=function(event){
+
+  if(event)
+    event.stopPropagation();
+
+
+  if(!window.galleryItems.length)
+    return;
+
+
+  currentImage--;
+
+  if(currentImage<0){
+
+    currentImage =
+      window.galleryItems.length-1;
+
+  }
+
+
+  showImage();
+
+};
+
+
+window.closeImage=function(){
+
+  document
+    .getElementById("lightbox")
+    .style.display="none";
+
+};
+
+
+window.closeOutside=function(event){
+
+  if(
+    event.target.id==="lightbox"
+  ){
+
+    closeImage();
+
+  }
+
+};
+
+
+/* Keyboard controls */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+
+    if(
+      lightbox.style.display!=="flex"
+    ){
+
+      return;
+
     }
 
-    document.getElementById("bigImage").src = images[currentImage];
 
-}
+    if(event.key==="Escape")
+      closeImage();
 
-function previousImage(){
 
-    currentImage--;
+    if(event.key==="ArrowRight")
+      nextImage();
 
-    if(currentImage < 0){
-        currentImage = images.length - 1;
-    }
 
-    document.getElementById("bigImage").src = images[currentImage];
+    if(event.key==="ArrowLeft")
+      previousImage();
 
-}
-
-document.getElementById("lightbox").addEventListener("click",function(event){
-
-    if(event.target === this){
-        closeImage();
-    }
-
-});
+  }
+);
 
 </script>
 
