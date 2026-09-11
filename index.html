@@ -68,8 +68,7 @@ nav a:hover{
     align-items:center;
     text-align:center;
     padding:50px 20px;
-    background:
-    radial-gradient(circle at top,#202532 0%,#080a0f 45%,#05070b 100%);
+    background:radial-gradient(circle at top,#202532 0%,#080a0f 45%,#05070b 100%);
 }
 
 .profile{
@@ -225,6 +224,7 @@ footer{
     margin:8px;
 }
 
+
 /* BIG IMAGE VIEWER */
 
 #lightbox{
@@ -241,10 +241,8 @@ footer{
 }
 
 #bigImage{
-    max-width:95%;
-    max-height:88vh;
-    width:auto;
-    height:auto;
+    max-width:90%;
+    max-height:85vh;
     object-fit:contain;
     border-radius:12px;
 }
@@ -257,7 +255,25 @@ footer{
     font-size:48px;
     font-weight:bold;
     cursor:pointer;
-    z-index:100000;
+}
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:white;
+    font-size:55px;
+    cursor:pointer;
+    padding:15px;
+    user-select:none;
+}
+
+#prevButton{
+    left:10px;
+}
+
+#nextButton{
+    right:10px;
 }
 
 @media(max-width:700px){
@@ -297,13 +313,15 @@ footer{
     }
 
     #bigImage{
-        max-width:96%;
-        max-height:82vh;
+        max-width:90%;
+        max-height:80vh;
+    }
+
+    .arrow{
+        font-size:42px;
     }
 
     #closeButton{
-        top:5px;
-        right:12px;
         font-size:42px;
     }
 }
@@ -350,7 +368,7 @@ AI Images • Creative Gallery • Digital Creator
 
 <div class="buttons">
 
-<a class="btn" href="https://t.me/" target="_blank">
+<a class="btn" href="https://t.me/Brokenboy221716" target="_blank">
 ✈️ Telegram
 </a>
 
@@ -377,9 +395,7 @@ Welcome to the official Broken Boy website
 
 <div class="about">
 
-<p>
-Welcome to Broken Boy. ❤️
-</p>
+<p>Welcome to Broken Boy. ❤️</p>
 
 <br>
 
@@ -406,38 +422,28 @@ future projects देखने को मिलेंगे।
 
 <h2 class="title">What I Create</h2>
 
-<p class="subtitle">
-Creative digital content
-</p>
+<p class="subtitle">Creative digital content</p>
 
 <div class="cards">
 
 <div class="card">
 <h3>🤖 AI Images</h3>
-<p>
-Creative और realistic AI generated images.
-</p>
+<p>Creative और realistic AI generated images.</p>
 </div>
 
 <div class="card">
 <h3>🎨 Photo Editing</h3>
-<p>
-Creative photo edits और visual designs.
-</p>
+<p>Creative photo edits और visual designs.</p>
 </div>
 
 <div class="card">
 <h3>🎬 Creative Content</h3>
-<p>
-Visual content और cinematic concepts.
-</p>
+<p>Visual content और cinematic concepts.</p>
 </div>
 
 <div class="card">
 <h3>📱 Social Media</h3>
-<p>
-Social media के लिए creative visuals.
-</p>
+<p>Social media के लिए creative visuals.</p>
 </div>
 
 </div>
@@ -451,27 +457,25 @@ Social media के लिए creative visuals.
 
 <h2 class="title">My Gallery</h2>
 
-<p class="subtitle">
-My latest creative work
-</p>
+<p class="subtitle">My latest creative work</p>
 
 <div class="gallery">
 
 <img src="IMG_20251021_094837.jpg"
      alt="Broken Boy Image"
-     onclick="openImage(this)">
+     onclick="openImage(0)">
 
 <img src="file_0000000081788211a203dc50290b078d.png"
      alt="Creative Image"
-     onclick="openImage(this)">
+     onclick="openImage(1)">
 
 <img src="file_00000000c4e48211affc8c65d7debc2f.png"
      alt="AI Image"
-     onclick="openImage(this)">
+     onclick="openImage(2)">
 
 <img src="IMG_20251021_094837.jpg"
      alt="Digital Artwork"
-     onclick="openImage(this)">
+     onclick="openImage(3)">
 
 </div>
 
@@ -484,7 +488,11 @@ My latest creative work
 
 <span id="closeButton" onclick="closeImage()">×</span>
 
+<span class="arrow" id="prevButton" onclick="previousImage()">‹</span>
+
 <img id="bigImage" src="" alt="Large Gallery Image">
+
+<span class="arrow" id="nextButton" onclick="nextImage()">›</span>
 
 </div>
 
@@ -495,9 +503,7 @@ My latest creative work
 
 <h2 class="title">Contact</h2>
 
-<p class="subtitle">
-Connect with Broken Boy
-</p>
+<p class="subtitle">Connect with Broken Boy</p>
 
 <div class="contact-box">
 
@@ -509,7 +515,7 @@ For creative work, collaborations and updates.
 
 <div class="buttons">
 
-<a class="btn" href="https://t.me/" target="_blank">
+<a class="btn" href="https://t.me/Brokenboy221716" target="_blank">
 ✈️ Telegram
 </a>
 
@@ -522,9 +528,7 @@ For creative work, collaborations and updates.
 
 <footer>
 
-<p>
-© 2026 Broken Boy. All Rights Reserved.
-</p>
+<p>© 2026 Broken Boy. All Rights Reserved.</p>
 
 <div class="social">
 
@@ -538,15 +542,24 @@ For creative work, collaborations and updates.
 </footer>
 
 
-<!-- JAVASCRIPT -->
-
 <script>
 
-function openImage(image){
+const images = [
+"IMG_20251021_094837.jpg",
+"file_0000000081788211a203dc50290b078d.png",
+"file_00000000c4e48211affc8c65d7debc2f.png",
+"IMG_20251021_094837.jpg"
+];
+
+let currentImage = 0;
+
+function openImage(index){
+
+    currentImage = index;
 
     document.getElementById("lightbox").style.display = "flex";
 
-    document.getElementById("bigImage").src = image.src;
+    document.getElementById("bigImage").src = images[currentImage];
 
 }
 
@@ -558,12 +571,34 @@ function closeImage(){
 
 }
 
-document.getElementById("lightbox").addEventListener("click", function(event){
+function nextImage(){
+
+    currentImage++;
+
+    if(currentImage >= images.length){
+        currentImage = 0;
+    }
+
+    document.getElementById("bigImage").src = images[currentImage];
+
+}
+
+function previousImage(){
+
+    currentImage--;
+
+    if(currentImage < 0){
+        currentImage = images.length - 1;
+    }
+
+    document.getElementById("bigImage").src = images[currentImage];
+
+}
+
+document.getElementById("lightbox").addEventListener("click",function(event){
 
     if(event.target === this){
-
         closeImage();
-
     }
 
 });
