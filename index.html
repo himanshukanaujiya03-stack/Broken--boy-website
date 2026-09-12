@@ -6,501 +6,137 @@
 <title>Broken AI | AI Images</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-font-family:Arial,sans-serif;
-color:#fff;
-background:#05020b;
-overflow-x:hidden
-}
-
-body:before{
-content:"";
-position:fixed;
-inset:0;
-z-index:-2;
+margin:0;color:#fff;font-family:Arial,sans-serif;
 background:
-radial-gradient(circle at 15% 15%,#ff1744 0,transparent 25%),
-radial-gradient(circle at 85% 20%,#7c00ff 0,transparent 25%),
-radial-gradient(circle at 50% 90%,#00d9ff 0,transparent 28%),
-#05020b
+radial-gradient(circle at 10% 10%,#ff008055,transparent 28%),
+radial-gradient(circle at 90% 20%,#00eaff44,transparent 30%),
+radial-gradient(circle at 50% 100%,#7c3aed44,transparent 35%),
+#050509;
 }
-
 header{
-position:sticky;
-top:0;
-z-index:2000;
-background:rgba(5,2,11,.82);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.12);
-padding:14px 5%
+position:sticky;top:0;z-index:20;
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 6%;background:#050509dd;
+backdrop-filter:blur(15px);
+border-bottom:1px solid #ffffff18;
 }
-
-.nav{
-max-width:1250px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between
-}
-
-.logo{
-font-size:25px;
-font-weight:900
-}
-
+.logo{font-size:27px;font-weight:900}
 .logo span{
-background:linear-gradient(90deg,#ff1744,#ff00cc,#00d9ff);
--webkit-background-clip:text;
-color:transparent
+background:linear-gradient(90deg,#00eaff,#7c3aed,#ff1493,#ff8a00);
+-webkit-background-clip:text;color:transparent;
 }
-
-nav{
-display:flex;
-gap:16px;
-align-items:center
+nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+nav a{color:#ddd;text-decoration:none;font-size:13px;font-weight:bold}
+button,.btn{
+border:0;border-radius:12px;padding:13px 18px;
+font-weight:bold;color:white;cursor:pointer;
+background:linear-gradient(90deg,#ff1744,#7c3aed,#00bfff);
 }
-
-nav a{
-color:#fff;
-text-decoration:none;
-font-size:14px
-}
-
-.admin{
-background:linear-gradient(90deg,#ff1744,#8b00ff);
-color:#fff;
-border:0;
-padding:11px 17px;
-border-radius:25px;
-font-weight:bold;
-cursor:pointer
-}
-
+.secondary{background:#ffffff12;border:1px solid #ffffff22}
 .hero{
-min-height:82vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:60px 20px
+min-height:600px;padding:70px 6%;
+display:flex;align-items:center;
+background:linear-gradient(90deg,#030308dd,#03030899),
+url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85")
+center/cover;
 }
-
-.hero-inner{
-max-width:850px
-}
-
-.profile{
-width:155px;
-height:155px;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #fff;
-box-shadow:
-0 0 20px #ff1744,
-0 0 45px #8b00ff;
+.hero-content{max-width:900px}
+.profile-wrap{
+width:150px;height:150px;border-radius:50%;padding:5px;
+background:linear-gradient(45deg,#00eaff,#7c3aed,#ff1493,#ff8a00);
+box-shadow:0 0 45px #7c3aed88;
 margin-bottom:25px;
-background:#111
 }
-
+.profile{
+width:100%;height:100%;border-radius:50%;
+object-fit:cover;display:block;
+background:#111;
+}
 .badge{
-display:inline-block;
-padding:8px 16px;
-border-radius:30px;
-background:rgba(255,255,255,.1);
-border:1px solid rgba(255,255,255,.2);
-margin-bottom:18px;
-color:#ddd
+display:inline-block;padding:8px 14px;border-radius:30px;
+background:#ffffff10;border:1px solid #00eaff55;
+color:#8defff;font-weight:bold;margin-bottom:15px;
 }
-
-.hero h1{
-font-size:clamp(45px,9vw,85px);
-font-weight:900;
-background:linear-gradient(
-90deg,#fff,#ff1744,#ff00cc,#7c00ff,#00d9ff
-);
--webkit-background-clip:text;
-color:transparent
+h1{font-size:clamp(55px,10vw,105px);line-height:.9;margin:0}
+h1 span{
+background:linear-gradient(90deg,#00eaff,#7c3aed,#ff1493,#ff8a00);
+-webkit-background-clip:text;color:transparent;
 }
-
-.hero p{
-color:#bbb;
-font-size:20px;
-margin-top:12px
-}
-
-.buttons{
-margin-top:28px
-}
-
-.btn{
-display:inline-block;
-padding:14px 25px;
-margin:6px;
-border-radius:30px;
-text-decoration:none;
-color:#fff;
-font-weight:bold;
-background:linear-gradient(90deg,#ff1744,#ff00cc);
-border:0;
-cursor:pointer;
-box-shadow:0 8px 25px rgba(255,0,100,.25)
-}
-
-.btn.blue{
-background:linear-gradient(90deg,#7c00ff,#00aaff)
-}
-
-section{
-max-width:1250px;
-margin:auto;
-padding:75px 6%
-}
-
-.title{
-text-align:center;
-font-size:42px;
-font-weight:900;
-background:linear-gradient(
-90deg,#ff1744,#ff00cc,#00d9ff
-);
--webkit-background-clip:text;
-color:transparent
-}
-
-.subtitle{
-text-align:center;
-color:#999;
-margin:10px 0 40px
-}
-
-.about{
-max-width:800px;
-margin:auto;
-text-align:center;
-color:#bbb;
-font-size:18px;
-line-height:1.9
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px
-}
-
-.service{
-padding:30px 20px;
-text-align:center;
-border-radius:20px;
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.12);
-transition:.3s
-}
-
-.service:hover{
-transform:translateY(-7px);
-border-color:#ff1744;
-box-shadow:0 10px 35px rgba(255,0,100,.18)
-}
-
-.service h3{
-margin-bottom:10px
-}
-
-.service p{
-color:#999
-}
-
-.search{
-margin-bottom:30px
-}
-
-.search input{
-width:100%;
-padding:17px 20px;
-border-radius:16px;
-border:1px solid #333;
+.hero p{font-size:19px;color:#cbd5e1;line-height:1.6;max-width:650px}
+.wrap{max-width:1400px;margin:auto;padding:45px 6%}
+.title{margin-bottom:25px}
+.title h2{font-size:32px;margin:0}
+.title p{color:#8997aa}
+.tools{display:flex;gap:12px;margin-bottom:25px}
+input,textarea{
+width:100%;padding:14px;border-radius:12px;
+border:1px solid #ffffff18;background:#0b1018;color:white;
 outline:none;
-background:rgba(0,0,0,.4);
-color:#fff;
-font-size:16px
 }
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-gap:22px
+.grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
-
-.image-card{
-overflow:hidden;
-border-radius:20px;
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.12);
-transition:.3s
+.card{
+background:#0b1018;border:1px solid #ffffff12;
+border-radius:18px;overflow:hidden;cursor:pointer;
+transition:.25s;box-shadow:0 15px 40px #0008;
 }
-
-.image-card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 40px rgba(124,0,255,.2)
+.card:hover{transform:translateY(-6px);border-color:#00eaff77}
+.card img{width:100%;height:280px;object-fit:cover;display:block}
+.card-info{padding:16px}
+.card-info h3{margin:0 0 7px}
+.card-info p{color:#9eacbc;line-height:1.5;margin:0}
+.meta{color:#718096;font-size:13px;margin-top:10px}
+.empty{
+grid-column:1/-1;text-align:center;padding:50px;
+border:1px dashed #ffffff22;border-radius:18px;color:#8c9bad;
 }
-
-.image-card img{
-width:100%;
-height:290px;
-object-fit:cover;
-display:block;
-cursor:pointer
-}
-
 .info{
-padding:16px
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;margin-top:40px;
 }
-
-.info h3{
-margin-bottom:6px
-}
-
-.info p{
-color:#999;
-font-size:14px
-}
-
-.actions{
-display:flex;
-gap:8px;
-margin-top:13px;
-flex-wrap:wrap
-}
-
-.small{
-padding:9px 12px;
-border-radius:10px;
-background:#191522;
-color:#fff;
-border:1px solid #383044;
-cursor:pointer
-}
-
-.delete{
-background:#4a101c;
-color:#ff7185
-}
-
-.upload{
-display:none;
-margin-top:25px;
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,.07);
-border:1px solid rgba(255,255,255,.15)
-}
-
-.upload input,
-.upload textarea{
-width:100%;
-padding:13px;
-margin:7px 0;
-border-radius:11px;
-border:1px solid #333;
-background:#08050e;
-color:#fff;
-outline:none
-}
-
-.upload textarea{
-min-height:100px;
-resize:vertical
-}
-
-.upload button{
-padding:13px 20px;
-border:0;
-border-radius:12px;
-background:linear-gradient(90deg,#ff1744,#7c00ff);
-color:#fff;
-font-weight:bold;
-cursor:pointer
-}
-
-.contact-box{
-max-width:700px;
-margin:auto;
-text-align:center;
-padding:40px 20px;
-border-radius:25px;
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.15)
-}
-
-footer{
-text-align:center;
-padding:35px 20px;
-color:#777;
-border-top:1px solid #222
-}
-
-/* IMAGE MODAL */
-
+.info div{padding:22px;border-radius:16px;background:#ffffff07;border:1px solid #ffffff12}
+.info span{color:#8997aa;font-size:14px}
+footer{text-align:center;padding:35px;border-top:1px solid #ffffff12;color:#7d8999}
 .modal{
-position:fixed;
-inset:0;
-z-index:5000;
-display:none;
-align-items:center;
-justify-content:center;
-padding:20px;
-background:rgba(0,0,0,.96)
+position:fixed;inset:0;background:#000d;z-index:100;
+display:none;align-items:center;justify-content:center;padding:18px;
+backdrop-filter:blur(8px);
 }
-
-.modal.show{
-display:flex
+.modal.show{display:flex}
+.box{
+width:min(1000px,100%);max-height:94vh;overflow:auto;
+background:#090e16;border:1px solid #ffffff18;
+border-radius:22px;padding:20px;position:relative;
 }
-
-.modal-box{
-width:100%;
-max-width:1000px;
-max-height:94vh;
-overflow:auto;
-text-align:center
-}
-
-.modal-image{
-max-width:100%;
-max-height:72vh;
-object-fit:contain;
-border-radius:15px
-}
-
 .close{
-position:fixed;
-top:15px;
-right:18px;
-z-index:6000;
-width:50px;
-height:50px;
-border-radius:50%;
-border:0;
-background:#fff;
-color:#000;
-font-size:30px;
-font-weight:bold;
-cursor:pointer
+position:absolute;right:15px;top:15px;
+width:42px;height:42px;border-radius:50%;
+background:#ffffff18;border:1px solid #ffffff22;font-size:22px;
 }
-
-.modal-box h2{
-margin-top:15px
+.bigimg{
+width:100%;max-height:60vh;object-fit:contain;
+border-radius:15px;background:#020307;
 }
-
-.modal-box p{
-color:#aaa
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+.prompt{
+padding:15px;border-radius:12px;background:#050912;
+border:1px solid #ffffff12;white-space:pre-wrap;color:#dbe7f5;
 }
-
-.modal-actions{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-margin-top:15px
-}
-
-/* LOGIN */
-
-.login{
-position:fixed;
-inset:0;
-z-index:7000;
-display:none;
-align-items:center;
-justify-content:center;
-padding:20px;
-background:rgba(0,0,0,.9)
-}
-
-.login.show{
-display:flex
-}
-
-.login-box{
-width:100%;
-max-width:400px;
-padding:28px;
-border-radius:22px;
-background:#110c19;
-border:1px solid #44304d;
-box-shadow:0 0 50px rgba(255,0,120,.2)
-}
-
-.login-box h2{
-margin-bottom:20px
-}
-
-.login-box input{
-width:100%;
-padding:14px;
-margin-bottom:12px;
-border-radius:10px;
-border:1px solid #333;
-background:#08050e;
-color:#fff
-}
-
-.login-btn{
-width:100%;
-padding:13px;
-border:0;
-border-radius:12px;
-background:linear-gradient(90deg,#ff1744,#7c00ff);
-color:#fff;
-font-weight:bold;
-cursor:pointer
-}
-
-.close-login{
-float:right;
-background:none;
-border:0;
-color:#fff;
-font-size:26px;
-cursor:pointer
-}
-
-@media(max-width:700px){
-
-nav a{
-display:none
-}
-
-.hero{
-min-height:70vh
-}
-
-.hero p{
-font-size:17px
-}
-
-section{
-padding:60px 5%
-}
-
-.gallery{
-grid-template-columns:1fr
-}
-
-.image-card img{
-height:330px
-}
-
-.title{
-font-size:34px
-}
+.status{color:#00eaff;margin:10px 0;min-height:20px}
+.field{margin:12px 0}
+.field label{display:block;margin-bottom:7px;font-weight:bold}
+.danger{background:#ef4444}
+@media(max-width:650px){
+nav a{font-size:11px}
+.hero{padding-top:55px}
+.profile-wrap{width:120px;height:120px}
+.tools{flex-direction:column}
+.card img{height:250px}
 }
 </style>
 </head>
@@ -508,381 +144,195 @@ font-size:34px
 <body>
 
 <header>
-<div class="nav">
-
-<div class="logo">
-💔 Broken <span>AI</span>
-</div>
+<div class="logo">Broken <span>AI</span></div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
 <a href="#gallery">Gallery</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-
-<button class="admin" id="adminBtn">
-Admin Login
-</button>
+<a href="#upload" id="uploadNav" style="display:none">Upload</a>
+<a href="https://t.me/Brokenboy221716" target="_blank">Telegram</a>
+<a href="https://wa.me/917318399281" target="_blank">Contact</a>
+<button id="adminBtn">Admin Login</button>
 </nav>
-
-</div>
 </header>
 
 
-<!-- HOME -->
+<section class="hero">
+<div class="hero-content">
 
-<section class="hero" id="home">
-
-<div class="hero-inner">
-
-<div class="badge">
-✨ FUTURE AI CREATIONS
+<div class="profile-wrap">
+<img src="./profile.jpg" class="profile" alt="Broken AI Profile">
 </div>
 
-<img
-src="./profile.jpg"
-class="profile"
-alt="Broken AI"
-onerror="this.style.display='none'"
->
+<div class="badge">✦ FUTURE AI CREATIONS</div>
 
-<h1>Broken AI</h1>
+<h1>Broken <span>AI</span></h1>
 
 <p>
-AI Images • Creative Gallery • Digital Creator
+खामोशियों को तस्वीरों में बदलते हैं… 💔<br>
+AI Images • Cinematic Art • Creative Prompts
 </p>
 
-<div class="buttons">
-
-<a
+<a class="btn" href="#gallery">View Gallery</a>
+<a class="btn secondary"
 href="https://t.me/Brokenboy221716"
-target="_blank"
-class="btn"
->
-✈️ Telegram
-</a>
-
-<a
-href="#gallery"
-class="btn blue"
->
-🖼️ View Gallery
+target="_blank">
+Join Telegram
 </a>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ABOUT -->
+<main class="wrap" id="gallery">
 
-<section id="about">
-
-<h2 class="title">
-About Me
-</h2>
-
-<p class="subtitle">
-Welcome to Broken AI ❤️
-</p>
-
-<div class="about">
-
-<p>
-Broken AI एक creative AI image platform है जहाँ
-AI generated images, creative ideas और digital artwork
-एक जगह मिलते हैं।
-</p>
-
-<p>
-नई images और नए creative projects लगातार यहाँ add होते रहेंगे।
-</p>
-
+<div class="title">
+<h2>🖼️ AI Gallery</h2>
+<p>AI images देखें और पूरा prompt copy करें</p>
 </div>
 
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="title">
-What I Create
-</h2>
-
-<p class="subtitle">
-Creative digital content
-</p>
-
-<div class="cards">
-
-<div class="service">
-<h3>🤖 AI Images</h3>
-<p>Realistic और creative AI generated images.</p>
+<div class="tools">
+<input id="search" placeholder="🔎 Image, title या prompt खोजें...">
 </div>
 
-<div class="service">
-<h3>🎨 Photo Editing</h3>
-<p>Creative photo edits और cinematic visuals.</p>
+<div class="tools" id="upload" style="display:none">
+<button id="uploadBtn">+ नई AI Image Upload</button>
+<input type="file" id="file" accept="image/*" hidden>
 </div>
 
-<div class="service">
-<h3>🔥 Viral Concepts</h3>
-<p>Social media के लिए creative visual ideas.</p>
+<div class="grid" id="grid"></div>
+
+<div class="info">
+<div>
+<b>🤖 AI Images</b><br>
+<span>Creative AI artwork</span>
+</div>
+<div>
+<b>🎬 Cinematic Art</b><br>
+<span>Premium cinematic visuals</span>
+</div>
+<div>
+<b>💔 Broken Vibes</b><br>
+<span>Emotions और sad creations</span>
+</div>
 </div>
 
-<div class="service">
-<h3>🚀 Future Projects</h3>
-<p>नई AI और digital projects आगे जुड़ते रहेंगे.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- GALLERY -->
-
-<section id="gallery">
-
-<h2 class="title">
-AI Gallery
-</h2>
-
-<p class="subtitle">
-Explore my latest creations
-</p>
-
-<div class="search">
-
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Image search करें..."
->
-
-</div>
-
-
-<!-- ADMIN UPLOAD -->
-
-<div class="upload" id="uploadSection">
-
-<h2>
-📤 Upload New Image
-</h2>
-
-<input
-type="file"
-id="imageFile"
-accept="image/*"
->
-
-<input
-type="text"
-id="imageTitle"
-placeholder="Image Title"
->
-
-<textarea
-id="imageCaption"
-placeholder="Image Caption"
-></textarea>
-
-<textarea
-id="imagePrompt"
-placeholder="AI Prompt"
-></textarea>
-
-<button id="uploadBtn">
-🚀 Upload Image
-</button>
-
-</div>
-
-
-<div
-class="gallery"
-id="galleryBox"
->
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2 class="title">
-Contact
-</h2>
-
-<p class="subtitle">
-Let's connect
-</p>
-
-<div class="contact-box">
-
-<h2>
-💜 Broken AI
-</h2>
-
-<p style="color:#999;margin-top:10px">
-Updates, creative work और collaborations के लिए connect करें।
-</p>
-
-<div class="buttons">
-
-<a
-href="https://t.me/Brokenboy221716"
-target="_blank"
-class="btn"
->
-✈️ Telegram
-</a>
-
-<a
-href="https://wa.me/917318399281"
-target="_blank"
-class="btn blue"
->
-📞 Contact
-</a>
-
-</div>
-
-</div>
-
-</section>
+</main>
 
 
 <footer>
-© 2026 Broken AI • Made with ❤️ & AI
+<b>Broken AI</b><br>
+AI Images • Cinematic Art • Prompts<br><br>
+© 2026 Broken AI
 </footer>
+
+
+<!-- LOGIN -->
+
+<div class="modal" id="loginModal">
+<div class="box" style="max-width:550px">
+
+<button class="close" id="closeLogin">×</button>
+
+<h2>🔐 Admin Login</h2>
+
+<div class="field">
+<label>Admin Email</label>
+<input id="adminEmail" type="email"
+value="himanshu731839@gmail.com">
+</div>
+
+<div class="field">
+<label>Password</label>
+<input id="adminPassword" type="password"
+placeholder="अपना Firebase password डालें">
+</div>
+
+<div class="status" id="loginStatus"></div>
+
+<button id="doLogin">Login</button>
+
+</div>
+</div>
+
+
+<!-- UPLOAD -->
+
+<div class="modal" id="formModal">
+<div class="box" style="max-width:600px">
+
+<button class="close" id="closeForm">×</button>
+
+<h2>✨ Upload AI Image</h2>
+
+<div class="field">
+<label>Title</label>
+<input id="title" placeholder="Image title">
+</div>
+
+<div class="field">
+<label>Caption</label>
+<textarea id="caption" placeholder="Image caption"></textarea>
+</div>
+
+<div class="field">
+<label>AI Prompt</label>
+<textarea id="prompt" placeholder="पूरा AI prompt"></textarea>
+</div>
+
+<div class="status" id="uploadStatus"></div>
+
+<button id="saveBtn">☁️ Upload & Save</button>
+
+</div>
+</div>
 
 
 <!-- IMAGE VIEW -->
 
-<div
-class="modal"
-id="imageModal"
->
+<div class="modal" id="viewModal">
 
-<button
-class="close"
-id="closeImage"
-type="button"
->
-×
-</button>
+<button class="close" id="closeView">×</button>
 
-<div class="modal-box">
+<div class="box">
 
-<img
-id="modalImage"
-class="modal-image"
-src=""
-alt="AI Image"
->
+<img id="viewImg" class="bigimg">
 
-<h2 id="modalTitle"></h2>
+<h2 id="viewTitle"></h2>
 
-<p id="modalCaption"></p>
+<p id="viewCaption"></p>
 
-<div class="modal-actions">
+<div class="prompt" id="viewPrompt"></div>
 
-<button
-class="small"
-id="copyPrompt"
->
-📋 Copy Prompt
-</button>
+<div class="actions">
 
-<button
-class="small"
-id="likeBtn"
->
-❤️ Like <span id="likeCount">0</span>
-</button>
+<button id="copyBtn">📋 Copy Prompt</button>
 
-<button
-class="small"
-id="downloadBtn"
->
-📥 Download
-</button>
+<button id="likeBtn" class="secondary">❤️ Like</button>
 
-<button
-class="small delete"
-id="deleteBtn"
->
+<a id="downloadBtn"
+class="btn secondary"
+download>
+⬇️ Download
+</a>
+
+<button id="deleteBtn"
+class="danger"
+style="display:none">
 🗑️ Delete
 </button>
 
 </div>
 
 </div>
-
-</div>
-
-
-<!-- LOGIN -->
-
-<div
-class="login"
-id="loginModal"
->
-
-<div class="login-box">
-
-<button
-class="close-login"
-id="closeLogin"
->
-×
-</button>
-
-<h2>
-🔐 Admin Login
-</h2>
-
-<input
-type="email"
-id="loginEmail"
-placeholder="Admin Email"
->
-
-<input
-type="password"
-id="loginPassword"
-placeholder="Password"
->
-
-<button
-class="login-btn"
-id="loginButton"
->
-Login
-</button>
-
-</div>
-
 </div>
 
 
 <script type="module">
 
-import{
-initializeApp
-}from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {initializeApp}
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 
-import{
+import {
 getFirestore,
 collection,
 addDoc,
@@ -891,108 +341,72 @@ deleteDoc,
 doc,
 updateDoc,
 increment,
-orderBy,
+serverTimestamp,
 query,
-serverTimestamp
-}from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+orderBy
+}
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-import{
+import {
 getAuth,
 signInWithEmailAndPassword,
 onAuthStateChanged,
 signOut
-}from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+}
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
-
-/* FIREBASE */
 
 const firebaseConfig={
-
-apiKey:
-"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
-
-authDomain:
-"broken-boy-f5087.firebaseapp.com",
-
-projectId:
-"broken-boy-f5087",
-
-storageBucket:
-"broken-boy-f5087.firebasestorage.app",
-
-messagingSenderId:
-"1086620986469",
-
-appId:
-"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
-
-measurementId:
-"G-F2E1B5LWEN"
-
+apiKey:"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+authDomain:"broken-boy-f5087.firebaseapp.com",
+projectId:"broken-boy-f5087",
+storageBucket:"broken-boy-f5087.firebasestorage.app",
+messagingSenderId:"1086620986469",
+appId:"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
+measurementId:"G-F2E1B5LWEN"
 };
 
-const app=initializeApp(firebaseConfig);
 
-const db=getFirestore(app);
+/* सही Admin Email */
 
-const auth=getAuth(app);
+const ADMIN_EMAIL="himanshu731839@gmail.com";
 
 
-/* CLOUDINARY */
+/* Cloudinary */
 
 const CLOUD_NAME="g33rvuls";
-
 const UPLOAD_PRESET="brokenai";
 
 
-/* ADMIN */
+const app=initializeApp(firebaseConfig);
+const db=getFirestore(app);
+const auth=getAuth(app);
 
-const ADMIN_EMAIL=
-"himanshukanaujiya03@gmail.com";
+const grid=document.getElementById("grid");
+const search=document.getElementById("search");
+const file=document.getElementById("file");
 
-
-let isAdmin=false;
+const loginModal=document.getElementById("loginModal");
+const formModal=document.getElementById("formModal");
+const viewModal=document.getElementById("viewModal");
 
 let images=[];
-
-let selectedImage=null;
-
-
-/* ELEMENTS */
-
-const galleryBox=
-document.getElementById("galleryBox");
-
-const searchInput=
-document.getElementById("searchInput");
-
-const imageModal=
-document.getElementById("imageModal");
-
-const modalImage=
-document.getElementById("modalImage");
-
-const modalTitle=
-document.getElementById("modalTitle");
-
-const modalCaption=
-document.getElementById("modalCaption");
-
-const likeCount=
-document.getElementById("likeCount");
-
-const loginModal=
-document.getElementById("loginModal");
+let selected=null;
+let isAdmin=false;
 
 
-/* LOAD */
+function esc(v){
+return String(v||"").replace(/[&<>"']/g,m=>({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#039;"
+}[m]));
+}
+
 
 async function loadImages(){
-
-galleryBox.innerHTML=
-"<p style='color:#888'>Loading...</p>";
 
 try{
 
@@ -1008,367 +422,134 @@ id:d.id,
 ...d.data()
 }));
 
-renderImages();
+render();
 
-}catch(error){
+}catch(e){
 
-console.error(error);
+console.error(e);
 
-galleryBox.innerHTML=
-"<p style='color:#888'>Gallery load नहीं हुई।</p>";
+grid.innerHTML=`
+<div class="empty">
+Gallery अभी load नहीं हुई।
+</div>`;
 
 }
 
 }
 
 
-/* RENDER */
+function render(){
 
-function renderImages(){
+const text=search.value.toLowerCase().trim();
 
-const search=
-searchInput.value
+const list=images.filter(x=>
+`${x.title||""} ${x.caption||""} ${x.prompt||""}`
 .toLowerCase()
-.trim();
-
-const filtered=images.filter(x=>
-(x.title||"")
-.toLowerCase()
-.includes(search)
-||
-(x.caption||"")
-.toLowerCase()
-.includes(search)
-||
-(x.prompt||"")
-.toLowerCase()
-.includes(search)
+.includes(text)
 );
 
-galleryBox.innerHTML="";
+grid.innerHTML="";
 
-if(filtered.length===0){
+if(!list.length){
 
-galleryBox.innerHTML=
-"<p style='color:#777'>कोई image नहीं मिली।</p>";
+grid.innerHTML=`
+<div class="empty">
+अभी कोई image नहीं मिली 🖼️
+</div>`;
 
 return;
 }
 
-filtered.forEach(x=>{
 
-const card=
-document.createElement("div");
+list.forEach(x=>{
 
-card.className="image-card";
+const card=document.createElement("div");
+
+card.className="card";
 
 card.innerHTML=`
+<img src="${esc(x.url)}"
+alt="${esc(x.title)}">
 
-<img
-src="${x.url}"
-alt="${x.title||"AI Image"}"
->
+<div class="card-info">
 
-<div class="info">
+<h3>${esc(x.title||"Broken AI Image")}</h3>
 
-<h3>
-${x.title||"Untitled"}
-</h3>
+<p>${esc(x.caption||"AI Creation 🖤")}</p>
 
-<p>
-${x.caption||""}
-</p>
-
-<div class="actions">
-
-<button class="small view">
-👁️ View
-</button>
-
-<button class="small like">
-❤️ ${x.likes||0}
-</button>
-
+<div class="meta">
+❤️ ${Number(x.likes||0)}
 </div>
 
 </div>
 `;
 
-card.querySelector("img")
-.addEventListener(
-"click",
-()=>openImage(x)
-);
+card.onclick=()=>openView(x);
 
-card.querySelector(".view")
-.addEventListener(
-"click",
-()=>openImage(x)
-);
-
-card.querySelector(".like")
-.addEventListener(
-"click",
-async()=>{
-
-try{
-
-await updateDoc(
-doc(db,"images",x.id),
-{
-likes:increment(1)
-}
-);
-
-x.likes=(x.likes||0)+1;
-
-renderImages();
-
-}catch{
-
-alert("Like नहीं हो पाया।");
-
-}
-
-});
-
-galleryBox.appendChild(card);
+grid.appendChild(card);
 
 });
 
 }
 
 
-/* OPEN IMAGE */
+function openView(x){
 
-function openImage(x){
+selected=x;
 
-selectedImage=x;
+document.getElementById("viewImg").src=x.url;
 
-modalImage.src=x.url;
+document.getElementById("viewTitle").textContent=
+x.title||"Broken AI Image";
 
-modalTitle.textContent=
-x.title||"Untitled";
-
-modalCaption.textContent=
+document.getElementById("viewCaption").textContent=
 x.caption||"";
 
-likeCount.textContent=
-x.likes||0;
+document.getElementById("viewPrompt").textContent=
+x.prompt||"Prompt available नहीं है।";
 
-document.getElementById(
-"deleteBtn"
-).style.display=
-isAdmin
-?"inline-block"
-:"none";
+document.getElementById("likeBtn").textContent=
+`❤️ ${Number(x.likes||0)}`;
 
-imageModal.classList.add("show");
+document.getElementById("downloadBtn").href=x.url;
+
+document.getElementById("deleteBtn").style.display=
+isAdmin?"inline-block":"none";
+
+viewModal.classList.add("show");
 
 document.body.style.overflow="hidden";
 
 }
 
 
-/* CLOSE IMAGE */
+function closeView(){
 
-function closeImage(){
-
-imageModal.classList.remove("show");
-
-modalImage.src="";
-
-modalTitle.textContent="";
-
-modalCaption.textContent="";
-
-selectedImage=null;
-
+viewModal.classList.remove("show");
 document.body.style.overflow="";
 
 }
 
 
-/* X */
+document.getElementById("closeView")
+.onclick=closeView;
 
-document.getElementById(
-"closeImage"
-).onclick=e=>{
 
-e.preventDefault();
+viewModal.onclick=e=>{
 
-e.stopPropagation();
-
-closeImage();
+if(e.target===viewModal)
+closeView();
 
 };
 
 
-/* BACKGROUND */
-
-imageModal.onclick=e=>{
-
-if(e.target===imageModal){
-
-closeImage();
-
-}
-
-};
-
-
-/* ESC */
-
-document.addEventListener(
-"keydown",
-e=>{
-
-if(e.key==="Escape"){
-
-if(imageModal.classList.contains("show"))
-closeImage();
-
-if(loginModal.classList.contains("show"))
-closeLogin();
-
-}
-
-}
-);
-
-
-/* SEARCH */
-
-searchInput.oninput=
-renderImages;
-
-
-/* COPY */
-
-document.getElementById(
-"copyPrompt"
-).onclick=async()=>{
-
-if(!selectedImage)return;
-
-try{
-
-await navigator.clipboard.writeText(
-selectedImage.prompt||""
-);
-
-alert("Prompt copy हो गया ✅");
-
-}catch{
-
-alert("Copy नहीं हो पाया।");
-
-}
-
-};
-
-
-/* LIKE */
-
-document.getElementById(
-"likeBtn"
-).onclick=async()=>{
-
-if(!selectedImage)return;
-
-try{
-
-await updateDoc(
-doc(db,"images",selectedImage.id),
-{
-likes:increment(1)
-}
-);
-
-selectedImage.likes=
-(selectedImage.likes||0)+1;
-
-likeCount.textContent=
-selectedImage.likes;
-
-}catch{
-
-alert("Like नहीं हो पाया।");
-
-}
-
-};
-
-
-/* DOWNLOAD */
-
-document.getElementById(
-"downloadBtn"
-).onclick=()=>{
-
-if(!selectedImage)return;
-
-const a=
-document.createElement("a");
-
-a.href=selectedImage.url;
-
-a.target="_blank";
-
-a.download=
-(selectedImage.title||"broken-ai")+
-".jpg";
-
-document.body.appendChild(a);
-
-a.click();
-
-a.remove();
-
-};
-
-
-/* DELETE */
-
-document.getElementById(
-"deleteBtn"
-).onclick=async()=>{
-
-if(!isAdmin||!selectedImage)return;
-
-if(!confirm(
-"क्या यह image delete करनी है?"
-))return;
-
-try{
-
-await deleteDoc(
-doc(db,"images",selectedImage.id)
-);
-
-closeImage();
-
-await loadImages();
-
-alert("Image delete हो गई ✅");
-
-}catch(error){
-
-alert(
-"Delete failed: "+
-error.message
-);
-
-}
-
-};
+search.oninput=render;
 
 
 /* ADMIN LOGIN */
 
-document.getElementById(
-"adminBtn"
-).onclick=()=>{
+document.getElementById("adminBtn")
+.onclick=()=>{
 
 if(isAdmin){
 
@@ -1378,72 +559,53 @@ signOut(auth);
 
 loginModal.classList.add("show");
 
-document.body.style.overflow="hidden";
-
 }
 
 };
 
 
-/* CLOSE LOGIN */
-
-function closeLogin(){
+document.getElementById("closeLogin")
+.onclick=()=>{
 
 loginModal.classList.remove("show");
 
-document.body.style.overflow="";
-
-}
-
-document.getElementById(
-"closeLogin"
-).onclick=closeLogin;
+};
 
 
-/* LOGIN */
-
-document.getElementById(
-"loginButton"
-).onclick=async()=>{
+document.getElementById("doLogin")
+.onclick=async()=>{
 
 const email=
-document.getElementById(
-"loginEmail"
-).value.trim();
+document.getElementById("adminEmail").value.trim();
 
 const password=
-document.getElementById(
-"loginPassword"
-).value;
+document.getElementById("adminPassword").value;
+
 
 if(email!==ADMIN_EMAIL){
 
-alert(
-"यह Admin Email नहीं है।"
-);
+document.getElementById("loginStatus").textContent=
+"❌ यह Admin email नहीं है।";
 
 return;
 
 }
 
+
 try{
 
 await signInWithEmailAndPassword(
-auth,
-email,
-password
+auth,email,password
 );
 
-closeLogin();
+loginModal.classList.remove("show");
 
-alert("Admin Login सफल ✅");
+document.getElementById("loginStatus").textContent="";
 
-}catch(error){
+}catch(e){
 
-alert(
-"Login failed: "+
-error.message
-);
+document.getElementById("loginStatus").textContent=
+"❌ Login failed: "+e.message;
 
 }
 
@@ -1452,192 +614,239 @@ error.message
 
 /* AUTH */
 
-onAuthStateChanged(
-auth,
-user=>{
+onAuthStateChanged(auth,user=>{
 
-isAdmin=
-!!user&&
-user.email===ADMIN_EMAIL;
+isAdmin=!!user && user.email===ADMIN_EMAIL;
 
-document.getElementById(
-"uploadSection"
-).style.display=
-isAdmin
-?"block"
-:"none";
+document.getElementById("adminBtn").textContent=
+isAdmin?"Logout Admin":"Admin Login";
 
-document.getElementById(
-"adminBtn"
-).textContent=
-isAdmin
-?"Logout"
-:"Admin Login";
+document.getElementById("upload").style.display=
+isAdmin?"flex":"none";
 
-if(imageModal.classList.contains("show")){
+document.getElementById("uploadNav").style.display=
+isAdmin?"inline":"none";
 
-document.getElementById(
-"deleteBtn"
-).style.display=
-isAdmin
-?"inline-block"
-:"none";
+render();
 
-}
-
-}
-);
+});
 
 
 /* UPLOAD */
 
-document.getElementById(
-"uploadBtn"
-).onclick=async()=>{
+document.getElementById("uploadBtn")
+.onclick=()=>file.click();
 
-if(!isAdmin){
 
-alert("पहले Admin Login करें।");
+file.onchange=()=>{
 
-return;
+if(!file.files[0])return;
 
-}
+document.getElementById("title").value=
+file.files[0].name.replace(/\.[^/.]+$/,"");
 
-const file=
-document.getElementById(
-"imageFile"
-).files[0];
-
-const title=
-document.getElementById(
-"imageTitle"
-).value.trim();
-
-const caption=
-document.getElementById(
-"imageCaption"
-).value.trim();
-
-const prompt=
-document.getElementById(
-"imagePrompt"
-).value.trim();
-
-if(!file){
-
-alert("पहले image चुनें।");
-
-return;
-
-}
-
-const button=
-document.getElementById(
-"uploadBtn"
-);
-
-button.disabled=true;
-
-button.textContent=
-"Uploading...";
-
-try{
-
-const formData=
-new FormData();
-
-formData.append(
-"file",
-file
-);
-
-formData.append(
-"upload_preset",
-UPLOAD_PRESET
-);
-
-const response=
-await fetch(
-`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-{
-method:"POST",
-body:formData
-}
-);
-
-const data=
-await response.json();
-
-if(!data.secure_url){
-
-throw new Error(
-"Cloudinary upload failed"
-);
-
-}
-
-await addDoc(
-collection(db,"images"),
-{
-
-url:data.secure_url,
-
-title:title||"Untitled",
-
-caption:caption,
-
-prompt:prompt,
-
-likes:0,
-
-createdAt:
-serverTimestamp()
-
-}
-);
-
-document.getElementById(
-"imageFile"
-).value="";
-
-document.getElementById(
-"imageTitle"
-).value="";
-
-document.getElementById(
-"imageCaption"
-).value="";
-
-document.getElementById(
-"imagePrompt"
-).value="";
-
-alert(
-"Image upload हो गई ✅"
-);
-
-await loadImages();
-
-}catch(error){
-
-console.error(error);
-
-alert(
-"Upload failed: "+
-error.message
-);
-
-}
-
-button.disabled=false;
-
-button.textContent=
-"🚀 Upload Image";
+formModal.classList.add("show");
 
 };
 
 
-/* START */
+document.getElementById("closeForm")
+.onclick=()=>{
+
+formModal.classList.remove("show");
+
+};
+
+
+document.getElementById("saveBtn")
+.onclick=async()=>{
+
+if(!isAdmin){
+
+alert("सिर्फ Admin upload कर सकता है।");
+return;
+
+}
+
+const selectedFile=file.files[0];
+
+if(!selectedFile)return;
+
+const status=document.getElementById("uploadStatus");
+
+const btn=document.getElementById("saveBtn");
+
+btn.disabled=true;
+
+status.textContent="☁️ Upload हो रही है...";
+
+try{
+
+const fd=new FormData();
+
+fd.append("file",selectedFile);
+fd.append("upload_preset",UPLOAD_PRESET);
+
+const response=await fetch(
+`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+{
+method:"POST",
+body:fd
+}
+);
+
+const data=await response.json();
+
+if(!data.secure_url)
+throw new Error("Cloudinary upload failed");
+
+
+await addDoc(collection(db,"images"),{
+
+url:data.secure_url,
+
+title:document.getElementById("title")
+.value.trim()||"Broken AI Image",
+
+caption:document.getElementById("caption")
+.value.trim()||"AI Creation 🖤",
+
+prompt:document.getElementById("prompt")
+.value.trim(),
+
+likes:0,
+
+createdAt:serverTimestamp()
+
+});
+
+
+status.textContent="✅ Upload हो गई!";
+
+await loadImages();
+
+setTimeout(()=>{
+formModal.classList.remove("show");
+file.value="";
+},700);
+
+}catch(e){
+
+status.textContent="❌ "+e.message;
+
+}finally{
+
+btn.disabled=false;
+
+}
+
+};
+
+
+/* LIKE */
+
+document.getElementById("likeBtn")
+.onclick=async()=>{
+
+if(!selected)return;
+
+try{
+
+await updateDoc(
+doc(db,"images",selected.id),
+{likes:increment(1)}
+);
+
+selected.likes=
+Number(selected.likes||0)+1;
+
+document.getElementById("likeBtn").textContent=
+`❤️ ${selected.likes}`;
+
+render();
+
+}catch(e){
+
+alert("Like update नहीं हुआ।");
+
+}
+
+};
+
+
+/* COPY */
+
+document.getElementById("copyBtn")
+.onclick=async()=>{
+
+if(!selected)return;
+
+try{
+
+await navigator.clipboard.writeText(
+selected.prompt||""
+);
+
+alert("✅ Prompt copy हो गया!");
+
+}catch{
+
+alert("Prompt copy नहीं हुआ।");
+
+}
+
+};
+
+
+/* DELETE */
+
+document.getElementById("deleteBtn")
+.onclick=async()=>{
+
+if(!isAdmin||!selected)return;
+
+if(!confirm("क्या यह image delete करनी है?"))
+return;
+
+try{
+
+await deleteDoc(
+doc(db,"images",selected.id)
+);
+
+images=images.filter(
+x=>x.id!==selected.id
+);
+
+closeView();
+
+render();
+
+}catch(e){
+
+alert("❌ Delete नहीं हुआ। Firebase Rules check करें।");
+
+}
+
+};
+
+
+/* ESC */
+
+document.addEventListener("keydown",e=>{
+
+if(e.key==="Escape"){
+
+closeView();
+
+loginModal.classList.remove("show");
+
+formModal.classList.remove("show");
+
+}
+
+});
+
 
 loadImages();
 
