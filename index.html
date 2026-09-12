@@ -1,1655 +1,1362 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Broken AI | AI Images</title>
-
-<meta name="description" content="Broken AI - Premium AI image gallery with prompts, likes, downloads and uploads.">
-<meta name="theme-color" content="#050505">
-
-<link rel="canonical"
-href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
-
-<meta name="google-site-verification"
-content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
+<meta name="description" content="Broken AI — AI Images, Sad Shayari and Cinematic Art">
+<link rel="canonical" href="https://himanshukanauji03-stack.github.io/Broken--boy-website/">
 
 <style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#05070b;color:#f7f9fc;font-family:Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,#159cff16,transparent 30%),radial-gradient(circle at 85% 30%,#7c3aed14,transparent 28%);z-index:-1}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+header{position:sticky;top:0;z-index:20;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;background:#070a10dd;border-bottom:1px solid #ffffff12;backdrop-filter:blur(16px)}
+
+.logo{font-size:28px;font-weight:900;letter-spacing:-1px}
+.logo span{color:#159cff}
+
+nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+nav a,nav button{
+color:#cbd5e1;
+text-decoration:none;
+font-weight:800;
+font-size:13px;
+background:#ffffff08;
+border:1px solid #ffffff12;
+padding:9px 12px;
+border-radius:10px;
+cursor:pointer
 }
 
-html{
-    scroll-behavior:smooth;
+nav a:hover,nav button:hover{
+border-color:#159cff66;
+color:#fff
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:
-    radial-gradient(circle at top,#181818 0%,#070707 45%,#000 100%);
-    color:#fff;
-    min-height:100vh;
-}
-
-button,
-input,
-textarea{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
-}
-
-.container{
-    width:min(1200px,92%);
-    margin:auto;
-}
-
-/* HEADER */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav{
-    min-height:72px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:900;
-    letter-spacing:-1px;
-}
-
-.logo span{
-    color:#888;
-}
-
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-.telegram,
-.contact{
-    color:#fff;
-    text-decoration:none;
-    padding:10px 14px;
-    border-radius:999px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.13);
-    transition:.25s;
-    font-size:13px;
-}
-
-.telegram:hover,
-.contact:hover{
-    background:#fff;
-    color:#000;
-}
-
-/* HERO */
+.contact{border-color:#25d36655!important}
+.telegram{border-color:#159cff55!important}
+#adminBtn{display:none}
 
 .hero{
-    text-align:center;
-    padding:90px 0 65px;
+padding:85px 6% 70px;
+min-height:470px;
+display:flex;
+align-items:center;
+background:linear-gradient(90deg,#05070bea,#05070bb5),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85') center/cover
 }
 
+.hero-inner{max-width:850px}
+
 .badge{
-    display:inline-block;
-    padding:8px 14px;
-    border-radius:999px;
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.05);
-    color:#aaa;
-    font-size:12px;
-    margin-bottom:20px;
+display:inline-block;
+padding:8px 13px;
+border:1px solid #159cff55;
+background:#159cff12;
+color:#8fd2ff;
+border-radius:999px;
+font-size:13px;
+font-weight:800;
+margin-bottom:18px
 }
 
 .hero h1{
-    font-size:clamp(48px,9vw,90px);
-    line-height:.95;
-    letter-spacing:-5px;
-    margin-bottom:22px;
+font-size:clamp(52px,10vw,100px);
+line-height:.95;
+margin:0;
+letter-spacing:-5px
 }
 
-.hero h1 span{
-    color:#777;
-}
+.hero h1 span{color:#159cff}
 
 .hero p{
-    max-width:680px;
-    margin:auto;
-    color:#999;
-    line-height:1.7;
-    font-size:16px;
-}
-
-/* CONTROLS */
-
-.controls{
-    display:flex;
-    gap:14px;
-    align-items:center;
-    margin-bottom:30px;
-}
-
-.search{
-    flex:1;
-}
-
-.search input{
-    width:100%;
-    padding:15px 18px;
-    border-radius:14px;
-    outline:none;
-    border:1px solid rgba(255,255,255,.12);
-    background:#0d0d0d;
-    color:#fff;
-}
-
-.search input::placeholder{
-    color:#666;
+font-size:20px;
+color:#cbd5e1;
+line-height:1.6;
+max-width:650px
 }
 
 .btn{
-    border:0;
-    border-radius:14px;
-    padding:14px 20px;
-    background:#fff;
-    color:#000;
-    font-weight:800;
-    transition:.25s;
+display:inline-block;
+background:#159cff;
+color:#fff;
+padding:14px 20px;
+border-radius:12px;
+text-decoration:none;
+border:0;
+cursor:pointer;
+font-weight:800;
+box-shadow:0 10px 30px #159cff25;
+transition:.2s
 }
 
-.btn:hover{
-    transform:translateY(-2px);
+.btn:hover{transform:translateY(-2px)}
+
+.btn.secondary{
+background:#ffffff0d;
+border:1px solid #ffffff18;
+margin-left:8px
 }
 
-.btn:disabled{
-    opacity:.5;
-    cursor:not-allowed;
+.wrap{
+padding:35px 6%;
+max-width:1400px;
+margin:auto
 }
 
-.btn.dark{
-    background:#111;
-    color:#fff;
-    border:1px solid rgba(255,255,255,.12);
+.section-title{
+display:flex;
+align-items:end;
+justify-content:space-between;
+gap:15px;
+margin-bottom:22px
 }
 
-/* GALLERY */
+.section-title h2{margin:0;font-size:30px}
+.section-title p{margin:5px 0 0;color:#8292a6}
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    padding-bottom:80px;
+.tools{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:25px
+}
+
+.tools input{
+flex:1;
+min-width:220px;
+background:#0b111a;
+border:1px solid #243247;
+color:#fff;
+padding:15px;
+border-radius:12px;
+outline:none
+}
+
+.tools input:focus{border-color:#159cff}
+
+.status{
+margin:0 0 18px;
+color:#8fa0b4;
+font-size:14px
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:18px
 }
 
 .card{
-    overflow:hidden;
-    border-radius:22px;
-    background:linear-gradient(145deg,#121212,#080808);
-    border:1px solid rgba(255,255,255,.08);
-    box-shadow:0 20px 60px rgba(0,0,0,.3);
-    transition:.3s;
+background:#0b1018;
+border:1px solid #ffffff10;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 45px #0006;
+transition:.25s
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(255,255,255,.18);
+transform:translateY(-5px);
+border-color:#159cff55
 }
 
-.card-image{
-    position:relative;
-    aspect-ratio:1/1;
-    overflow:hidden;
-    background:#111;
-    cursor:pointer;
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+display:block;
+background:#0e1622;
+cursor:pointer
 }
 
-.card-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:.4s;
-}
-
-.card:hover .card-image img{
-    transform:scale(1.04);
-}
-
-.view-label{
-    position:absolute;
-    right:12px;
-    bottom:12px;
-    padding:7px 11px;
-    border-radius:999px;
-    background:rgba(0,0,0,.72);
-    backdrop-filter:blur(10px);
-    font-size:11px;
-}
-
-.card-body{
-    padding:17px;
-}
-
-.card-title{
-    font-size:18px;
-    font-weight:800;
-    margin-bottom:8px;
-}
-
-.card-caption{
-    color:#999;
-    font-size:14px;
-    line-height:1.5;
-    margin-bottom:12px;
-}
-
-.prompt-box{
-    padding:11px;
-    border-radius:12px;
-    background:#070707;
-    border:1px solid rgba(255,255,255,.07);
-    color:#aaa;
-    font-size:12px;
-    line-height:1.5;
-    word-break:break-word;
-}
+.card .text{padding:16px}
+.card h3{margin:0 0 7px;font-size:17px}
+.card p{color:#9eacbc;margin:0 0 12px}
 
 .actions{
-    display:flex;
-    gap:7px;
-    flex-wrap:wrap;
-    margin-top:13px;
+display:flex;
+gap:7px;
+flex-wrap:wrap
 }
 
-.action{
-    flex:1;
-    min-width:70px;
-    padding:9px 8px;
-    border-radius:10px;
-    background:#111;
-    color:#fff;
-    border:1px solid rgba(255,255,255,.1);
-    font-size:12px;
+.actions button{
+border:1px solid #ffffff14;
+background:#ffffff08;
+color:#fff;
+border-radius:9px;
+padding:8px 10px;
+cursor:pointer;
+font-weight:700
 }
 
-.action:hover{
-    background:#222;
-}
-
-.action.delete{
-    color:#ff7777;
-}
-
-/* EMPTY */
+.actions button:hover{border-color:#159cff66}
 
 .empty{
-    grid-column:1/-1;
-    text-align:center;
-    padding:70px 20px;
-    border:1px dashed rgba(255,255,255,.12);
-    border-radius:20px;
-    color:#777;
+grid-column:1/-1;
+color:#9fb0c3;
+padding:55px 20px;
+text-align:center;
+border:1px dashed #ffffff18;
+border-radius:18px
 }
 
-.loading{
-    grid-column:1/-1;
-    text-align:center;
-    padding:70px 20px;
-    color:#777;
+.info{
+margin-top:38px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px
 }
 
-/* STATUS */
-
-.status{
-    text-align:center;
-    color:#777;
-    font-size:13px;
-    margin-bottom:20px;
+.info div{
+padding:20px;
+border:1px solid #ffffff10;
+border-radius:16px;
+background:#ffffff05
 }
 
-/* IMAGE MODAL */
+.info b{display:block;margin-bottom:6px}
+.info span{color:#8f9daf;font-size:14px}
+
+footer{
+padding:35px 6%;
+border-top:1px solid #ffffff10;
+color:#8f9daf;
+margin-top:45px;
+text-align:center
+}
+
+footer b{color:#fff}
 
 .modal{
-    position:fixed;
-    inset:0;
-    z-index:1000;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    background:rgba(0,0,0,.92);
-    backdrop-filter:blur(12px);
+position:fixed;
+inset:0;
+background:#000d;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+z-index:50
 }
 
-.modal.active{
-    display:flex;
+.modal.show{display:flex}
+
+.modal-box{
+width:min(680px,100%);
+background:#0b1018;
+border:1px solid #ffffff18;
+border-radius:18px;
+padding:22px;
+box-shadow:0 25px 80px #000
 }
 
-.modal-content{
-    position:relative;
-    width:min(1100px,96vw);
-    max-height:94vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.modal-box h2{margin-top:0}
+
+.modal-box input,.modal-box textarea{
+width:100%;
+margin:7px 0;
+padding:13px;
+background:#070b12;
+border:1px solid #243247;
+color:#fff;
+border-radius:10px;
+outline:none
 }
 
-.modal-content img{
-    max-width:100%;
-    max-height:90vh;
-    object-fit:contain;
-    border-radius:16px;
+.modal-box textarea{
+min-height:100px;
+resize:vertical
+}
+
+.modal-actions{
+display:flex;
+gap:10px;
+justify-content:flex-end;
+margin-top:12px
 }
 
 .close{
-    position:absolute;
-    top:-10px;
-    right:-10px;
-    width:43px;
-    height:43px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.2);
-    background:#111;
-    color:#fff;
-    font-size:23px;
-    z-index:5;
+background:#ffffff0d!important;
+color:#fff;
+border:1px solid #ffffff18;
+padding:10px 14px;
+border-radius:10px
 }
 
-/* UPLOAD MODAL */
-
-.upload-modal{
-    position:fixed;
-    inset:0;
-    z-index:1100;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    background:rgba(0,0,0,.84);
-    backdrop-filter:blur(15px);
+.viewer img{
+max-width:92vw;
+max-height:78vh;
+object-fit:contain;
+border-radius:14px
 }
 
-.upload-modal.active{
-    display:flex;
+.viewer .viewer-tools{
+position:absolute;
+bottom:25px;
+display:flex;
+gap:10px
 }
 
-.upload-box{
-    width:min(520px,95vw);
-    max-height:92vh;
-    overflow:auto;
-    background:#0d0d0d;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:22px;
-    padding:25px;
+.viewer .viewer-tools button{
+padding:11px 14px;
+border-radius:10px;
+border:1px solid #ffffff18;
+background:#0b1018;
+color:#fff;
+cursor:pointer;
+font-weight:800
 }
 
-.upload-box h2{
-    margin-bottom:20px;
+@media(max-width:650px){
+nav{gap:6px}
+nav a,nav button{font-size:11px;padding:8px}
+.hero{padding-top:65px}
+.hero h1{letter-spacing:-3px}
+.btn.secondary{margin-left:0;margin-top:10px}
 }
-
-.field{
-    margin-bottom:15px;
-}
-
-.field label{
-    display:block;
-    color:#aaa;
-    font-size:13px;
-    margin-bottom:7px;
-}
-
-.field input,
-.field textarea{
-    width:100%;
-    padding:13px;
-    border-radius:12px;
-    outline:none;
-    border:1px solid rgba(255,255,255,.12);
-    background:#050505;
-    color:#fff;
-}
-
-.field textarea{
-    min-height:90px;
-    resize:vertical;
-}
-
-.upload-actions{
-    display:flex;
-    gap:10px;
-    margin-top:18px;
-}
-
-.upload-actions button{
-    flex:1;
-}
-
-/* FOOTER */
-
-footer{
-    border-top:1px solid rgba(255,255,255,.08);
-    padding:30px 0;
-    text-align:center;
-    color:#666;
-    font-size:13px;
-}
-
-/* MOBILE */
-
-@media(max-width:850px){
-
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:600px){
-
-    .nav{
-        min-height:62px;
-    }
-
-    .logo{
-        font-size:20px;
-    }
-
-    .nav-right{
-        gap:5px;
-    }
-
-    .telegram,
-    .contact{
-        padding:8px 9px;
-        font-size:11px;
-    }
-
-    .hero{
-        padding:65px 0 45px;
-    }
-
-    .hero h1{
-        font-size:50px;
-        letter-spacing:-3px;
-    }
-
-    .controls{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .gallery{
-        grid-template-columns:1fr;
-    }
-
-    .controls .btn{
-        width:100%;
-    }
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="logo">Broken <span>AI</span></div>
 
-<div class="container nav">
+<nav>
+<a href="#gallery">Gallery</a>
+<a href="#upload">Upload</a>
 
-    <div class="logo">
-        Broken <span>AI</span>
-    </div>
+<a class="telegram"
+href="https://t.me/Brokenboy221716"
+target="_blank"
+rel="noopener">
+Telegram ↗
+</a>
 
-    <div class="nav-right">
+<a class="contact"
+href="https://wa.me/917318399281"
+target="_blank"
+rel="noopener">
+Contact
+</a>
 
-        <!-- TELEGRAM -->
-
-        <a
-            class="telegram"
-            href="https://t.me/Brokenboy221716"
-            target="_blank"
-            rel="noopener">
-            Telegram ↗
-        </a>
-
-        <!-- WHATSAPP -->
-
-        <a
-            class="contact"
-            href="https://wa.me/917318399281"
-            target="_blank"
-            rel="noopener">
-            Contact
-        </a>
-
-    </div>
-
-</div>
-
+<button id="adminBtn">Admin Login</button>
+</nav>
 </header>
 
-
-<main>
-
 <section class="hero">
+<div class="hero-inner">
 
-<div class="container">
-
-    <div class="badge">
-        AI IMAGES • PREMIUM GALLERY
-    </div>
-
-    <h1>
-        Broken <span>AI</span>
-    </h1>
-
-    <p>
-        Discover premium AI images, creative prompts
-        and futuristic artwork. Upload your own creation
-        and share it with everyone.
-    </p>
-
+<div class="badge">
+✦ AI IMAGES • CINEMATIC ART
 </div>
 
+<h1>
+Broken <span>AI</span>
+</h1>
+
+<p>
+खामोशियों को तस्वीरों में बदलते हैं… 💔
+<br>
+अपनी AI images शेयर करो और अपनी gallery बनाओ।
+</p>
+
+<a class="btn" href="#upload">
++ Upload Image
+</a>
+
+<a class="btn secondary"
+href="https://t.me/Brokenboy221716"
+target="_blank"
+rel="noopener">
+Join Telegram
+</a>
+
+</div>
 </section>
 
+<main class="wrap" id="gallery">
 
-<section class="container">
+<div class="section-title">
+<div>
+<h2>🖼️ AI Gallery</h2>
+<p>अपनी पसंद की images खोजें और देखें</p>
+</div>
+</div>
 
-<div class="controls">
+<div class="tools" id="upload">
 
-    <div class="search">
+<input
+id="search"
+placeholder="🔎 Title, Caption या Prompt से image खोजें..."
+>
 
-        <input
-            id="searchInput"
-            type="search"
-            placeholder="Search title, caption or prompt...">
+<button class="btn" id="uploadBtn">
++ नई AI इमेज अपलोड करें
+</button>
 
-    </div>
+<button class="btn secondary" id="loginBtn">
+🔐 Admin Login
+</button>
 
-    <button
-        class="btn"
-        onclick="openUpload()">
-        + Upload Image
-    </button>
+<input
+type="file"
+id="file"
+accept="image/*"
+hidden
+>
 
 </div>
 
-
-<div
-    id="status"
-    class="status">
-    Loading gallery...
+<div class="status" id="status">
+Gallery load हो रही है…
 </div>
 
+<div class="grid" id="grid"></div>
 
-<div
-    id="gallery"
-    class="gallery">
+<div class="info">
 
-    <div class="loading">
-        Loading images...
-    </div>
-
+<div>
+<b>🤖 AI Images</b>
+<span>Cinematic और creative artwork</span>
 </div>
 
-</section>
+<div>
+<b>💔 Sad Shayari</b>
+<span>Broken vibes और emotions</span>
+</div>
+
+<div>
+<b>🎬 Cinematic Art</b>
+<span>Dark और premium visual style</span>
+</div>
+
+</div>
 
 </main>
 
-
 <footer>
-
-© 2026 Broken AI • AI Images
-
+<b>Broken AI</b>
+<br>
+AI Images • Sad Shayari • Cinematic Art
+<br>
+<small>© 2026 Broken AI</small>
 </footer>
 
 
-<!-- FULLSCREEN IMAGE -->
+<!-- UPLOAD MODAL -->
 
-<div
-    id="imageModal"
-    class="modal"
-    onclick="closeImage(event)">
+<div class="modal" id="uploadModal">
 
-    <div class="modal-content">
+<div class="modal-box">
 
-        <button
-            class="close"
-            onclick="closeImage()">
-            ×
-        </button>
+<h2>➕ नई AI Image</h2>
 
-        <img
-            id="modalImage"
-            src=""
-            alt="AI Image">
+<input id="titleInput" placeholder="Title">
 
-    </div>
+<input id="captionInput" placeholder="Caption">
 
-</div>
+<textarea
+id="promptInput"
+placeholder="Prompt">
+</textarea>
 
+<div class="modal-actions">
 
-<!-- UPLOAD -->
+<button class="close" id="cancelUpload">
+Cancel
+</button>
 
-<div
-    id="uploadModal"
-    class="upload-modal">
-
-    <div class="upload-box">
-
-        <h2>
-            Upload AI Image
-        </h2>
-
-
-        <div class="field">
-
-            <label>
-                Image
-            </label>
-
-            <input
-                id="imageFile"
-                type="file"
-                accept="image/*">
-
-        </div>
-
-
-        <div class="field">
-
-            <label>
-                Title
-            </label>
-
-            <input
-                id="imageTitle"
-                type="text"
-                placeholder="Enter image title">
-
-        </div>
-
-
-        <div class="field">
-
-            <label>
-                Caption
-            </label>
-
-            <textarea
-                id="imageCaption"
-                placeholder="Write a short caption..."></textarea>
-
-        </div>
-
-
-        <div class="field">
-
-            <label>
-                Prompt
-            </label>
-
-            <textarea
-                id="imagePrompt"
-                placeholder="Enter the AI prompt..."></textarea>
-
-        </div>
-
-
-        <div class="upload-actions">
-
-            <button
-                class="btn dark"
-                onclick="closeUpload()">
-                Cancel
-            </button>
-
-            <button
-                id="uploadButton"
-                class="btn"
-                onclick="uploadImage()">
-                Upload
-            </button>
-
-        </div>
-
-    </div>
+<button class="btn" id="saveUpload">
+Upload
+</button>
 
 </div>
 
+</div>
+</div>
 
-<!-- FIREBASE -->
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-box">
+
+<h2>🔐 Admin Login</h2>
+
+<input
+id="emailInput"
+type="email"
+placeholder="Admin Email"
+>
+
+<input
+id="passwordInput"
+type="password"
+placeholder="Password"
+>
+
+<div class="modal-actions">
+
+<button class="close" id="cancelLogin">
+Cancel
+</button>
+
+<button class="btn" id="doLogin">
+Login
+</button>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- IMAGE VIEWER -->
+
+<div class="modal viewer" id="viewerModal">
+
+<img id="viewerImage" alt="Broken AI Image">
+
+<div class="viewer-tools">
+
+<button id="copyViewerPrompt">
+📋 Copy Prompt
+</button>
+
+<button id="downloadViewer">
+⬇️ Download
+</button>
+
+<button id="closeViewer">
+✕ Close
+</button>
+
+</div>
+
+</div>
+
 
 <script type="module">
 
-import {
-    initializeApp
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 
 import {
-    getFirestore,
-    collection,
-    addDoc,
-    getDocs,
-    deleteDoc,
-    doc,
-    updateDoc,
-    increment,
-    orderBy,
-    query
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+getFirestore,
+collection,
+addDoc,
+getDocs,
+deleteDoc,
+doc,
+updateDoc,
+increment,
+orderBy,
+query,
+serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
+import {
+getAuth,
+signInWithEmailAndPassword,
+onAuthStateChanged,
+signOut
+}
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
-/* =========================
-   FIREBASE CONFIG
-========================= */
 
 const firebaseConfig = {
 
-    apiKey:
-    "AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+apiKey:
+"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
 
-    authDomain:
-    "broken-boy-f5087.firebaseapp.com",
+authDomain:
+"broken-boy-f5087.firebaseapp.com",
 
-    projectId:
-    "broken-boy-f5087",
+projectId:
+"broken-boy-f5087",
 
-    storageBucket:
-    "broken-boy-f5087.firebasestorage.app",
+storageBucket:
+"broken-boy-f5087.firebasestorage.app",
 
-    messagingSenderId:
-    "1086620986469",
+messagingSenderId:
+"1086620986469",
 
-    appId:
-    "1:1086620986469:web:0c08c7c876e5389ae8aa8c",
+appId:
+"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
 
-    measurementId:
-    "G-F2E1B5LWEN"
+measurementId:
+"G-F2E1B5LWEN"
 
 };
 
 
-const app =
-initializeApp(firebaseConfig);
+const CLOUDINARY_CLOUD_NAME = "g33rvuls";
 
-const db =
-getFirestore(app);
+const CLOUDINARY_UPLOAD_PRESET = "brokenai";
 
-
-/* =========================
-   CLOUDINARY
-========================= */
-
-const CLOUDINARY_CLOUD_NAME =
-"g33rvuls";
-
-const CLOUDINARY_UPLOAD_PRESET =
-"brokenai";
-
-const CLOUDINARY_URL =
-`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`;
+const ADMIN_EMAIL =
+"himanshukanaujiya03@gmail.com";
 
 
-/* =========================
-   VARIABLES
-========================= */
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+const auth = getAuth(app);
+
+
+const grid =
+document.querySelector("#grid");
+
+const search =
+document.querySelector("#search");
+
+const file =
+document.querySelector("#file");
+
+const status =
+document.querySelector("#status");
+
+const uploadModal =
+document.querySelector("#uploadModal");
+
+const loginModal =
+document.querySelector("#loginModal");
+
+const viewerModal =
+document.querySelector("#viewerModal");
+
+const viewerImage =
+document.querySelector("#viewerImage");
+
+const titleInput =
+document.querySelector("#titleInput");
+
+const captionInput =
+document.querySelector("#captionInput");
+
+const promptInput =
+document.querySelector("#promptInput");
+
+const emailInput =
+document.querySelector("#emailInput");
+
+const passwordInput =
+document.querySelector("#passwordInput");
+
+const adminBtn =
+document.querySelector("#adminBtn");
+
+const loginBtn =
+document.querySelector("#loginBtn");
+
 
 let images = [];
 
-const gallery =
-document.getElementById("gallery");
+let selectedFile = null;
 
-const searchInput =
-document.getElementById("searchInput");
+let currentViewer = null;
 
-const status =
-document.getElementById("status");
-
-const uploadModal =
-document.getElementById("uploadModal");
-
-const imageModal =
-document.getElementById("imageModal");
-
-const modalImage =
-document.getElementById("modalImage");
+let isAdmin = false;
 
 
-/* =========================
-   LOAD IMAGES
-========================= */
+function esc(v=""){
+
+return String(v).replace(
+/[&<>"']/g,
+m => ({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#039;"
+}[m])
+);
+
+}
+
+
+function render(){
+
+const q =
+search.value.trim().toLowerCase();
+
+const list =
+images.filter(x =>
+[x.title,x.caption,x.prompt]
+.join(" ")
+.toLowerCase()
+.includes(q)
+);
+
+grid.innerHTML = "";
+
+if(!list.length){
+
+grid.innerHTML =
+'<div class="empty">अभी कोई matching image नहीं है। 🖤</div>';
+
+return;
+
+}
+
+
+list.forEach(x => {
+
+const article =
+document.createElement("article");
+
+article.className = "card";
+
+article.innerHTML = `
+
+<img
+src="${esc(x.url)}"
+alt="${esc(x.title || "Broken AI Image")}"
+>
+
+<div class="text">
+
+<h3>
+${esc(x.title || "Broken AI Image")}
+</h3>
+
+<p>
+${esc(x.caption || "AI Cinematic Art 🖤")}
+</p>
+
+<div class="actions">
+
+<button class="like">
+❤️ ${Number(x.likes||0)}
+</button>
+
+<button class="copy">
+📋 Copy Prompt
+</button>
+
+<button class="download">
+⬇️ Download
+</button>
+
+${isAdmin ?
+'<button class="delete">🗑️ Delete</button>'
+: ''}
+
+</div>
+
+</div>
+`;
+
+
+article.querySelector("img")
+.onclick = () => openViewer(x);
+
+
+article.querySelector(".like")
+.onclick = () => likeImage(x.id);
+
+
+article.querySelector(".copy")
+.onclick = () =>
+copyPrompt(x.prompt || "");
+
+
+article.querySelector(".download")
+.onclick = () =>
+downloadImage(
+x.url,
+x.title || "broken-ai"
+);
+
+
+if(isAdmin){
+
+article.querySelector(".delete")
+.onclick = () =>
+deleteImage(x.id);
+
+}
+
+
+grid.appendChild(article);
+
+});
+
+
+status.textContent =
+`${images.length} image${images.length===1?"":"s"} • ${
+isAdmin ? "Admin mode ON 👑" : "Viewer mode"
+}`;
+
+}
+
 
 async function loadImages(){
 
-    try{
+status.textContent =
+"Gallery load हो रही है…";
 
-        status.textContent =
-        "Loading gallery...";
+try{
 
+const q =
+query(
+collection(db,"images"),
+orderBy("createdAt","desc")
+);
 
-        const q =
-        query(
-            collection(db,"images"),
-            orderBy("createdAt","desc")
-        );
+const snap =
+await getDocs(q);
 
+images =
+snap.docs.map(d => ({
+id:d.id,
+...d.data()
+}));
 
-        const snapshot =
-        await getDocs(q);
+render();
 
+}catch(err){
 
-        images =
-        snapshot.docs.map(item => ({
+console.error(err);
 
-            id:item.id,
+status.textContent =
+"Gallery load नहीं हुई। Firebase Rules/connection check करें।";
 
-            ...item.data()
+grid.innerHTML =
+'<div class="empty">Firebase से images नहीं मिल पाईं।</div>';
 
-        }));
-
-
-        renderImages();
-
-
-        status.textContent =
-        `${images.length} image${images.length === 1 ? "" : "s"} in gallery`;
-
-
-    }catch(error){
-
-        console.error(error);
-
-
-        status.textContent =
-        "Gallery loading error";
-
-
-        gallery.innerHTML = `
-
-            <div class="empty">
-
-                <h3>
-                    Gallery Error
-                </h3>
-
-                <p style="margin-top:8px;">
-                    Please check Firebase Firestore.
-                </p>
-
-            </div>
-
-        `;
-
-    }
+}
 
 }
 
 
-/* =========================
-   UPLOAD MODAL
-========================= */
+function openUpload(){
 
-window.openUpload = function(){
-
-    uploadModal.classList.add(
-        "active"
-    );
-
-};
-
-
-window.closeUpload = function(){
-
-    uploadModal.classList.remove(
-        "active"
-    );
-
-};
-
-
-/* =========================
-   UPLOAD IMAGE
-========================= */
-
-window.uploadImage = async function(){
-
-    const file =
-    document.getElementById("imageFile").files[0];
-
-
-    const title =
-    document.getElementById("imageTitle").value.trim();
-
-
-    const caption =
-    document.getElementById("imageCaption").value.trim();
-
-
-    const prompt =
-    document.getElementById("imagePrompt").value.trim();
-
-
-    const button =
-    document.getElementById("uploadButton");
-
-
-    if(!file){
-
-        alert(
-            "Please select an image."
-        );
-
-        return;
-
-    }
-
-
-    if(!title){
-
-        alert(
-            "Please enter image title."
-        );
-
-        return;
-
-    }
-
-
-    button.disabled = true;
-
-    button.textContent =
-    "Uploading...";
-
-
-    try{
-
-        /* CLOUDINARY */
-
-        const formData =
-        new FormData();
-
-
-        formData.append(
-            "file",
-            file
-        );
-
-
-        formData.append(
-            "upload_preset",
-            CLOUDINARY_UPLOAD_PRESET
-        );
-
-
-        const cloudinaryResponse =
-        await fetch(
-            CLOUDINARY_URL,
-            {
-                method:"POST",
-                body:formData
-            }
-        );
-
-
-        const cloudinaryData =
-        await cloudinaryResponse.json();
-
-
-        if(!cloudinaryResponse.ok){
-
-            throw new Error(
-                cloudinaryData.error?.message ||
-                "Cloudinary upload failed"
-            );
-
-        }
-
-
-        const imageURL =
-        cloudinaryData.secure_url;
-
-
-        /* FIRESTORE */
-
-        await addDoc(
-            collection(db,"images"),
-            {
-
-                url:imageURL,
-
-                title:title,
-
-                caption:caption,
-
-                prompt:prompt,
-
-                likes:0,
-
-                createdAt:Date.now()
-
-            }
-        );
-
-
-        /* RESET */
-
-        document.getElementById(
-            "imageFile"
-        ).value = "";
-
-
-        document.getElementById(
-            "imageTitle"
-        ).value = "";
-
-
-        document.getElementById(
-            "imageCaption"
-        ).value = "";
-
-
-        document.getElementById(
-            "imagePrompt"
-        ).value = "";
-
-
-        closeUpload();
-
-
-        await loadImages();
-
-
-        alert(
-            "Image uploaded successfully! 🎉"
-        );
-
-
-    }catch(error){
-
-        console.error(error);
-
-
-        alert(
-            "Upload failed:\n" +
-            error.message
-        );
-
-
-    }finally{
-
-        button.disabled = false;
-
-        button.textContent =
-        "Upload";
-
-    }
-
-};
-
-
-/* =========================
-   RENDER
-========================= */
-
-function renderImages(){
-
-    const search =
-    searchInput.value
-    .toLowerCase()
-    .trim();
-
-
-    const filtered =
-    images.filter(item => {
-
-        const text = `
-
-            ${item.title || ""}
-
-            ${item.caption || ""}
-
-            ${item.prompt || ""}
-
-        `.toLowerCase();
-
-
-        return text.includes(
-            search
-        );
-
-    });
-
-
-    if(filtered.length === 0){
-
-        gallery.innerHTML = `
-
-            <div class="empty">
-
-                <h3>
-                    No images found
-                </h3>
-
-                <p style="margin-top:8px;">
-                    Upload your first AI image.
-                </p>
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    gallery.innerHTML =
-    filtered.map(item => {
-
-        return `
-
-        <article class="card">
-
-            <div
-                class="card-image"
-                onclick="openImage('${escapeAttr(item.url)}')">
-
-                <img
-                    src="${escapeAttr(item.url)}"
-                    alt="${escapeAttr(item.title || "AI Image")}"
-                    loading="lazy">
-
-                <div class="view-label">
-                    Tap to view
-                </div>
-
-            </div>
-
-
-            <div class="card-body">
-
-                <div class="card-title">
-
-                    ${escapeHTML(
-                        item.title ||
-                        "Untitled"
-                    )}
-
-                </div>
-
-
-                <div class="card-caption">
-
-                    ${escapeHTML(
-                        item.caption ||
-                        "No caption"
-                    )}
-
-                </div>
-
-
-                ${
-                    item.prompt
-                    ?
-                    `
-
-                    <div class="prompt-box">
-
-                        <strong>
-                            Prompt:
-                        </strong>
-
-                        <br>
-
-                        ${escapeHTML(
-                            item.prompt
-                        )}
-
-                    </div>
-
-                    `
-                    :
-                    ""
-                }
-
-
-                <div class="actions">
-
-                    <button
-                        class="action"
-                        onclick="copyPrompt('${item.id}')">
-
-                        📋 Copy
-
-                    </button>
-
-
-                    <button
-                        class="action"
-                        onclick="likeImage('${item.id}')">
-
-                        ❤️ ${item.likes || 0}
-
-                    </button>
-
-
-                    <button
-                        class="action"
-                        onclick="downloadImage('${escapeAttr(item.url)}','${escapeAttr(item.title || "broken-ai-image")}')">
-
-                        ⬇️ Download
-
-                    </button>
-
-
-                    <button
-                        class="action delete"
-                        onclick="deleteImage('${item.id}')">
-
-                        🗑️ Delete
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        `;
-
-    }).join("");
+uploadModal.classList.add("show");
 
 }
 
 
-/* =========================
-   FULLSCREEN IMAGE
-========================= */
+function closeUpload(){
 
-window.openImage = function(url){
+uploadModal.classList.remove("show");
 
-    modalImage.src =
-    url;
+selectedFile = null;
 
+file.value = "";
 
-    imageModal.classList.add(
-        "active"
-    );
+titleInput.value = "";
 
+captionInput.value = "";
 
-    document.body.style.overflow =
-    "hidden";
+promptInput.value = "";
 
-};
+}
 
 
-window.closeImage = function(event){
-
-    if(
-        event &&
-        event.target !== imageModal
-    ){
-
-        return;
-
-    }
+document.querySelector("#uploadBtn")
+.onclick = () => file.click();
 
 
-    imageModal.classList.remove(
-        "active"
-    );
+file.onchange = () => {
 
+selectedFile =
+file.files[0] || null;
 
-    modalImage.src =
-    "";
-
-
-    document.body.style.overflow =
-    "";
+if(selectedFile)
+openUpload();
 
 };
 
 
-/* =========================
-   COPY PROMPT
-========================= */
-
-window.copyPrompt = async function(id){
-
-    const item =
-    images.find(
-        x => x.id === id
-    );
+document.querySelector("#cancelUpload")
+.onclick = closeUpload;
 
 
-    if(!item){
+document.querySelector("#saveUpload")
+.onclick = async () => {
 
-        return;
+if(!selectedFile){
 
-    }
+alert("पहले image चुनो।");
 
+return;
 
-    if(!item.prompt){
-
-        alert(
-            "No prompt available."
-        );
-
-        return;
-
-    }
+}
 
 
-    try{
-
-        await navigator.clipboard.writeText(
-            item.prompt
-        );
-
-
-        alert(
-            "Prompt copied! 📋"
-        );
+const title =
+titleInput.value.trim()
+||
+selectedFile.name.replace(/\.[^.]+$/,"");
 
 
-    }catch(error){
-
-        alert(
-            "Copy failed."
-        );
-
-    }
-
-};
+const caption =
+captionInput.value.trim()
+||
+"AI Cinematic Art 🖤";
 
 
-/* =========================
-   LIKE
-========================= */
-
-window.likeImage = async function(id){
-
-    try{
-
-        const imageRef =
-        doc(
-            db,
-            "images",
-            id
-        );
+const prompt =
+promptInput.value.trim();
 
 
-        await updateDoc(
-            imageRef,
-            {
-                likes:
-                increment(1)
-            }
-        );
+const btn =
+document.querySelector("#saveUpload");
 
 
-        await loadImages();
+btn.disabled = true;
+
+btn.textContent = "Uploading…";
 
 
-    }catch(error){
+try{
 
-        console.error(error);
-
-
-        alert(
-            "Like failed."
-        );
-
-    }
-
-};
+const form =
+new FormData();
 
 
-/* =========================
-   DELETE
-========================= */
-
-window.deleteImage = async function(id){
-
-    const yes =
-    confirm(
-        "Are you sure you want to delete this image?"
-    );
+form.append(
+"file",
+selectedFile
+);
 
 
-    if(!yes){
-
-        return;
-
-    }
-
-
-    try{
-
-        await deleteDoc(
-            doc(
-                db,
-                "images",
-                id
-            )
-        );
+form.append(
+"upload_preset",
+CLOUDINARY_UPLOAD_PRESET
+);
 
 
-        await loadImages();
+const res =
+await fetch(
+`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
+{
+method:"POST",
+body:form
+}
+);
 
 
-    }catch(error){
+const data =
+await res.json();
 
-        console.error(error);
+
+if(!res.ok || !data.secure_url){
+
+throw new Error(
+data.error?.message
+||
+"Cloudinary upload failed"
+);
+
+}
 
 
-        alert(
-            "Delete failed."
-        );
+await addDoc(
+collection(db,"images"),
+{
 
-    }
+url:data.secure_url,
+
+title,
+
+caption,
+
+prompt,
+
+likes:0,
+
+createdAt:
+serverTimestamp()
+
+}
+);
+
+
+closeUpload();
+
+await loadImages();
+
+
+alert(
+"Image successfully upload हो गई ❤️"
+);
+
+
+}catch(err){
+
+console.error(err);
+
+alert(
+"Upload failed: "
++
+err.message
+);
+
+}finally{
+
+btn.disabled = false;
+
+btn.textContent = "Upload";
+
+}
 
 };
 
 
-/* =========================
-   DOWNLOAD
-========================= */
+search.oninput = render;
 
-window.downloadImage = async function(
-    url,
-    title
+
+async function likeImage(id){
+
+try{
+
+await updateDoc(
+doc(db,"images",id),
+{
+likes:increment(1)
+}
+);
+
+
+const item =
+images.find(x => x.id === id);
+
+
+if(item)
+item.likes =
+Number(item.likes||0)+1;
+
+
+render();
+
+}catch(err){
+
+alert("Like update नहीं हुआ।");
+
+}
+
+}
+
+
+async function deleteImage(id){
+
+if(!isAdmin){
+
+alert(
+"Delete सिर्फ Admin कर सकता है।"
+);
+
+return;
+
+}
+
+
+if(!confirm(
+"इस image को gallery से delete करना है?"
+))
+return;
+
+
+try{
+
+await deleteDoc(
+doc(db,"images",id)
+);
+
+
+images =
+images.filter(
+x => x.id !== id
+);
+
+
+render();
+
+
+}catch(err){
+
+console.error(err);
+
+alert(
+"Delete नहीं हुआ। Firebase Rules check करें।"
+);
+
+}
+
+}
+
+
+async function copyPrompt(prompt){
+
+if(!prompt){
+
+alert(
+"इस image का prompt available नहीं है।"
+);
+
+return;
+
+}
+
+
+try{
+
+await navigator.clipboard
+.writeText(prompt);
+
+alert(
+"Prompt copied 📋"
+);
+
+}catch{
+
+promptInput.value = prompt;
+
+alert(
+"Prompt copy नहीं हो पाया।"
+);
+
+}
+
+}
+
+
+async function downloadImage(
+url,
+name
 ){
 
-    try{
+try{
 
-        const response =
-        await fetch(url);
+const r =
+await fetch(url);
 
+const blob =
+await r.blob();
 
-        const blob =
-        await response.blob();
+const a =
+document.createElement("a");
 
+a.href =
+URL.createObjectURL(blob);
 
-        const blobURL =
-        URL.createObjectURL(
-            blob
-        );
+a.download =
+name.replace(
+/[^\w-]+/g,
+"_"
+)
++
+".jpg";
 
+a.click();
 
-        const link =
-        document.createElement(
-            "a"
-        );
+URL.revokeObjectURL(a.href);
 
+}catch{
 
-        link.href =
-        blobURL;
+window.open(
+url,
+"_blank"
+);
 
+}
 
-        link.download =
-        `${title || "broken-ai-image"}.jpg`;
-
-
-        document.body.appendChild(
-            link
-        );
-
-
-        link.click();
-
-
-        link.remove();
+}
 
 
-        URL.revokeObjectURL(
-            blobURL
-        );
+function openViewer(x){
+
+currentViewer = x;
+
+viewerImage.src = x.url;
+
+viewerModal.classList.add(
+"show"
+);
+
+}
 
 
-    }catch(error){
+document.querySelector("#closeViewer")
+.onclick = () =>
+viewerModal.classList.remove(
+"show"
+);
 
-        window.open(
-            url,
-            "_blank"
-        );
 
-    }
+document.querySelector("#copyViewerPrompt")
+.onclick = () =>
+currentViewer &&
+copyPrompt(
+currentViewer.prompt || ""
+);
+
+
+document.querySelector("#downloadViewer")
+.onclick = () =>
+currentViewer &&
+downloadImage(
+currentViewer.url,
+currentViewer.title || "broken-ai"
+);
+
+
+viewerModal.onclick = e => {
+
+if(e.target === viewerModal)
+
+viewerModal.classList.remove(
+"show"
+);
 
 };
 
 
-/* =========================
-   SEARCH
-========================= */
+function openLogin(){
 
-searchInput.addEventListener(
-    "input",
-    renderImages
+loginModal.classList.add(
+"show"
 );
-
-
-/* =========================
-   ESC KEY
-========================= */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(
-            event.key === "Escape"
-        ){
-
-            imageModal.classList.remove(
-                "active"
-            );
-
-
-            uploadModal.classList.remove(
-                "active"
-            );
-
-
-            document.body.style.overflow =
-            "";
-
-        }
-
-    }
-);
-
-
-/* =========================
-   SECURITY HELPERS
-========================= */
-
-function escapeHTML(value){
-
-    return String(value)
-
-    .replace(
-        /&/g,
-        "&amp;"
-    )
-
-    .replace(
-        /</g,
-        "&lt;"
-    )
-
-    .replace(
-        />/g,
-        "&gt;"
-    )
-
-    .replace(
-        /"/g,
-        "&quot;"
-    )
-
-    .replace(
-        /'/g,
-        "&#039;"
-    );
 
 }
 
 
-function escapeAttr(value){
+function closeLogin(){
 
-    return String(value)
-
-    .replace(
-        /\\/g,
-        "\\\\"
-    )
-
-    .replace(
-        /'/g,
-        "\\'"
-    )
-
-    .replace(
-        /"/g,
-        "&quot;"
-    )
-
-    .replace(
-        /\n/g,
-        " "
-    );
+loginModal.classList.remove(
+"show"
+);
 
 }
 
 
-/* =========================
-   START
-========================= */
+loginBtn.onclick = () => {
+
+if(isAdmin){
+
+signOut(auth);
+
+return;
+
+}
+
+openLogin();
+
+};
+
+
+adminBtn.onclick = () => {
+
+if(isAdmin)
+
+signOut(auth);
+
+else
+
+openLogin();
+
+};
+
+
+document.querySelector("#cancelLogin")
+.onclick = closeLogin;
+
+
+document.querySelector("#doLogin")
+.onclick = async () => {
+
+const email =
+emailInput.value.trim();
+
+const password =
+passwordInput.value;
+
+
+if(email !== ADMIN_EMAIL){
+
+alert(
+"यह Admin email नहीं है।"
+);
+
+return;
+
+}
+
+
+try{
+
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+
+closeLogin();
+
+emailInput.value = "";
+
+passwordInput.value = "";
+
+
+}catch(err){
+
+alert(
+"Login failed: "
++
+err.message
+);
+
+}
+
+};
+
+
+onAuthStateChanged(
+auth,
+user => {
+
+isAdmin =
+!!user
+&&
+user.email === ADMIN_EMAIL;
+
+
+adminBtn.style.display =
+"inline-block";
+
+
+adminBtn.textContent =
+isAdmin
+?
+"Logout Admin"
+:
+"Admin Login";
+
+
+loginBtn.textContent =
+isAdmin
+?
+"🚪 Admin Logout"
+:
+"🔐 Admin Login";
+
+
+render();
+
+}
+);
+
 
 loadImages();
 
