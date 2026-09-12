@@ -3,1520 +3,491 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>Broken AI | AI Images</title>
-
 <meta name="description" content="Broken AI — AI Images, Sad Shayari and Cinematic Art">
 
-<meta name="google-site-verification"
-content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
-
-<link rel="canonical"
-href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
-
 <style>
-*{
- box-sizing:border-box;
-}
-
-html{
- scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
- margin:0;
- background:#05070b;
- color:#f7f9fc;
- font-family:Arial,sans-serif;
+  margin:0;
+  background:#05070b;
+  color:#f7f9fc;
+  font-family:Arial,sans-serif
 }
-
 body:before{
- content:"";
- position:fixed;
- inset:0;
- pointer-events:none;
- background:
- radial-gradient(circle at 10% 10%,#159cff18,transparent 30%),
- radial-gradient(circle at 90% 25%,#8b5cf618,transparent 28%);
- z-index:-1;
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 10%,#159cff16,transparent 30%),
+    radial-gradient(circle at 85% 30%,#7c3aed14,transparent 28%);
+  z-index:-1
 }
-
-/* HEADER */
 header{
- position:sticky;
- top:0;
- z-index:50;
- padding:14px 5%;
- display:flex;
- align-items:center;
- justify-content:space-between;
- background:#070a10e8;
- border-bottom:1px solid #ffffff12;
- backdrop-filter:blur(18px);
+  position:sticky;
+  top:0;
+  z-index:10;
+  padding:15px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#070a10dd;
+  border-bottom:1px solid #ffffff12;
+  backdrop-filter:blur(16px)
 }
-
 .logo{
- font-size:27px;
- font-weight:900;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:-1px
 }
-
-.logo span{
- color:#159cff;
-}
-
-nav{
- display:flex;
- gap:18px;
- align-items:center;
-}
-
+.logo span{color:#159cff}
+nav{display:flex;gap:18px}
 nav a{
- color:#cbd5e1;
- text-decoration:none;
- font-weight:700;
- font-size:14px;
+  color:#cbd5e1;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px
 }
-
-/* HERO */
 .hero{
- padding:90px 6%;
- min-height:500px;
- display:flex;
- align-items:center;
- background:
- linear-gradient(90deg,#05070bf5,#05070bb0),
- url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85')
- center/cover;
+  padding:85px 6% 70px;
+  min-height:470px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,#05070bea,#05070bb5),
+    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85')
+    center/cover
 }
-
-.hero-inner{
- max-width:850px;
-}
-
+.hero-inner{max-width:850px}
 .badge{
- display:inline-block;
- padding:8px 13px;
- border:1px solid #159cff55;
- background:#159cff12;
- color:#8fd2ff;
- border-radius:999px;
- font-size:13px;
- font-weight:800;
- margin-bottom:18px;
+  display:inline-block;
+  padding:8px 13px;
+  border:1px solid #159cff55;
+  background:#159cff12;
+  color:#8fd2ff;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:18px
 }
-
 .hero h1{
- font-size:clamp(52px,10vw,100px);
- line-height:.95;
- margin:0;
- letter-spacing:-5px;
+  font-size:clamp(52px,10vw,100px);
+  line-height:.95;
+  margin:0;
+  letter-spacing:-5px
 }
-
-.hero h1 span{
- color:#159cff;
-}
-
+.hero h1 span{color:#159cff}
 .hero p{
- font-size:20px;
- color:#cbd5e1;
- line-height:1.6;
- max-width:650px;
+  font-size:20px;
+  color:#cbd5e1;
+  line-height:1.6;
+  max-width:650px
 }
-
-/* BUTTON */
 .btn{
- display:inline-block;
- background:#159cff;
- color:#fff;
- padding:13px 18px;
- border-radius:12px;
- text-decoration:none;
- border:0;
- cursor:pointer;
- font-weight:800;
- transition:.2s;
+  display:inline-block;
+  background:#159cff;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:12px;
+  text-decoration:none;
+  border:0;
+  cursor:pointer;
+  font-weight:800;
+  box-shadow:0 10px 30px #159cff25;
+  transition:.2s
 }
-
-.btn:hover{
- transform:translateY(-2px);
+.btn:hover{transform:translateY(-2px)}
+.btn:disabled{
+  opacity:.6;
+  cursor:wait;
+  transform:none
 }
-
 .btn.secondary{
- background:#ffffff0d;
- border:1px solid #ffffff18;
- margin-left:8px;
+  background:#ffffff0d;
+  border:1px solid #ffffff18;
+  margin-left:8px
 }
-
-/* MAIN */
 .wrap{
- padding:38px 6%;
- max-width:1450px;
- margin:auto;
+  padding:35px 6%;
+  max-width:1400px;
+  margin:auto
 }
-
 .section-title{
- display:flex;
- align-items:end;
- justify-content:space-between;
- gap:15px;
- margin-bottom:22px;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:22px
 }
-
 .section-title h2{
- margin:0;
- font-size:30px;
+  margin:0;
+  font-size:30px
 }
-
 .section-title p{
- margin:5px 0 0;
- color:#8292a6;
+  margin:5px 0 0;
+  color:#8292a6
 }
-
-/* PROFILE */
-.profile{
- display:flex;
- align-items:center;
- gap:18px;
- background:linear-gradient(135deg,#0c1420,#090d15);
- border:1px solid #ffffff12;
- padding:18px;
- border-radius:20px;
- margin-bottom:28px;
-}
-
-.avatar{
- width:76px;
- height:76px;
- border-radius:50%;
- object-fit:cover;
- background:#101927;
- border:2px solid #159cff;
- box-shadow:0 0 25px #159cff30;
-}
-
-.profile h3{
- margin:0 0 5px;
-}
-
-.profile p{
- margin:0;
- color:#8f9daf;
- font-size:14px;
-}
-
-/* TOOLS */
 .tools{
- display:flex;
- gap:10px;
- flex-wrap:wrap;
- margin-bottom:25px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:25px
 }
-
-.tools input,
-.tools select{
- flex:1;
- min-width:190px;
- background:#0b111a;
- border:1px solid #243247;
- color:#fff;
- padding:14px;
- border-radius:12px;
- outline:none;
+.tools input{
+  flex:1;
+  min-width:220px;
+  background:#0b111a;
+  border:1px solid #243247;
+  color:#fff;
+  padding:15px;
+  border-radius:12px;
+  outline:none
 }
-
-.tools input:focus,
-.tools select:focus{
- border-color:#159cff;
-}
-
-/* STATS */
-.stats{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:12px;
- margin-bottom:25px;
-}
-
-.stat{
- background:#0b1018;
- border:1px solid #ffffff10;
- border-radius:16px;
- padding:16px;
-}
-
-.stat b{
- display:block;
- font-size:22px;
-}
-
-.stat span{
- color:#8190a3;
- font-size:13px;
-}
-
-/* GALLERY */
+.tools input:focus{border-color:#159cff}
 .grid{
- display:grid;
- grid-template-columns:
- repeat(auto-fit,minmax(235px,1fr));
- gap:18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px
 }
-
 .card{
- background:#0b1018;
- border:1px solid #ffffff10;
- border-radius:18px;
- overflow:hidden;
- box-shadow:0 15px 45px #0006;
- transition:.25s;
+  background:#0b1018;
+  border:1px solid #ffffff10;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 15px 45px #0006;
+  transition:.25s
 }
-
 .card:hover{
- transform:translateY(-5px);
- border-color:#159cff55;
+  transform:translateY(-5px);
+  border-color:#159cff55
 }
-
 .card img{
- width:100%;
- height:285px;
- object-fit:cover;
- display:block;
- background:#0e1622;
- cursor:zoom-in;
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+  background:#0e1622
 }
-
-.card .text{
- padding:15px;
-}
-
+.card .text{padding:16px}
 .card h3{
- margin:0 0 6px;
- font-size:17px;
+  margin:0 0 7px;
+  font-size:17px
 }
-
 .card p{
- color:#9eacbc;
- margin:0 0 12px;
- line-height:1.45;
+  color:#9eacbc;
+  margin:0
 }
-
-/* ACTIONS */
-.actions{
- display:flex;
- gap:7px;
- flex-wrap:wrap;
-}
-
-.action{
- border:1px solid #ffffff14;
- background:#ffffff08;
- color:#dbe5f0;
- border-radius:9px;
- padding:8px 10px;
- cursor:pointer;
- font-size:12px;
-}
-
-.action:hover{
- border-color:#159cff66;
-}
-
-/* PROMPT */
-.prompt{
- background:#060a10;
- border:1px solid #ffffff0e;
- border-radius:11px;
- padding:10px;
- color:#9fb0c3;
- font-size:12px;
- margin:10px 0;
- display:none;
- white-space:pre-wrap;
-}
-
-.prompt.show{
- display:block;
-}
-
-/* EMPTY */
 .empty{
- grid-column:1/-1;
- color:#9fb0c3;
- padding:55px 20px;
- text-align:center;
- border:1px dashed #ffffff18;
- border-radius:18px;
+  grid-column:1/-1;
+  color:#9fb0c3;
+  padding:55px 20px;
+  text-align:center;
+  border:1px dashed #ffffff18;
+  border-radius:18px
 }
-
-/* INFO */
 .info{
- margin-top:38px;
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:15px;
+  margin-top:38px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px
 }
-
 .info div{
- padding:20px;
- border:1px solid #ffffff10;
- border-radius:16px;
- background:#ffffff05;
+  padding:20px;
+  border:1px solid #ffffff10;
+  border-radius:16px;
+  background:#ffffff05
 }
-
 .info b{
- display:block;
- margin-bottom:6px;
+  display:block;
+  margin-bottom:6px
 }
-
 .info span{
- color:#8f9daf;
- font-size:14px;
+  color:#8f9daf;
+  font-size:14px
 }
-
-/* SHAYARI */
-.shayari{
- margin-top:30px;
- padding:25px;
- border-radius:20px;
- background:linear-gradient(135deg,#111827,#0b1018);
- border:1px solid #ffffff12;
- text-align:center;
-}
-
-.shayari p{
- font-size:18px;
- line-height:1.8;
- color:#d6deea;
-}
-
-/* FOOTER */
 footer{
- padding:35px 6%;
- border-top:1px solid #ffffff10;
- color:#8f9daf;
- margin-top:45px;
- text-align:center;
+  padding:35px 6%;
+  border-top:1px solid #ffffff10;
+  color:#8f9daf;
+  margin-top:45px;
+  text-align:center
 }
+footer b{color:#fff}
+small{color:#657387}
 
-footer b{
- color:#fff;
-}
-
-/* FULL SCREEN MODAL */
-.modal{
- display:none;
- position:fixed;
- inset:0;
- background:#000e;
- z-index:100;
- align-items:center;
- justify-content:center;
- padding:25px;
-}
-
-.modal.open{
- display:flex;
-}
-
-.modal img{
- max-width:95vw;
- max-height:88vh;
- object-fit:contain;
- border-radius:12px;
- box-shadow:0 20px 80px #000;
-}
-
-.close{
- position:absolute;
- right:22px;
- top:15px;
- width:45px;
- height:45px;
- border-radius:50%;
- border:1px solid #ffffff30;
- background:#111a;
- color:#fff;
- font-size:30px;
- cursor:pointer;
-}
-
-/* TOAST */
-.toast{
- position:fixed;
- bottom:22px;
- left:50%;
- transform:translateX(-50%);
- background:#111827;
- border:1px solid #ffffff18;
- padding:12px 18px;
- border-radius:12px;
- display:none;
- z-index:200;
-}
-
-.toast.show{
- display:block;
-}
-
-/* MOBILE */
-@media(max-width:700px){
-
- nav{
-  gap:8px;
- }
-
- nav a{
-  font-size:11px;
- }
-
- .hero{
-  padding:65px 6%;
- }
-
- .hero h1{
-  letter-spacing:-3px;
- }
-
- .hero p{
-  font-size:17px;
- }
-
- .btn.secondary{
-  margin-left:0;
-  margin-top:9px;
- }
-
- .stats{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .info{
-  grid-template-columns:1fr;
- }
-
- .profile{
-  padding:14px;
- }
-
- .avatar{
-  width:62px;
-  height:62px;
- }
-
- .card img{
-  height:260px;
- }
+@media(max-width:650px){
+  nav{gap:9px}
+  nav a{font-size:12px}
+  .hero{padding-top:65px}
+  .hero h1{letter-spacing:-3px}
+  .btn.secondary{
+    margin-left:0;
+    margin-top:10px
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-
-<div class="logo">
-Broken <span>AI</span>
-</div>
-
-<nav>
-<a href="#gallery">Gallery</a>
-<a href="#upload">Upload</a>
-<a href="#shayari">Shayari</a>
-<a href="https://t.me/Brokenboy221716" target="_blank">
-Telegram
-</a>
-</nav>
-
+  <div class="logo">Broken <span>AI</span></div>
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#upload">Upload</a>
+    <a href="https://t.me/Brokenboy221716" target="_blank">Telegram</a>
+  </nav>
 </header>
 
-
-<!-- HERO -->
 <section class="hero">
-
-<div class="hero-inner">
-
-<div class="badge">
-✦ AI IMAGES • CINEMATIC ART • PROMPTS
-</div>
-
-<h1>
-Broken <span>AI</span>
-</h1>
-
-<p>
-खामोशियों को तस्वीरों में बदलते हैं… 💔
-<br>
-AI images शेयर करो, prompts सेव करो और अपनी premium gallery बनाओ।
-</p>
-
-<a class="btn" href="#upload">
-+ Upload Image
-</a>
-
-<a class="btn secondary"
-href="https://t.me/Brokenboy221716"
-target="_blank">
-Join Telegram
-</a>
-
-</div>
-
+  <div class="hero-inner">
+    <div class="badge">✦ AI IMAGES • CINEMATIC ART</div>
+    <h1>Broken <span>AI</span></h1>
+    <p>
+      खामोशियों को तस्वीरों में बदलते हैं… 💔<br>
+      अपनी AI images शेयर करो और अपनी gallery बनाओ।
+    </p>
+    <a class="btn" href="#upload">+ Upload Image</a>
+    <a class="btn secondary"
+       href="https://t.me/Brokenboy221716"
+       target="_blank">
+       Join Telegram
+    </a>
+  </div>
 </section>
 
-
-<!-- MAIN -->
 <main class="wrap" id="gallery">
 
+  <div class="section-title">
+    <div>
+      <h2>🖼️ AI Gallery</h2>
+      <p>अपनी पसंद की images खोजें और देखें</p>
+    </div>
+  </div>
 
-<!-- PROFILE -->
-<div class="profile">
+  <div class="tools" id="upload">
+    <input id="search" placeholder="🔎 AI इमेज खोजें...">
+    <button class="btn" id="uploadBtn">
+      + नई AI इमेज अपलोड करें
+    </button>
+    <input type="file" id="file" accept="image/*" hidden>
+  </div>
 
-<img id="avatar"
-class="avatar"
-src=""
-alt="Profile">
+  <div class="grid" id="grid"></div>
 
-<div style="flex:1">
-
-<h3>
-Broken AI Creator
-</h3>
-
-<p>
-AI Images • Cinematic Art • Sad Shayari
-</p>
-
-</div>
-
-<button class="action"
-onclick="chooseProfile()">
-📷 Profile Photo
-</button>
-
-<input
-id="profileFile"
-type="file"
-accept="image/*"
-hidden
->
-
-</div>
-
-
-<!-- TITLE -->
-<div class="section-title">
-
-<div>
-
-<h2>
-🖼️ AI Gallery
-</h2>
-
-<p>
-अपनी images खोजें, पसंद करें, share करें और full screen में देखें।
-</p>
-
-</div>
-
-</div>
-
-
-<!-- STATS -->
-<div class="stats">
-
-<div class="stat">
-<b id="total">0</b>
-<span>Total Images</span>
-</div>
-
-<div class="stat">
-<b id="likes">0</b>
-<span>Total Likes</span>
-</div>
-
-<div class="stat">
-<b id="saved">0</b>
-<span>Saved Prompts</span>
-</div>
-
-<div class="stat">
-<b>PRO</b>
-<span>Premium Gallery</span>
-</div>
-
-</div>
-
-
-<!-- TOOLS -->
-<div class="tools" id="upload">
-
-<input
-id="search"
-placeholder="🔎 Title, caption या prompt खोजें..."
->
-
-<select id="sort">
-
-<option value="new">
-🆕 Newest First
-</option>
-
-<option value="old">
-📅 Oldest First
-</option>
-
-<option value="az">
-🔤 A-Z
-</option>
-
-</select>
-
-<button
-class="btn"
-id="uploadBtn">
-+ नई AI इमेज
-</button>
-
-<input
-type="file"
-id="file"
-accept="image/*"
-hidden
->
-
-</div>
-
-
-<!-- GALLERY -->
-<div class="grid" id="grid"></div>
-
-
-<!-- INFO -->
-<div class="info">
-
-<div>
-
-<b>
-🤖 AI Images
-</b>
-
-<span>
-Cinematic और creative artwork
-</span>
-
-</div>
-
-<div>
-
-<b>
-💔 Sad Shayari
-</b>
-
-<span>
-Broken vibes और emotions
-</span>
-
-</div>
-
-<div>
-
-<b>
-🎬 Cinematic Art
-</b>
-
-<span>
-Dark और premium visual style
-</span>
-
-</div>
-
-</div>
-
-
-<!-- SHAYARI -->
-<section class="shayari" id="shayari">
-
-<h2>
-💔 Sad Shayari
-</h2>
-
-<p>
-“कुछ तस्वीरें सिर्फ तस्वीरें नहीं होतीं,
-<br>
-उनमें किसी की पूरी कहानी छुपी होती है…”
-</p>
-
-</section>
+  <div class="info">
+    <div>
+      <b>🤖 AI Images</b>
+      <span>Cinematic और creative artwork</span>
+    </div>
+    <div>
+      <b>💔 Sad Shayari</b>
+      <span>Broken vibes और emotions</span>
+    </div>
+    <div>
+      <b>🎬 Cinematic Art</b>
+      <span>Dark और premium visual style</span>
+    </div>
+  </div>
 
 </main>
 
-
-<!-- FOOTER -->
 <footer>
-
-<b>
-Broken AI
-</b>
-
-<br>
-
-AI Images • Sad Shayari • Cinematic Art • AI Prompts
-
-<br>
-
-<small>
-© 2026 Broken AI
-</small>
-
+  <b>Broken AI</b><br>
+  AI Images • Sad Shayari • Cinematic Art<br>
+  <small>© 2026 Broken AI</small>
 </footer>
-
-
-<!-- FULL SCREEN -->
-<div
-class="modal"
-id="modal"
->
-
-<button
-class="close"
-onclick="closeModal()">
-×
-</button>
-
-<img
-id="modalImg"
-src=""
-alt="Full Screen Image"
->
-
-</div>
-
-
-<div
-class="toast"
-id="toast">
-</div>
-
 
 <script>
 
-/* STORAGE */
-const grid =
-document.getElementById("grid");
+const grid=document.querySelector('#grid');
+const file=document.querySelector('#file');
+const search=document.querySelector('#search');
 
-const file =
-document.getElementById("file");
-
-const search =
-document.getElementById("search");
-
-const sort =
-document.getElementById("sort");
-
-
-/*
-IMPORTANT:
-
-पुरानी images का वही storage key रखा गया है।
-*/
-let images =
-JSON.parse(
-localStorage.getItem("brokenAIImages") || "[]"
+let images=JSON.parse(
+  localStorage.getItem('brokenAIImages')||'[]'
 );
 
-let likes =
-JSON.parse(
-localStorage.getItem("brokenAILikes") || "{}"
-);
+/* Cloudinary Settings */
+const CLOUDINARY_CLOUD_NAME='g33rvuls';
+const CLOUDINARY_UPLOAD_PRESET='brokenai';
 
-
-/* ESCAPE TEXT */
-function esc(s){
-
-return String(s ?? "")
-.replace(/[&<>"']/g,function(m){
-
-return {
-
-"&":"&amp;",
-"<":"&lt;",
-">":"&gt;",
-'"':"&quot;",
-"'":"&#039;"
-
-}[m];
-
-});
-
-}
-
-
-/* SAVE */
-function save(){
-
-localStorage.setItem(
-"brokenAIImages",
-JSON.stringify(images)
-);
-
-localStorage.setItem(
-"brokenAILikes",
-JSON.stringify(likes)
-);
-
-}
-
-
-/* TOAST */
-function toast(t){
-
-const x =
-document.getElementById("toast");
-
-x.textContent=t;
-
-x.classList.add("show");
-
-setTimeout(
-()=>x.classList.remove("show"),
-1800
-);
-
-}
-
-
-/* RENDER */
+/* Gallery */
 function render(){
 
-let q =
-search.value
-.toLowerCase()
-.trim();
+  const q=search.value.toLowerCase();
 
-let list =
-images.map(
-(x,i)=>({...x,_i:i})
-);
+  grid.innerHTML='';
 
+  const list=images.filter(x=>
+    ((x.title||'')+(x.caption||''))
+    .toLowerCase()
+    .includes(q)
+  );
 
-/* SEARCH */
-list =
-list.filter(x=>
+  if(!list.length){
 
-(
-(x.title || "") +
-(x.caption || "") +
-(x.prompt || "")
-)
-.toLowerCase()
-.includes(q)
+    grid.innerHTML=`
+      <div class="empty">
+        अभी कोई इमेज नहीं है।<br>
+        ऊपर से अपनी AI इमेज अपलोड करें। 🖤
+      </div>
+    `;
 
-);
+    return;
+  }
 
+  list.forEach(x=>{
 
-/* SORT */
+    grid.innerHTML+=`
+      <article class="card">
 
-if(sort.value==="old"){
+        <img
+          src="${x.src}"
+          alt="${x.title||'Broken AI Image'}"
+          loading="lazy"
+        >
 
-list.reverse();
+        <div class="text">
+          <h3>${x.title||'Broken AI Image'}</h3>
+          <p>${x.caption||'AI Cinematic Art 🖤'}</p>
+        </div>
 
-}
+      </article>
+    `;
 
-if(sort.value==="az"){
-
-list.sort(
-(a,b)=>
-(a.title||"")
-.localeCompare(
-b.title||""
-)
-);
-
-}
-
-
-/* CLEAR */
-grid.innerHTML="";
-
-
-/* EMPTY */
-
-if(!list.length){
-
-grid.innerHTML=`
-
-<div class="empty">
-
-अभी कोई matching image नहीं मिली।
-
-<br>
-
-अपनी AI image upload करें। 🖤
-
-</div>
-
-`;
-
+  });
 }
 
 
-/* CARDS */
+/* Cloudinary Upload */
+async function uploadToCloudinary(imageFile){
 
-list.forEach(x=>{
+  const formData=new FormData();
 
-const i=x._i;
+  formData.append('file',imageFile);
+  formData.append(
+    'upload_preset',
+    CLOUDINARY_UPLOAD_PRESET
+  );
 
-const liked=!!likes[i];
+  const response=await fetch(
+    `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
+    {
+      method:'POST',
+      body:formData
+    }
+  );
 
-grid.innerHTML += `
+  if(!response.ok){
+    throw new Error('Cloudinary upload failed');
+  }
 
-<article class="card">
-
-<img
-
-src="${x.src}"
-
-alt="${esc(
-x.title ||
-"Broken AI Image"
-)}"
-
-onclick="openModal(${i})"
-
->
-
-<div class="text">
-
-<h3>
-${esc(
-x.title ||
-"Broken AI Image"
-)}
-</h3>
-
-<p>
-${esc(
-x.caption ||
-"AI Cinematic Art 🖤"
-)}
-</p>
-
-
-<div
-class="prompt"
-id="p${i}"
->
-
-${esc(
-x.prompt ||
-"Prompt अभी add नहीं किया गया है।"
-)}
-
-</div>
-
-
-<div class="actions">
-
-
-<button
-class="action"
-onclick="togglePrompt(${i})"
->
-🪄 Prompt
-</button>
-
-
-<button
-class="action"
-onclick="copyPrompt(${i})"
->
-📋 Copy
-</button>
-
-
-<button
-class="action"
-onclick="likeImage(${i})"
->
-${liked ? "❤️" : "🤍"}
-${liked ? "Liked" : "Like"}
-</button>
-
-
-<button
-class="action"
-onclick="shareImage(${i})"
->
-↗ Share
-</button>
-
-
-<button
-class="action"
-onclick="downloadImage(${i})"
->
-⬇ Download
-</button>
-
-
-<button
-class="action"
-onclick="deleteImage(${i})"
->
-🗑 Delete
-</button>
-
-
-</div>
-
-</div>
-
-</article>
-
-`;
-
-});
-
-
-/* STATS */
-
-document.getElementById(
-"total"
-).textContent=images.length;
-
-document.getElementById(
-"likes"
-).textContent=
-Object.values(likes)
-.filter(Boolean)
-.length;
-
-document.getElementById(
-"saved"
-).textContent=
-images.filter(x=>x.prompt)
-.length;
-
+  return await response.json();
 }
 
 
-/* PROMPT */
+/* Upload Button */
+document.querySelector('#uploadBtn').onclick=()=>{
+  file.click();
+};
 
-function togglePrompt(i){
 
-const p =
-document.getElementById("p"+i);
+/* File Upload */
+file.onchange=async()=>{
 
-if(p){
+  const f=file.files[0];
 
-p.classList.toggle("show");
+  if(!f)return;
 
-}
+  if(!f.type.startsWith('image/')){
 
-}
+    alert('कृपया केवल image चुनें।');
 
+    file.value='';
 
-/* COPY PROMPT */
+    return;
+  }
 
-async function copyPrompt(i){
+  if(f.size>10*1024*1024){
 
-let p =
-images[i]?.prompt || "";
+    alert('Image 10MB से छोटी रखें।');
 
-if(!p){
+    file.value='';
 
-toast(
-"इस image में prompt नहीं है"
-);
+    return;
+  }
 
-return;
+  const uploadBtn=
+    document.querySelector('#uploadBtn');
 
-}
+  const oldText=
+    uploadBtn.textContent;
 
-try{
+  uploadBtn.disabled=true;
 
-await navigator.clipboard.writeText(p);
+  uploadBtn.textContent=
+    '⏳ Upload हो रही है...';
 
-toast(
-"Prompt copied ✅"
-);
+  try{
 
-}catch(e){
+    const data=
+      await uploadToCloudinary(f);
 
-toast(
-"Copy नहीं हुआ"
-);
+    images.unshift({
 
-}
+      src:data.secure_url,
 
-}
+      title:f.name
+        .replace(/\.[^/.]+$/,''),
 
+      caption:'मेरी नई AI इमेज 🖤',
 
-/* LIKE */
+      cloudinaryPublicId:data.public_id,
 
-function likeImage(i){
+      date:new Date().toISOString()
 
-likes[i]=!likes[i];
+    });
 
-save();
+    localStorage.setItem(
+      'brokenAIImages',
+      JSON.stringify(images)
+    );
 
-render();
+    render();
 
-}
+    alert(
+      'Image successfully upload हो गई ✅'
+    );
 
+  }catch(error){
 
-/* DELETE */
+    console.error(error);
 
-function deleteImage(i){
+    alert(
+      'Upload नहीं हुआ। Cloudinary preset और internet connection check करें।'
+    );
 
-if(
-!confirm(
-"क्या यह image delete करनी है?"
-)
-)return;
+  }finally{
 
+    uploadBtn.disabled=false;
 
-/*
-सिर्फ तभी delete होगी जब
-यूजर खुद Delete दबाए।
-*/
+    uploadBtn.textContent=oldText;
 
-images.splice(i,1);
+    file.value='';
 
-
-/* likes indexes fix */
-
-let n={};
-
-Object.keys(likes)
-.forEach(k=>{
-
-let z=+k;
-
-if(z<i){
-
-n[z]=likes[k];
-
-}
-
-else if(z>i){
-
-n[z-1]=likes[k];
-
-}
-
-});
-
-likes=n;
-
-save();
-
-render();
-
-toast(
-"Image delete हो गई"
-);
-
-}
-
-
-/* FULL SCREEN */
-
-function openModal(i){
-
-document.getElementById(
-"modalImg"
-).src=images[i].src;
-
-document.getElementById(
-"modal"
-).classList.add("open");
-
-}
-
-
-function closeModal(){
-
-document.getElementById(
-"modal"
-).classList.remove("open");
-
-}
-
-
-document.getElementById(
-"modal"
-).onclick=function(e){
-
-if(e.target.id==="modal"){
-
-closeModal();
-
-}
+  }
 
 };
 
 
-document.addEventListener(
-"keydown",
-function(e){
-
-if(e.key==="Escape"){
-
-closeModal();
-
-}
-
-}
-);
-
-
-/* SHARE */
-
-async function shareImage(i){
-
-let x=images[i];
-
-try{
-
-if(navigator.share){
-
-await navigator.share({
-
-title:
-x.title ||
-"Broken AI",
-
-text:
-x.caption ||
-"Broken AI Image",
-
-url:
-location.href
-
-});
-
-}else{
-
-await navigator.clipboard.writeText(
-location.href
-);
-
-toast(
-"Website link copied ✅"
-);
-
-}
-
-}catch(e){}
-
-}
-
-
-/* DOWNLOAD */
-
-function downloadImage(i){
-
-let a =
-document.createElement("a");
-
-a.href=images[i].src;
-
-a.download=
-(images[i].title ||
-"broken-ai-image")+
-".png";
-
-a.click();
-
-}
-
-
-/* UPLOAD */
-
-document.getElementById(
-"uploadBtn"
-).onclick=()=>file.click();
-
-
-file.onchange=function(){
-
-const f=file.files[0];
-
-if(!f)return;
-
-const r=new FileReader();
-
-
-r.onload=function(){
-
-let title =
-prompt(
-"Image का title लिखें:",
-f.name.split(".")[0]
-)
-||
-f.name.split(".")[0];
-
-
-let caption =
-prompt(
-"Caption लिखें:",
-"मेरी नई AI इमेज 🖤"
-)
-||
-"मेरी नई AI इमेज 🖤";
-
-
-let p =
-prompt(
-"AI Prompt डालें (optional):",
-""
-);
-
-
-/*
-नई image को पुराने
-data को delete किए बिना
-सबसे ऊपर add किया जाता है।
-*/
-
-images.unshift({
-
-src:r.result,
-
-title:title,
-
-caption:caption,
-
-prompt:p || "",
-
-date:Date.now()
-
-});
-
-
-save();
-
-render();
-
-file.value="";
-
-toast(
-"Image safely saved ✅"
-);
-
-};
-
-
-r.readAsDataURL(f);
-
-};
-
-
-/* SEARCH */
-
+/* Search */
 search.oninput=render;
 
 
-/* SORT */
-
-sort.onchange=render;
-
-
-/* PROFILE */
-
-function chooseProfile(){
-
-document.getElementById(
-"profileFile"
-).click();
-
-}
-
-
-document.getElementById(
-"profileFile"
-).onchange=function(e){
-
-const f=e.target.files[0];
-
-if(!f)return;
-
-const r=new FileReader();
-
-r.onload=function(){
-
-localStorage.setItem(
-"brokenAIProfile",
-r.result
-);
-
-loadProfile();
-
-toast(
-"Profile photo saved ✅"
-);
-
-};
-
-r.readAsDataURL(f);
-
-};
-
-
-/* LOAD PROFILE */
-
-function loadProfile(){
-
-let p =
-localStorage.getItem(
-"brokenAIProfile"
-);
-
-document.getElementById(
-"avatar"
-).src =
-
-p ||
-
-"data:image/svg+xml;charset=UTF-8," +
-
-encodeURIComponent(
-
-`<svg
-xmlns="http://www.w3.org/2000/svg"
-width="100"
-height="100">
-
-<rect
-width="100"
-height="100"
-fill="#101927"/>
-
-<text
-x="50"
-y="58"
-text-anchor="middle"
-fill="#159cff"
-font-size="34">
-
-AI
-
-</text>
-
-</svg>`
-
-);
-
-}
-
-
-/* START */
-
-loadProfile();
-
+/* Start */
 render();
 
 </script>
