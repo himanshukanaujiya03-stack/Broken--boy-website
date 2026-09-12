@@ -2,496 +2,505 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Broken AI | AI Images</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#05070b;
-  color:white;
-  line-height:1.6;
+font-family:Arial,sans-serif;
+color:#fff;
+background:#05020b;
+overflow-x:hidden
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+radial-gradient(circle at 15% 15%,#ff1744 0,transparent 25%),
+radial-gradient(circle at 85% 20%,#7c00ff 0,transparent 25%),
+radial-gradient(circle at 50% 90%,#00d9ff 0,transparent 28%),
+#05020b
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(5,7,11,.97);
-  border-bottom:1px solid #222;
-  padding:15px 5%;
+position:sticky;
+top:0;
+z-index:2000;
+background:rgba(5,2,11,.82);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.12);
+padding:14px 5%
 }
 
 .nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+max-width:1250px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between
 }
 
 .logo{
-  font-size:25px;
-  font-weight:bold;
+font-size:25px;
+font-weight:900
 }
 
 .logo span{
-  color:#ff304f;
+background:linear-gradient(90deg,#ff1744,#ff00cc,#00d9ff);
+-webkit-background-clip:text;
+color:transparent
 }
 
 nav{
-  display:flex;
-  align-items:center;
-  gap:15px;
+display:flex;
+gap:16px;
+align-items:center
 }
 
 nav a{
-  color:#ddd;
-  text-decoration:none;
+color:#fff;
+text-decoration:none;
+font-size:14px
 }
 
-nav a:hover{
-  color:#ff304f;
+.admin{
+background:linear-gradient(90deg,#ff1744,#8b00ff);
+color:#fff;
+border:0;
+padding:11px 17px;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer
 }
-
-.admin-btn{
-  background:white;
-  color:black;
-  border:0;
-  padding:10px 15px;
-  border-radius:10px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* HERO */
 
 .hero{
-  min-height:75vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:60px 20px;
-  background:
-  radial-gradient(circle at top,#202532 0%,#080a0f 45%,#05070b 100%);
+min-height:82vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 20px
+}
+
+.hero-inner{
+max-width:850px
 }
 
 .profile{
-  width:145px;
-  height:145px;
-  object-fit:cover;
-  border-radius:50%;
-  border:5px solid white;
-  margin-bottom:25px;
+width:155px;
+height:155px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #fff;
+box-shadow:
+0 0 20px #ff1744,
+0 0 45px #8b00ff;
+margin-bottom:25px;
+background:#111
+}
+
+.badge{
+display:inline-block;
+padding:8px 16px;
+border-radius:30px;
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.2);
+margin-bottom:18px;
+color:#ddd
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,70px);
+font-size:clamp(45px,9vw,85px);
+font-weight:900;
+background:linear-gradient(
+90deg,#fff,#ff1744,#ff00cc,#7c00ff,#00d9ff
+);
+-webkit-background-clip:text;
+color:transparent
 }
 
 .hero p{
-  color:#aaa;
-  font-size:20px;
-  max-width:700px;
-  margin:auto;
+color:#bbb;
+font-size:20px;
+margin-top:12px
 }
 
 .buttons{
-  margin-top:25px;
+margin-top:28px
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 25px;
-  margin:6px;
-  border-radius:30px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  background:#ff304f;
-  border:0;
-  cursor:pointer;
+display:inline-block;
+padding:14px 25px;
+margin:6px;
+border-radius:30px;
+text-decoration:none;
+color:#fff;
+font-weight:bold;
+background:linear-gradient(90deg,#ff1744,#ff00cc);
+border:0;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(255,0,100,.25)
 }
 
-.btn.dark{
-  background:#20232d;
-  border:1px solid #444;
+.btn.blue{
+background:linear-gradient(90deg,#7c00ff,#00aaff)
 }
-
-/* SECTIONS */
 
 section{
-  padding:70px 6%;
-  max-width:1250px;
-  margin:auto;
+max-width:1250px;
+margin:auto;
+padding:75px 6%
 }
 
 .title{
-  text-align:center;
-  font-size:38px;
-  margin-bottom:12px;
+text-align:center;
+font-size:42px;
+font-weight:900;
+background:linear-gradient(
+90deg,#ff1744,#ff00cc,#00d9ff
+);
+-webkit-background-clip:text;
+color:transparent
 }
 
 .subtitle{
-  text-align:center;
-  color:#999;
-  margin-bottom:40px;
+text-align:center;
+color:#999;
+margin:10px 0 40px
 }
-
-/* ABOUT */
 
 .about{
-  max-width:800px;
-  margin:auto;
-  text-align:center;
-  color:#bbb;
-  font-size:18px;
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#bbb;
+font-size:18px;
+line-height:1.9
 }
-
-/* SERVICES */
 
 .cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px
 }
 
-.card-service{
-  background:#10131a;
-  border:1px solid #252936;
-  border-radius:18px;
-  padding:30px 20px;
-  text-align:center;
+.service{
+padding:30px 20px;
+text-align:center;
+border-radius:20px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.12);
+transition:.3s
 }
 
-.card-service h3{
-  margin-bottom:10px;
+.service:hover{
+transform:translateY(-7px);
+border-color:#ff1744;
+box-shadow:0 10px 35px rgba(255,0,100,.18)
 }
 
-.card-service p{
-  color:#999;
+.service h3{
+margin-bottom:10px
 }
 
-/* GALLERY */
-
-.gallery-top{
-  max-width:1200px;
-  margin:auto;
+.service p{
+color:#999
 }
 
-.search-box{
-  margin-bottom:30px;
+.search{
+margin-bottom:30px
 }
 
-.search-box input{
-  width:100%;
-  padding:15px 18px;
-  background:#10131a;
-  border:1px solid #30333d;
-  color:white;
-  border-radius:14px;
-  outline:none;
-  font-size:16px;
+.search input{
+width:100%;
+padding:17px 20px;
+border-radius:16px;
+border:1px solid #333;
+outline:none;
+background:rgba(0,0,0,.4);
+color:#fff;
+font-size:16px
 }
 
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+gap:22px
 }
 
-.gallery-card{
-  background:#10131a;
-  border:1px solid #252936;
-  border-radius:18px;
-  overflow:hidden;
+.image-card{
+overflow:hidden;
+border-radius:20px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.12);
+transition:.3s
 }
 
-.gallery-card img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  display:block;
-  cursor:pointer;
-  transition:.25s;
+.image-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 40px rgba(124,0,255,.2)
 }
 
-.gallery-card img:hover{
-  transform:scale(1.02);
+.image-card img{
+width:100%;
+height:290px;
+object-fit:cover;
+display:block;
+cursor:pointer
 }
 
-.gallery-info{
-  padding:15px;
+.info{
+padding:16px
 }
 
-.gallery-info h3{
-  margin-bottom:6px;
+.info h3{
+margin-bottom:6px
 }
 
-.gallery-info p{
-  color:#999;
-  font-size:14px;
+.info p{
+color:#999;
+font-size:14px
 }
 
 .actions{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:12px;
+display:flex;
+gap:8px;
+margin-top:13px;
+flex-wrap:wrap
 }
 
-.small-btn{
-  background:#20232d;
-  color:white;
-  border:1px solid #383b45;
-  padding:8px 12px;
-  border-radius:10px;
-  cursor:pointer;
+.small{
+padding:9px 12px;
+border-radius:10px;
+background:#191522;
+color:#fff;
+border:1px solid #383044;
+cursor:pointer
 }
 
-.delete-btn{
-  background:#35151a;
-  color:#ff7180;
-  border-color:#63242c;
+.delete{
+background:#4a101c;
+color:#ff7185
 }
 
-/* UPLOAD */
-
-.upload-section{
-  display:none;
-  background:#10131a;
-  border:1px solid #292d38;
-  border-radius:18px;
-  padding:25px;
-  margin-top:30px;
+.upload{
+display:none;
+margin-top:25px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.15)
 }
 
-.upload-section input,
-.upload-section textarea{
-  width:100%;
-  padding:13px;
-  margin:7px 0;
-  background:#07090e;
-  color:white;
-  border:1px solid #333;
-  border-radius:10px;
-  outline:none;
+.upload input,
+.upload textarea{
+width:100%;
+padding:13px;
+margin:7px 0;
+border-radius:11px;
+border:1px solid #333;
+background:#08050e;
+color:#fff;
+outline:none
 }
 
-.upload-section textarea{
-  min-height:100px;
-  resize:vertical;
+.upload textarea{
+min-height:100px;
+resize:vertical
 }
 
-.upload-btn{
-  background:white;
-  color:black;
-  padding:12px 20px;
-  border:0;
-  border-radius:10px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-top:10px;
-}
-
-/* CONTACT */
-
-.contact{
-  text-align:center;
+.upload button{
+padding:13px 20px;
+border:0;
+border-radius:12px;
+background:linear-gradient(90deg,#ff1744,#7c00ff);
+color:#fff;
+font-weight:bold;
+cursor:pointer
 }
 
 .contact-box{
-  max-width:700px;
-  margin:auto;
-  background:#10131a;
-  border:1px solid #292d38;
-  border-radius:20px;
-  padding:40px 20px;
+max-width:700px;
+margin:auto;
+text-align:center;
+padding:40px 20px;
+border-radius:25px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.15)
 }
 
-/* FOOTER */
-
 footer{
-  text-align:center;
-  padding:35px 20px;
-  background:#030407;
-  border-top:1px solid #222;
-  color:#777;
+text-align:center;
+padding:35px 20px;
+color:#777;
+border-top:1px solid #222
 }
 
 /* IMAGE MODAL */
 
-.image-modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.96);
-  z-index:5000;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+.modal{
+position:fixed;
+inset:0;
+z-index:5000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:rgba(0,0,0,.96)
 }
 
-.image-modal.show{
-  display:flex;
+.modal.show{
+display:flex
 }
 
-.modal-content{
-  width:100%;
-  max-width:1000px;
-  max-height:95vh;
-  overflow:auto;
-  text-align:center;
-  position:relative;
+.modal-box{
+width:100%;
+max-width:1000px;
+max-height:94vh;
+overflow:auto;
+text-align:center
 }
 
 .modal-image{
-  max-width:100%;
-  max-height:72vh;
-  object-fit:contain;
-  border-radius:12px;
+max-width:100%;
+max-height:72vh;
+object-fit:contain;
+border-radius:15px
 }
 
-.close-image{
-  position:fixed;
-  top:15px;
-  right:18px;
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  background:white;
-  color:black;
-  border:0;
-  font-size:28px;
-  font-weight:bold;
-  cursor:pointer;
-  z-index:6000;
+.close{
+position:fixed;
+top:15px;
+right:18px;
+z-index:6000;
+width:50px;
+height:50px;
+border-radius:50%;
+border:0;
+background:#fff;
+color:#000;
+font-size:30px;
+font-weight:bold;
+cursor:pointer
 }
 
-.modal-content h2{
-  margin-top:15px;
+.modal-box h2{
+margin-top:15px
 }
 
-.modal-content p{
-  color:#aaa;
+.modal-box p{
+color:#aaa
 }
 
 .modal-actions{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:15px;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px
 }
 
 /* LOGIN */
 
-.login-modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
-  z-index:7000;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+.login{
+position:fixed;
+inset:0;
+z-index:7000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:rgba(0,0,0,.9)
 }
 
-.login-modal.show{
-  display:flex;
+.login.show{
+display:flex
 }
 
 .login-box{
-  width:100%;
-  max-width:400px;
-  background:#11131a;
-  border:1px solid #333;
-  border-radius:18px;
-  padding:25px;
+width:100%;
+max-width:400px;
+padding:28px;
+border-radius:22px;
+background:#110c19;
+border:1px solid #44304d;
+box-shadow:0 0 50px rgba(255,0,120,.2)
 }
 
 .login-box h2{
-  margin-bottom:20px;
+margin-bottom:20px
 }
 
 .login-box input{
-  width:100%;
-  padding:13px;
-  margin-bottom:12px;
-  background:#07090e;
-  color:white;
-  border:1px solid #333;
-  border-radius:10px;
+width:100%;
+padding:14px;
+margin-bottom:12px;
+border-radius:10px;
+border:1px solid #333;
+background:#08050e;
+color:#fff
 }
 
-.login-button{
-  width:100%;
-  padding:13px;
-  background:white;
-  color:black;
-  border:0;
-  border-radius:10px;
-  font-weight:bold;
-  cursor:pointer;
+.login-btn{
+width:100%;
+padding:13px;
+border:0;
+border-radius:12px;
+background:linear-gradient(90deg,#ff1744,#7c00ff);
+color:#fff;
+font-weight:bold;
+cursor:pointer
 }
 
 .close-login{
-  float:right;
-  background:none;
-  color:white;
-  border:0;
-  font-size:25px;
-  cursor:pointer;
+float:right;
+background:none;
+border:0;
+color:#fff;
+font-size:26px;
+cursor:pointer
 }
-
-/* MOBILE */
 
 @media(max-width:700px){
 
-  header{
-    padding:14px 4%;
-  }
+nav a{
+display:none
+}
 
-  .nav{
-    flex-direction:row;
-  }
+.hero{
+min-height:70vh
+}
 
-  nav a{
-    display:none;
-  }
+.hero p{
+font-size:17px
+}
 
-  .hero{
-    min-height:65vh;
-  }
+section{
+padding:60px 5%
+}
 
-  .hero p{
-    font-size:17px;
-  }
+.gallery{
+grid-template-columns:1fr
+}
 
-  section{
-    padding:55px 5%;
-  }
+.image-card img{
+height:330px
+}
 
-  .title{
-    font-size:30px;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .gallery-card img{
-    height:300px;
-  }
+.title{
+font-size:34px
+}
 }
 </style>
 </head>
@@ -499,25 +508,25 @@ footer{
 <body>
 
 <header>
-  <div class="nav">
+<div class="nav">
 
-    <div class="logo">
-      💔 Broken <span>AI</span>
-    </div>
+<div class="logo">
+💔 Broken <span>AI</span>
+</div>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
 
-      <button class="admin-btn" id="adminBtn">
-        Admin Login
-      </button>
-    </nav>
+<button class="admin" id="adminBtn">
+Admin Login
+</button>
+</nav>
 
-  </div>
+</div>
 </header>
 
 
@@ -525,40 +534,45 @@ footer{
 
 <section class="hero" id="home">
 
-  <div>
+<div class="hero-inner">
 
-    <img
-      src="profile.jpg"
-      class="profile"
-      alt="Broken AI"
-    >
+<div class="badge">
+✨ FUTURE AI CREATIONS
+</div>
 
-    <h1>Broken AI</h1>
+<img
+src="./profile.jpg"
+class="profile"
+alt="Broken AI"
+onerror="this.style.display='none'"
+>
 
-    <p>
-      AI Images • Creative Gallery • Digital Creator
-    </p>
+<h1>Broken AI</h1>
 
-    <div class="buttons">
+<p>
+AI Images • Creative Gallery • Digital Creator
+</p>
 
-      <a
-        class="btn"
-        href="https://t.me/Brokenboy221716"
-        target="_blank"
-      >
-        ✈️ Telegram
-      </a>
+<div class="buttons">
 
-      <a
-        class="btn dark"
-        href="#gallery"
-      >
-        🖼️ View Gallery
-      </a>
+<a
+href="https://t.me/Brokenboy221716"
+target="_blank"
+class="btn"
+>
+✈️ Telegram
+</a>
 
-    </div>
+<a
+href="#gallery"
+class="btn blue"
+>
+🖼️ View Gallery
+</a>
 
-  </div>
+</div>
+
+</div>
 
 </section>
 
@@ -567,34 +581,27 @@ footer{
 
 <section id="about">
 
-  <h2 class="title">
-    About Me
-  </h2>
+<h2 class="title">
+About Me
+</h2>
 
-  <p class="subtitle">
-    Welcome to Broken AI
-  </p>
+<p class="subtitle">
+Welcome to Broken AI ❤️
+</p>
 
-  <div class="about">
+<div class="about">
 
-    <p>
-      Welcome to Broken AI ❤️
-    </p>
+<p>
+Broken AI एक creative AI image platform है जहाँ
+AI generated images, creative ideas और digital artwork
+एक जगह मिलते हैं।
+</p>
 
-    <br>
+<p>
+नई images और नए creative projects लगातार यहाँ add होते रहेंगे।
+</p>
 
-    <p>
-      यहाँ आपको AI images, creative edits,
-      digital artwork और नए creative projects देखने को मिलेंगे।
-    </p>
-
-    <br>
-
-    <p>
-      यह website आगे भी लगातार update होती रहेगी।
-    </p>
-
-  </div>
+</div>
 
 </section>
 
@@ -603,45 +610,37 @@ footer{
 
 <section id="services">
 
-  <h2 class="title">
-    What I Create
-  </h2>
+<h2 class="title">
+What I Create
+</h2>
 
-  <p class="subtitle">
-    Creative digital content
-  </p>
+<p class="subtitle">
+Creative digital content
+</p>
 
-  <div class="cards">
+<div class="cards">
 
-    <div class="card-service">
-      <h3>🤖 AI Images</h3>
-      <p>
-        Creative और realistic AI generated images.
-      </p>
-    </div>
+<div class="service">
+<h3>🤖 AI Images</h3>
+<p>Realistic और creative AI generated images.</p>
+</div>
 
-    <div class="card-service">
-      <h3>🎨 Photo Editing</h3>
-      <p>
-        Creative photo edits और visual designs.
-      </p>
-    </div>
+<div class="service">
+<h3>🎨 Photo Editing</h3>
+<p>Creative photo edits और cinematic visuals.</p>
+</div>
 
-    <div class="card-service">
-      <h3>🎬 Creative Content</h3>
-      <p>
-        Cinematic concepts और visual content.
-      </p>
-    </div>
+<div class="service">
+<h3>🔥 Viral Concepts</h3>
+<p>Social media के लिए creative visual ideas.</p>
+</div>
 
-    <div class="card-service">
-      <h3>📱 Social Media</h3>
-      <p>
-        Social media के लिए creative visuals.
-      </p>
-    </div>
+<div class="service">
+<h3>🚀 Future Projects</h3>
+<p>नई AI और digital projects आगे जुड़ते रहेंगे.</p>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -650,397 +649,375 @@ footer{
 
 <section id="gallery">
 
-  <h2 class="title">
-    My Gallery
-  </h2>
+<h2 class="title">
+AI Gallery
+</h2>
 
-  <p class="subtitle">
-    My latest creative work
-  </p>
+<p class="subtitle">
+Explore my latest creations
+</p>
 
-  <div class="gallery-top">
+<div class="search">
 
-    <div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Image search करें..."
+>
 
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Image search करें..."
-      >
-
-    </div>
+</div>
 
 
-    <!-- ADMIN UPLOAD -->
+<!-- ADMIN UPLOAD -->
 
-    <div
-      class="upload-section"
-      id="uploadSection"
-    >
+<div class="upload" id="uploadSection">
 
-      <h2>
-        📤 Upload New Image
-      </h2>
+<h2>
+📤 Upload New Image
+</h2>
 
-      <input
-        type="file"
-        id="imageFile"
-        accept="image/*"
-      >
+<input
+type="file"
+id="imageFile"
+accept="image/*"
+>
 
-      <input
-        type="text"
-        id="imageTitle"
-        placeholder="Image Title"
-      >
+<input
+type="text"
+id="imageTitle"
+placeholder="Image Title"
+>
 
-      <textarea
-        id="imageCaption"
-        placeholder="Image Caption"
-      ></textarea>
+<textarea
+id="imageCaption"
+placeholder="Image Caption"
+></textarea>
 
-      <textarea
-        id="imagePrompt"
-        placeholder="AI Prompt"
-      ></textarea>
+<textarea
+id="imagePrompt"
+placeholder="AI Prompt"
+></textarea>
 
-      <button
-        class="upload-btn"
-        id="uploadBtn"
-      >
-        Upload Image
-      </button>
+<button id="uploadBtn">
+🚀 Upload Image
+</button>
 
-    </div>
+</div>
 
 
-    <div
-      class="gallery"
-      id="galleryBox"
-    ></div>
-
-  </div>
+<div
+class="gallery"
+id="galleryBox"
+>
+</div>
 
 </section>
 
 
 <!-- CONTACT -->
 
-<section
-  id="contact"
-  class="contact"
+<section id="contact">
+
+<h2 class="title">
+Contact
+</h2>
+
+<p class="subtitle">
+Let's connect
+</p>
+
+<div class="contact-box">
+
+<h2>
+💜 Broken AI
+</h2>
+
+<p style="color:#999;margin-top:10px">
+Updates, creative work और collaborations के लिए connect करें।
+</p>
+
+<div class="buttons">
+
+<a
+href="https://t.me/Brokenboy221716"
+target="_blank"
+class="btn"
 >
+✈️ Telegram
+</a>
 
-  <h2 class="title">
-    Contact
-  </h2>
+<a
+href="https://wa.me/917318399281"
+target="_blank"
+class="btn blue"
+>
+📞 Contact
+</a>
 
-  <p class="subtitle">
-    Connect with Broken AI
-  </p>
+</div>
 
-  <div class="contact-box">
-
-    <h2>
-      💔 Let's Connect
-    </h2>
-
-    <p style="color:#999;margin-top:10px;">
-      Creative work, collaborations और updates के लिए contact करें।
-    </p>
-
-    <div class="buttons">
-
-      <a
-        class="btn"
-        href="https://t.me/Brokenboy221716"
-        target="_blank"
-      >
-        ✈️ Telegram
-      </a>
-
-      <a
-        class="btn dark"
-        href="https://wa.me/917318399281"
-        target="_blank"
-      >
-        📞 Contact
-      </a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
 <footer>
-
-  <p>
-    © 2026 Broken AI. All Rights Reserved.
-  </p>
-
+© 2026 Broken AI • Made with ❤️ & AI
 </footer>
 
 
-<!-- IMAGE VIEW MODAL -->
+<!-- IMAGE VIEW -->
 
 <div
-  class="image-modal"
-  id="imageModal"
+class="modal"
+id="imageModal"
 >
 
-  <!-- X BUTTON -->
+<button
+class="close"
+id="closeImage"
+type="button"
+>
+×
+</button>
 
-  <button
-    class="close-image"
-    id="closeImage"
-    type="button"
-  >
-    ×
-  </button>
+<div class="modal-box">
 
-  <div class="modal-content">
+<img
+id="modalImage"
+class="modal-image"
+src=""
+alt="AI Image"
+>
 
-    <img
-      id="modalImage"
-      class="modal-image"
-      src=""
-      alt="AI Image"
-    >
+<h2 id="modalTitle"></h2>
 
-    <h2 id="modalTitle"></h2>
+<p id="modalCaption"></p>
 
-    <p id="modalCaption"></p>
+<div class="modal-actions">
 
-    <div class="modal-actions">
+<button
+class="small"
+id="copyPrompt"
+>
+📋 Copy Prompt
+</button>
 
-      <button
-        class="small-btn"
-        id="copyPrompt"
-      >
-        📋 Copy Prompt
-      </button>
+<button
+class="small"
+id="likeBtn"
+>
+❤️ Like <span id="likeCount">0</span>
+</button>
 
-      <button
-        class="small-btn"
-        id="likeBtn"
-      >
-        ❤️ Like <span id="likeCount">0</span>
-      </button>
+<button
+class="small"
+id="downloadBtn"
+>
+📥 Download
+</button>
 
-      <button
-        class="small-btn"
-        id="downloadBtn"
-      >
-        📥 Download
-      </button>
+<button
+class="small delete"
+id="deleteBtn"
+>
+🗑️ Delete
+</button>
 
-      <button
-        class="small-btn delete-btn"
-        id="deleteBtn"
-      >
-        🗑️ Delete
-      </button>
+</div>
 
-    </div>
-
-  </div>
+</div>
 
 </div>
 
 
-<!-- LOGIN MODAL -->
+<!-- LOGIN -->
 
 <div
-  class="login-modal"
-  id="loginModal"
+class="login"
+id="loginModal"
 >
 
-  <div class="login-box">
+<div class="login-box">
 
-    <button
-      class="close-login"
-      id="closeLogin"
-      type="button"
-    >
-      ×
-    </button>
+<button
+class="close-login"
+id="closeLogin"
+>
+×
+</button>
 
-    <h2>
-      🔐 Admin Login
-    </h2>
+<h2>
+🔐 Admin Login
+</h2>
 
-    <input
-      type="email"
-      id="loginEmail"
-      placeholder="Admin Email"
-    >
+<input
+type="email"
+id="loginEmail"
+placeholder="Admin Email"
+>
 
-    <input
-      type="password"
-      id="loginPassword"
-      placeholder="Password"
-    >
+<input
+type="password"
+id="loginPassword"
+placeholder="Password"
+>
 
-    <button
-      class="login-button"
-      id="loginButton"
-    >
-      Login
-    </button>
+<button
+class="login-btn"
+id="loginButton"
+>
+Login
+</button>
 
-  </div>
+</div>
 
 </div>
 
 
 <script type="module">
 
+import{
+initializeApp
+}from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+import{
+getFirestore,
+collection,
+addDoc,
+getDocs,
+deleteDoc,
+doc,
+updateDoc,
+increment,
+orderBy,
+query,
+serverTimestamp
+}from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+import{
+getAuth,
+signInWithEmailAndPassword,
+onAuthStateChanged,
+signOut
+}from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+
 /* FIREBASE */
 
-import {
-  initializeApp
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+const firebaseConfig={
 
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  deleteDoc,
-  doc,
-  updateDoc,
-  increment,
-  orderBy,
-  query,
-  serverTimestamp
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+apiKey:
+"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
 
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+authDomain:
+"broken-boy-f5087.firebaseapp.com",
 
+projectId:
+"broken-boy-f5087",
 
-const firebaseConfig = {
+storageBucket:
+"broken-boy-f5087.firebasestorage.app",
 
-  apiKey:
-    "AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+messagingSenderId:
+"1086620986469",
 
-  authDomain:
-    "broken-boy-f5087.firebaseapp.com",
+appId:
+"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
 
-  projectId:
-    "broken-boy-f5087",
+measurementId:
+"G-F2E1B5LWEN"
 
-  storageBucket:
-    "broken-boy-f5087.firebasestorage.app",
-
-  messagingSenderId:
-    "1086620986469",
-
-  appId:
-    "1:1086620986469:web:0c08c7c876e5389ae8aa8c",
-
-  measurementId:
-    "G-F2E1B5LWEN"
 };
 
+const app=initializeApp(firebaseConfig);
 
-const app =
-  initializeApp(firebaseConfig);
+const db=getFirestore(app);
 
-const db =
-  getFirestore(app);
-
-const auth =
-  getAuth(app);
+const auth=getAuth(app);
 
 
 /* CLOUDINARY */
 
-const CLOUDINARY_CLOUD_NAME =
-  "g33rvuls";
+const CLOUD_NAME="g33rvuls";
 
-const CLOUDINARY_UPLOAD_PRESET =
-  "brokenai";
+const UPLOAD_PRESET="brokenai";
 
 
 /* ADMIN */
 
-const ADMIN_EMAIL =
-  "himanshukanaujiya03@gmail.com";
+const ADMIN_EMAIL=
+"himanshukanaujiya03@gmail.com";
 
 
-let isAdmin = false;
-let images = [];
-let selectedImage = null;
+let isAdmin=false;
+
+let images=[];
+
+let selectedImage=null;
 
 
 /* ELEMENTS */
 
-const galleryBox =
-  document.getElementById("galleryBox");
+const galleryBox=
+document.getElementById("galleryBox");
 
-const searchInput =
-  document.getElementById("searchInput");
+const searchInput=
+document.getElementById("searchInput");
 
-const imageModal =
-  document.getElementById("imageModal");
+const imageModal=
+document.getElementById("imageModal");
 
-const modalImage =
-  document.getElementById("modalImage");
+const modalImage=
+document.getElementById("modalImage");
 
-const modalTitle =
-  document.getElementById("modalTitle");
+const modalTitle=
+document.getElementById("modalTitle");
 
-const modalCaption =
-  document.getElementById("modalCaption");
+const modalCaption=
+document.getElementById("modalCaption");
 
-const likeCount =
-  document.getElementById("likeCount");
+const likeCount=
+document.getElementById("likeCount");
 
-const loginModal =
-  document.getElementById("loginModal");
+const loginModal=
+document.getElementById("loginModal");
 
 
-/* LOAD IMAGES */
+/* LOAD */
 
 async function loadImages(){
 
-  galleryBox.innerHTML =
-    "<p style='color:#888;'>Loading images...</p>";
+galleryBox.innerHTML=
+"<p style='color:#888'>Loading...</p>";
 
-  try{
+try{
 
-    const q =
-      query(
-        collection(db,"images"),
-        orderBy("createdAt","desc")
-      );
+const q=query(
+collection(db,"images"),
+orderBy("createdAt","desc")
+);
 
-    const snap =
-      await getDocs(q);
+const snap=await getDocs(q);
 
-    images =
-      snap.docs.map(d => ({
-        id:d.id,
-        ...d.data()
-      }));
+images=snap.docs.map(d=>({
+id:d.id,
+...d.data()
+}));
 
-    renderImages();
+renderImages();
 
-  }catch(error){
+}catch(error){
 
-    console.error(error);
+console.error(error);
 
-    galleryBox.innerHTML =
-      "<p style='color:#888;'>Gallery load नहीं हुई।</p>";
+galleryBox.innerHTML=
+"<p style='color:#888'>Gallery load नहीं हुई।</p>";
 
-  }
+}
 
 }
 
@@ -1049,143 +1026,115 @@ async function loadImages(){
 
 function renderImages(){
 
-  const text =
-    searchInput.value
-      .toLowerCase()
-      .trim();
+const search=
+searchInput.value
+.toLowerCase()
+.trim();
 
-  const filtered =
-    images.filter(x => {
+const filtered=images.filter(x=>
+(x.title||"")
+.toLowerCase()
+.includes(search)
+||
+(x.caption||"")
+.toLowerCase()
+.includes(search)
+||
+(x.prompt||"")
+.toLowerCase()
+.includes(search)
+);
 
-      return (
+galleryBox.innerHTML="";
 
-        (x.title || "")
-          .toLowerCase()
-          .includes(text)
+if(filtered.length===0){
 
-        ||
+galleryBox.innerHTML=
+"<p style='color:#777'>कोई image नहीं मिली।</p>";
 
-        (x.caption || "")
-          .toLowerCase()
-          .includes(text)
+return;
+}
 
-        ||
+filtered.forEach(x=>{
 
-        (x.prompt || "")
-          .toLowerCase()
-          .includes(text)
+const card=
+document.createElement("div");
 
-      );
+card.className="image-card";
 
-    });
+card.innerHTML=`
 
+<img
+src="${x.url}"
+alt="${x.title||"AI Image"}"
+>
 
-  galleryBox.innerHTML = "";
+<div class="info">
 
+<h3>
+${x.title||"Untitled"}
+</h3>
 
-  if(filtered.length === 0){
+<p>
+${x.caption||""}
+</p>
 
-    galleryBox.innerHTML =
-      "<p style='color:#777;'>अभी कोई image नहीं मिली।</p>";
+<div class="actions">
 
-    return;
+<button class="small view">
+👁️ View
+</button>
 
-  }
+<button class="small like">
+❤️ ${x.likes||0}
+</button>
 
+</div>
 
-  filtered.forEach(x => {
+</div>
+`;
 
-    const card =
-      document.createElement("div");
+card.querySelector("img")
+.addEventListener(
+"click",
+()=>openImage(x)
+);
 
-    card.className =
-      "gallery-card";
+card.querySelector(".view")
+.addEventListener(
+"click",
+()=>openImage(x)
+);
 
+card.querySelector(".like")
+.addEventListener(
+"click",
+async()=>{
 
-    card.innerHTML = `
+try{
 
-      <img
-        src="${x.url}"
-        alt="${x.title || "AI Image"}"
-      >
+await updateDoc(
+doc(db,"images",x.id),
+{
+likes:increment(1)
+}
+);
 
-      <div class="gallery-info">
+x.likes=(x.likes||0)+1;
 
-        <h3>
-          ${x.title || "Untitled"}
-        </h3>
+renderImages();
 
-        <p>
-          ${x.caption || ""}
-        </p>
+}catch{
 
-        <div class="actions">
+alert("Like नहीं हो पाया।");
 
-          <button class="small-btn view-btn">
-            👁️ View
-          </button>
+}
 
-          <button class="small-btn like-card">
-            ❤️ ${x.likes || 0}
-          </button>
+});
 
-        </div>
+galleryBox.appendChild(card);
 
-      </div>
-    `;
-
-
-    card
-      .querySelector("img")
-      .addEventListener(
-        "click",
-        () => openImage(x)
-      );
-
-
-    card
-      .querySelector(".view-btn")
-      .addEventListener(
-        "click",
-        () => openImage(x)
-      );
-
-
-    card
-      .querySelector(".like-card")
-      .addEventListener(
-        "click",
-        async () => {
-
-          try{
-
-            await updateDoc(
-              doc(db,"images",x.id),
-              {
-                likes:increment(1)
-              }
-            );
-
-            x.likes =
-              (x.likes || 0) + 1;
-
-            renderImages();
-
-          }catch(error){
-
-            alert(
-              "Like नहीं हो पाया।"
-            );
-
-          }
-
-        }
-      );
-
-
-    galleryBox.appendChild(card);
-
-  });
+});
 
 }
 
@@ -1194,655 +1143,498 @@ function renderImages(){
 
 function openImage(x){
 
-  selectedImage = x;
+selectedImage=x;
 
-  modalImage.src =
-    x.url;
+modalImage.src=x.url;
 
-  modalTitle.textContent =
-    x.title || "Untitled";
+modalTitle.textContent=
+x.title||"Untitled";
 
-  modalCaption.textContent =
-    x.caption || "";
+modalCaption.textContent=
+x.caption||"";
 
-  likeCount.textContent =
-    x.likes || 0;
+likeCount.textContent=
+x.likes||0;
 
+document.getElementById(
+"deleteBtn"
+).style.display=
+isAdmin
+?"inline-block"
+:"none";
 
-  document.getElementById(
-    "deleteBtn"
-  ).style.display =
-    isAdmin
-      ? "inline-block"
-      : "none";
+imageModal.classList.add("show");
 
-
-  imageModal.classList.add(
-    "show"
-  );
-
-  document.body.style.overflow =
-    "hidden";
+document.body.style.overflow="hidden";
 
 }
 
 
-/* =========================
-   FIXED CLOSE FUNCTION
-   ========================= */
+/* CLOSE IMAGE */
 
 function closeImage(){
 
-  imageModal.classList.remove(
-    "show"
-  );
+imageModal.classList.remove("show");
 
-  modalImage.src = "";
+modalImage.src="";
 
-  modalTitle.textContent = "";
+modalTitle.textContent="";
 
-  modalCaption.textContent = "";
+modalCaption.textContent="";
 
-  selectedImage = null;
+selectedImage=null;
 
-  document.body.style.overflow =
-    "";
+document.body.style.overflow="";
 
 }
 
 
-/* X BUTTON */
+/* X */
 
-document
-  .getElementById("closeImage")
-  .addEventListener(
-    "click",
-    function(e){
+document.getElementById(
+"closeImage"
+).onclick=e=>{
 
-      e.preventDefault();
-      e.stopPropagation();
+e.preventDefault();
 
-      closeImage();
+e.stopPropagation();
 
-    }
-  );
+closeImage();
+
+};
 
 
-/* BACKGROUND CLICK */
+/* BACKGROUND */
 
-imageModal.addEventListener(
-  "click",
-  function(e){
+imageModal.onclick=e=>{
 
-    if(e.target === imageModal){
+if(e.target===imageModal){
 
-      closeImage();
+closeImage();
 
-    }
+}
 
-  }
-);
+};
 
 
 /* ESC */
 
 document.addEventListener(
-  "keydown",
-  function(e){
+"keydown",
+e=>{
 
-    if(e.key === "Escape"){
+if(e.key==="Escape"){
 
-      if(
-        imageModal.classList.contains(
-          "show"
-        )
-      ){
+if(imageModal.classList.contains("show"))
+closeImage();
 
-        closeImage();
+if(loginModal.classList.contains("show"))
+closeLogin();
 
-      }
+}
 
-      if(
-        loginModal.classList.contains(
-          "show"
-        )
-      ){
-
-        closeLogin();
-
-      }
-
-    }
-
-  }
+}
 );
 
 
 /* SEARCH */
 
-searchInput.addEventListener(
-  "input",
-  renderImages
+searchInput.oninput=
+renderImages;
+
+
+/* COPY */
+
+document.getElementById(
+"copyPrompt"
+).onclick=async()=>{
+
+if(!selectedImage)return;
+
+try{
+
+await navigator.clipboard.writeText(
+selectedImage.prompt||""
 );
 
+alert("Prompt copy हो गया ✅");
 
-/* COPY PROMPT */
+}catch{
 
-document
-  .getElementById("copyPrompt")
-  .addEventListener(
-    "click",
-    async () => {
+alert("Copy नहीं हो पाया।");
 
-      if(!selectedImage)
-        return;
+}
 
-      try{
-
-        await navigator.clipboard.writeText(
-          selectedImage.prompt || ""
-        );
-
-        alert(
-          "Prompt copy हो गया ✅"
-        );
-
-      }catch{
-
-        alert(
-          "Prompt copy नहीं हो पाया।"
-        );
-
-      }
-
-    }
-  );
+};
 
 
-/* LIKE MODAL */
+/* LIKE */
 
-document
-  .getElementById("likeBtn")
-  .addEventListener(
-    "click",
-    async () => {
+document.getElementById(
+"likeBtn"
+).onclick=async()=>{
 
-      if(!selectedImage)
-        return;
+if(!selectedImage)return;
 
-      try{
+try{
 
-        await updateDoc(
-          doc(
-            db,
-            "images",
-            selectedImage.id
-          ),
-          {
-            likes:increment(1)
-          }
-        );
+await updateDoc(
+doc(db,"images",selectedImage.id),
+{
+likes:increment(1)
+}
+);
 
-        selectedImage.likes =
-          (selectedImage.likes || 0) + 1;
+selectedImage.likes=
+(selectedImage.likes||0)+1;
 
-        likeCount.textContent =
-          selectedImage.likes;
+likeCount.textContent=
+selectedImage.likes;
 
-      }catch{
+}catch{
 
-        alert(
-          "Like नहीं हो पाया।"
-        );
+alert("Like नहीं हो पाया।");
 
-      }
+}
 
-    }
-  );
+};
 
 
 /* DOWNLOAD */
 
-document
-  .getElementById("downloadBtn")
-  .addEventListener(
-    "click",
-    () => {
+document.getElementById(
+"downloadBtn"
+).onclick=()=>{
 
-      if(!selectedImage)
-        return;
+if(!selectedImage)return;
 
-      const a =
-        document.createElement("a");
+const a=
+document.createElement("a");
 
-      a.href =
-        selectedImage.url;
+a.href=selectedImage.url;
 
-      a.target =
-        "_blank";
+a.target="_blank";
 
-      a.download =
-        (selectedImage.title ||
-          "broken-ai") + ".jpg";
+a.download=
+(selectedImage.title||"broken-ai")+
+".jpg";
 
-      document.body.appendChild(a);
+document.body.appendChild(a);
 
-      a.click();
+a.click();
 
-      a.remove();
+a.remove();
 
-    }
-  );
+};
 
 
 /* DELETE */
 
-document
-  .getElementById("deleteBtn")
-  .addEventListener(
-    "click",
-    async () => {
+document.getElementById(
+"deleteBtn"
+).onclick=async()=>{
 
-      if(
-        !isAdmin ||
-        !selectedImage
-      )
-        return;
+if(!isAdmin||!selectedImage)return;
 
-      if(
-        !confirm(
-          "क्या यह image delete करनी है?"
-        )
-      )
-        return;
+if(!confirm(
+"क्या यह image delete करनी है?"
+))return;
 
+try{
 
-      try{
+await deleteDoc(
+doc(db,"images",selectedImage.id)
+);
 
-        await deleteDoc(
-          doc(
-            db,
-            "images",
-            selectedImage.id
-          )
-        );
+closeImage();
 
-        closeImage();
+await loadImages();
 
-        await loadImages();
+alert("Image delete हो गई ✅");
 
-        alert(
-          "Image delete हो गई ✅"
-        );
+}catch(error){
 
-      }catch(error){
+alert(
+"Delete failed: "+
+error.message
+);
 
-        console.error(error);
+}
 
-        alert(
-          "Delete failed: " +
-          error.message
-        );
-
-      }
-
-    }
-  );
+};
 
 
-/* ADMIN BUTTON */
+/* ADMIN LOGIN */
 
-document
-  .getElementById("adminBtn")
-  .addEventListener(
-    "click",
-    () => {
+document.getElementById(
+"adminBtn"
+).onclick=()=>{
 
-      if(isAdmin){
+if(isAdmin){
 
-        signOut(auth);
+signOut(auth);
 
-      }else{
+}else{
 
-        loginModal.classList.add(
-          "show"
-        );
+loginModal.classList.add("show");
 
-        document.body.style.overflow =
-          "hidden";
+document.body.style.overflow="hidden";
 
-      }
+}
 
-    }
-  );
+};
 
 
 /* CLOSE LOGIN */
 
 function closeLogin(){
 
-  loginModal.classList.remove(
-    "show"
-  );
+loginModal.classList.remove("show");
 
-  document.body.style.overflow =
-    "";
+document.body.style.overflow="";
 
 }
 
-
-document
-  .getElementById("closeLogin")
-  .addEventListener(
-    "click",
-    closeLogin
-  );
+document.getElementById(
+"closeLogin"
+).onclick=closeLogin;
 
 
 /* LOGIN */
 
-document
-  .getElementById("loginButton")
-  .addEventListener(
-    "click",
-    async () => {
+document.getElementById(
+"loginButton"
+).onclick=async()=>{
 
-      const email =
-        document
-          .getElementById(
-            "loginEmail"
-          )
-          .value
-          .trim();
+const email=
+document.getElementById(
+"loginEmail"
+).value.trim();
 
-      const password =
-        document
-          .getElementById(
-            "loginPassword"
-          )
-          .value;
+const password=
+document.getElementById(
+"loginPassword"
+).value;
 
+if(email!==ADMIN_EMAIL){
 
-      if(
-        email !== ADMIN_EMAIL
-      ){
+alert(
+"यह Admin Email नहीं है।"
+);
 
-        alert(
-          "यह Admin Email नहीं है।"
-        );
+return;
 
-        return;
+}
 
-      }
+try{
 
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
 
-      try{
+closeLogin();
 
-        await signInWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
+alert("Admin Login सफल ✅");
 
-        closeLogin();
+}catch(error){
 
-        alert(
-          "Admin Login सफल ✅"
-        );
+alert(
+"Login failed: "+
+error.message
+);
 
-      }catch(error){
+}
 
-        alert(
-          "Login failed: " +
-          error.message
-        );
-
-      }
-
-    }
-  );
+};
 
 
 /* AUTH */
 
 onAuthStateChanged(
-  auth,
-  user => {
+auth,
+user=>{
 
-    isAdmin =
-      !!user &&
-      user.email === ADMIN_EMAIL;
+isAdmin=
+!!user&&
+user.email===ADMIN_EMAIL;
 
+document.getElementById(
+"uploadSection"
+).style.display=
+isAdmin
+?"block"
+:"none";
 
-    document
-      .getElementById(
-        "uploadSection"
-      )
-      .style.display =
-        isAdmin
-          ? "block"
-          : "none";
+document.getElementById(
+"adminBtn"
+).textContent=
+isAdmin
+?"Logout"
+:"Admin Login";
 
+if(imageModal.classList.contains("show")){
 
-    document
-      .getElementById(
-        "adminBtn"
-      )
-      .textContent =
-        isAdmin
-          ? "Logout"
-          : "Admin Login";
+document.getElementById(
+"deleteBtn"
+).style.display=
+isAdmin
+?"inline-block"
+:"none";
 
+}
 
-    if(
-      imageModal.classList.contains(
-        "show"
-      )
-    ){
-
-      document
-        .getElementById(
-          "deleteBtn"
-        )
-        .style.display =
-          isAdmin
-            ? "inline-block"
-            : "none";
-
-    }
-
-  }
+}
 );
 
 
 /* UPLOAD */
 
-document
-  .getElementById("uploadBtn")
-  .addEventListener(
-    "click",
-    async () => {
+document.getElementById(
+"uploadBtn"
+).onclick=async()=>{
 
-      if(!isAdmin){
+if(!isAdmin){
 
-        alert(
-          "पहले Admin Login करें।"
-        );
+alert("पहले Admin Login करें।");
 
-        return;
+return;
 
-      }
+}
 
+const file=
+document.getElementById(
+"imageFile"
+).files[0];
 
-      const file =
-        document
-          .getElementById(
-            "imageFile"
-          )
-          .files[0];
+const title=
+document.getElementById(
+"imageTitle"
+).value.trim();
 
-      const title =
-        document
-          .getElementById(
-            "imageTitle"
-          )
-          .value
-          .trim();
+const caption=
+document.getElementById(
+"imageCaption"
+).value.trim();
 
-      const caption =
-        document
-          .getElementById(
-            "imageCaption"
-          )
-          .value
-          .trim();
+const prompt=
+document.getElementById(
+"imagePrompt"
+).value.trim();
 
-      const prompt =
-        document
-          .getElementById(
-            "imagePrompt"
-          )
-          .value
-          .trim();
+if(!file){
 
+alert("पहले image चुनें।");
 
-      if(!file){
+return;
 
-        alert(
-          "पहले image चुनें।"
-        );
+}
 
-        return;
+const button=
+document.getElementById(
+"uploadBtn"
+);
 
-      }
+button.disabled=true;
 
+button.textContent=
+"Uploading...";
 
-      const button =
-        document.getElementById(
-          "uploadBtn"
-        );
+try{
 
-      button.disabled =
-        true;
+const formData=
+new FormData();
 
-      button.textContent =
-        "Uploading...";
+formData.append(
+"file",
+file
+);
 
+formData.append(
+"upload_preset",
+UPLOAD_PRESET
+);
 
-      try{
+const response=
+await fetch(
+`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+{
+method:"POST",
+body:formData
+}
+);
 
-        const formData =
-          new FormData();
+const data=
+await response.json();
 
-        formData.append(
-          "file",
-          file
-        );
+if(!data.secure_url){
 
-        formData.append(
-          "upload_preset",
-          CLOUDINARY_UPLOAD_PRESET
-        );
+throw new Error(
+"Cloudinary upload failed"
+);
 
+}
 
-        const response =
-          await fetch(
-            "https://api.cloudinary.com/v1_1/" +
-            CLOUDINARY_CLOUD_NAME +
-            "/image/upload",
-            {
-              method:"POST",
-              body:formData
-            }
-          );
+await addDoc(
+collection(db,"images"),
+{
 
+url:data.secure_url,
 
-        const data =
-          await response.json();
+title:title||"Untitled",
 
+caption:caption,
 
-        if(!data.secure_url){
+prompt:prompt,
 
-          throw new Error(
-            "Cloudinary upload failed"
-          );
+likes:0,
 
-        }
+createdAt:
+serverTimestamp()
 
+}
+);
 
-        await addDoc(
-          collection(db,"images"),
-          {
+document.getElementById(
+"imageFile"
+).value="";
 
-            url:data.secure_url,
+document.getElementById(
+"imageTitle"
+).value="";
 
-            title:
-              title || "Untitled",
+document.getElementById(
+"imageCaption"
+).value="";
 
-            caption:
-              caption,
+document.getElementById(
+"imagePrompt"
+).value="";
 
-            prompt:
-              prompt,
+alert(
+"Image upload हो गई ✅"
+);
 
-            likes:0,
+await loadImages();
 
-            createdAt:
-              serverTimestamp()
+}catch(error){
 
-          }
-        );
+console.error(error);
 
+alert(
+"Upload failed: "+
+error.message
+);
 
-        document
-          .getElementById(
-            "imageFile"
-          ).value = "";
+}
 
-        document
-          .getElementById(
-            "imageTitle"
-          ).value = "";
+button.disabled=false;
 
-        document
-          .getElementById(
-            "imageCaption"
-          ).value = "";
+button.textContent=
+"🚀 Upload Image";
 
-        document
-          .getElementById(
-            "imagePrompt"
-          ).value = "";
-
-
-        alert(
-          "Image upload हो गई ✅"
-        );
-
-
-        await loadImages();
-
-
-      }catch(error){
-
-        console.error(error);
-
-        alert(
-          "Upload failed: " +
-          error.message
-        );
-
-      }
-
-
-      button.disabled =
-        false;
-
-      button.textContent =
-        "Upload Image";
-
-    }
-  );
+};
 
 
 /* START */
