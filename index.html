@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Broken AI | AI Images</title>
 
-<meta name="description"
-      content="Broken AI - Premium AI image gallery with prompts, likes, downloads and uploads.">
-
+<meta name="description" content="Broken AI - Premium AI image gallery with prompts, likes, downloads and uploads.">
 <meta name="theme-color" content="#050505">
 
 <link rel="canonical"
-      href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
+href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
 
 <meta name="google-site-verification"
-      content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
+content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
 
 <style>
 
@@ -34,7 +30,7 @@ html{
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:
-        radial-gradient(circle at top,#181818 0%,#070707 45%,#000 100%);
+    radial-gradient(circle at top,#181818 0%,#070707 45%,#000 100%);
     color:#fff;
     min-height:100vh;
 }
@@ -70,6 +66,7 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:12px;
 }
 
 .logo{
@@ -82,17 +79,26 @@ header{
     color:#888;
 }
 
-.telegram{
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.telegram,
+.contact{
     color:#fff;
     text-decoration:none;
-    padding:11px 17px;
+    padding:10px 14px;
     border-radius:999px;
     background:rgba(255,255,255,.06);
     border:1px solid rgba(255,255,255,.13);
     transition:.25s;
+    font-size:13px;
 }
 
-.telegram:hover{
+.telegram:hover,
+.contact:hover{
     background:#fff;
     color:#000;
 }
@@ -178,6 +184,12 @@ header{
 .btn:disabled{
     opacity:.5;
     cursor:not-allowed;
+}
+
+.btn.dark{
+    background:#111;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.12);
 }
 
 /* GALLERY */
@@ -299,13 +311,20 @@ header{
     color:#777;
 }
 
-/* LOADING */
-
 .loading{
     grid-column:1/-1;
     text-align:center;
     padding:70px 20px;
     color:#777;
+}
+
+/* STATUS */
+
+.status{
+    text-align:center;
+    color:#777;
+    font-size:13px;
+    margin-bottom:20px;
 }
 
 /* IMAGE MODAL */
@@ -425,16 +444,6 @@ header{
     flex:1;
 }
 
-/* STATUS */
-
-.status{
-    text-align:center;
-    color:#888;
-    font-size:13px;
-    margin-top:-15px;
-    margin-bottom:20px;
-}
-
 /* FOOTER */
 
 footer{
@@ -462,12 +471,17 @@ footer{
     }
 
     .logo{
-        font-size:21px;
+        font-size:20px;
     }
 
-    .telegram{
-        font-size:13px;
-        padding:9px 12px;
+    .nav-right{
+        gap:5px;
+    }
+
+    .telegram,
+    .contact{
+        padding:8px 9px;
+        font-size:11px;
     }
 
     .hero{
@@ -507,13 +521,29 @@ footer{
         Broken <span>AI</span>
     </div>
 
-    <a
-        class="telegram"
-        href="https://t.me/"
-        target="_blank"
-        rel="noopener">
-        Telegram ↗
-    </a>
+    <div class="nav-right">
+
+        <!-- TELEGRAM -->
+
+        <a
+            class="telegram"
+            href="https://t.me/Brokenboy221716"
+            target="_blank"
+            rel="noopener">
+            Telegram ↗
+        </a>
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="contact"
+            href="https://wa.me/917318399281"
+            target="_blank"
+            rel="noopener">
+            Contact
+        </a>
+
+    </div>
 
 </div>
 
@@ -566,11 +596,13 @@ footer{
 
 </div>
 
+
 <div
     id="status"
     class="status">
     Loading gallery...
 </div>
+
 
 <div
     id="gallery"
@@ -594,7 +626,7 @@ footer{
 </footer>
 
 
-<!-- IMAGE FULLSCREEN -->
+<!-- FULLSCREEN IMAGE -->
 
 <div
     id="imageModal"
@@ -619,7 +651,7 @@ footer{
 </div>
 
 
-<!-- UPLOAD MODAL -->
+<!-- UPLOAD -->
 
 <div
     id="uploadModal"
@@ -630,6 +662,7 @@ footer{
         <h2>
             Upload AI Image
         </h2>
+
 
         <div class="field">
 
@@ -759,10 +792,6 @@ const firebaseConfig = {
 };
 
 
-/* =========================
-   INITIALIZE FIREBASE
-========================= */
-
 const app =
 initializeApp(firebaseConfig);
 
@@ -810,7 +839,7 @@ document.getElementById("modalImage");
 
 
 /* =========================
-   LOAD FIRESTORE IMAGES
+   LOAD IMAGES
 ========================= */
 
 async function loadImages(){
@@ -820,34 +849,43 @@ async function loadImages(){
         status.textContent =
         "Loading gallery...";
 
+
         const q =
         query(
             collection(db,"images"),
             orderBy("createdAt","desc")
         );
 
+
         const snapshot =
         await getDocs(q);
+
 
         images =
         snapshot.docs.map(item => ({
 
             id:item.id,
+
             ...item.data()
 
         }));
 
+
         renderImages();
+
 
         status.textContent =
         `${images.length} image${images.length === 1 ? "" : "s"} in gallery`;
+
 
     }catch(error){
 
         console.error(error);
 
+
         status.textContent =
         "Gallery loading error";
+
 
         gallery.innerHTML = `
 
@@ -871,23 +909,23 @@ async function loadImages(){
 
 
 /* =========================
-   OPEN UPLOAD
+   UPLOAD MODAL
 ========================= */
 
 window.openUpload = function(){
 
-    uploadModal.classList.add("active");
+    uploadModal.classList.add(
+        "active"
+    );
 
 };
 
 
-/* =========================
-   CLOSE UPLOAD
-========================= */
-
 window.closeUpload = function(){
 
-    uploadModal.classList.remove("active");
+    uploadModal.classList.remove(
+        "active"
+    );
 
 };
 
@@ -901,14 +939,18 @@ window.uploadImage = async function(){
     const file =
     document.getElementById("imageFile").files[0];
 
+
     const title =
     document.getElementById("imageTitle").value.trim();
+
 
     const caption =
     document.getElementById("imageCaption").value.trim();
 
+
     const prompt =
     document.getElementById("imagePrompt").value.trim();
+
 
     const button =
     document.getElementById("uploadButton");
@@ -916,7 +958,9 @@ window.uploadImage = async function(){
 
     if(!file){
 
-        alert("Please select an image.");
+        alert(
+            "Please select an image."
+        );
 
         return;
 
@@ -925,7 +969,9 @@ window.uploadImage = async function(){
 
     if(!title){
 
-        alert("Please enter image title.");
+        alert(
+            "Please enter image title."
+        );
 
         return;
 
@@ -945,10 +991,12 @@ window.uploadImage = async function(){
         const formData =
         new FormData();
 
+
         formData.append(
             "file",
             file
         );
+
 
         formData.append(
             "upload_preset",
@@ -1000,8 +1048,7 @@ window.uploadImage = async function(){
 
                 likes:0,
 
-                createdAt:
-                Date.now()
+                createdAt:Date.now()
 
             }
         );
@@ -1009,20 +1056,28 @@ window.uploadImage = async function(){
 
         /* RESET */
 
-        document.getElementById("imageFile").value =
-        "";
+        document.getElementById(
+            "imageFile"
+        ).value = "";
 
-        document.getElementById("imageTitle").value =
-        "";
 
-        document.getElementById("imageCaption").value =
-        "";
+        document.getElementById(
+            "imageTitle"
+        ).value = "";
 
-        document.getElementById("imagePrompt").value =
-        "";
+
+        document.getElementById(
+            "imageCaption"
+        ).value = "";
+
+
+        document.getElementById(
+            "imagePrompt"
+        ).value = "";
 
 
         closeUpload();
+
 
         await loadImages();
 
@@ -1036,10 +1091,12 @@ window.uploadImage = async function(){
 
         console.error(error);
 
+
         alert(
             "Upload failed:\n" +
             error.message
         );
+
 
     }finally{
 
@@ -1068,14 +1125,20 @@ function renderImages(){
     const filtered =
     images.filter(item => {
 
-        const text =
-        `
-        ${item.title || ""}
-        ${item.caption || ""}
-        ${item.prompt || ""}
+        const text = `
+
+            ${item.title || ""}
+
+            ${item.caption || ""}
+
+            ${item.prompt || ""}
+
         `.toLowerCase();
 
-        return text.includes(search);
+
+        return text.includes(
+            search
+        );
 
     });
 
@@ -1129,16 +1192,22 @@ function renderImages(){
             <div class="card-body">
 
                 <div class="card-title">
+
                     ${escapeHTML(
-                        item.title || "Untitled"
+                        item.title ||
+                        "Untitled"
                     )}
+
                 </div>
 
 
                 <div class="card-caption">
+
                     ${escapeHTML(
-                        item.caption || "No caption"
+                        item.caption ||
+                        "No caption"
                     )}
+
                 </div>
 
 
@@ -1146,6 +1215,7 @@ function renderImages(){
                     item.prompt
                     ?
                     `
+
                     <div class="prompt-box">
 
                         <strong>
@@ -1154,9 +1224,12 @@ function renderImages(){
 
                         <br>
 
-                        ${escapeHTML(item.prompt)}
+                        ${escapeHTML(
+                            item.prompt
+                        )}
 
                     </div>
+
                     `
                     :
                     ""
@@ -1214,7 +1287,7 @@ function renderImages(){
 
 
 /* =========================
-   FULLSCREEN
+   FULLSCREEN IMAGE
 ========================= */
 
 window.openImage = function(url){
@@ -1222,9 +1295,11 @@ window.openImage = function(url){
     modalImage.src =
     url;
 
+
     imageModal.classList.add(
         "active"
     );
+
 
     document.body.style.overflow =
     "hidden";
@@ -1248,8 +1323,10 @@ window.closeImage = function(event){
         "active"
     );
 
+
     modalImage.src =
     "";
+
 
     document.body.style.overflow =
     "";
@@ -1293,9 +1370,11 @@ window.copyPrompt = async function(id){
             item.prompt
         );
 
+
         alert(
             "Prompt copied! 📋"
         );
+
 
     }catch(error){
 
@@ -1339,6 +1418,7 @@ window.likeImage = async function(id){
     }catch(error){
 
         console.error(error);
+
 
         alert(
             "Like failed."
@@ -1386,6 +1466,7 @@ window.deleteImage = async function(id){
 
         console.error(error);
 
+
         alert(
             "Delete failed."
         );
@@ -1409,28 +1490,41 @@ window.downloadImage = async function(
         const response =
         await fetch(url);
 
+
         const blob =
         await response.blob();
 
+
         const blobURL =
-        URL.createObjectURL(blob);
+        URL.createObjectURL(
+            blob
+        );
+
 
         const link =
-        document.createElement("a");
+        document.createElement(
+            "a"
+        );
+
 
         link.href =
         blobURL;
 
+
         link.download =
         `${title || "broken-ai-image"}.jpg`;
+
 
         document.body.appendChild(
             link
         );
 
+
         link.click();
 
+
         link.remove();
+
 
         URL.revokeObjectURL(
             blobURL
@@ -1475,9 +1569,11 @@ document.addEventListener(
                 "active"
             );
 
+
             uploadModal.classList.remove(
                 "active"
             );
+
 
             document.body.style.overflow =
             "";
@@ -1496,30 +1592,30 @@ function escapeHTML(value){
 
     return String(value)
 
-        .replace(
-            /&/g,
-            "&amp;"
-        )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
 
-        .replace(
-            /</g,
-            "&lt;"
-        )
+    .replace(
+        /</g,
+        "&lt;"
+    )
 
-        .replace(
-            />/g,
-            "&gt;"
-        )
+    .replace(
+        />/g,
+        "&gt;"
+    )
 
-        .replace(
-            /"/g,
-            "&quot;"
-        )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
 
-        .replace(
-            /'/g,
-            "&#039;"
-        );
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
 }
 
@@ -1528,25 +1624,25 @@ function escapeAttr(value){
 
     return String(value)
 
-        .replace(
-            /\\/g,
-            "\\\\"
-        )
+    .replace(
+        /\\/g,
+        "\\\\"
+    )
 
-        .replace(
-            /'/g,
-            "\\'"
-        )
+    .replace(
+        /'/g,
+        "\\'"
+    )
 
-        .replace(
-            /"/g,
-            "&quot;"
-        )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
 
-        .replace(
-            /\n/g,
-            " "
-        );
+    .replace(
+        /\n/g,
+        " "
+    );
 
 }
 
