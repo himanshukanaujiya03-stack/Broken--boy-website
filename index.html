@@ -5,52 +5,81 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Broken AI | AI Images</title>
 <meta name="description" content="Broken AI — AI Images, Sad Shayari and Cinematic Art">
-<link rel="canonical" href="https://himanshukanauji03-stack.github.io/Broken--boy-website/">
+<meta name="google-site-verification" content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
+<link rel="canonical" href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
 
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#05070b;color:#f7f9fc;font-family:Arial,sans-serif}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,#159cff16,transparent 30%),radial-gradient(circle at 85% 30%,#7c3aed14,transparent 28%);z-index:-1}
 
-header{position:sticky;top:0;z-index:20;padding:15px 6%;display:flex;align-items:center;justify-content:space-between;background:#070a10dd;border-bottom:1px solid #ffffff12;backdrop-filter:blur(16px)}
+body{
+margin:0;
+background:#05070b;
+color:#f7f9fc;
+font-family:Inter,Arial,sans-serif
+}
 
-.logo{font-size:28px;font-weight:900;letter-spacing:-1px}
-.logo span{color:#159cff}
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+radial-gradient(circle at 15% 10%,#159cff16,transparent 30%),
+radial-gradient(circle at 85% 30%,#7c3aed14,transparent 28%);
+z-index:-1
+}
 
-nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+header{
+position:sticky;
+top:0;
+z-index:50;
+padding:15px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#070a10e8;
+border-bottom:1px solid #ffffff12;
+backdrop-filter:blur(18px)
+}
 
-nav a,nav button{
+.logo{
+font-size:28px;
+font-weight:900;
+letter-spacing:-1px
+}
+
+.logo span{
+color:#159cff
+}
+
+nav{
+display:flex;
+gap:18px;
+align-items:center
+}
+
+nav a{
 color:#cbd5e1;
 text-decoration:none;
-font-weight:800;
-font-size:13px;
-background:#ffffff08;
-border:1px solid #ffffff12;
-padding:9px 12px;
-border-radius:10px;
-cursor:pointer
+font-weight:700;
+font-size:14px
 }
-
-nav a:hover,nav button:hover{
-border-color:#159cff66;
-color:#fff
-}
-
-.contact{border-color:#25d36655!important}
-.telegram{border-color:#159cff55!important}
-#adminBtn{display:none}
 
 .hero{
 padding:85px 6% 70px;
 min-height:470px;
 display:flex;
 align-items:center;
-background:linear-gradient(90deg,#05070bea,#05070bb5),
-url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85') center/cover
+background:
+linear-gradient(90deg,#05070bea,#05070bb5),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85')
+center/cover
 }
 
-.hero-inner{max-width:850px}
+.hero-inner{
+max-width:850px
+}
 
 .badge{
 display:inline-block;
@@ -71,7 +100,9 @@ margin:0;
 letter-spacing:-5px
 }
 
-.hero h1 span{color:#159cff}
+.hero h1 span{
+color:#159cff
+}
 
 .hero p{
 font-size:20px;
@@ -94,7 +125,9 @@ box-shadow:0 10px 30px #159cff25;
 transition:.2s
 }
 
-.btn:hover{transform:translateY(-2px)}
+.btn:hover{
+transform:translateY(-2px)
+}
 
 .btn.secondary{
 background:#ffffff0d;
@@ -116,8 +149,15 @@ gap:15px;
 margin-bottom:22px
 }
 
-.section-title h2{margin:0;font-size:30px}
-.section-title p{margin:5px 0 0;color:#8292a6}
+.section-title h2{
+margin:0;
+font-size:30px
+}
+
+.section-title p{
+margin:5px 0 0;
+color:#8292a6
+}
 
 .tools{
 display:flex;
@@ -126,23 +166,27 @@ flex-wrap:wrap;
 margin-bottom:25px
 }
 
-.tools input{
-flex:1;
-min-width:220px;
+.tools input,
+.field input,
+.field textarea{
 background:#0b111a;
 border:1px solid #243247;
 color:#fff;
-padding:15px;
+padding:14px;
 border-radius:12px;
-outline:none
+outline:none;
+width:100%
 }
 
-.tools input:focus{border-color:#159cff}
+.tools input{
+flex:1;
+min-width:220px
+}
 
-.status{
-margin:0 0 18px;
-color:#8fa0b4;
-font-size:14px
+.tools input:focus,
+.field input:focus,
+.field textarea:focus{
+border-color:#159cff
 }
 
 .grid{
@@ -157,7 +201,8 @@ border:1px solid #ffffff10;
 border-radius:18px;
 overflow:hidden;
 box-shadow:0 15px 45px #0006;
-transition:.25s
+transition:.25s;
+cursor:pointer
 }
 
 .card:hover{
@@ -170,31 +215,29 @@ width:100%;
 height:280px;
 object-fit:cover;
 display:block;
-background:#0e1622;
-cursor:pointer
+background:#0e1622
 }
 
-.card .text{padding:16px}
-.card h3{margin:0 0 7px;font-size:17px}
-.card p{color:#9eacbc;margin:0 0 12px}
-
-.actions{
-display:flex;
-gap:7px;
-flex-wrap:wrap
+.card .text{
+padding:16px
 }
 
-.actions button{
-border:1px solid #ffffff14;
-background:#ffffff08;
-color:#fff;
-border-radius:9px;
-padding:8px 10px;
-cursor:pointer;
-font-weight:700
+.card h3{
+margin:0 0 7px;
+font-size:17px
 }
 
-.actions button:hover{border-color:#159cff66}
+.card p{
+color:#9eacbc;
+margin:0;
+line-height:1.5
+}
+
+.meta{
+margin-top:9px;
+font-size:12px;
+color:#6f8196
+}
 
 .empty{
 grid-column:1/-1;
@@ -219,8 +262,15 @@ border-radius:16px;
 background:#ffffff05
 }
 
-.info b{display:block;margin-bottom:6px}
-.info span{color:#8f9daf;font-size:14px}
+.info b{
+display:block;
+margin-bottom:6px
+}
+
+.info span{
+color:#8f9daf;
+font-size:14px
+}
 
 footer{
 padding:35px 6%;
@@ -230,93 +280,147 @@ margin-top:45px;
 text-align:center
 }
 
-footer b{color:#fff}
+footer b{
+color:#fff
+}
+
+small{
+color:#657387
+}
 
 .modal{
 position:fixed;
 inset:0;
 background:#000d;
+z-index:100;
 display:none;
 align-items:center;
 justify-content:center;
-padding:20px;
-z-index:50
+padding:18px;
+backdrop-filter:blur(8px)
 }
 
-.modal.show{display:flex}
+.modal.show{
+display:flex
+}
 
 .modal-box{
-width:min(680px,100%);
-background:#0b1018;
+width:min(1050px,100%);
+max-height:94vh;
+overflow:auto;
+background:#090e16;
 border:1px solid #ffffff18;
-border-radius:18px;
-padding:22px;
+border-radius:22px;
+padding:18px;
 box-shadow:0 25px 80px #000
 }
 
-.modal-box h2{margin-top:0}
-
-.modal-box input,.modal-box textarea{
+.modal-img{
 width:100%;
-margin:7px 0;
-padding:13px;
-background:#070b12;
-border:1px solid #243247;
-color:#fff;
-border-radius:10px;
-outline:none
+max-height:62vh;
+object-fit:contain;
+border-radius:14px;
+background:#030508
 }
 
-.modal-box textarea{
-min-height:100px;
-resize:vertical
+.modal h2{
+margin:16px 0 7px
+}
+
+.modal p{
+color:#aeb9c7;
+line-height:1.6
+}
+
+.prompt{
+background:#050912;
+border:1px solid #ffffff12;
+border-radius:12px;
+padding:14px;
+white-space:pre-wrap;
+color:#dbe7f5
 }
 
 .modal-actions{
 display:flex;
 gap:10px;
-justify-content:flex-end;
-margin-top:12px
+flex-wrap:wrap;
+margin-top:15px
 }
 
 .close{
-background:#ffffff0d!important;
-color:#fff;
-border:1px solid #ffffff18;
-padding:10px 14px;
-border-radius:10px
-}
-
-.viewer img{
-max-width:92vw;
-max-height:78vh;
-object-fit:contain;
-border-radius:14px
-}
-
-.viewer .viewer-tools{
 position:absolute;
-bottom:25px;
-display:flex;
-gap:10px
+top:15px;
+right:18px;
+background:#ffffff15;
+color:white;
+border:1px solid #ffffff20;
+border-radius:50%;
+width:42px;
+height:42px;
+font-size:22px;
+cursor:pointer
 }
 
-.viewer .viewer-tools button{
-padding:11px 14px;
-border-radius:10px;
-border:1px solid #ffffff18;
-background:#0b1018;
-color:#fff;
-cursor:pointer;
-font-weight:800
+.form-modal{
+width:min(620px,100%)
+}
+
+.field{
+margin:12px 0
+}
+
+.field label{
+display:block;
+margin-bottom:7px;
+font-weight:700;
+color:#cbd5e1
+}
+
+.field textarea{
+min-height:110px;
+resize:vertical
+}
+
+.status{
+margin:8px 0;
+color:#8fd2ff;
+min-height:20px
+}
+
+.danger{
+background:#ef4444
+}
+
+.like.active{
+background:#ef4444
 }
 
 @media(max-width:650px){
-nav{gap:6px}
-nav a,nav button{font-size:11px;padding:8px}
-.hero{padding-top:65px}
-.hero h1{letter-spacing:-3px}
-.btn.secondary{margin-left:0;margin-top:10px}
+nav{
+gap:9px
+}
+
+nav a{
+font-size:12px
+}
+
+.hero{
+padding-top:65px
+}
+
+.hero h1{
+letter-spacing:-3px
+}
+
+.btn.secondary{
+margin-left:0;
+margin-top:10px
+}
+
+.card img{
+height:250px
+}
 }
 </style>
 </head>
@@ -324,31 +428,45 @@ nav a,nav button{font-size:11px;padding:8px}
 <body>
 
 <header>
-<div class="logo">Broken <span>AI</span></div>
+
+<div class="logo">
+Broken <span>AI</span>
+</div>
 
 <nav>
-<a href="#gallery">Gallery</a>
-<a href="#upload">Upload</a>
 
-<a class="telegram"
-href="https://t.me/Brokenboy221716"
-target="_blank"
-rel="noopener">
-Telegram ↗
+<a href="#gallery">Gallery</a>
+
+<a href="#upload" id="uploadNav" style="display:none">
+Upload
 </a>
 
-<a class="contact"
-href="https://wa.me/917318399281"
+<a href="https://t.me/Brokenboy221716"
+target="_blank"
+rel="noopener">
+Telegram
+</a>
+
+<a href="https://wa.me/917318399281"
 target="_blank"
 rel="noopener">
 Contact
 </a>
 
-<button id="adminBtn">Admin Login</button>
+<button
+class="btn"
+id="adminBtn"
+style="display:none;padding:9px 12px;font-size:12px">
+Admin Login
+</button>
+
 </nav>
+
 </header>
 
+
 <section class="hero">
+
 <div class="hero-inner">
 
 <div class="badge">
@@ -362,14 +480,19 @@ Broken <span>AI</span>
 <p>
 खामोशियों को तस्वीरों में बदलते हैं… 💔
 <br>
-अपनी AI images शेयर करो और अपनी gallery बनाओ।
+AI images, title, caption और prompt के साथ शेयर करें।
 </p>
 
-<a class="btn" href="#upload">
+<a
+class="btn"
+href="#upload"
+id="heroUploadBtn"
+style="display:none">
 + Upload Image
 </a>
 
-<a class="btn secondary"
+<a
+class="btn secondary"
 href="https://t.me/Brokenboy221716"
 target="_blank"
 rel="noopener">
@@ -377,165 +500,308 @@ Join Telegram
 </a>
 
 </div>
+
 </section>
+
 
 <main class="wrap" id="gallery">
 
 <div class="section-title">
+
 <div>
-<h2>🖼️ AI Gallery</h2>
-<p>अपनी पसंद की images खोजें और देखें</p>
-</div>
+
+<h2>
+🖼️ AI Gallery
+</h2>
+
+<p>
+Image पर tap करके बड़ी image और पूरा prompt देखें
+</p>
+
 </div>
 
-<div class="tools" id="upload">
+</div>
+
+
+<div
+class="tools"
+id="upload"
+style="display:none">
 
 <input
 id="search"
-placeholder="🔎 Title, Caption या Prompt से image खोजें..."
->
+placeholder="🔎 Title, caption या prompt खोजें...">
 
-<button class="btn" id="uploadBtn">
+<button
+class="btn"
+id="uploadBtn">
 + नई AI इमेज अपलोड करें
-</button>
-
-<button class="btn secondary" id="loginBtn">
-🔐 Admin Login
 </button>
 
 <input
 type="file"
 id="file"
 accept="image/*"
-hidden
->
+hidden>
 
 </div>
 
-<div class="status" id="status">
-Gallery load हो रही है…
+
+<div
+class="grid"
+id="grid">
 </div>
 
-<div class="grid" id="grid"></div>
 
 <div class="info">
 
 <div>
 <b>🤖 AI Images</b>
-<span>Cinematic और creative artwork</span>
+<span>
+Cinematic और creative artwork
+</span>
 </div>
 
 <div>
 <b>💔 Sad Shayari</b>
-<span>Broken vibes और emotions</span>
+<span>
+Broken vibes और emotions
+</span>
 </div>
 
 <div>
 <b>🎬 Cinematic Art</b>
-<span>Dark और premium visual style</span>
+<span>
+Dark और premium visual style
+</span>
 </div>
 
 </div>
 
 </main>
 
+
 <footer>
+
 <b>Broken AI</b>
 <br>
 AI Images • Sad Shayari • Cinematic Art
 <br>
-<small>© 2026 Broken AI</small>
+<small>
+© 2026 Broken AI
+</small>
+
 </footer>
 
 
 <!-- UPLOAD MODAL -->
 
-<div class="modal" id="uploadModal">
+<div
+class="modal"
+id="formModal">
 
-<div class="modal-box">
+<div class="modal-box form-modal">
 
-<h2>➕ नई AI Image</h2>
+<button
+class="close"
+onclick="closeForm()">
+×
+</button>
 
-<input id="titleInput" placeholder="Title">
+<h2>
+✨ Image Details
+</h2>
 
-<input id="captionInput" placeholder="Caption">
+<p>
+अपनी image के साथ Title, Caption और AI Prompt डालें।
+</p>
+
+<div class="field">
+
+<label>
+🏷️ Title
+</label>
+
+<input
+id="title"
+placeholder="जैसे: Broken Boy Cinematic">
+
+</div>
+
+
+<div class="field">
+
+<label>
+✍️ Caption
+</label>
 
 <textarea
-id="promptInput"
-placeholder="Prompt">
+id="caption"
+placeholder="Image के बारे में छोटा caption...">
 </textarea>
 
-<div class="modal-actions">
+</div>
 
-<button class="close" id="cancelUpload">
-Cancel
-</button>
 
-<button class="btn" id="saveUpload">
-Upload
+<div class="field">
+
+<label>
+🤖 AI Prompt
+</label>
+
+<textarea
+id="prompt"
+placeholder="पूरा AI prompt यहाँ डालें...">
+</textarea>
+
+</div>
+
+
+<div
+class="status"
+id="status">
+</div>
+
+
+<button
+class="btn"
+id="saveBtn">
+☁️ Upload & Save
 </button>
 
 </div>
 
-</div>
 </div>
 
 
 <!-- LOGIN MODAL -->
 
-<div class="modal" id="loginModal">
+<div
+class="modal"
+id="loginModal">
 
-<div class="modal-box">
+<div class="modal-box form-modal">
 
-<h2>🔐 Admin Login</h2>
-
-<input
-id="emailInput"
-type="email"
-placeholder="Admin Email"
->
-
-<input
-id="passwordInput"
-type="password"
-placeholder="Password"
->
-
-<div class="modal-actions">
-
-<button class="close" id="cancelLogin">
-Cancel
+<button
+class="close"
+id="closeLogin">
+×
 </button>
 
-<button class="btn" id="doLogin">
+<h2>
+🔐 Admin Login
+</h2>
+
+<p>
+सिर्फ Admin account से Upload और Delete permission मिलेगी।
+</p>
+
+<div class="field">
+
+<label>
+Email
+</label>
+
+<input
+id="adminEmail"
+type="email"
+placeholder="Admin email">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Password
+</label>
+
+<input
+id="adminPassword"
+type="password"
+placeholder="Password">
+
+</div>
+
+
+<div
+class="status"
+id="loginStatus">
+</div>
+
+
+<button
+class="btn"
+id="doLogin">
 Login
 </button>
 
 </div>
 
 </div>
+
+
+<!-- VIEW MODAL -->
+
+<div
+class="modal"
+id="viewModal"
+onclick="if(event.target===this)closeView()">
+
+<button
+class="close"
+onclick="closeView()">
+×
+</button>
+
+<div class="modal-box">
+
+<img
+class="modal-img"
+id="viewImg"
+alt="">
+
+<h2 id="viewTitle">
+</h2>
+
+<p id="viewCaption">
+</p>
+
+<div
+class="prompt"
+id="viewPrompt">
 </div>
 
 
-<!-- IMAGE VIEWER -->
+<div class="modal-actions">
 
-<div class="modal viewer" id="viewerModal">
-
-<img id="viewerImage" alt="Broken AI Image">
-
-<div class="viewer-tools">
-
-<button id="copyViewerPrompt">
+<button
+class="btn"
+id="copyBtn">
 📋 Copy Prompt
 </button>
 
-<button id="downloadViewer">
-⬇️ Download
+<button
+class="btn secondary like"
+id="likeBtn">
+❤️ Like
 </button>
 
-<button id="closeViewer">
-✕ Close
+<a
+class="btn secondary"
+id="downloadBtn"
+download>
+⬇️ Download
+</a>
+
+<button
+class="btn danger"
+id="deleteBtn"
+style="display:none">
+🗑️ Delete
 </button>
+
+</div>
 
 </div>
 
@@ -544,8 +810,12 @@ Login
 
 <script type="module">
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {
+initializeApp
+}
+from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
 
 import {
 getFirestore,
@@ -560,7 +830,9 @@ orderBy,
 query,
 serverTimestamp
 }
-from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
 
 import {
 getAuth,
@@ -568,10 +840,11 @@ signInWithEmailAndPassword,
 onAuthStateChanged,
 signOut
 }
-from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+from
+"https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 
 
-const firebaseConfig = {
+const firebaseConfig={
 
 apiKey:
 "AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
@@ -597,81 +870,60 @@ measurementId:
 };
 
 
-const CLOUDINARY_CLOUD_NAME = "g33rvuls";
+const CLOUDINARY_CLOUD_NAME=
+"g33rvuls";
 
-const CLOUDINARY_UPLOAD_PRESET = "brokenai";
+const CLOUDINARY_UPLOAD_PRESET=
+"brokenai";
 
-const ADMIN_EMAIL =
+const ADMIN_EMAIL=
 "himanshukanaujiya03@gmail.com";
 
 
-const app = initializeApp(firebaseConfig);
+const app=
+initializeApp(firebaseConfig);
 
-const db = getFirestore(app);
+const db=
+getFirestore(app);
 
-const auth = getAuth(app);
+const auth=
+getAuth(app);
 
 
-const grid =
+const grid=
 document.querySelector("#grid");
 
-const search =
-document.querySelector("#search");
-
-const file =
+const file=
 document.querySelector("#file");
 
-const status =
-document.querySelector("#status");
+const search=
+document.querySelector("#search");
 
-const uploadModal =
-document.querySelector("#uploadModal");
+const formModal=
+document.querySelector("#formModal");
 
-const loginModal =
+const viewModal=
+document.querySelector("#viewModal");
+
+const loginModal=
 document.querySelector("#loginModal");
 
-const viewerModal =
-document.querySelector("#viewerModal");
 
-const viewerImage =
-document.querySelector("#viewerImage");
+let images=[];
 
-const titleInput =
-document.querySelector("#titleInput");
+let pendingFile=null;
 
-const captionInput =
-document.querySelector("#captionInput");
+let currentId=null;
 
-const promptInput =
-document.querySelector("#promptInput");
-
-const emailInput =
-document.querySelector("#emailInput");
-
-const passwordInput =
-document.querySelector("#passwordInput");
-
-const adminBtn =
-document.querySelector("#adminBtn");
-
-const loginBtn =
-document.querySelector("#loginBtn");
+let isAdmin=false;
 
 
-let images = [];
-
-let selectedFile = null;
-
-let currentViewer = null;
-
-let isAdmin = false;
-
-
-function esc(v=""){
-
-return String(v).replace(
+const esc=
+s=>
+String(s??"")
+.replace(
 /[&<>"']/g,
-m => ({
+m=>({
 "&":"&amp;",
 "<":"&lt;",
 ">":"&gt;",
@@ -680,281 +932,338 @@ m => ({
 }[m])
 );
 
-}
-
 
 function render(){
 
-const q =
-search.value.trim().toLowerCase();
+const q=
+search.value
+.toLowerCase()
+.trim();
 
-const list =
-images.filter(x =>
-[x.title,x.caption,x.prompt]
+
+grid.innerHTML="";
+
+
+const list=
+images.filter(x=>
+
+[
+x.title,
+x.caption,
+x.prompt
+]
 .join(" ")
 .toLowerCase()
 .includes(q)
+
 );
 
-grid.innerHTML = "";
 
 if(!list.length){
 
-grid.innerHTML =
-'<div class="empty">अभी कोई matching image नहीं है। 🖤</div>';
+grid.innerHTML=
+`
+<div class="empty">
+अभी कोई matching image नहीं है।
+<br>
+अपनी AI image जल्द देखें। 🖤
+</div>
+`;
 
 return;
-
 }
 
 
-list.forEach(x => {
+list.forEach(x=>{
 
-const article =
+const card=
 document.createElement("article");
 
-article.className = "card";
+card.className="card";
 
-article.innerHTML = `
 
+card.innerHTML=
+`
 <img
 src="${esc(x.url)}"
-alt="${esc(x.title || "Broken AI Image")}"
->
+alt="${esc(x.title||"Broken AI Image")}">
 
 <div class="text">
 
 <h3>
-${esc(x.title || "Broken AI Image")}
+${esc(x.title||"Broken AI Image")}
 </h3>
 
 <p>
-${esc(x.caption || "AI Cinematic Art 🖤")}
+${esc(x.caption||"AI Cinematic Art 🖤")}
 </p>
 
-<div class="actions">
-
-<button class="like">
+<div class="meta">
 ❤️ ${Number(x.likes||0)}
-</button>
-
-<button class="copy">
-📋 Copy Prompt
-</button>
-
-<button class="download">
-⬇️ Download
-</button>
-
-${isAdmin ?
-'<button class="delete">🗑️ Delete</button>'
-: ''}
-
+${isAdmin?" • 👑 Admin":""}
 </div>
 
 </div>
 `;
 
 
-article.querySelector("img")
-.onclick = () => openViewer(x);
+card.onclick=
+()=>openView(x);
 
 
-article.querySelector(".like")
-.onclick = () => likeImage(x.id);
-
-
-article.querySelector(".copy")
-.onclick = () =>
-copyPrompt(x.prompt || "");
-
-
-article.querySelector(".download")
-.onclick = () =>
-downloadImage(
-x.url,
-x.title || "broken-ai"
-);
-
-
-if(isAdmin){
-
-article.querySelector(".delete")
-.onclick = () =>
-deleteImage(x.id);
-
-}
-
-
-grid.appendChild(article);
+grid.appendChild(card);
 
 });
 
-
-status.textContent =
-`${images.length} image${images.length===1?"":"s"} • ${
-isAdmin ? "Admin mode ON 👑" : "Viewer mode"
-}`;
-
 }
 
 
-async function loadImages(){
-
-status.textContent =
-"Gallery load हो रही है…";
+async function load(){
 
 try{
 
-const q =
+const q=
 query(
 collection(db,"images"),
 orderBy("createdAt","desc")
 );
 
-const snap =
+
+const snap=
 await getDocs(q);
 
-images =
-snap.docs.map(d => ({
+
+images=
+snap.docs.map(
+d=>({
 id:d.id,
 ...d.data()
-}));
+})
+);
+
 
 render();
 
-}catch(err){
 
-console.error(err);
+}catch(e){
 
-status.textContent =
-"Gallery load नहीं हुई। Firebase Rules/connection check करें।";
+console.error(e);
 
-grid.innerHTML =
-'<div class="empty">Firebase से images नहीं मिल पाईं।</div>';
+grid.innerHTML=
+`
+<div class="empty">
+Firebase gallery load नहीं हुई।
+<br>
+Rules और connection check करें।
+</div>
+`;
 
 }
-
-}
-
-
-function openUpload(){
-
-uploadModal.classList.add("show");
 
 }
 
 
-function closeUpload(){
+function openView(x){
 
-uploadModal.classList.remove("show");
+currentId=x.id;
 
-selectedFile = null;
 
-file.value = "";
+document.querySelector("#viewImg").src=
+x.url;
 
-titleInput.value = "";
 
-captionInput.value = "";
+document.querySelector("#viewTitle").textContent=
+x.title||"Broken AI Image";
 
-promptInput.value = "";
+
+document.querySelector("#viewCaption").textContent=
+x.caption||"AI Cinematic Art 🖤";
+
+
+document.querySelector("#viewPrompt").textContent=
+x.prompt||"इस image का prompt उपलब्ध नहीं है।";
+
+
+document.querySelector("#downloadBtn").href=
+x.url;
+
+
+document.querySelector("#downloadBtn").download=
+(x.title||"broken-ai-image")
+.replace(/\s+/g,"-")
++".jpg";
+
+
+document.querySelector("#likeBtn").textContent=
+`❤️ ${Number(x.likes||0)}`;
+
+
+document.querySelector("#deleteBtn").style.display=
+isAdmin
+?"inline-block"
+:"none";
+
+
+viewModal.classList.add("show");
+
+document.body.style.overflow="hidden";
 
 }
 
 
-document.querySelector("#uploadBtn")
-.onclick = () => file.click();
+function closeView(){
+
+viewModal.classList.remove("show");
+
+document.body.style.overflow="";
+
+}
 
 
-file.onchange = () => {
+function closeForm(){
 
-selectedFile =
-file.files[0] || null;
+formModal.classList.remove("show");
 
-if(selectedFile)
-openUpload();
+document.body.style.overflow="";
+
+pendingFile=null;
+
+file.value="";
+
+}
+
+
+function openLogin(){
+
+loginModal.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeLogin(){
+
+loginModal.classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+document.querySelector("#uploadBtn").onclick=
+()=>{
+
+if(!isAdmin){
+
+openLogin();
+
+return;
+
+}
+
+file.click();
 
 };
 
 
-document.querySelector("#cancelUpload")
-.onclick = closeUpload;
+file.onchange=
+()=>{
+
+pendingFile=
+file.files[0]||null;
 
 
-document.querySelector("#saveUpload")
-.onclick = async () => {
+if(pendingFile){
 
-if(!selectedFile){
+document.querySelector("#title").value=
+pendingFile.name
+.replace(/\.[^.]+$/,"");
 
-alert("पहले image चुनो।");
+
+document.querySelector("#caption").value=
+"मेरी नई AI इमेज 🖤";
+
+
+document.querySelector("#prompt").value=
+"";
+
+
+formModal.classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+};
+
+
+document.querySelector("#saveBtn").onclick=
+async()=>{
+
+if(!isAdmin){
+
+alert("Upload सिर्फ Admin कर सकता है।");
 
 return;
 
 }
 
 
-const title =
-titleInput.value.trim()
-||
-selectedFile.name.replace(/\.[^.]+$/,"");
+if(!pendingFile)return;
 
 
-const caption =
-captionInput.value.trim()
-||
-"AI Cinematic Art 🖤";
+const btn=
+document.querySelector("#saveBtn");
 
 
-const prompt =
-promptInput.value.trim();
+btn.disabled=true;
 
 
-const btn =
-document.querySelector("#saveUpload");
-
-
-btn.disabled = true;
-
-btn.textContent = "Uploading…";
+document.querySelector("#status").textContent=
+"☁️ Upload हो रही है…";
 
 
 try{
 
-const form =
+
+const fd=
 new FormData();
 
 
-form.append(
+fd.append(
 "file",
-selectedFile
+pendingFile
 );
 
 
-form.append(
+fd.append(
 "upload_preset",
 CLOUDINARY_UPLOAD_PRESET
 );
 
 
-const res =
+const r=
 await fetch(
+
 `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
+
 {
 method:"POST",
-body:form
+body:fd
 }
+
 );
 
 
-const data =
-await res.json();
+const d=
+await r.json();
 
 
-if(!res.ok || !data.secure_url){
+if(!r.ok||!d.secure_url){
 
 throw new Error(
-data.error?.message
-||
+d.error?.message||
 "Cloudinary upload failed"
 );
 
@@ -965,13 +1274,21 @@ await addDoc(
 collection(db,"images"),
 {
 
-url:data.secure_url,
+url:d.secure_url,
 
-title,
+title:
+document.querySelector("#title")
+.value.trim()||
+"Broken AI Image",
 
-caption,
+caption:
+document.querySelector("#caption")
+.value.trim()||
+"AI Cinematic Art 🖤",
 
-prompt,
+prompt:
+document.querySelector("#prompt")
+.value.trim(),
 
 likes:0,
 
@@ -982,73 +1299,116 @@ serverTimestamp()
 );
 
 
-closeUpload();
+document.querySelector("#status").textContent=
+"✅ Upload हो गई!";
 
-await loadImages();
+
+await load();
 
 
-alert(
-"Image successfully upload हो गई ❤️"
+setTimeout(
+closeForm,
+500
 );
 
 
-}catch(err){
+}catch(e){
 
-console.error(err);
-
-alert(
-"Upload failed: "
-+
-err.message
-);
+document.querySelector("#status").textContent=
+"❌ "+e.message;
 
 }finally{
 
-btn.disabled = false;
-
-btn.textContent = "Upload";
+btn.disabled=false;
 
 }
 
 };
 
 
-search.oninput = render;
+search.oninput=
+render;
 
 
-async function likeImage(id){
+document.querySelector("#copyBtn").onclick=
+async()=>{
+
+const x=
+images.find(
+i=>i.id===currentId
+);
+
+
+if(!x)return;
+
+
+try{
+
+await navigator.clipboard.writeText(
+x.prompt||""
+);
+
+alert(
+"✅ Prompt copy हो गया!"
+);
+
+}catch{
+
+alert(
+"Prompt copy नहीं हो पाया।"
+);
+
+}
+
+};
+
+
+document.querySelector("#likeBtn").onclick=
+async()=>{
+
+const x=
+images.find(
+i=>i.id===currentId
+);
+
+
+if(!x)return;
+
 
 try{
 
 await updateDoc(
-doc(db,"images",id),
+doc(db,"images",x.id),
 {
 likes:increment(1)
 }
 );
 
 
-const item =
-images.find(x => x.id === id);
+x.likes=
+Number(x.likes||0)+1;
 
 
-if(item)
-item.likes =
-Number(item.likes||0)+1;
+document.querySelector("#likeBtn").textContent=
+`❤️ ${x.likes}`;
 
 
 render();
 
-}catch(err){
 
-alert("Like update नहीं हुआ।");
+}catch(e){
+
+alert(
+"Like update नहीं हुआ।"
+);
 
 }
 
-}
+};
 
 
-async function deleteImage(id){
+document.querySelector("#deleteBtn").onclick=
+async()=>{
 
 if(!isAdmin){
 
@@ -1061,31 +1421,39 @@ return;
 }
 
 
-if(!confirm(
-"इस image को gallery से delete करना है?"
-))
-return;
+const x=
+images.find(
+i=>i.id===currentId
+);
+
+
+if(
+!x||
+!confirm(
+"क्या यह image gallery से delete करनी है?"
+)
+)return;
 
 
 try{
 
 await deleteDoc(
-doc(db,"images",id)
+doc(db,"images",x.id)
 );
 
 
-images =
+images=
 images.filter(
-x => x.id !== id
+i=>i.id!==x.id
 );
 
+
+closeView();
 
 render();
 
 
-}catch(err){
-
-console.error(err);
+}catch(e){
 
 alert(
 "Delete नहीं हुआ। Firebase Rules check करें।"
@@ -1093,200 +1461,47 @@ alert(
 
 }
 
-}
-
-
-async function copyPrompt(prompt){
-
-if(!prompt){
-
-alert(
-"इस image का prompt available नहीं है।"
-);
-
-return;
-
-}
-
-
-try{
-
-await navigator.clipboard
-.writeText(prompt);
-
-alert(
-"Prompt copied 📋"
-);
-
-}catch{
-
-promptInput.value = prompt;
-
-alert(
-"Prompt copy नहीं हो पाया।"
-);
-
-}
-
-}
-
-
-async function downloadImage(
-url,
-name
-){
-
-try{
-
-const r =
-await fetch(url);
-
-const blob =
-await r.blob();
-
-const a =
-document.createElement("a");
-
-a.href =
-URL.createObjectURL(blob);
-
-a.download =
-name.replace(
-/[^\w-]+/g,
-"_"
-)
-+
-".jpg";
-
-a.click();
-
-URL.revokeObjectURL(a.href);
-
-}catch{
-
-window.open(
-url,
-"_blank"
-);
-
-}
-
-}
-
-
-function openViewer(x){
-
-currentViewer = x;
-
-viewerImage.src = x.url;
-
-viewerModal.classList.add(
-"show"
-);
-
-}
-
-
-document.querySelector("#closeViewer")
-.onclick = () =>
-viewerModal.classList.remove(
-"show"
-);
-
-
-document.querySelector("#copyViewerPrompt")
-.onclick = () =>
-currentViewer &&
-copyPrompt(
-currentViewer.prompt || ""
-);
-
-
-document.querySelector("#downloadViewer")
-.onclick = () =>
-currentViewer &&
-downloadImage(
-currentViewer.url,
-currentViewer.title || "broken-ai"
-);
-
-
-viewerModal.onclick = e => {
-
-if(e.target === viewerModal)
-
-viewerModal.classList.remove(
-"show"
-);
-
 };
 
 
-function openLogin(){
-
-loginModal.classList.add(
-"show"
-);
-
-}
-
-
-function closeLogin(){
-
-loginModal.classList.remove(
-"show"
-);
-
-}
-
-
-loginBtn.onclick = () => {
+document.querySelector("#adminBtn").onclick=
+()=>{
 
 if(isAdmin){
 
 signOut(auth);
 
-return;
+}else{
+
+openLogin();
 
 }
 
-openLogin();
-
 };
 
 
-adminBtn.onclick = () => {
-
-if(isAdmin)
-
-signOut(auth);
-
-else
-
-openLogin();
-
-};
+document.querySelector("#closeLogin").onclick=
+closeLogin;
 
 
-document.querySelector("#cancelLogin")
-.onclick = closeLogin;
+document.querySelector("#doLogin").onclick=
+async()=>{
+
+const email=
+document.querySelector("#adminEmail")
+.value.trim();
 
 
-document.querySelector("#doLogin")
-.onclick = async () => {
-
-const email =
-emailInput.value.trim();
-
-const password =
-passwordInput.value;
+const password=
+document.querySelector("#adminPassword")
+.value;
 
 
-if(email !== ADMIN_EMAIL){
+if(email!==ADMIN_EMAIL){
 
-alert(
-"यह Admin email नहीं है।"
-);
+document.querySelector("#loginStatus")
+.textContent=
+"❌ यह Admin email नहीं है।";
 
 return;
 
@@ -1304,18 +1519,12 @@ password
 
 closeLogin();
 
-emailInput.value = "";
 
-passwordInput.value = "";
+}catch(e){
 
-
-}catch(err){
-
-alert(
-"Login failed: "
-+
-err.message
-);
+document.querySelector("#loginStatus")
+.textContent=
+"❌ Login failed: "+e.message;
 
 }
 
@@ -1324,32 +1533,46 @@ err.message
 
 onAuthStateChanged(
 auth,
-user => {
+user=>{
 
-isAdmin =
-!!user
-&&
-user.email === ADMIN_EMAIL;
+isAdmin=
+!!user&&
+user.email===ADMIN_EMAIL;
 
 
-adminBtn.style.display =
+const b=
+document.querySelector("#adminBtn");
+
+
+b.style.display=
 "inline-block";
 
 
-adminBtn.textContent =
+b.textContent=
 isAdmin
-?
-"Logout Admin"
-:
-"Admin Login";
+?"Logout Admin"
+:"Admin Login";
 
 
-loginBtn.textContent =
+document.querySelector("#uploadNav")
+.style.display=
 isAdmin
-?
-"🚪 Admin Logout"
-:
-"🔐 Admin Login";
+?"inline-block"
+:"none";
+
+
+document.querySelector("#heroUploadBtn")
+.style.display=
+isAdmin
+?"inline-block"
+:"none";
+
+
+document.querySelector("#upload")
+.style.display=
+isAdmin
+?"block"
+:"none";
 
 
 render();
@@ -1358,7 +1581,25 @@ render();
 );
 
 
-loadImages();
+document.addEventListener(
+"keydown",
+e=>{
+
+if(e.key==="Escape"){
+
+closeView();
+
+closeForm();
+
+closeLogin();
+
+}
+
+}
+);
+
+
+load();
 
 </script>
 
