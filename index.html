@@ -1,494 +1,1561 @@
-<!doctype html>
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
 <title>Broken AI | AI Images</title>
-<meta name="description" content="Broken AI — AI Images, Sad Shayari and Cinematic Art">
+
+<meta name="description"
+      content="Broken AI - Premium AI image gallery with prompts, likes, downloads and uploads.">
+
+<meta name="theme-color" content="#050505">
+
+<link rel="canonical"
+      href="https://himanshukanaujiya03-stack.github.io/Broken--boy-website/">
+
+<meta name="google-site-verification"
+      content="Kl2XixYVqf5_ZAP33vfkymRPwpkgqCk35Njb64Kn3ug">
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:#05070b;
-  color:#f7f9fc;
-  font-family:Arial,sans-serif
-}
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 15% 10%,#159cff16,transparent 30%),
-    radial-gradient(circle at 85% 30%,#7c3aed14,transparent 28%);
-  z-index:-1
-}
-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  padding:15px 6%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  background:#070a10dd;
-  border-bottom:1px solid #ffffff12;
-  backdrop-filter:blur(16px)
-}
-.logo{
-  font-size:28px;
-  font-weight:900;
-  letter-spacing:-1px
-}
-.logo span{color:#159cff}
-nav{display:flex;gap:18px}
-nav a{
-  color:#cbd5e1;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px
-}
-.hero{
-  padding:85px 6% 70px;
-  min-height:470px;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(90deg,#05070bea,#05070bb5),
-    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85')
-    center/cover
-}
-.hero-inner{max-width:850px}
-.badge{
-  display:inline-block;
-  padding:8px 13px;
-  border:1px solid #159cff55;
-  background:#159cff12;
-  color:#8fd2ff;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:800;
-  margin-bottom:18px
-}
-.hero h1{
-  font-size:clamp(52px,10vw,100px);
-  line-height:.95;
-  margin:0;
-  letter-spacing:-5px
-}
-.hero h1 span{color:#159cff}
-.hero p{
-  font-size:20px;
-  color:#cbd5e1;
-  line-height:1.6;
-  max-width:650px
-}
-.btn{
-  display:inline-block;
-  background:#159cff;
-  color:#fff;
-  padding:14px 20px;
-  border-radius:12px;
-  text-decoration:none;
-  border:0;
-  cursor:pointer;
-  font-weight:800;
-  box-shadow:0 10px 30px #159cff25;
-  transition:.2s
-}
-.btn:hover{transform:translateY(-2px)}
-.btn:disabled{
-  opacity:.6;
-  cursor:wait;
-  transform:none
-}
-.btn.secondary{
-  background:#ffffff0d;
-  border:1px solid #ffffff18;
-  margin-left:8px
-}
-.wrap{
-  padding:35px 6%;
-  max-width:1400px;
-  margin:auto
-}
-.section-title{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  gap:15px;
-  margin-bottom:22px
-}
-.section-title h2{
-  margin:0;
-  font-size:30px
-}
-.section-title p{
-  margin:5px 0 0;
-  color:#8292a6
-}
-.tools{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-bottom:25px
-}
-.tools input{
-  flex:1;
-  min-width:220px;
-  background:#0b111a;
-  border:1px solid #243247;
-  color:#fff;
-  padding:15px;
-  border-radius:12px;
-  outline:none
-}
-.tools input:focus{border-color:#159cff}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:18px
-}
-.card{
-  background:#0b1018;
-  border:1px solid #ffffff10;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 15px 45px #0006;
-  transition:.25s
-}
-.card:hover{
-  transform:translateY(-5px);
-  border-color:#159cff55
-}
-.card img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  display:block;
-  background:#0e1622
-}
-.card .text{padding:16px}
-.card h3{
-  margin:0 0 7px;
-  font-size:17px
-}
-.card p{
-  color:#9eacbc;
-  margin:0
-}
-.empty{
-  grid-column:1/-1;
-  color:#9fb0c3;
-  padding:55px 20px;
-  text-align:center;
-  border:1px dashed #ffffff18;
-  border-radius:18px
-}
-.info{
-  margin-top:38px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px
-}
-.info div{
-  padding:20px;
-  border:1px solid #ffffff10;
-  border-radius:16px;
-  background:#ffffff05
-}
-.info b{
-  display:block;
-  margin-bottom:6px
-}
-.info span{
-  color:#8f9daf;
-  font-size:14px
-}
-footer{
-  padding:35px 6%;
-  border-top:1px solid #ffffff10;
-  color:#8f9daf;
-  margin-top:45px;
-  text-align:center
-}
-footer b{color:#fff}
-small{color:#657387}
 
-@media(max-width:650px){
-  nav{gap:9px}
-  nav a{font-size:12px}
-  .hero{padding-top:65px}
-  .hero h1{letter-spacing:-3px}
-  .btn.secondary{
-    margin-left:0;
-    margin-top:10px
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at top,#181818 0%,#070707 45%,#000 100%);
+    color:#fff;
+    min-height:100vh;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:#888;
+}
+
+.telegram{
+    color:#fff;
+    text-decoration:none;
+    padding:11px 17px;
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.13);
+    transition:.25s;
+}
+
+.telegram:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:90px 0 65px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.05);
+    color:#aaa;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,9vw,90px);
+    line-height:.95;
+    letter-spacing:-5px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#999;
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* CONTROLS */
+
+.controls{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.search{
+    flex:1;
+}
+
+.search input{
+    width:100%;
+    padding:15px 18px;
+    border-radius:14px;
+    outline:none;
+    border:1px solid rgba(255,255,255,.12);
+    background:#0d0d0d;
+    color:#fff;
+}
+
+.search input::placeholder{
+    color:#666;
+}
+
+.btn{
+    border:0;
+    border-radius:14px;
+    padding:14px 20px;
+    background:#fff;
+    color:#000;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding-bottom:80px;
+}
+
+.card{
+    overflow:hidden;
+    border-radius:22px;
+    background:linear-gradient(145deg,#121212,#080808);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,255,255,.18);
+}
+
+.card-image{
+    position:relative;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:#111;
+    cursor:pointer;
+}
+
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.card:hover .card-image img{
+    transform:scale(1.04);
+}
+
+.view-label{
+    position:absolute;
+    right:12px;
+    bottom:12px;
+    padding:7px 11px;
+    border-radius:999px;
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(10px);
+    font-size:11px;
+}
+
+.card-body{
+    padding:17px;
+}
+
+.card-title{
+    font-size:18px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.card-caption{
+    color:#999;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:12px;
+}
+
+.prompt-box{
+    padding:11px;
+    border-radius:12px;
+    background:#070707;
+    border:1px solid rgba(255,255,255,.07);
+    color:#aaa;
+    font-size:12px;
+    line-height:1.5;
+    word-break:break-word;
+}
+
+.actions{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:13px;
+}
+
+.action{
+    flex:1;
+    min-width:70px;
+    padding:9px 8px;
+    border-radius:10px;
+    background:#111;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.1);
+    font-size:12px;
+}
+
+.action:hover{
+    background:#222;
+}
+
+.action.delete{
+    color:#ff7777;
+}
+
+/* EMPTY */
+
+.empty{
+    grid-column:1/-1;
+    text-align:center;
+    padding:70px 20px;
+    border:1px dashed rgba(255,255,255,.12);
+    border-radius:20px;
+    color:#777;
+}
+
+/* LOADING */
+
+.loading{
+    grid-column:1/-1;
+    text-align:center;
+    padding:70px 20px;
+    color:#777;
+}
+
+/* IMAGE MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.92);
+    backdrop-filter:blur(12px);
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    position:relative;
+    width:min(1100px,96vw);
+    max-height:94vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal-content img{
+    max-width:100%;
+    max-height:90vh;
+    object-fit:contain;
+    border-radius:16px;
+}
+
+.close{
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:#111;
+    color:#fff;
+    font-size:23px;
+    z-index:5;
+}
+
+/* UPLOAD MODAL */
+
+.upload-modal{
+    position:fixed;
+    inset:0;
+    z-index:1100;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.84);
+    backdrop-filter:blur(15px);
+}
+
+.upload-modal.active{
+    display:flex;
+}
+
+.upload-box{
+    width:min(520px,95vw);
+    max-height:92vh;
+    overflow:auto;
+    background:#0d0d0d;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:25px;
+}
+
+.upload-box h2{
+    margin-bottom:20px;
+}
+
+.field{
+    margin-bottom:15px;
+}
+
+.field label{
+    display:block;
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:7px;
+}
+
+.field input,
+.field textarea{
+    width:100%;
+    padding:13px;
+    border-radius:12px;
+    outline:none;
+    border:1px solid rgba(255,255,255,.12);
+    background:#050505;
+    color:#fff;
+}
+
+.field textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.upload-actions{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+}
+
+.upload-actions button{
+    flex:1;
+}
+
+/* STATUS */
+
+.status{
+    text-align:center;
+    color:#888;
+    font-size:13px;
+    margin-top:-15px;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:30px 0;
+    text-align:center;
+    color:#666;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .nav{
+        min-height:62px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .telegram{
+        font-size:13px;
+        padding:9px 12px;
+    }
+
+    .hero{
+        padding:65px 0 45px;
+    }
+
+    .hero h1{
+        font-size:50px;
+        letter-spacing:-3px;
+    }
+
+    .controls{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .controls .btn{
+        width:100%;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Broken <span>AI</span></div>
-  <nav>
-    <a href="#gallery">Gallery</a>
-    <a href="#upload">Upload</a>
-    <a href="https://t.me/Brokenboy221716" target="_blank">Telegram</a>
-  </nav>
+
+<div class="container nav">
+
+    <div class="logo">
+        Broken <span>AI</span>
+    </div>
+
+    <a
+        class="telegram"
+        href="https://t.me/"
+        target="_blank"
+        rel="noopener">
+        Telegram ↗
+    </a>
+
+</div>
+
 </header>
 
+
+<main>
+
 <section class="hero">
-  <div class="hero-inner">
-    <div class="badge">✦ AI IMAGES • CINEMATIC ART</div>
-    <h1>Broken <span>AI</span></h1>
+
+<div class="container">
+
+    <div class="badge">
+        AI IMAGES • PREMIUM GALLERY
+    </div>
+
+    <h1>
+        Broken <span>AI</span>
+    </h1>
+
     <p>
-      खामोशियों को तस्वीरों में बदलते हैं… 💔<br>
-      अपनी AI images शेयर करो और अपनी gallery बनाओ।
+        Discover premium AI images, creative prompts
+        and futuristic artwork. Upload your own creation
+        and share it with everyone.
     </p>
-    <a class="btn" href="#upload">+ Upload Image</a>
-    <a class="btn secondary"
-       href="https://t.me/Brokenboy221716"
-       target="_blank">
-       Join Telegram
-    </a>
-  </div>
+
+</div>
+
 </section>
 
-<main class="wrap" id="gallery">
 
-  <div class="section-title">
-    <div>
-      <h2>🖼️ AI Gallery</h2>
-      <p>अपनी पसंद की images खोजें और देखें</p>
+<section class="container">
+
+<div class="controls">
+
+    <div class="search">
+
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Search title, caption or prompt...">
+
     </div>
-  </div>
 
-  <div class="tools" id="upload">
-    <input id="search" placeholder="🔎 AI इमेज खोजें...">
-    <button class="btn" id="uploadBtn">
-      + नई AI इमेज अपलोड करें
+    <button
+        class="btn"
+        onclick="openUpload()">
+        + Upload Image
     </button>
-    <input type="file" id="file" accept="image/*" hidden>
-  </div>
 
-  <div class="grid" id="grid"></div>
+</div>
 
-  <div class="info">
-    <div>
-      <b>🤖 AI Images</b>
-      <span>Cinematic और creative artwork</span>
+<div
+    id="status"
+    class="status">
+    Loading gallery...
+</div>
+
+<div
+    id="gallery"
+    class="gallery">
+
+    <div class="loading">
+        Loading images...
     </div>
-    <div>
-      <b>💔 Sad Shayari</b>
-      <span>Broken vibes और emotions</span>
-    </div>
-    <div>
-      <b>🎬 Cinematic Art</b>
-      <span>Dark और premium visual style</span>
-    </div>
-  </div>
+
+</div>
+
+</section>
 
 </main>
 
+
 <footer>
-  <b>Broken AI</b><br>
-  AI Images • Sad Shayari • Cinematic Art<br>
-  <small>© 2026 Broken AI</small>
+
+© 2026 Broken AI • AI Images
+
 </footer>
 
-<script>
 
-const grid=document.querySelector('#grid');
-const file=document.querySelector('#file');
-const search=document.querySelector('#search');
+<!-- IMAGE FULLSCREEN -->
 
-let images=JSON.parse(
-  localStorage.getItem('brokenAIImages')||'[]'
-);
+<div
+    id="imageModal"
+    class="modal"
+    onclick="closeImage(event)">
 
-/* Cloudinary Settings */
-const CLOUDINARY_CLOUD_NAME='g33rvuls';
-const CLOUDINARY_UPLOAD_PRESET='brokenai';
+    <div class="modal-content">
 
-/* Gallery */
-function render(){
-
-  const q=search.value.toLowerCase();
-
-  grid.innerHTML='';
-
-  const list=images.filter(x=>
-    ((x.title||'')+(x.caption||''))
-    .toLowerCase()
-    .includes(q)
-  );
-
-  if(!list.length){
-
-    grid.innerHTML=`
-      <div class="empty">
-        अभी कोई इमेज नहीं है।<br>
-        ऊपर से अपनी AI इमेज अपलोड करें। 🖤
-      </div>
-    `;
-
-    return;
-  }
-
-  list.forEach(x=>{
-
-    grid.innerHTML+=`
-      <article class="card">
+        <button
+            class="close"
+            onclick="closeImage()">
+            ×
+        </button>
 
         <img
-          src="${x.src}"
-          alt="${x.title||'Broken AI Image'}"
-          loading="lazy"
-        >
+            id="modalImage"
+            src=""
+            alt="AI Image">
 
-        <div class="text">
-          <h3>${x.title||'Broken AI Image'}</h3>
-          <p>${x.caption||'AI Cinematic Art 🖤'}</p>
+    </div>
+
+</div>
+
+
+<!-- UPLOAD MODAL -->
+
+<div
+    id="uploadModal"
+    class="upload-modal">
+
+    <div class="upload-box">
+
+        <h2>
+            Upload AI Image
+        </h2>
+
+        <div class="field">
+
+            <label>
+                Image
+            </label>
+
+            <input
+                id="imageFile"
+                type="file"
+                accept="image/*">
+
         </div>
 
-      </article>
-    `;
 
-  });
-}
+        <div class="field">
 
+            <label>
+                Title
+            </label>
 
-/* Cloudinary Upload */
-async function uploadToCloudinary(imageFile){
+            <input
+                id="imageTitle"
+                type="text"
+                placeholder="Enter image title">
 
-  const formData=new FormData();
-
-  formData.append('file',imageFile);
-  formData.append(
-    'upload_preset',
-    CLOUDINARY_UPLOAD_PRESET
-  );
-
-  const response=await fetch(
-    `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`,
-    {
-      method:'POST',
-      body:formData
-    }
-  );
-
-  if(!response.ok){
-    throw new Error('Cloudinary upload failed');
-  }
-
-  return await response.json();
-}
+        </div>
 
 
-/* Upload Button */
-document.querySelector('#uploadBtn').onclick=()=>{
-  file.click();
+        <div class="field">
+
+            <label>
+                Caption
+            </label>
+
+            <textarea
+                id="imageCaption"
+                placeholder="Write a short caption..."></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+            <label>
+                Prompt
+            </label>
+
+            <textarea
+                id="imagePrompt"
+                placeholder="Enter the AI prompt..."></textarea>
+
+        </div>
+
+
+        <div class="upload-actions">
+
+            <button
+                class="btn dark"
+                onclick="closeUpload()">
+                Cancel
+            </button>
+
+            <button
+                id="uploadButton"
+                class="btn"
+                onclick="uploadImage()">
+                Upload
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FIREBASE -->
+
+<script type="module">
+
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    deleteDoc,
+    doc,
+    updateDoc,
+    increment,
+    orderBy,
+    query
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+
+/* =========================
+   FIREBASE CONFIG
+========================= */
+
+const firebaseConfig = {
+
+    apiKey:
+    "AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+
+    authDomain:
+    "broken-boy-f5087.firebaseapp.com",
+
+    projectId:
+    "broken-boy-f5087",
+
+    storageBucket:
+    "broken-boy-f5087.firebasestorage.app",
+
+    messagingSenderId:
+    "1086620986469",
+
+    appId:
+    "1:1086620986469:web:0c08c7c876e5389ae8aa8c",
+
+    measurementId:
+    "G-F2E1B5LWEN"
+
 };
 
 
-/* File Upload */
-file.onchange=async()=>{
+/* =========================
+   INITIALIZE FIREBASE
+========================= */
 
-  const f=file.files[0];
+const app =
+initializeApp(firebaseConfig);
 
-  if(!f)return;
+const db =
+getFirestore(app);
 
-  if(!f.type.startsWith('image/')){
 
-    alert('कृपया केवल image चुनें।');
+/* =========================
+   CLOUDINARY
+========================= */
 
-    file.value='';
+const CLOUDINARY_CLOUD_NAME =
+"g33rvuls";
 
-    return;
-  }
+const CLOUDINARY_UPLOAD_PRESET =
+"brokenai";
 
-  if(f.size>10*1024*1024){
+const CLOUDINARY_URL =
+`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`;
 
-    alert('Image 10MB से छोटी रखें।');
 
-    file.value='';
+/* =========================
+   VARIABLES
+========================= */
 
-    return;
-  }
+let images = [];
 
-  const uploadBtn=
-    document.querySelector('#uploadBtn');
+const gallery =
+document.getElementById("gallery");
 
-  const oldText=
-    uploadBtn.textContent;
+const searchInput =
+document.getElementById("searchInput");
 
-  uploadBtn.disabled=true;
+const status =
+document.getElementById("status");
 
-  uploadBtn.textContent=
-    '⏳ Upload हो रही है...';
+const uploadModal =
+document.getElementById("uploadModal");
 
-  try{
+const imageModal =
+document.getElementById("imageModal");
 
-    const data=
-      await uploadToCloudinary(f);
+const modalImage =
+document.getElementById("modalImage");
 
-    images.unshift({
 
-      src:data.secure_url,
+/* =========================
+   LOAD FIRESTORE IMAGES
+========================= */
 
-      title:f.name
-        .replace(/\.[^/.]+$/,''),
+async function loadImages(){
 
-      caption:'मेरी नई AI इमेज 🖤',
+    try{
 
-      cloudinaryPublicId:data.public_id,
+        status.textContent =
+        "Loading gallery...";
 
-      date:new Date().toISOString()
+        const q =
+        query(
+            collection(db,"images"),
+            orderBy("createdAt","desc")
+        );
+
+        const snapshot =
+        await getDocs(q);
+
+        images =
+        snapshot.docs.map(item => ({
+
+            id:item.id,
+            ...item.data()
+
+        }));
+
+        renderImages();
+
+        status.textContent =
+        `${images.length} image${images.length === 1 ? "" : "s"} in gallery`;
+
+    }catch(error){
+
+        console.error(error);
+
+        status.textContent =
+        "Gallery loading error";
+
+        gallery.innerHTML = `
+
+            <div class="empty">
+
+                <h3>
+                    Gallery Error
+                </h3>
+
+                <p style="margin-top:8px;">
+                    Please check Firebase Firestore.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================
+   OPEN UPLOAD
+========================= */
+
+window.openUpload = function(){
+
+    uploadModal.classList.add("active");
+
+};
+
+
+/* =========================
+   CLOSE UPLOAD
+========================= */
+
+window.closeUpload = function(){
+
+    uploadModal.classList.remove("active");
+
+};
+
+
+/* =========================
+   UPLOAD IMAGE
+========================= */
+
+window.uploadImage = async function(){
+
+    const file =
+    document.getElementById("imageFile").files[0];
+
+    const title =
+    document.getElementById("imageTitle").value.trim();
+
+    const caption =
+    document.getElementById("imageCaption").value.trim();
+
+    const prompt =
+    document.getElementById("imagePrompt").value.trim();
+
+    const button =
+    document.getElementById("uploadButton");
+
+
+    if(!file){
+
+        alert("Please select an image.");
+
+        return;
+
+    }
+
+
+    if(!title){
+
+        alert("Please enter image title.");
+
+        return;
+
+    }
+
+
+    button.disabled = true;
+
+    button.textContent =
+    "Uploading...";
+
+
+    try{
+
+        /* CLOUDINARY */
+
+        const formData =
+        new FormData();
+
+        formData.append(
+            "file",
+            file
+        );
+
+        formData.append(
+            "upload_preset",
+            CLOUDINARY_UPLOAD_PRESET
+        );
+
+
+        const cloudinaryResponse =
+        await fetch(
+            CLOUDINARY_URL,
+            {
+                method:"POST",
+                body:formData
+            }
+        );
+
+
+        const cloudinaryData =
+        await cloudinaryResponse.json();
+
+
+        if(!cloudinaryResponse.ok){
+
+            throw new Error(
+                cloudinaryData.error?.message ||
+                "Cloudinary upload failed"
+            );
+
+        }
+
+
+        const imageURL =
+        cloudinaryData.secure_url;
+
+
+        /* FIRESTORE */
+
+        await addDoc(
+            collection(db,"images"),
+            {
+
+                url:imageURL,
+
+                title:title,
+
+                caption:caption,
+
+                prompt:prompt,
+
+                likes:0,
+
+                createdAt:
+                Date.now()
+
+            }
+        );
+
+
+        /* RESET */
+
+        document.getElementById("imageFile").value =
+        "";
+
+        document.getElementById("imageTitle").value =
+        "";
+
+        document.getElementById("imageCaption").value =
+        "";
+
+        document.getElementById("imagePrompt").value =
+        "";
+
+
+        closeUpload();
+
+        await loadImages();
+
+
+        alert(
+            "Image uploaded successfully! 🎉"
+        );
+
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Upload failed:\n" +
+            error.message
+        );
+
+    }finally{
+
+        button.disabled = false;
+
+        button.textContent =
+        "Upload";
+
+    }
+
+};
+
+
+/* =========================
+   RENDER
+========================= */
+
+function renderImages(){
+
+    const search =
+    searchInput.value
+    .toLowerCase()
+    .trim();
+
+
+    const filtered =
+    images.filter(item => {
+
+        const text =
+        `
+        ${item.title || ""}
+        ${item.caption || ""}
+        ${item.prompt || ""}
+        `.toLowerCase();
+
+        return text.includes(search);
 
     });
 
-    localStorage.setItem(
-      'brokenAIImages',
-      JSON.stringify(images)
+
+    if(filtered.length === 0){
+
+        gallery.innerHTML = `
+
+            <div class="empty">
+
+                <h3>
+                    No images found
+                </h3>
+
+                <p style="margin-top:8px;">
+                    Upload your first AI image.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    gallery.innerHTML =
+    filtered.map(item => {
+
+        return `
+
+        <article class="card">
+
+            <div
+                class="card-image"
+                onclick="openImage('${escapeAttr(item.url)}')">
+
+                <img
+                    src="${escapeAttr(item.url)}"
+                    alt="${escapeAttr(item.title || "AI Image")}"
+                    loading="lazy">
+
+                <div class="view-label">
+                    Tap to view
+                </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+                <div class="card-title">
+                    ${escapeHTML(
+                        item.title || "Untitled"
+                    )}
+                </div>
+
+
+                <div class="card-caption">
+                    ${escapeHTML(
+                        item.caption || "No caption"
+                    )}
+                </div>
+
+
+                ${
+                    item.prompt
+                    ?
+                    `
+                    <div class="prompt-box">
+
+                        <strong>
+                            Prompt:
+                        </strong>
+
+                        <br>
+
+                        ${escapeHTML(item.prompt)}
+
+                    </div>
+                    `
+                    :
+                    ""
+                }
+
+
+                <div class="actions">
+
+                    <button
+                        class="action"
+                        onclick="copyPrompt('${item.id}')">
+
+                        📋 Copy
+
+                    </button>
+
+
+                    <button
+                        class="action"
+                        onclick="likeImage('${item.id}')">
+
+                        ❤️ ${item.likes || 0}
+
+                    </button>
+
+
+                    <button
+                        class="action"
+                        onclick="downloadImage('${escapeAttr(item.url)}','${escapeAttr(item.title || "broken-ai-image")}')">
+
+                        ⬇️ Download
+
+                    </button>
+
+
+                    <button
+                        class="action delete"
+                        onclick="deleteImage('${item.id}')">
+
+                        🗑️ Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        `;
+
+    }).join("");
+
+}
+
+
+/* =========================
+   FULLSCREEN
+========================= */
+
+window.openImage = function(url){
+
+    modalImage.src =
+    url;
+
+    imageModal.classList.add(
+        "active"
     );
 
-    render();
-
-    alert(
-      'Image successfully upload हो गई ✅'
-    );
-
-  }catch(error){
-
-    console.error(error);
-
-    alert(
-      'Upload नहीं हुआ। Cloudinary preset और internet connection check करें।'
-    );
-
-  }finally{
-
-    uploadBtn.disabled=false;
-
-    uploadBtn.textContent=oldText;
-
-    file.value='';
-
-  }
+    document.body.style.overflow =
+    "hidden";
 
 };
 
 
-/* Search */
-search.oninput=render;
+window.closeImage = function(event){
+
+    if(
+        event &&
+        event.target !== imageModal
+    ){
+
+        return;
+
+    }
 
 
-/* Start */
-render();
+    imageModal.classList.remove(
+        "active"
+    );
+
+    modalImage.src =
+    "";
+
+    document.body.style.overflow =
+    "";
+
+};
+
+
+/* =========================
+   COPY PROMPT
+========================= */
+
+window.copyPrompt = async function(id){
+
+    const item =
+    images.find(
+        x => x.id === id
+    );
+
+
+    if(!item){
+
+        return;
+
+    }
+
+
+    if(!item.prompt){
+
+        alert(
+            "No prompt available."
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        await navigator.clipboard.writeText(
+            item.prompt
+        );
+
+        alert(
+            "Prompt copied! 📋"
+        );
+
+    }catch(error){
+
+        alert(
+            "Copy failed."
+        );
+
+    }
+
+};
+
+
+/* =========================
+   LIKE
+========================= */
+
+window.likeImage = async function(id){
+
+    try{
+
+        const imageRef =
+        doc(
+            db,
+            "images",
+            id
+        );
+
+
+        await updateDoc(
+            imageRef,
+            {
+                likes:
+                increment(1)
+            }
+        );
+
+
+        await loadImages();
+
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Like failed."
+        );
+
+    }
+
+};
+
+
+/* =========================
+   DELETE
+========================= */
+
+window.deleteImage = async function(id){
+
+    const yes =
+    confirm(
+        "Are you sure you want to delete this image?"
+    );
+
+
+    if(!yes){
+
+        return;
+
+    }
+
+
+    try{
+
+        await deleteDoc(
+            doc(
+                db,
+                "images",
+                id
+            )
+        );
+
+
+        await loadImages();
+
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Delete failed."
+        );
+
+    }
+
+};
+
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+window.downloadImage = async function(
+    url,
+    title
+){
+
+    try{
+
+        const response =
+        await fetch(url);
+
+        const blob =
+        await response.blob();
+
+        const blobURL =
+        URL.createObjectURL(blob);
+
+        const link =
+        document.createElement("a");
+
+        link.href =
+        blobURL;
+
+        link.download =
+        `${title || "broken-ai-image"}.jpg`;
+
+        document.body.appendChild(
+            link
+        );
+
+        link.click();
+
+        link.remove();
+
+        URL.revokeObjectURL(
+            blobURL
+        );
+
+
+    }catch(error){
+
+        window.open(
+            url,
+            "_blank"
+        );
+
+    }
+
+};
+
+
+/* =========================
+   SEARCH
+========================= */
+
+searchInput.addEventListener(
+    "input",
+    renderImages
+);
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape"
+        ){
+
+            imageModal.classList.remove(
+                "active"
+            );
+
+            uploadModal.classList.remove(
+                "active"
+            );
+
+            document.body.style.overflow =
+            "";
+
+        }
+
+    }
+);
+
+
+/* =========================
+   SECURITY HELPERS
+========================= */
+
+function escapeHTML(value){
+
+    return String(value)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+function escapeAttr(value){
+
+    return String(value)
+
+        .replace(
+            /\\/g,
+            "\\\\"
+        )
+
+        .replace(
+            /'/g,
+            "\\'"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /\n/g,
+            " "
+        );
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+loadImages();
 
 </script>
 
