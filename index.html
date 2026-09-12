@@ -3,2163 +3,1848 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>Broken AI | AI Images</title>
+<title>Broken AI | Future of AI Images</title>
 
 <style>
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:
-radial-gradient(circle at 10% 10%,#ff008055,transparent 28%),
-radial-gradient(circle at 90% 20%,#00eaff44,transparent 30%),
-radial-gradient(circle at 50% 100%,#7c3aed44,transparent 35%),
-#03040a;
-color:white;
-min-height:100vh;
+  background:#02030a;
+  color:#fff;
+  overflow-x:hidden;
 }
 
+/* FUTURE BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background:
+    radial-gradient(circle at 20% 20%,#00eaff22,transparent 30%),
+    radial-gradient(circle at 80% 30%,#9d00ff22,transparent 30%),
+    radial-gradient(circle at 50% 90%,#ff006622,transparent 35%);
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  opacity:.18;
+  background-image:
+    linear-gradient(#00eaff22 1px,transparent 1px),
+    linear-gradient(90deg,#00eaff22 1px,transparent 1px);
+  background-size:45px 45px;
+  transform:perspective(500px) rotateX(55deg) scale(1.8);
+  transform-origin:center bottom;
+  animation:gridMove 12s linear infinite;
+}
+
+@keyframes gridMove{
+  from{background-position:0 0,0 0}
+  to{background-position:0 450px,450px 0}
+}
+
+/* FLOATING LIGHTS */
+.light{
+  position:fixed;
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  filter:blur(100px);
+  opacity:.22;
+  z-index:-1;
+  animation:float 8s ease-in-out infinite;
+}
+
+.l1{
+  background:#00eaff;
+  top:10%;
+  left:-100px;
+}
+.l2{
+  background:#9d00ff;
+  right:-100px;
+  top:40%;
+  animation-delay:2s;
+}
+.l3{
+  background:#ff006a;
+  left:35%;
+  bottom:-120px;
+  animation-delay:4s;
+}
+
+@keyframes float{
+  50%{transform:translateY(-80px) translateX(50px)}
+}
 
 /* HEADER */
-
 header{
-position:sticky;
-top:0;
-z-index:50;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:15px 6%;
-
-background:#05070ddd;
-backdrop-filter:blur(18px);
-
-border-bottom:1px solid #ffffff18;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 6%;
+  background:#03040bcc;
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid #ffffff18;
 }
 
 .logo{
-font-size:28px;
-font-weight:900;
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:2px;
+  color:#fff;
+  text-shadow:
+    0 0 8px #00eaff,
+    0 0 25px #9d00ff;
 }
 
 .logo span{
-background:
-linear-gradient(
-90deg,
-#00eaff,
-#7c3aed,
-#ff1493,
-#ff8a00
-);
-
--webkit-background-clip:text;
-background-clip:text;
-color:transparent;
+  color:#00eaff;
 }
 
 nav{
-display:flex;
-align-items:center;
-gap:12px;
-flex-wrap:wrap;
+  display:flex;
+  gap:10px;
 }
 
-nav a{
-color:#ddd;
-text-decoration:none;
-font-size:13px;
-font-weight:bold;
+nav button,
+.adminBtn{
+  background:#ffffff08;
+  border:1px solid #ffffff22;
+  color:#fff;
+  padding:10px 17px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
 }
 
-button,
-.btn{
-border:0;
-border-radius:12px;
-
-padding:13px 18px;
-
-color:white;
-font-weight:800;
-
-cursor:pointer;
-
-background:
-linear-gradient(
-90deg,
-#ff1744,
-#7c3aed,
-#00bfff
-);
-
-transition:.2s;
+nav button:hover,
+.adminBtn:hover{
+  border-color:#00eaff;
+  box-shadow:0 0 20px #00eaff44;
+  transform:translateY(-2px);
 }
-
-button:hover,
-.btn:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 30px #7c3aed55;
-}
-
-.secondary{
-background:#ffffff10;
-border:1px solid #ffffff22;
-}
-
 
 /* HERO */
-
 .hero{
-min-height:650px;
-
-display:flex;
-align-items:center;
-
-padding:70px 6%;
-
-background:
-linear-gradient(
-90deg,
-#020308ee,
-#02030899
-),
-url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85")
-center/cover;
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 20px;
+  position:relative;
 }
-
-.hero-content{
-max-width:900px;
-}
-
-
-/* PROFILE */
-
-.profile-wrap{
-
-width:155px;
-height:155px;
-
-padding:5px;
-
-border-radius:50%;
-
-background:
-linear-gradient(
-45deg,
-#00eaff,
-#7c3aed,
-#ff1493,
-#ff8a00
-);
-
-box-shadow:
-0 0 25px #00eaff66,
-0 0 55px #7c3aed66;
-
-margin-bottom:25px;
-}
-
-.profile{
-
-width:100%;
-height:100%;
-
-border-radius:50%;
-
-object-fit:cover;
-
-display:block;
-
-background:#111;
-}
-
-
-/* BADGE */
 
 .badge{
-
-display:inline-block;
-
-padding:8px 15px;
-
-border-radius:30px;
-
-background:#ffffff0c;
-
-border:1px solid #00eaff66;
-
-color:#8defff;
-
-font-weight:bold;
-
-margin-bottom:18px;
+  padding:9px 18px;
+  border:1px solid #00eaff66;
+  border-radius:50px;
+  background:#00eaff0b;
+  color:#00eaff;
+  font-size:13px;
+  letter-spacing:2px;
+  box-shadow:0 0 25px #00eaff22;
+  margin-bottom:25px;
 }
-
-
-/* HERO TEXT */
 
 .hero h1{
-
-font-size:
-clamp(55px,10vw,105px);
-
-line-height:.9;
-
-letter-spacing:-5px;
-
-margin-bottom:20px;
+  font-size:clamp(55px,12vw,150px);
+  font-weight:1000;
+  line-height:.85;
+  letter-spacing:-7px;
+  background:linear-gradient(
+    90deg,
+    #fff,
+    #00eaff,
+    #fff,
+    #b000ff,
+    #fff
+  );
+  background-size:300% auto;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:textMove 5s linear infinite;
+  text-shadow:0 0 50px #00eaff33;
 }
 
-.hero h1 span{
+@keyframes textMove{
+  to{background-position:300% center}
+}
 
-background:
-linear-gradient(
-90deg,
-#00eaff,
-#7c3aed,
-#ff1493,
-#ff8a00
-);
-
--webkit-background-clip:text;
-background-clip:text;
-
-color:transparent;
+.hero h2{
+  margin-top:30px;
+  font-size:clamp(20px,4vw,35px);
+  color:#b9c8d5;
+  font-weight:400;
 }
 
 .hero p{
-
-font-size:19px;
-
-color:#cbd5e1;
-
-line-height:1.7;
-
-max-width:650px;
-
-margin-bottom:25px;
+  max-width:650px;
+  margin:20px auto;
+  color:#8493a2;
+  line-height:1.7;
 }
 
-
-/* MAIN */
-
-.wrap{
-
-max-width:1400px;
-
-margin:auto;
-
-padding:50px 6%;
+.heroButtons{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-.title{
-
-margin-bottom:25px;
+.mainBtn{
+  padding:15px 28px;
+  border:0;
+  border-radius:15px;
+  color:#000;
+  background:linear-gradient(90deg,#00eaff,#7df8ff);
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 0 30px #00eaff55;
+  transition:.3s;
 }
 
-.title h2{
-
-font-size:34px;
-
-margin-bottom:8px;
+.mainBtn:hover{
+  transform:scale(1.06);
+  box-shadow:0 0 50px #00eaff99;
 }
 
-.title p{
-
-color:#8f9daf;
+.secondBtn{
+  padding:15px 28px;
+  border:1px solid #ffffff30;
+  border-radius:15px;
+  background:#ffffff08;
+  color:#fff;
+  cursor:pointer;
 }
 
+/* ORBIT */
+.orbit{
+  position:absolute;
+  width:500px;
+  height:500px;
+  border:1px solid #00eaff22;
+  border-radius:50%;
+  animation:spin 18s linear infinite;
+  pointer-events:none;
+}
 
-/* SEARCH */
+.orbit::before,
+.orbit::after{
+  content:"";
+  position:absolute;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#00eaff;
+  box-shadow:0 0 30px #00eaff;
+}
 
-.tools{
+.orbit::before{
+  top:10px;
+  left:50%;
+}
 
-display:flex;
+.orbit::after{
+  bottom:50px;
+  right:10px;
+  background:#c000ff;
+  box-shadow:0 0 30px #c000ff;
+}
 
-gap:12px;
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
 
-margin-bottom:25px;
+/* SECTIONS */
+section{
+  padding:100px 6%;
+}
+
+.sectionTitle{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.sectionTitle small{
+  color:#00eaff;
+  letter-spacing:3px;
+}
+
+.sectionTitle h2{
+  margin-top:10px;
+  font-size:clamp(35px,6vw,65px);
+}
+
+.sectionTitle p{
+  color:#71808d;
+  margin-top:15px;
+}
+
+/* PROFILE */
+.profileCard{
+  max-width:1000px;
+  margin:auto;
+  padding:35px;
+  display:flex;
+  gap:40px;
+  align-items:center;
+  background:linear-gradient(135deg,#ffffff0d,#ffffff03);
+  border:1px solid #ffffff18;
+  border-radius:30px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 0 70px #00eaff0d;
+}
+
+.profile-wrap{
+  min-width:180px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  padding:5px;
+  background:linear-gradient(135deg,#00eaff,#9d00ff,#ff006a);
+  box-shadow:
+    0 0 25px #00eaff77,
+    0 0 60px #9d00ff33;
+}
+
+.profile{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  background:#05050a;
+}
+
+.profileText h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.profileText h2 span{
+  color:#00eaff;
+}
+
+.profileText p{
+  color:#8998a6;
+  line-height:1.8;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.feature{
+  padding:30px;
+  min-height:190px;
+  border:1px solid #ffffff16;
+  border-radius:22px;
+  background:#ffffff06;
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.feature::before{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  background:#00eaff;
+  filter:blur(70px);
+  opacity:.1;
+}
+
+.feature:hover{
+  transform:translateY(-10px);
+  border-color:#00eaff66;
+  box-shadow:0 20px 60px #00eaff12;
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:18px;
+}
+
+.feature h3{
+  margin-bottom:10px;
+}
+
+.feature p{
+  color:#73818e;
+  line-height:1.6;
+}
+
+/* ADMIN */
+#adminPanel{
+  display:none;
+  max-width:900px;
+  margin:0 auto 50px;
+  padding:30px;
+  border:1px solid #00eaff33;
+  border-radius:25px;
+  background:#00eaff06;
+}
+
+#adminPanel.show{
+  display:block;
+}
+
+.uploadBox{
+  display:grid;
+  gap:14px;
 }
 
 input,
 textarea{
-
-width:100%;
-
-padding:14px;
-
-border-radius:12px;
-
-border:1px solid #ffffff18;
-
-background:#0b1018;
-
-color:white;
-
-outline:none;
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #ffffff20;
+  background:#05060c;
+  color:#fff;
+  outline:none;
 }
 
 input:focus,
 textarea:focus{
-
-border-color:#00eaff;
-
-box-shadow:
-0 0 0 3px #00eaff12;
-}
-
-
-/* GALLERY */
-
-.grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(230px,1fr)
-);
-
-gap:20px;
-}
-
-.card{
-
-background:#0b1018;
-
-border:1px solid #ffffff12;
-
-border-radius:18px;
-
-overflow:hidden;
-
-cursor:pointer;
-
-box-shadow:
-0 15px 40px #0008;
-
-transition:.25s;
-}
-
-.card:hover{
-
-transform:translateY(-7px);
-
-border-color:#00eaff77;
-
-box-shadow:
-0 20px 55px #7c3aed55;
-}
-
-.card img{
-
-width:100%;
-
-height:280px;
-
-object-fit:cover;
-
-display:block;
-
-background:#080b10;
-}
-
-.card-info{
-
-padding:16px;
-}
-
-.card-info h3{
-
-font-size:18px;
-
-margin-bottom:8px;
-}
-
-.card-info p{
-
-color:#9eacbc;
-
-line-height:1.5;
-}
-
-.meta{
-
-margin-top:10px;
-
-font-size:13px;
-
-color:#718096;
-}
-
-
-/* EMPTY */
-
-.empty{
-
-grid-column:1/-1;
-
-padding:55px 20px;
-
-text-align:center;
-
-border:1px dashed #ffffff22;
-
-border-radius:18px;
-
-color:#8997aa;
-}
-
-
-/* INFO */
-
-.info{
-
-display:grid;
-
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(220px,1fr)
-);
-
-gap:15px;
-
-margin-top:45px;
-}
-
-.info div{
-
-padding:22px;
-
-border-radius:16px;
-
-background:#ffffff07;
-
-border:1px solid #ffffff12;
-}
-
-.info b{
-
-display:block;
-
-margin-bottom:7px;
-}
-
-.info span{
-
-color:#8997aa;
-
-font-size:14px;
-}
-
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-
-padding:40px 20px;
-
-border-top:1px solid #ffffff12;
-
-color:#7d8999;
-
-margin-top:20px;
-}
-
-footer b{
-
-color:white;
-}
-
-
-/* MODAL */
-
-.modal{
-
-position:fixed;
-
-inset:0;
-
-z-index:100;
-
-display:none;
-
-align-items:center;
-
-justify-content:center;
-
-padding:20px;
-
-background:#000e;
-
-backdrop-filter:blur(10px);
-}
-
-.modal.show{
-
-display:flex;
-}
-
-.box{
-
-position:relative;
-
-width:min(1000px,100%);
-
-max-height:94vh;
-
-overflow:auto;
-
-padding:22px;
-
-border-radius:22px;
-
-background:#090e16;
-
-border:1px solid #ffffff18;
-
-box-shadow:
-0 25px 80px #000;
-}
-
-
-/* BIG X */
-
-.close{
-
-position:fixed;
-
-right:20px;
-
-top:20px;
-
-z-index:9999;
-
-width:58px;
-
-height:58px;
-
-padding:0;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#ff1744;
-
-border:3px solid white;
-
-color:white;
-
-font-size:38px;
-
-font-weight:900;
-
-line-height:1;
-
-cursor:pointer;
-
-box-shadow:
-0 0 30px #ff1744aa;
-}
-
-.close:hover{
-
-background:#ff003c;
-
-transform:scale(1.08);
-}
-
-
-/* BIG IMAGE */
-
-.bigimg{
-
-width:100%;
-
-max-height:68vh;
-
-object-fit:contain;
-
-display:block;
-
-border-radius:15px;
-
-background:#020307;
-}
-
-#viewTitle{
-
-margin-top:18px;
-
-font-size:27px;
-}
-
-#viewCaption{
-
-margin-top:8px;
-
-color:#aeb9c7;
-
-line-height:1.6;
-}
-
-
-/* PROMPT */
-
-.prompt{
-
-margin-top:15px;
-
-padding:15px;
-
-border-radius:12px;
-
-background:#050912;
-
-border:1px solid #ffffff12;
-
-color:#dbe7f5;
-
-white-space:pre-wrap;
-
-line-height:1.5;
-}
-
-
-/* ACTIONS */
-
-.actions{
-
-display:flex;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-margin-top:18px;
-}
-
-
-/* FORM */
-
-.field{
-
-margin:14px 0;
-}
-
-.field label{
-
-display:block;
-
-margin-bottom:7px;
-
-font-weight:bold;
-
-color:#dbe5f0;
+  border-color:#00eaff;
+  box-shadow:0 0 20px #00eaff18;
 }
 
 textarea{
-
-min-height:120px;
-
-resize:vertical;
+  min-height:100px;
+  resize:vertical;
 }
 
-.status{
-
-color:#00eaff;
-
-min-height:22px;
-
-margin:10px 0;
+.fileInput{
+  padding:12px;
 }
 
-.danger{
-
-background:#ef4444;
+/* GALLERY */
+.gallery{
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:25px;
 }
 
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-header{
-
-padding:13px 4%;
+.card{
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid #ffffff15;
+  background:#ffffff06;
+  backdrop-filter:blur(15px);
+  transition:.4s;
 }
 
-.logo{
-
-font-size:23px;
-}
-
-nav{
-
-gap:7px;
-}
-
-nav a{
-
-font-size:10px;
-}
-
-.hero{
-
-min-height:600px;
-
-padding:55px 5%;
-}
-
-.profile-wrap{
-
-width:125px;
-height:125px;
-}
-
-.hero h1{
-
-font-size:60px;
-
-letter-spacing:-3px;
-}
-
-.hero p{
-
-font-size:16px;
-}
-
-.wrap{
-
-padding:40px 5%;
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#00eaff55;
+  box-shadow:0 20px 50px #00eaff18;
 }
 
 .card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  cursor:pointer;
+  display:block;
+}
 
-height:250px;
+.cardBody{
+  padding:18px;
+}
+
+.cardBody h3{
+  margin-bottom:7px;
+}
+
+.cardBody p{
+  color:#778592;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.cardActions{
+  display:flex;
+  gap:8px;
+  margin-top:15px;
+  flex-wrap:wrap;
+}
+
+.cardActions button{
+  border:1px solid #ffffff1c;
+  background:#ffffff08;
+  color:#fff;
+  padding:9px 12px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.cardActions button:hover{
+  border-color:#00eaff;
+}
+
+/* CONTACT */
+.contactBox{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  padding:50px 25px;
+  border:1px solid #ffffff15;
+  border-radius:30px;
+  background:linear-gradient(135deg,#00eaff08,#9d00ff08);
+}
+
+.contactBtns{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.telegram{
+  background:#168bd0;
+  color:#fff;
+}
+
+.whatsapp{
+  background:#20bd67;
+  color:#fff;
+}
+
+/* MODALS */
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:#000c;
+  backdrop-filter:blur(15px);
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modalBox{
+  width:min(500px,100%);
+  max-height:90vh;
+  overflow:auto;
+  padding:30px;
+  border:1px solid #ffffff20;
+  border-radius:25px;
+  background:#080a12;
+  box-shadow:0 0 100px #00eaff18;
+}
+
+.modalBox h2{
+  margin-bottom:20px;
+}
+
+.modalBox input{
+  margin-bottom:12px;
 }
 
 .close{
-
-width:52px;
-
-height:52px;
-
-font-size:34px;
-
-right:14px;
-
-top:14px;
+  position:fixed;
+  right:20px;
+  top:20px;
+  z-index:9999;
+  width:58px;
+  height:58px;
+  padding:0;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#ff1744;
+  border:3px solid #fff;
+  color:#fff;
+  font-size:38px;
+  font-weight:900;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 0 30px #ff1744aa;
 }
 
+.viewer{
+  max-width:1000px;
+  width:100%;
+  max-height:90vh;
+  overflow:auto;
+  text-align:center;
 }
 
+.viewer img{
+  max-width:100%;
+  max-height:65vh;
+  object-fit:contain;
+  border-radius:20px;
+  box-shadow:0 0 60px #00eaff22;
+}
+
+.viewerInfo{
+  padding:20px;
+}
+
+.viewerInfo h2{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.viewerInfo p{
+  color:#8b98a5;
+  margin:7px 0;
+}
+
+.promptBox{
+  margin-top:15px;
+  padding:15px;
+  background:#ffffff08;
+  border:1px solid #ffffff15;
+  border-radius:12px;
+  text-align:left;
+  word-break:break-word;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  border-top:1px solid #ffffff12;
+  color:#5d6a75;
+}
+
+footer strong{
+  color:#00eaff;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+  header{
+    padding:0 4%;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .orbit{
+    width:300px;
+    height:300px;
+  }
+
+  .profileCard{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:75px 5%;
+  }
+
+  .card img{
+    height:280px;
+  }
+}
 </style>
 </head>
 
-
 <body>
 
-
-<!-- HEADER -->
+<div class="light l1"></div>
+<div class="light l2"></div>
+<div class="light l3"></div>
 
 <header>
+  <div class="logo">BROKEN<span> AI</span></div>
 
-<div class="logo">
-Broken <span>AI</span>
-</div>
+  <nav>
+    <button onclick="scrollToId('home')">Home</button>
+    <button onclick="scrollToId('gallerySection')">Gallery</button>
+    <button onclick="scrollToId('about')">About</button>
+    <button onclick="scrollToId('contact')">Contact</button>
+  </nav>
 
-<nav>
-
-<a href="#gallery">
-Gallery
-</a>
-
-<a
-href="https://t.me/Brokenboy221716"
-target="_blank">
-Telegram
-</a>
-
-<a
-href="https://wa.me/917318399281"
-target="_blank">
-Contact
-</a>
-
-<button id="adminBtn">
-Admin Login
-</button>
-
-</nav>
-
+  <button class="adminBtn" id="adminBtn">🔐 Admin Login</button>
 </header>
 
-
-
 <!-- HERO -->
+<section class="hero" id="home">
 
-<section class="hero">
+  <div class="orbit"></div>
 
-<div class="hero-content">
+  <div class="badge">⚡ NEXT GENERATION AI IMAGE PLATFORM</div>
 
+  <h1>BROKEN AI</h1>
 
-<!-- PROFILE IMAGE -->
+  <h2>ENTER THE FUTURE OF AI IMAGES</h2>
 
-<div class="profile-wrap">
+  <p>
+    Create. Imagine. Transform.
+    Welcome to a futuristic space where artificial intelligence
+    turns imagination into powerful visual experiences.
+  </p>
 
-<img
-src="./profile.jpg"
-class="profile"
-alt="Broken AI Profile"
-onerror="this.src='./profile.png'"
->
+  <div class="heroButtons">
+    <button class="mainBtn"
+      onclick="scrollToId('gallerySection')">
+      🚀 Explore Gallery
+    </button>
 
-</div>
-
-
-<div class="badge">
-
-✦ FUTURE AI CREATIONS
-
-</div>
-
-
-<h1>
-
-Broken <span>AI</span>
-
-</h1>
-
-
-<p>
-
-खामोशियों को तस्वीरों में बदलते हैं… 💔
-
-<br>
-
-AI Images • Cinematic Art • Creative Prompts
-
-</p>
-
-
-<a
-href="#gallery"
-class="btn">
-
-View Gallery
-
-</a>
-
-
-<a
-href="https://t.me/Brokenboy221716"
-target="_blank"
-class="btn secondary">
-
-Join Telegram
-
-</a>
-
-
-</div>
+    <button class="secondBtn"
+      onclick="scrollToId('about')">
+      🧠 Discover Broken AI
+    </button>
+  </div>
 
 </section>
 
+<!-- ABOUT -->
+<section id="about">
 
+  <div class="sectionTitle">
+    <small>ABOUT THE CREATOR</small>
+    <h2>Meet <span style="color:#00eaff">HIMANSHU</span></h2>
+    <p>The mind behind Broken AI</p>
+  </div>
 
-<!-- MAIN -->
+  <div class="profileCard">
 
-<main class="wrap" id="gallery">
+    <div class="profile-wrap">
+      <img
+        src="./profile.jpg"
+        class="profile"
+        alt="Broken AI Profile"
+        onerror="this.onerror=null;this.src='./profile.png';"
+      >
+    </div>
 
+    <div class="profileText">
+      <h2>I'm <span>HIMANSHU</span></h2>
 
-<div class="title">
+      <p>
+        Welcome to Broken AI — a futuristic AI image platform
+        built to explore creativity, technology and imagination.
+        Every image represents a different possibility of what
+        artificial intelligence can create.
+      </p>
+    </div>
 
-<h2>
-🖼️ AI Gallery
-</h2>
+  </div>
 
-<p>
-AI images देखें और पूरा prompt copy करें
-</p>
+</section>
 
-</div>
+<!-- FEATURES -->
+<section>
 
+  <div class="sectionTitle">
+    <small>WHY BROKEN AI</small>
+    <h2>Built For The Future</h2>
+  </div>
 
-<!-- SEARCH -->
+  <div class="features">
 
-<div class="tools">
+    <div class="feature">
+      <div class="icon">🤖</div>
+      <h3>AI Creativity</h3>
+      <p>
+        Explore unique AI-generated visual concepts
+        and futuristic artwork.
+      </p>
+    </div>
 
-<input
-id="search"
-placeholder="🔎 Title, caption या prompt खोजें..."
->
+    <div class="feature">
+      <div class="icon">⚡</div>
+      <h3>Future Interface</h3>
+      <p>
+        A modern neon interface designed to feel
+        like technology from the future.
+      </p>
+    </div>
 
-</div>
+    <div class="feature">
+      <div class="icon">🌌</div>
+      <h3>Infinite Imagination</h3>
+      <p>
+        Discover visuals without limits and turn
+        ideas into digital experiences.
+      </p>
+    </div>
 
+  </div>
 
-<!-- ADMIN UPLOAD -->
+</section>
 
-<div
-class="tools"
-id="uploadArea"
-style="display:none">
+<!-- ADMIN PANEL -->
+<section id="adminPanel">
 
-<button id="uploadBtn">
+  <h2>⚡ Admin Control Center</h2>
 
-+ नई AI Image Upload
+  <p style="color:#73818e;margin:10px 0 25px">
+    Upload a new AI image to Broken AI.
+  </p>
 
-</button>
+  <div class="uploadBox">
 
-<input
-type="file"
-id="file"
-accept="image/*"
-hidden
->
+    <input
+      id="imageTitle"
+      placeholder="Image title"
+    >
 
-</div>
+    <textarea
+      id="imageCaption"
+      placeholder="Caption"
+    ></textarea>
 
+    <textarea
+      id="imagePrompt"
+      placeholder="AI Prompt"
+    ></textarea>
+
+    <input
+      class="fileInput"
+      id="imageFile"
+      type="file"
+      accept="image/*"
+    >
+
+    <button class="mainBtn" onclick="uploadImage()">
+      🚀 Upload To Broken AI
+    </button>
+
+    <button class="secondBtn" onclick="logoutAdmin()">
+      Logout Admin
+    </button>
+
+  </div>
+
+</section>
 
 <!-- GALLERY -->
+<section id="gallerySection">
 
-<div
-class="grid"
-id="grid">
+  <div class="sectionTitle">
+    <small>AI VISUAL ARCHIVE</small>
+    <h2>Future Gallery</h2>
+    <p>Explore the latest creations</p>
+  </div>
 
-<div class="empty">
+  <div style="max-width:600px;margin:0 auto 35px">
+    <input
+      id="searchBox"
+      placeholder="🔎 Search images..."
+      oninput="renderGallery()"
+    >
+  </div>
 
-Gallery loading... 🖼️
+  <div class="gallery" id="gallery">
+    <div style="text-align:center;color:#71808d">
+      Loading futuristic gallery...
+    </div>
+  </div>
 
-</div>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact">
 
+  <div class="contactBox">
 
+    <div class="sectionTitle" style="margin-bottom:0">
+      <small>CONNECT</small>
+      <h2>Enter The Network</h2>
+      <p>
+        Follow Broken AI and connect with the creator.
+      </p>
+    </div>
 
-<!-- INFO -->
+    <div class="contactBtns">
 
-<div class="info">
+      <a
+        href="https://t.me/Brokenboy221716"
+        target="_blank"
+        style="text-decoration:none"
+      >
+        <button class="mainBtn telegram">
+          ✈️ Telegram
+        </button>
+      </a>
 
-<div>
+      <a
+        href="https://wa.me/917318399281"
+        target="_blank"
+        style="text-decoration:none"
+      >
+        <button class="mainBtn whatsapp">
+          💬 WhatsApp
+        </button>
+      </a>
 
-<b>
-🤖 AI Images
-</b>
+    </div>
 
-<span>
-Creative AI artwork
-</span>
+  </div>
 
-</div>
-
-
-<div>
-
-<b>
-🎬 Cinematic Art
-</b>
-
-<span>
-Premium cinematic visuals
-</span>
-
-</div>
-
-
-<div>
-
-<b>
-💔 Broken Vibes
-</b>
-
-<span>
-Emotions और sad creations
-</span>
-
-</div>
-
-</div>
-
-
-</main>
-
-
-
-<!-- FOOTER -->
+</section>
 
 <footer>
-
-<b>
-Broken AI
-</b>
-
-<br>
-
-AI Images • Cinematic Art • Prompts
-
-<br><br>
-
-© 2026 Broken AI
-
+  © 2026 <strong>Broken AI</strong> — Built for the Future ⚡
 </footer>
 
-
-
 <!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
 
-<div
-class="modal"
-id="loginModal">
+  <div class="modalBox">
 
-<div
-class="box"
-style="max-width:560px">
+    <button class="close" id="loginClose">×</button>
 
+    <h2>🔐 Admin Access</h2>
 
-<button
-class="close"
-id="closeLogin">
+    <input
+      id="loginEmail"
+      type="email"
+      placeholder="Admin Email"
+    >
 
-×
+    <input
+      id="loginPassword"
+      type="password"
+      placeholder="Password"
+    >
 
-</button>
+    <button
+      class="mainBtn"
+      style="width:100%"
+      onclick="loginAdmin()"
+    >
+      ENTER SYSTEM
+    </button>
 
+    <p
+      id="loginMessage"
+      style="margin-top:15px;color:#ff5370"
+    ></p>
 
-<h2>
-🔐 Admin Login
-</h2>
-
-
-<p style="color:#9eacbc;margin-top:8px">
-
-सिर्फ Admin account से Upload और Delete permission मिलेगी।
-
-</p>
-
-
-<div class="field">
-
-<label>
-Admin Email
-</label>
-
-<input
-id="adminEmail"
-type="email"
-value="himanshu731839@gmail.com"
->
+  </div>
 
 </div>
 
+<!-- IMAGE VIEWER -->
+<div class="modal" id="viewModal">
 
-<div class="field">
+  <button class="close" id="closeView">×</button>
 
-<label>
-Password
-</label>
+  <div class="viewer">
 
-<input
-id="adminPassword"
-type="password"
-placeholder="Firebase password"
->
+    <img id="viewImage" src="" alt="AI Image">
 
-</div>
+    <div class="viewerInfo">
 
+      <h2 id="viewTitle"></h2>
 
-<div
-class="status"
-id="loginStatus">
-</div>
+      <p id="viewCaption"></p>
 
+      <div class="promptBox">
+        <strong>AI Prompt:</strong>
+        <p id="viewPrompt"></p>
+      </div>
 
-<button id="doLogin">
+      <div
+        class="cardActions"
+        style="justify-content:center"
+      >
 
-Login
+        <button id="likeBtn">
+          ❤️ Like <span id="likeCount">0</span>
+        </button>
 
-</button>
+        <button id="copyBtn">
+          📋 Copy Prompt
+        </button>
 
+        <button id="downloadBtn">
+          ⬇️ Download
+        </button>
 
-</div>
+        <button
+          id="deleteBtn"
+          style="display:none;background:#ff1744"
+        >
+          🗑️ Delete
+        </button>
 
-</div>
+      </div>
 
+    </div>
 
-
-<!-- UPLOAD MODAL -->
-
-<div
-class="modal"
-id="formModal">
-
-<div
-class="box"
-style="max-width:620px">
-
-
-<button
-class="close"
-id="closeForm">
-
-×
-
-</button>
-
-
-<h2>
-✨ Upload AI Image
-</h2>
-
-
-<div class="field">
-
-<label>
-Title
-</label>
-
-<input
-id="title"
-placeholder="Image title"
->
+  </div>
 
 </div>
-
-
-<div class="field">
-
-<label>
-Caption
-</label>
-
-<textarea
-id="caption"
-placeholder="Image caption">
-</textarea>
-
-</div>
-
-
-<div class="field">
-
-<label>
-AI Prompt
-</label>
-
-<textarea
-id="prompt"
-placeholder="पूरा AI prompt">
-</textarea>
-
-</div>
-
-
-<div
-class="status"
-id="uploadStatus">
-</div>
-
-
-<button id="saveBtn">
-
-☁️ Upload & Save
-
-</button>
-
-
-</div>
-
-</div>
-
-
-
-<!-- IMAGE VIEW MODAL -->
-
-<div
-class="modal"
-id="viewModal">
-
-
-<button
-class="close"
-id="closeView">
-
-×
-
-</button>
-
-
-<div class="box">
-
-
-<img
-id="viewImg"
-class="bigimg"
-alt="AI Image"
->
-
-
-<h2
-id="viewTitle">
-</h2>
-
-
-<p
-id="viewCaption">
-</p>
-
-
-<div
-id="viewPrompt"
-class="prompt">
-</div>
-
-
-<div class="actions">
-
-
-<button id="copyBtn">
-
-📋 Copy Prompt
-
-</button>
-
-
-<button
-id="likeBtn"
-class="secondary">
-
-❤️ Like
-
-</button>
-
-
-<a
-id="downloadBtn"
-class="btn secondary"
-download>
-
-⬇️ Download
-
-</a>
-
-
-<button
-id="deleteBtn"
-class="danger"
-style="display:none">
-
-🗑️ Delete
-
-</button>
-
-
-</div>
-
-</div>
-
-</div>
-
-
 
 <!-- FIREBASE -->
-
 <script type="module">
 
-import {
-initializeApp
-}
-from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
-getFirestore,
-collection,
-addDoc,
-getDocs,
-deleteDoc,
-doc,
-updateDoc,
-increment,
-serverTimestamp,
-query,
-orderBy
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut
 }
-from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
-
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 import {
-getAuth,
-signInWithEmailAndPassword,
-onAuthStateChanged,
-signOut
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  orderBy,
+  doc,
+  deleteDoc,
+  updateDoc,
+  increment,
+  serverTimestamp
 }
-from
-"https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
+/* =========================
+   CONFIG
+========================= */
 
-/* FIREBASE CONFIG */
+const ADMIN_EMAIL = "himanshu731839@gmail.com";
 
-const firebaseConfig={
+const CLOUD_NAME = "g33rvuls";
+const UPLOAD_PRESET = "brokenai";
 
-apiKey:
-"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+const firebaseConfig = {
+  apiKey: "AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+  authDomain: "broken-boy-f5087.firebaseapp.com",
+  projectId: "broken-boy-f5087",
+  storageBucket: "broken-boy-f5087.firebasestorage.app",
+  messagingSenderId: "1086620986469",
+  appId: "1:1086620986469:web:0c08c7c876e5389ae8aa8c",
+  measurementId: "G-F2E1B5LWEN"
+};
 
-authDomain:
-"broken-boy-f5087.firebaseapp.com",
 
-projectId:
-"broken-boy-f5087",
+/* =========================
+   FIREBASE
+========================= */
 
-storageBucket:
-"broken-boy-f5087.firebasestorage.app",
+const app = initializeApp(firebaseConfig);
 
-messagingSenderId:
-"1086620986469",
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-appId:
-"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
 
-measurementId:
-"G-F2E1B5LWEN"
+/* =========================
+   VARIABLES
+========================= */
+
+let isAdmin = false;
+let images = [];
+let selected = null;
+
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const adminBtn =
+  document.getElementById("adminBtn");
+
+const adminPanel =
+  document.getElementById("adminPanel");
+
+const loginModal =
+  document.getElementById("loginModal");
+
+const viewModal =
+  document.getElementById("viewModal");
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+window.scrollToId = function(id){
+
+  const el = document.getElementById(id);
+
+  if(el){
+    el.scrollIntoView({
+      behavior:"smooth"
+    });
+  }
 
 };
 
 
+/* =========================
+   ADMIN BUTTON
+========================= */
 
-/* ADMIN */
+adminBtn.onclick = function(){
 
-const ADMIN_EMAIL=
-"himanshu731839@gmail.com";
+  if(isAdmin){
 
+    adminPanel.classList.toggle("show");
 
+  }else{
 
-/* CLOUDINARY */
+    loginModal.classList.add("show");
 
-const CLOUD_NAME=
-"g33rvuls";
+  }
 
-const UPLOAD_PRESET=
-"brokenai";
+};
 
 
+/* =========================
+   LOGIN CLOSE
+========================= */
 
-/* INIT */
+document.getElementById("loginClose").onclick =
+function(){
 
-const app=
-initializeApp(firebaseConfig);
+  loginModal.classList.remove("show");
 
-const db=
-getFirestore(app);
+};
 
-const auth=
-getAuth(app);
 
+/* =========================
+   ADMIN LOGIN
+========================= */
 
+window.loginAdmin = async function(){
 
-/* ELEMENTS */
+  const email =
+    document.getElementById("loginEmail")
+    .value.trim();
 
-const grid=
-document.getElementById("grid");
+  const password =
+    document.getElementById("loginPassword")
+    .value;
 
-const search=
-document.getElementById("search");
+  const message =
+    document.getElementById("loginMessage");
 
-const file=
-document.getElementById("file");
 
-const loginModal=
-document.getElementById("loginModal");
+  if(email !== ADMIN_EMAIL){
 
-const formModal=
-document.getElementById("formModal");
+    message.textContent =
+      "यह Admin Email नहीं है।";
 
-const viewModal=
-document.getElementById("viewModal");
+    return;
+  }
 
 
+  try{
 
-let images=[];
+    await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
 
-let selected=null;
+  }catch(error){
 
-let isAdmin=false;
+    message.textContent =
+      "Login failed: " + error.message;
 
+  }
 
+};
 
-/* LOAD */
 
-async function loadImages(){
+/* =========================
+   AUTH STATE
+========================= */
 
-try{
+onAuthStateChanged(auth,user=>{
 
-const q=
-query(
-collection(db,"images"),
-orderBy("createdAt","desc")
-);
+  if(
+    user &&
+    user.email === ADMIN_EMAIL
+  ){
 
-const snap=
-await getDocs(q);
+    isAdmin = true;
 
-images=
-snap.docs.map(d=>({
+    adminBtn.textContent =
+      "⚡ Admin Panel";
 
-id:d.id,
-...d.data()
+    adminPanel.classList.add("show");
 
-}));
+    document.getElementById("deleteBtn")
+      .style.display = "inline-block";
 
-render();
+    loginModal.classList.remove("show");
 
-}
+  }else{
 
-catch(error){
+    isAdmin = false;
 
-console.error(error);
+    adminBtn.textContent =
+      "🔐 Admin Login";
 
-grid.innerHTML=`
+    adminPanel.classList.remove("show");
 
-<div class="empty">
+    document.getElementById("deleteBtn")
+      .style.display = "none";
 
-Gallery load नहीं हुई।
+  }
 
-<br>
-
-Firebase Rules check करें।
-
-</div>
-
-`;
-
-}
-
-}
-
-
-
-/* RENDER */
-
-function render(){
-
-const text=
-search.value
-.toLowerCase()
-.trim();
-
-
-const list=
-images.filter(x=>
-
-`${x.title||""}
-${x.caption||""}
-${x.prompt||""}`
-.toLowerCase()
-.includes(text)
-
-);
-
-
-grid.innerHTML="";
-
-
-if(!list.length){
-
-grid.innerHTML=`
-
-<div class="empty">
-
-अभी कोई image नहीं मिली 🖼️
-
-</div>
-
-`;
-
-return;
-
-}
-
-
-list.forEach(x=>{
-
-const card=
-document.createElement("div");
-
-card.className="card";
-
-
-card.innerHTML=`
-
-<img
-src="${x.url}"
-alt="${x.title||"Broken AI Image"}"
->
-
-<div class="card-info">
-
-<h3>
-${x.title||"Broken AI Image"}
-</h3>
-
-<p>
-${x.caption||"AI Creation 🖤"}
-</p>
-
-<div class="meta">
-
-❤️ ${Number(x.likes||0)}
-
-</div>
-
-</div>
-
-`;
-
-
-card.onclick=
-()=>openView(x);
-
-
-grid.appendChild(card);
+  renderGallery();
 
 });
 
+
+/* =========================
+   LOGOUT
+========================= */
+
+window.logoutAdmin = async function(){
+
+  await signOut(auth);
+
+};
+
+
+/* =========================
+   UPLOAD IMAGE
+========================= */
+
+window.uploadImage = async function(){
+
+  if(!isAdmin){
+
+    alert("Admin login required.");
+
+    return;
+  }
+
+
+  const file =
+    document.getElementById("imageFile")
+    .files[0];
+
+  const title =
+    document.getElementById("imageTitle")
+    .value.trim();
+
+  const caption =
+    document.getElementById("imageCaption")
+    .value.trim();
+
+  const prompt =
+    document.getElementById("imagePrompt")
+    .value.trim();
+
+
+  if(!file){
+
+    alert("Image select karo.");
+
+    return;
+  }
+
+
+  try{
+
+    /* CLOUDINARY */
+
+    const formData =
+      new FormData();
+
+    formData.append("file",file);
+
+    formData.append(
+      "upload_preset",
+      UPLOAD_PRESET
+    );
+
+
+    const response =
+      await fetch(
+        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+        {
+          method:"POST",
+          body:formData
+        }
+      );
+
+
+    const data =
+      await response.json();
+
+
+    if(!data.secure_url){
+
+      throw new Error(
+        "Cloudinary upload failed."
+      );
+
+    }
+
+
+    /* FIRESTORE */
+
+    await addDoc(
+      collection(db,"images"),
+      {
+        url:data.secure_url,
+        title:title || "Untitled AI",
+        caption:caption || "",
+        prompt:prompt || "",
+        likes:0,
+        createdAt:serverTimestamp()
+      }
+    );
+
+
+    alert("🚀 Image uploaded successfully!");
+
+
+    document.getElementById("imageFile")
+      .value="";
+
+    document.getElementById("imageTitle")
+      .value="";
+
+    document.getElementById("imageCaption")
+      .value="";
+
+    document.getElementById("imagePrompt")
+      .value="";
+
+
+    await loadGallery();
+
+  }catch(error){
+
+    alert(
+      "Upload failed: " +
+      error.message
+    );
+
+    console.error(error);
+
+  }
+
+};
+
+
+/* =========================
+   LOAD GALLERY
+========================= */
+
+async function loadGallery(){
+
+  try{
+
+    const q =
+      query(
+        collection(db,"images"),
+        orderBy(
+          "createdAt",
+          "desc"
+        )
+      );
+
+
+    const snap =
+      await getDocs(q);
+
+
+    images =
+      snap.docs.map(item=>({
+
+        id:item.id,
+        ...item.data()
+
+      }));
+
+
+    renderGallery();
+
+  }catch(error){
+
+    console.error(error);
+
+    document.getElementById("gallery")
+      .innerHTML =
+      `
+      <p style="color:#ff5370;text-align:center">
+        Gallery load error.
+        Check Firebase Firestore Rules.
+      </p>
+      `;
+
+  }
+
 }
 
 
+/* =========================
+   RENDER GALLERY
+========================= */
 
-/* OPEN IMAGE */
+window.renderGallery = function(){
 
-function openView(x){
+  const gallery =
+    document.getElementById("gallery");
 
-selected=x;
-
-
-document.getElementById("viewImg").src=
-x.url;
-
-
-document.getElementById("viewTitle").textContent=
-x.title||"Broken AI Image";
-
-
-document.getElementById("viewCaption").textContent=
-x.caption||"";
+  const search =
+    document.getElementById("searchBox")
+    .value
+    .toLowerCase();
 
 
-document.getElementById("viewPrompt").textContent=
-x.prompt||"Prompt available नहीं है।";
+  const filtered =
+    images.filter(item=>{
+
+      return (
+
+        (item.title || "")
+          .toLowerCase()
+          .includes(search)
+
+        ||
+
+        (item.caption || "")
+          .toLowerCase()
+          .includes(search)
+
+        ||
+
+        (item.prompt || "")
+          .toLowerCase()
+          .includes(search)
+
+      );
+
+    });
 
 
-document.getElementById("likeBtn").textContent=
-`❤️ ${Number(x.likes||0)}`;
+  if(!filtered.length){
+
+    gallery.innerHTML =
+      `
+      <p style="
+        grid-column:1/-1;
+        text-align:center;
+        color:#71808d
+      ">
+        No AI images found.
+      </p>
+      `;
+
+    return;
+  }
 
 
-document.getElementById("downloadBtn").href=
-x.url;
+  gallery.innerHTML =
+    filtered.map(item=>{
+
+      return `
+
+      <div class="card">
+
+        <img
+          src="${item.url}"
+          alt="${escapeHTML(item.title || 'AI Image')}"
+          onclick="openViewer('${item.id}')"
+        >
+
+        <div class="cardBody">
+
+          <h3>
+            ${escapeHTML(
+              item.title || "Untitled AI"
+            )}
+          </h3>
+
+          <p>
+            ${escapeHTML(
+              item.caption || ""
+            )}
+          </p>
+
+          <div class="cardActions">
+
+            <button
+              onclick="openViewer('${item.id}')"
+            >
+              👁️ View
+            </button>
+
+            <button
+              onclick="likeImage('${item.id}')"
+            >
+              ❤️ ${item.likes || 0}
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      `;
+
+    }).join("");
+
+};
 
 
-document.getElementById("deleteBtn").style.display=
-isAdmin
-?"inline-block"
-:"none";
+/* =========================
+   OPEN VIEWER
+========================= */
+
+window.openViewer = function(id){
+
+  selected =
+    images.find(x=>x.id === id);
 
 
-viewModal.classList.add("show");
-
-document.body.style.overflow="hidden";
-
-}
+  if(!selected) return;
 
 
+  document.getElementById("viewImage")
+    .src = selected.url;
 
-/* CLOSE IMAGE */
+
+  document.getElementById("viewTitle")
+    .textContent =
+    selected.title || "Untitled AI";
+
+
+  document.getElementById("viewCaption")
+    .textContent =
+    selected.caption || "";
+
+
+  document.getElementById("viewPrompt")
+    .textContent =
+    selected.prompt || "No prompt";
+
+
+  document.getElementById("likeCount")
+    .textContent =
+    selected.likes || 0;
+
+
+  viewModal.classList.add("show");
+
+  document.body.style.overflow="hidden";
+
+};
+
+
+/* =========================
+   CLOSE VIEWER
+========================= */
 
 function closeView(){
 
-viewModal.classList.remove("show");
+  viewModal.classList.remove("show");
 
-document.body.style.overflow="";
+  document.body.style.overflow="";
 
-selected=null;
+  selected=null;
 
 }
-
 
 
 document.getElementById("closeView")
-.onclick=
-function(e){
+.onclick=function(e){
 
-e.preventDefault();
+  e.preventDefault();
 
-e.stopPropagation();
+  e.stopPropagation();
 
-closeView();
-
-};
-
-
-
-/* OUTSIDE CLICK */
-
-viewModal.onclick=
-function(e){
-
-if(e.target===viewModal){
-
-closeView();
-
-}
+  closeView();
 
 };
 
 
+viewModal.onclick=function(e){
 
-/* SEARCH */
+  if(e.target === viewModal){
 
-search.oninput=
-render;
+    closeView();
 
-
-
-/* ADMIN */
-
-document.getElementById("adminBtn")
-.onclick=
-()=>{
-
-if(isAdmin){
-
-signOut(auth);
-
-}else{
-
-loginModal.classList.add("show");
-
-document.body.style.overflow="hidden";
-
-}
+  }
 
 };
 
 
-
-/* CLOSE LOGIN */
-
-document.getElementById("closeLogin")
-.onclick=
-()=>{
-
-loginModal.classList.remove("show");
-
-document.body.style.overflow="";
-
-};
-
-
-
-/* LOGIN */
-
-document.getElementById("doLogin")
-.onclick=
-async()=>{
-
-const email=
-document.getElementById("adminEmail")
-.value.trim();
-
-const password=
-document.getElementById("adminPassword")
-.value;
-
-
-if(email!==ADMIN_EMAIL){
-
-document.getElementById("loginStatus")
-.textContent=
-"❌ यह Admin email नहीं है।";
-
-return;
-
-}
-
-
-try{
-
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
-
-loginModal.classList.remove("show");
-
-document.body.style.overflow="";
-
-document.getElementById("loginStatus")
-.textContent="";
-
-}
-
-catch(error){
-
-document.getElementById("loginStatus")
-.textContent=
-"❌ Login failed: "+error.message;
-
-}
-
-};
-
-
-
-/* AUTH STATE */
-
-onAuthStateChanged(
-auth,
-user=>{
-
-isAdmin=
-!!user &&
-user.email===ADMIN_EMAIL;
-
-
-document.getElementById("adminBtn")
-.textContent=
-isAdmin
-?"Logout Admin"
-:"Admin Login";
-
-
-document.getElementById("uploadArea")
-.style.display=
-isAdmin
-?"flex"
-:"none";
-
-
-render();
-
-});
-
-
-
-/* UPLOAD BUTTON */
-
-document.getElementById("uploadBtn")
-.onclick=
-()=>{
-
-if(!isAdmin){
-
-alert(
-"सिर्फ Admin upload कर सकता है।"
-);
-
-return;
-
-}
-
-file.click();
-
-};
-
-
-
-/* FILE */
-
-file.onchange=
-()=>{
-
-const selectedFile=
-file.files[0];
-
-if(!selectedFile)
-return;
-
-
-document.getElementById("title")
-.value=
-selectedFile.name
-.replace(/\.[^/.]+$/,"");
-
-
-document.getElementById("caption")
-.value=
-"AI Cinematic Creation 🖤";
-
-
-document.getElementById("prompt")
-.value="";
-
-
-formModal.classList.add("show");
-
-document.body.style.overflow="hidden";
-
-};
-
-
-
-/* CLOSE FORM */
-
-document.getElementById("closeForm")
-.onclick=
-()=>{
-
-formModal.classList.remove("show");
-
-document.body.style.overflow="";
-
-};
-
-
-
-/* SAVE IMAGE */
-
-document.getElementById("saveBtn")
-.onclick=
-async()=>{
-
-if(!isAdmin){
-
-alert(
-"सिर्फ Admin upload कर सकता है।"
-);
-
-return;
-
-}
-
-
-const selectedFile=
-file.files[0];
-
-if(!selectedFile)
-return;
-
-
-const status=
-document.getElementById("uploadStatus");
-
-const button=
-document.getElementById("saveBtn");
-
-
-button.disabled=true;
-
-status.textContent=
-"☁️ Upload हो रही है...";
-
-
-try{
-
-
-const fd=
-new FormData();
-
-
-fd.append(
-"file",
-selectedFile
-);
-
-
-fd.append(
-"upload_preset",
-UPLOAD_PRESET
-);
-
-
-const response=
-await fetch(
-
-`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-
-{
-
-method:"POST",
-
-body:fd
-
-}
-
-);
-
-
-const data=
-await response.json();
-
-
-if(!data.secure_url){
-
-throw new Error(
-"Cloudinary upload failed"
-);
-
-}
-
-
-await addDoc(
-collection(db,"images"),
-{
-
-url:data.secure_url,
-
-title:
-document.getElementById("title")
-.value.trim()
-||
-"Broken AI Image",
-
-caption:
-document.getElementById("caption")
-.value.trim()
-||
-"AI Cinematic Creation 🖤",
-
-prompt:
-document.getElementById("prompt")
-.value.trim(),
-
-likes:0,
-
-createdAt:
-serverTimestamp()
-
-}
-
-);
-
-
-status.textContent=
-"✅ Upload हो गई!";
-
-
-await loadImages();
-
-
-setTimeout(()=>{
-
-formModal.classList.remove("show");
-
-document.body.style.overflow="";
-
-file.value="";
-
-},700);
-
-
-}
-
-catch(error){
-
-status.textContent=
-"❌ "+error.message;
-
-}
-
-finally{
-
-button.disabled=false;
-
-}
-
-};
-
-
-
-/* LIKE */
-
-document.getElementById("likeBtn")
-.onclick=
-async()=>{
-
-if(!selected)
-return;
-
-
-try{
-
-await updateDoc(
-
-doc(
-db,
-"images",
-selected.id
-),
-
-{
-
-likes:
-increment(1)
-
-}
-
-);
-
-
-selected.likes=
-Number(selected.likes||0)+1;
-
-
-document.getElementById("likeBtn")
-.textContent=
-`❤️ ${selected.likes}`;
-
-
-render();
-
-}
-
-catch(error){
-
-alert(
-"Like update नहीं हुआ।"
-);
-
-}
-
-};
-
-
-
-/* COPY */
-
-document.getElementById("copyBtn")
-.onclick=
-async()=>{
-
-if(!selected)
-return;
-
-
-try{
-
-await navigator.clipboard.writeText(
-selected.prompt||""
-);
-
-alert(
-"✅ Prompt copy हो गया!"
-);
-
-}
-
-catch{
-
-alert(
-"Prompt copy नहीं हुआ।"
-);
-
-}
-
-};
-
-
-
-/* DELETE */
-
-document.getElementById("deleteBtn")
-.onclick=
-async()=>{
-
-if(!isAdmin||!selected)
-return;
-
-
-if(!confirm(
-"क्या यह image delete करनी है?"
-))
-return;
-
-
-try{
-
-await deleteDoc(
-
-doc(
-db,
-"images",
-selected.id
-)
-
-);
-
-
-images=
-images.filter(
-x=>x.id!==selected.id
-);
-
-
-closeView();
-
-render();
-
-}
-
-catch(error){
-
-alert(
-"❌ Delete नहीं हुआ। Firebase Rules check करें।"
-);
-
-}
-
-};
-
-
-
-/* ESC KEY */
+/* =========================
+   ESCAPE
+========================= */
 
 document.addEventListener(
-"keydown",
-e=>{
+  "keydown",
+  e=>{
 
-if(e.key==="Escape"){
+    if(e.key === "Escape"){
 
-closeView();
+      closeView();
 
-loginModal.classList.remove("show");
+      loginModal.classList.remove("show");
 
-formModal.classList.remove("show");
+      document.body.style.overflow="";
 
-document.body.style.overflow="";
+    }
+
+  }
+);
+
+
+/* =========================
+   LIKE
+========================= */
+
+window.likeImage = async function(id){
+
+  try{
+
+    await updateDoc(
+      doc(db,"images",id),
+      {
+        likes:increment(1)
+      }
+    );
+
+
+    const item =
+      images.find(x=>x.id===id);
+
+
+    if(item){
+
+      item.likes =
+        (item.likes || 0) + 1;
+
+    }
+
+
+    renderGallery();
+
+
+    if(selected &&
+       selected.id === id){
+
+      document.getElementById("likeCount")
+        .textContent =
+        selected.likes;
+
+    }
+
+  }catch(error){
+
+    alert(
+      "Like failed: " +
+      error.message
+    );
+
+  }
+
+};
+
+
+document.getElementById("likeBtn")
+.onclick=function(){
+
+  if(selected){
+
+    likeImage(selected.id);
+
+  }
+
+};
+
+
+/* =========================
+   COPY PROMPT
+========================= */
+
+document.getElementById("copyBtn")
+.onclick=async function(){
+
+  if(!selected) return;
+
+
+  try{
+
+    await navigator.clipboard.writeText(
+      selected.prompt || ""
+    );
+
+    this.textContent =
+      "✅ Copied!";
+
+    setTimeout(()=>{
+
+      this.textContent =
+        "📋 Copy Prompt";
+
+    },1500);
+
+  }catch{
+
+    alert("Copy failed.");
+
+  }
+
+};
+
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+document.getElementById("downloadBtn")
+.onclick=function(){
+
+  if(!selected) return;
+
+
+  const a =
+    document.createElement("a");
+
+  a.href =
+    selected.url;
+
+  a.target="_blank";
+
+  a.download =
+    selected.title || "broken-ai-image";
+
+  document.body.appendChild(a);
+
+  a.click();
+
+  a.remove();
+
+};
+
+
+/* =========================
+   DELETE
+========================= */
+
+document.getElementById("deleteBtn")
+.onclick=async function(){
+
+  if(!isAdmin || !selected){
+
+    return;
+  }
+
+
+  const ok =
+    confirm(
+      "क्या आप यह image delete करना चाहते हैं?"
+    );
+
+
+  if(!ok) return;
+
+
+  try{
+
+    await deleteDoc(
+      doc(
+        db,
+        "images",
+        selected.id
+      )
+    );
+
+
+    closeView();
+
+    await loadGallery();
+
+
+    alert("🗑️ Image deleted.");
+
+  }catch(error){
+
+    alert(
+      "Delete failed: " +
+      error.message
+    );
+
+  }
+
+};
+
+
+/* =========================
+   HTML ESCAPE
+========================= */
+
+function escapeHTML(value){
+
+  return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
 
 }
 
-});
 
+/* =========================
+   START
+========================= */
 
-
-/* START */
-
-loadImages();
+loadGallery();
 
 </script>
 
