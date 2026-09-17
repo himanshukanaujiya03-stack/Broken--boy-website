@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#050816">
- <meta name="description" content="Broken Boy Website by HIMANSHU — AI images, professional prompts, custom styles, futuristic looks and creative AI artwork.">
-<title>Broken AI HIMANSHU | AI Images, Prompts & Styles</title>
+
+<meta name="description" content="Broken AI by HIMANSHU — 500+ AI image commands, professional prompts, cinematic styles, camera angles, lighting effects and creative AI artwork.">
+<meta name="keywords" content="Broken AI, AI image commands, AI prompts, AI image prompts, cinematic prompts, Himanshu">
+<meta name="robots" content="index, follow">
+
+<title>Broken AI HIMANSHU | 500+ AI Image Commands & Prompts</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -69,9 +74,7 @@ canvas{
  transition:.7s;
 }
 
-.loader{
- text-align:center;
-}
+.loader{text-align:center}
 
 .loaderOrb{
  width:100px;
@@ -143,7 +146,7 @@ header{
 
 .navLinks{
  display:flex;
- gap:25px;
+ gap:20px;
  align-items:center;
 }
 
@@ -212,22 +215,14 @@ header{
 }
 
 .gradient{
- background:linear-gradient(
-  90deg,
-  var(--cyan),
-  white,
-  var(--purple),
-  var(--pink)
- );
+ background:linear-gradient(90deg,var(--cyan),white,var(--purple),var(--pink));
  background-size:300%;
  -webkit-background-clip:text;
  color:transparent;
  animation:gradient 8s ease infinite;
 }
 
-@keyframes gradient{
- 50%{background-position:100%}
-}
+@keyframes gradient{50%{background-position:100%}}
 
 .hero p{
  margin-top:30px;
@@ -336,13 +331,8 @@ header{
  letter-spacing:4px;
 }
 
-@keyframes float{
- 50%{transform:translateY(-18px) rotateY(8deg)}
-}
-
-@keyframes orbit{
- to{transform:rotate(385deg)}
-}
+@keyframes float{50%{transform:translateY(-18px) rotateY(8deg)}}
+@keyframes orbit{to{transform:rotate(385deg)}}
 
 /* SECTIONS */
 section{
@@ -405,19 +395,11 @@ section{
  object-fit:cover;
  border-radius:50%;
  border:3px solid var(--cyan);
- box-shadow:
- 0 0 20px var(--cyan),
- 0 0 60px rgba(140,92,255,.45);
+ box-shadow:0 0 20px var(--cyan),0 0 60px rgba(140,92,255,.45);
 }
 
-.profileInfo{
- position:relative;
- z-index:2;
-}
-
-.profileInfo h2{
- font-size:42px;
-}
+.profileInfo{position:relative;z-index:2}
+.profileInfo h2{font-size:42px}
 
 .role{
  color:var(--cyan);
@@ -496,14 +478,8 @@ section{
  box-shadow:0 20px 50px rgba(0,234,255,.07);
 }
 
-.icon{
- font-size:30px;
- margin-bottom:15px;
-}
-
-.feature h3{
- margin-bottom:9px;
-}
+.icon{font-size:30px;margin-bottom:15px}
+.feature h3{margin-bottom:9px}
 
 .feature p{
  color:var(--muted);
@@ -533,9 +509,7 @@ section{
  font-size:14px;
 }
 
-.promptLab textarea:focus{
- border-color:var(--cyan);
-}
+.promptLab textarea:focus{border-color:var(--cyan)}
 
 .promptOutput{
  margin-top:15px;
@@ -547,6 +521,119 @@ section{
  background:rgba(0,234,255,.025);
  line-height:1.7;
  font-size:13px;
+}
+
+/* =========================
+   COMMANDS LIBRARY
+   ========================= */
+
+.commandsSection{
+ padding-top:50px;
+}
+
+.commandTools{
+ margin-top:30px;
+}
+
+.commandSearch{
+ width:100%;
+ padding:15px 18px;
+ border-radius:13px;
+ border:1px solid rgba(255,255,255,.12);
+ background:#060918;
+ color:white;
+ outline:none;
+ margin-bottom:15px;
+ font-size:14px;
+}
+
+.commandSearch:focus{border-color:var(--cyan)}
+
+.categoryBar{
+ display:flex;
+ flex-wrap:wrap;
+ gap:8px;
+}
+
+.categoryBtn{
+ padding:9px 13px;
+ border-radius:10px;
+ border:1px solid rgba(255,255,255,.12);
+ background:rgba(255,255,255,.04);
+ color:#9aa6c5;
+ cursor:pointer;
+ font-weight:800;
+ font-size:12px;
+}
+
+.categoryBtn.active,
+.categoryBtn:hover{
+ background:var(--cyan);
+ color:#001018;
+ border-color:var(--cyan);
+}
+
+.commandCount{
+ color:#9aa6c5;
+ margin:20px 0 18px;
+ font-size:13px;
+}
+
+.commandsGrid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:14px;
+}
+
+.commandCard{
+ padding:17px;
+ border-radius:15px;
+ border:1px solid rgba(255,255,255,.11);
+ background:rgba(13,18,38,.72);
+ transition:.2s;
+}
+
+.commandCard:hover{
+ transform:translateY(-3px);
+ border-color:var(--cyan);
+ box-shadow:0 10px 35px rgba(0,234,255,.07);
+}
+
+.commandName{
+ color:var(--cyan);
+ font-weight:900;
+ font-size:17px;
+ margin-bottom:8px;
+}
+
+.commandDesc{
+ color:#9aa6c5;
+ font-size:13px;
+ line-height:1.55;
+ min-height:42px;
+}
+
+.copyCommand{
+ width:100%;
+ margin-top:12px;
+ padding:10px;
+ border-radius:9px;
+ border:1px solid rgba(0,234,255,.25);
+ background:rgba(0,234,255,.06);
+ color:var(--cyan);
+ cursor:pointer;
+ font-weight:bold;
+}
+
+.copyCommand:hover{
+ background:rgba(0,234,255,.15);
+}
+
+.noResult{
+ grid-column:1/-1;
+ text-align:center;
+ padding:40px;
+ color:#9aa6c5;
 }
 
 /* SEARCH */
@@ -566,9 +653,7 @@ section{
  color:white;
 }
 
-.search input:focus{
- border-color:var(--cyan);
-}
+.search input:focus{border-color:var(--cyan)}
 
 /* FILTERS */
 .filters{
@@ -624,13 +709,8 @@ section{
  cursor:pointer;
 }
 
-.cardBody{
- padding:16px;
-}
-
-.cardBody h3{
- margin-bottom:7px;
-}
+.cardBody{padding:16px}
+.cardBody h3{margin-bottom:7px}
 
 .caption{
  color:var(--muted);
@@ -657,14 +737,8 @@ section{
  font-weight:800;
 }
 
-.action:hover{
- border-color:var(--cyan);
-}
-
-.delete:hover{
- border-color:var(--red);
- color:#ff6685;
-}
+.action:hover{border-color:var(--cyan)}
+.delete:hover{border-color:var(--red);color:#ff6685}
 
 /* ADMIN */
 .admin{
@@ -696,9 +770,7 @@ section{
  resize:vertical;
 }
 
-.full{
- grid-column:1/-1;
-}
+.full{grid-column:1/-1}
 
 .adminButtons{
  display:flex;
@@ -767,9 +839,7 @@ footer{
  color:#75809d;
 }
 
-footer strong{
- color:white;
-}
+footer strong{color:white}
 
 /* MOBILE */
 @media(max-width:850px){
@@ -795,12 +865,13 @@ footer strong{
   padding-top:65px;
  }
 
- .hero p{margin-left:auto;margin-right:auto}
+ .hero p{
+  margin-left:auto;
+  margin-right:auto;
+ }
 
  .buttons{justify-content:center}
-
  .scene{height:370px}
-
  .core{transform:scale(.75)}
 
  .profile{
@@ -811,23 +882,20 @@ footer strong{
 
  .social{justify-content:center}
 
- .stats{
-  grid-template-columns:repeat(2,1fr);
- }
+ .stats{grid-template-columns:repeat(2,1fr)}
 
  .features,
  .gallery{
   grid-template-columns:1fr;
  }
 
- .form{
-  grid-template-columns:1fr;
- }
-
+ .form{grid-template-columns:1fr}
  .full{grid-column:auto}
 
- .sectionTitle{
-  font-size:34px;
+ .sectionTitle{font-size:34px}
+
+ .commandsGrid{
+  grid-template-columns:repeat(2,1fr);
  }
 }
 
@@ -838,16 +906,14 @@ footer strong{
   letter-spacing:-4px;
  }
 
- .profileInfo h2{
-  font-size:34px;
- }
+ .profileInfo h2{font-size:34px}
 
- .actions{
-  grid-template-columns:1fr 1fr;
- }
+ .actions{grid-template-columns:1fr 1fr}
 
- .cardImg{
-  height:245px;
+ .cardImg{height:245px}
+
+ .commandsGrid{
+  grid-template-columns:1fr;
  }
 }
 </style>
@@ -880,6 +946,7 @@ footer strong{
    <a href="#home">Home</a>
    <a href="#profile">Profile</a>
    <a href="#studio">AI Studio</a>
+   <a href="#commands">⚡ Commands</a>
    <a href="#gallery">Gallery</a>
    <a href="#about">About</a>
    <a href="#admin">Admin</a>
@@ -1024,53 +1091,37 @@ footer strong{
   <div class="feature">
    <div class="icon">🧠</div>
    <h3>Prompt Intelligence</h3>
-   <p>
-    Create and improve professional AI prompts
-    directly inside the platform.
-   </p>
+   <p>Create and improve professional AI prompts directly inside the platform.</p>
   </div>
 
   <div class="feature">
    <div class="icon">🎨</div>
    <h3>Visual Gallery</h3>
-   <p>
-    Discover a growing collection of futuristic
-    AI creations.
-   </p>
+   <p>Discover a growing collection of futuristic AI creations.</p>
   </div>
 
   <div class="feature">
    <div class="icon">🔥</div>
    <h3>Trending Content</h3>
-   <p>
-    Find popular creations based on community likes.
-   </p>
+   <p>Find popular creations based on community likes.</p>
   </div>
 
   <div class="feature">
    <div class="icon">❤️</div>
    <h3>Community Likes</h3>
-   <p>
-    Support your favourite AI artwork with a like.
-   </p>
+   <p>Support your favourite AI artwork with a like.</p>
   </div>
 
   <div class="feature">
    <div class="icon">📋</div>
    <h3>Prompt Copy</h3>
-   <p>
-    Copy prompts instantly and use them in your
-    favourite AI tools.
-   </p>
+   <p>Copy prompts instantly and use them in your favourite AI tools.</p>
   </div>
 
   <div class="feature">
    <div class="icon">🔐</div>
    <h3>Protected Admin</h3>
-   <p>
-    Gallery management remains restricted to the
-    authorized administrator.
-   </p>
+   <p>Gallery management remains restricted to the authorized administrator.</p>
   </div>
 
  </div>
@@ -1114,6 +1165,37 @@ footer strong{
   </div>
 
  </div>
+
+</section>
+
+<!-- =========================
+     COMMANDS LIBRARY
+     ========================= -->
+<section id="commands" class="commandsSection">
+
+ <div class="kicker">BROKEN AI COMMANDS</div>
+ <h2 class="sectionTitle">⚡ 500+ AI Commands</h2>
+ <p class="sectionDesc">
+  किसी भी command को Copy करके अपने AI image prompt में इस्तेमाल करें।
+ </p>
+
+ <div class="commandTools">
+
+  <input
+   id="commandSearch"
+   class="commandSearch"
+   type="text"
+   placeholder="🔎 Command search करें..."
+   oninput="renderCommands()"
+  >
+
+  <div class="categoryBar" id="categoryBar"></div>
+
+ </div>
+
+ <div class="commandCount" id="commandCount"></div>
+
+ <div class="commandsGrid" id="commandsGrid"></div>
 
 </section>
 
@@ -1172,26 +1254,15 @@ footer strong{
 
    <div class="form">
 
-    <input
-     id="email"
-     type="email"
-     placeholder="Admin Email"
-    >
-
-    <input
-     id="password"
-     type="password"
-     placeholder="Password"
-    >
+    <input id="email" type="email" placeholder="Admin Email">
+    <input id="password" type="password" placeholder="Password">
 
    </div>
 
    <div class="adminButtons">
-
     <button class="btn primary" onclick="adminLogin()">
      🔐 Login
     </button>
-
    </div>
 
    <div id="loginStatus" class="statusText"></div>
@@ -1204,15 +1275,8 @@ footer strong{
 
    <div class="form" style="margin-top:16px">
 
-    <input
-     id="title"
-     placeholder="Image Title"
-    >
-
-    <input
-     id="caption"
-     placeholder="Caption"
-    >
+    <input id="title" placeholder="Image Title">
+    <input id="caption" placeholder="Caption">
 
     <textarea
      id="prompt"
@@ -1265,6 +1329,7 @@ footer strong{
 </footer>
 
 
+<!-- FIREBASE -->
 <script type="module">
 
 import { initializeApp }
@@ -1292,8 +1357,6 @@ import {
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
-/* FIREBASE */
-
 const firebaseConfig = {
  apiKey:"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
  authDomain:"broken-boy-f5087.firebaseapp.com",
@@ -1304,18 +1367,9 @@ const firebaseConfig = {
  measurementId:"G-F2E1B5LWEN"
 };
 
-
-/* SETTINGS */
-
-const ADMIN_EMAIL =
-"himanshu731839@gmail.com";
-
-const CLOUD_NAME =
-"g33rvuls";
-
-const UPLOAD_PRESET =
-"brokenai";
-
+const ADMIN_EMAIL="himanshu731839@gmail.com";
+const CLOUD_NAME="g33rvuls";
+const UPLOAD_PRESET="brokenai";
 
 const app=initializeApp(firebaseConfig);
 const auth=getAuth(app);
@@ -1325,31 +1379,23 @@ let images=[];
 let currentFilter="all";
 
 
-/* AUTH */
-
 onAuthStateChanged(auth,user=>{
 
  const loginArea=document.getElementById("loginArea");
  const uploadArea=document.getElementById("uploadArea");
 
  if(user && user.email===ADMIN_EMAIL){
-
   loginArea.style.display="none";
   uploadArea.style.display="block";
-
  }else{
-
   loginArea.style.display="block";
   uploadArea.style.display="none";
-
  }
 
  renderGallery();
 
 });
 
-
-/* LOGIN */
 
 window.adminLogin=async function(){
 
@@ -1363,9 +1409,7 @@ window.adminLogin=async function(){
    throw new Error("Unauthorized admin email.");
   }
 
-  await signInWithEmailAndPassword(
-   auth,email,password
-  );
+  await signInWithEmailAndPassword(auth,email,password);
 
   status.style.color="#35ff9a";
   status.textContent="Admin login successful.";
@@ -1373,22 +1417,17 @@ window.adminLogin=async function(){
  }catch(error){
 
   status.style.color="#ff5578";
-  status.textContent=
-   "Login failed: "+error.message;
+  status.textContent="Login failed: "+error.message;
 
  }
 
 };
 
 
-/* LOGOUT */
-
 window.logout=async function(){
  await signOut(auth);
 };
 
-
-/* CLOUDINARY UPLOAD */
 
 window.uploadImage=async function(){
 
@@ -1459,15 +1498,12 @@ window.uploadImage=async function(){
  }catch(error){
 
   status.style.color="#ff5578";
-  status.textContent=
-   "Upload failed: "+error.message;
+  status.textContent="Upload failed: "+error.message;
 
  }
 
 };
 
-
-/* LOAD */
 
 async function loadImages(){
 
@@ -1495,16 +1531,12 @@ async function loadImages(){
   console.error(error);
 
   document.getElementById("galleryGrid").innerHTML=
-   `<p style="color:#ff5578">
-     Gallery could not be loaded.
-    </p>`;
+   `<p style="color:#ff5578">Gallery could not be loaded.</p>`;
 
  }
 
 }
 
-
-/* FILTER */
 
 window.setFilter=function(filter,button){
 
@@ -1519,8 +1551,6 @@ window.setFilter=function(filter,button){
 
 };
 
-
-/* GALLERY */
 
 window.renderGallery=function(){
 
@@ -1585,9 +1615,7 @@ window.renderGallery=function(){
 
    <div class="cardBody">
 
-    <h3>
-     ${safe(item.title||"Broken AI Creation")}
-    </h3>
+    <h3>${safe(item.title||"Broken AI Creation")}</h3>
 
     <div class="caption">
      ${safe(item.caption||"AI Creation")}
@@ -1640,8 +1668,6 @@ window.renderGallery=function(){
 };
 
 
-/* LIKE */
-
 window.likeImage=async function(id){
 
  try{
@@ -1671,8 +1697,6 @@ window.likeImage=async function(id){
 };
 
 
-/* COPY */
-
 window.copyPrompt=async function(prompt){
 
  if(!prompt){
@@ -1694,8 +1718,6 @@ window.copyPrompt=async function(prompt){
 };
 
 
-/* DOWNLOAD */
-
 window.downloadImage=function(url){
 
  const a=document.createElement("a");
@@ -1708,8 +1730,6 @@ window.downloadImage=function(url){
 
 };
 
-
-/* DELETE */
 
 window.deleteImage=async function(id){
 
@@ -1741,8 +1761,6 @@ window.deleteImage=async function(id){
 };
 
 
-/* MODAL */
-
 window.openModal=function(url){
 
  document.getElementById("modalImage").src=url;
@@ -1750,12 +1768,14 @@ window.openModal=function(url){
 
 };
 
+
 window.closeModal=function(){
 
  document.getElementById("modal").classList.remove("show");
  document.getElementById("modalImage").src="";
 
 };
+
 
 document.getElementById("modal")
  .addEventListener("click",e=>{
@@ -1766,8 +1786,6 @@ document.getElementById("modal")
 
  });
 
-
-/* STATS */
 
 function updateStats(){
 
@@ -1786,8 +1804,6 @@ function updateStats(){
 }
 
 
-/* SAFE TEXT */
-
 function safe(value){
 
  return String(value)
@@ -1799,6 +1815,7 @@ function safe(value){
 
 }
 
+
 function jsSafe(value){
 
  return String(value)
@@ -1807,6 +1824,7 @@ function jsSafe(value){
   .replaceAll("\n"," ");
 
 }
+
 
 function templateSafe(value){
 
@@ -1849,8 +1867,7 @@ function generatePrompt(){
 
  if(!input){
 
-  output.textContent=
-   "Pehle apna idea likho.";
+  output.textContent="Pehle apna idea likho.";
 
   return;
 
@@ -1866,13 +1883,16 @@ function generatePrompt(){
 
 }
 
+
 function clearPrompt(){
 
  document.getElementById("promptInput").value="";
+
  document.getElementById("promptOutput").textContent=
   "Your enhanced prompt will appear here.";
 
 }
+
 
 async function copyGenerated(){
 
@@ -1966,6 +1986,7 @@ function animateParticles(){
   if(p.y>canvas.height)p.y=0;
 
   ctx.beginPath();
+
   ctx.arc(
    p.x,p.y,p.r,
    0,Math.PI*2
@@ -1981,6 +2002,584 @@ function animateParticles(){
 }
 
 animateParticles();
+
+
+/* ==========================================
+   500+ BROKEN AI COMMAND LIBRARY
+   ========================================== */
+
+const commandGroups={
+
+Camera:[
+"Droneview","Aerialview","Cinematic","Portrait","Closeup",
+"UltraCloseup","Wideangle","Lowangle","Highangle","Birdseye",
+"Topview","Sideview","Backview","Frontview","Fullbody",
+"Halfbody","Mediumshot","Longshot","ExtremeLongshot",
+"Overtheshoulder","POV","Firstperson","Thirdperson","Macro",
+"Microshot","Dutchangle","Eyelevel","Wormseye","TrackingShot",
+"PanShot","TiltShot","ZoomShot","StaticShot","DynamicShot",
+"Handheld","Steadicam","DollyShot","CraneShot","OrbitShot",
+"FollowShot","RevealShot","EstablishingShot","TwoShot",
+"GroupShot","ProfileShot","ReflectionShot","SilhouetteShot",
+"FrameWithinFrame","DepthShot","PerspectiveShot"
+],
+
+Style:[
+"Streetstyle","Travel","Luxury","Royal","Traditional","Modern",
+"Vintage","Retro","Filmlook","Bollywood","Kollywood","Hero",
+"Masslook","Action","Warrior","King","Prince","Mythology",
+"Historical","Futuristic","Cyberpunk","Neon","Fantasy","Epic",
+"Superhero","Hollywood","Movieposter","Albumcover","Musicvideo",
+"Instagram","YouTubeShorts","Reels","Dreamy","Romantic",
+"Emotional","ProfessionalPhotoshoot","Editorial","Minimalist",
+"Maximalist","Artistic","Creative","Premium","Classic","Elegant",
+"Stylish","Trendy","Urban","Rustic","Bohemian","AvantGarde"
+],
+
+Character:[
+"MalePortrait","FemalePortrait","YoungHero","YoungPrince",
+"RoyalKing","RoyalQueen","WarriorMan","WarriorWoman",
+"AncientWarrior","ModernHero","Superhero","Villain","Detective",
+"Explorer","Adventurer","Traveler","Photographer","Artist",
+"Musician","Singer","Dancer","Actor","Director","Model",
+"FashionModel","Businessman","Businesswoman","Student","Teacher",
+"Scientist","Engineer","Doctor","Pilot","Soldier","PoliceOfficer",
+"Farmer","VillageMan","VillageWoman","Monk","KingdomPrince",
+"KingdomPrincess","Emperor","Empress","Knight","Samurai",
+"Ninja","Pirate","Rider","Biker","Athlete","Champion"
+],
+
+Nature:[
+"Nature","Forest","Mountain","Beach","Waterfall","River","Lake",
+"Desert","Snow","Rain","Sunset","Sunrise","Goldenhour","Bluehour",
+"Night","Moonlight","Jungle","Canyon","Valley","Island","Ocean",
+"Seaside","Cliff","Hilltop","Meadow","Grassland","Flowerfield",
+"Garden","Park","BambooForest","PineForest","AutumnForest",
+"TropicalForest","Rainforest","FoggyForest","MistyMountain",
+"SnowMountain","Volcano","Glacier","CoralReef","WaterCave",
+"IceCave","CrystalCave","Riverbank","Lakeside","Riverside",
+"Countryside","Farmland","VillageLandscape"
+],
+
+Lighting:[
+"Studio","Softlight","Dramaticlight","Hardlight","Rimlight",
+"Backlight","Frontlight","SideLighting","TopLighting",
+"BottomLighting","Neonlight","Volumetriclight","Godrays",
+"Sunlight","Moonlight","Starlight","Candlelight","Firelight",
+"Lanternlight","Streetlight","Windowlight","Goldenlight",
+"BlueLight","RedLight","PurpleLight","PinkLight","OrangeLight",
+"CoolLight","WarmLight","NaturalLight","AmbientLight",
+"AmbientGlow","Glowlight","SoftGlow","Dreamlight","MysticLight",
+"EpicLighting","CinematicLighting","MovieLighting",
+"PortraitLighting","FashionLighting","StudioLighting",
+"LowkeyLighting","HighkeyLighting","SilhouetteLighting",
+"FogLighting","RainLighting","SunsetLighting","SunriseLighting",
+"NightLighting","ColorfulLighting"
+],
+
+Quality:[
+"4K","8K","12K","HDR","Photorealistic","UltraRealistic",
+"HyperRealistic","Sharp","UltraSharp","HighDetail","ExtremeDetail",
+"FineDetail","RealisticTexture","SkinDetail","HairDetail",
+"EyeDetail","FabricDetail","EnvironmentDetail",
+"ArchitecturalDetail","NaturalTexture","PremiumQuality",
+"ProfessionalQuality","Masterpiece","HighResolution","UltraHD",
+"HD","CrystalClear","CleanImage","PerfectFocus","SharpFocus",
+"DetailedFace","DetailedEyes","DetailedHair","DetailedClothing",
+"RealisticSkin","RealisticLighting","RealisticShadow",
+"RealisticReflection","RealisticMaterial","ProfessionalCamera",
+"DSLRQuality","MirrorlessQuality","StudioQuality",
+"MagazineQuality","CommercialQuality","AdvertisingQuality",
+"PosterQuality","PrintQuality","GalleryQuality","MasterQuality",
+"PremiumRender"
+],
+
+Effects:[
+"Backgroundblur","Bokeh","Lensflare","Motionblur","Slowmotion",
+"DepthOfField","ShallowDepth","DeepFocus","Filmgrain","Lightleak",
+"DustParticles","SmokeEffect","FogEffect","RainEffect",
+"SnowEffect","FireEffect","SparkEffect","GlowEffect",
+"ParticleEffect","EnergyEffect","LightningEffect","MagicEffect",
+"WaterSplash","WindEffect","FlyingParticles","FloatingDust",
+"VolumetricFog","AtmosphericFog","LensReflection",
+"GlassReflection","WaterReflection","MirrorReflection",
+"WetSurface","RainDrops","SnowParticles","FireSparks",
+"LightParticles","MotionEffect","SpeedEffect","ActionBlur",
+"RadialBlur","SoftFocus","DreamyGlow","MysticGlow","NeonGlow",
+"CyberGlow","ElectricGlow","GoldenGlow","BlueGlow","RedGlow"
+],
+
+Fashion:[
+"Fashion","StreetFashion","LuxuryFashion","RoyalFashion",
+"TraditionalFashion","ModernFashion","VintageFashion",
+"RetroFashion","DesignerOutfit","LuxuryOutfit","RoyalOutfit",
+"TraditionalOutfit","WeddingOutfit","FestivalOutfit",
+"CasualOutfit","FormalOutfit","PartyOutfit","WinterOutfit",
+"SummerOutfit","BeachOutfit","DenimStyle","LeatherStyle",
+"SuitStyle","KurtaStyle","SherwaniStyle","SareeStyle",
+"LehengaStyle","EthnicStyle","WesternStyle","UrbanFashion",
+"RunwayFashion","MagazineFashion","EditorialFashion",
+"ModelPhotoshoot","FashionPhotoshoot","LuxuryPhotoshoot",
+"DesignerPhotoshoot","StudioFashion","OutdoorFashion",
+"StreetPhotoshoot","FashionPortrait","FashionEditorial",
+"PremiumFashion","ElegantFashion","BoldFashion",
+"ClassicFashion","ModernLuxury","RoyalLuxury","MinimalFashion",
+"HighFashion"
+],
+
+Cinema:[
+"Cinematicposter","MoviePoster","ActionPoster","RomancePoster",
+"WarPoster","HistoricalPoster","FantasyPoster","SuperheroPoster",
+"ThrillerPoster","HorrorPoster","AdventurePoster","DramaPoster",
+"BollywoodPoster","HollywoodPoster","SouthIndianPoster",
+"MassCinema","EpicCinema","FilmScene","MovieScene","OpeningScene",
+"FinalScene","HeroEntry","VillainEntry","ActionScene","FightScene",
+"ChaseScene","DanceScene","RomanticScene","EmotionalScene",
+"ClimaxScene","RainScene","NightScene","VillageScene","CityScene",
+"PalaceScene","TempleScene","ForestScene","MountainScene",
+"BeachScene","TrainScene","CarScene","BikeScene","AirportScene",
+"StreetScene","MarketScene","FestivalScene","ConcertScene",
+"MusicScene","DancePerformance","TrailerStyle"
+],
+
+Architecture:[
+"ModernHouse","LuxuryHouse","RoyalPalace","AncientPalace",
+"ModernBuilding","Skyscraper","FuturisticBuilding",
+"CyberpunkBuilding","TraditionalHouse","VillageHouse",
+"IndianArchitecture","TempleArchitecture","Castle","Fortress",
+"AncientCity","ModernCity","FutureCity","SmartCity","SkyCity",
+"FloatingCity","UndergroundCity","GlassBuilding","NeonBuilding",
+"LuxuryHotel","LuxuryResort","BeachResort","MountainResort",
+"ForestCabin","WoodenHouse","StoneHouse","DesertHouse",
+"SnowHouse","CityApartment","Penthouse","Rooftop","BalconyView",
+"InteriorDesign","LuxuryInterior","ModernInterior","RoyalInterior",
+"TraditionalInterior","MinimalInterior","FuturisticInterior",
+"BedroomDesign","LivingRoomDesign","OfficeDesign","StudioInterior",
+"RestaurantInterior","CafeInterior","TempleInterior"
+],
+
+Vehicle:[
+"SportsCar","Supercar","LuxuryCar","VintageCar","ClassicCar",
+"MuscleCar","RaceCar","RallyCar","ElectricCar","FuturisticCar",
+"CyberpunkCar","RoyalCar","OffroadCar","SUV","Jeep","Motorcycle",
+"SportsBike","RoyalBike","VintageBike","ElectricBike","RacingBike",
+"MountainBike","ClassicBike","Scooter","Bicycle","Truck","Bus",
+"Train","BulletTrain","Metro","Airplane","PrivateJet","Helicopter",
+"Drone","Boat","Yacht","Speedboat","Sailboat","Spaceship","Rocket",
+"FutureVehicle","FlyingCar","HoverBike","MilitaryVehicle",
+"PoliceCar","FireTruck","Ambulance","Taxi","CityBus"
+],
+
+Fantasy:[
+"Dragon","Phoenix","Unicorn","MagicForest","MagicCastle",
+"MagicKingdom","FantasyVillage","FantasyCity","FantasyMountain",
+"FantasyOcean","FantasyIsland","Wizard","Witch","Mage","Knight",
+"Elf","Fairy","Mermaid","Centaur","MythicalBeast","AncientDragon",
+"IceDragon","FireDragon","DarkDragon","SkyDragon","MagicPortal",
+"MagicSword","MagicArmor","MagicCrystal","EnchantedForest",
+"MysticLake","MysticMountain","FantasyTemple","FantasyPalace",
+"FantasyBattle","EpicBattle","LegendaryHero","LegendaryWarrior",
+"FantasyPrincess","FantasyKing","FantasyQueen","DarkFantasy",
+"EpicFantasy","HighFantasy","Fairyland","DreamWorld","MagicWorld",
+"LostKingdom","AncientLegend","MythicWorld"
+],
+
+Food:[
+"FoodPhotography","RestaurantFood","IndianFood","StreetFood",
+"RoyalFood","LuxuryFood","Dessert","Cake","Chocolate","Pizza",
+"Burger","Pasta","Noodles","Biryani","Samosa","Dosa","Idli",
+"Thali","IndianSweets","GulabJamun","Jalebi","Rasgulla","IceCream",
+"FruitBowl","HealthyFood","FreshFood","OrganicFood","Breakfast",
+"Lunch","Dinner","Coffee","Tea","Juice","Smoothie","Mocktail",
+"ChefSpecial","FoodMenu","RestaurantMenu","LuxuryRestaurant",
+"StreetFoodStall","FoodMarket","KitchenScene","CookingScene",
+"ChefPortrait","FoodCloseup","MacroFood","CinematicFood",
+"PremiumFood","CommercialFood","FoodAdvertisement"
+],
+
+Social:[
+"InstagramPost","InstagramStory","InstagramReels",
+"YouTubeThumbnail","YouTubeShorts","FacebookPost","SocialMediaPost",
+"ViralPost","TrendingPost","ProfilePicture","CoverPhoto",
+"ChannelBanner","GamingThumbnail","GamingBanner","CreatorThumbnail",
+"InfluencerStyle","CreatorPortrait","ProfessionalProfile",
+"BusinessProfile","BrandPoster","ProductPoster","Advertisement",
+"DigitalAdvertisement","MarketingPoster","EventPoster",
+"FestivalPoster","BirthdayPoster","WeddingPoster",
+"InvitationPoster","AnnouncementPoster","MotivationalPoster",
+"QuotePoster","MusicPoster","AlbumCover","SingleCover",
+"PodcastCover","PodcastThumbnail","NewsThumbnail","BreakingNews",
+"SportsPoster","CricketPoster","FootballPoster","GamingPoster",
+"EsportsPoster","YouTubeBanner","ChannelLogo","BrandLogo",
+"ProductBanner","PromoPoster"
+]
+
+};
+
+
+/* ORIGINAL COMMANDS */
+
+const originalCommands=[
+"Droneview","Aerialview","Cinematic","Portrait","Closeup",
+"UltraCloseup","Wideangle","Lowangle","Highangle","Birdseye",
+"Topview","Sideview","Backview","Frontview","Fullbody","Halfbody",
+"Streetstyle","Travel","Luxury","Royal","Traditional","Modern",
+"Vintage","Retro","Filmlook","Bollywood","Kollywood","Hero",
+"Masslook","Action","Warrior","King","Prince","Village","City",
+"Nature","Forest","Mountain","Beach","Waterfall","River","Lake",
+"Desert","Snow","Rain","Sunset","Sunrise","Goldenhour","Bluehour",
+"Night","Moonlight","Studio","Fashion","Model","Magazine","Wedding",
+"Engagement","Festival","Temple","Chola","Raman","Lakshman",
+"Mythology","Historical","Futuristic","Cyberpunk","Neon","Fantasy",
+"Epic","Superhero","Hollywood","Movieposter","Albumcover",
+"Musicvideo","Instagram","YouTubeShorts","Reels","4K","8K","HDR",
+"Photorealistic","UltraRealistic","Sharp","Softlight","Dramaticlight",
+"Moody","Dreamy","Romantic","Emotional","Blackandwhite",
+"Monochrome","Sepia","Colorgrade","Backgroundblur","Bokeh",
+"Lensflare","Motionblur","Slowmotion","Cinematicposter",
+"ProfessionalPhotoshoot"
+];
+
+
+/* CREATE UNIQUE COMMANDS */
+
+let aiCommands=[];
+const used=new Set();
+
+function addCommand(name,category){
+
+ if(!used.has(name)){
+
+  used.add(name);
+
+  aiCommands.push({
+   name:"/"+name,
+   category:category
+  });
+
+ }
+
+}
+
+
+/* ORIGINAL FIRST */
+
+originalCommands.forEach(name=>{
+
+ let category="Style";
+
+ for(const cat in commandGroups){
+
+  if(commandGroups[cat].includes(name)){
+   category=cat;
+   break;
+  }
+
+ }
+
+ addCommand(name,category);
+
+});
+
+
+/* GROUP COMMANDS */
+
+for(const category in commandGroups){
+
+ commandGroups[category].forEach(name=>{
+  addCommand(name,category);
+ });
+
+}
+
+
+/* AUTOMATIC COMBINATIONS
+   यह list को 550+ तक ले जाएगी */
+
+const words1=[
+"Cinematic","Professional","UltraRealistic",
+"Photorealistic","Premium","Epic","Luxury",
+"Modern","Vintage","Fantasy","Royal","Dramatic",
+"Natural","Futuristic","Creative","Realistic"
+];
+
+const words2=[
+"Portrait","Scene","Photography","Photoshoot",
+"Composition","Lighting","Background","Environment",
+"Artwork","Visual","Frame","Shot","Poster",
+"Landscape","Character","Style","Image",
+"View","Camera","Design","Look","Render"
+];
+
+for(const a of words1){
+
+ for(const b of words2){
+
+  addCommand(a+b,"Style");
+
+  if(aiCommands.length>=550) break;
+
+ }
+
+ if(aiCommands.length>=550) break;
+
+}
+
+
+/* DESCRIPTIONS */
+
+function commandDescription(command,category){
+
+ const clean=command.replace("/","");
+
+ const descriptions={
+
+  Camera:
+   "यह camera angle, framing या photography view को control करने में मदद करता है।",
+
+  Style:
+   "यह image की overall visual style और appearance को बदलने में मदद करता है।",
+
+  Character:
+   "यह character की appearance और presentation को बेहतर define करता है।",
+
+  Nature:
+   "यह natural environment, location या landscape का feel देता है।",
+
+  Lighting:
+   "यह image में light, shadow और atmosphere को control करता है।",
+
+  Quality:
+   "यह image की detail, sharpness और overall quality को improve करने के लिए उपयोगी है।",
+
+  Effects:
+   "यह image में blur, glow, particles और cinematic effects जोड़ने में मदद करता है।",
+
+  Fashion:
+   "यह clothing, fashion और professional photoshoot style को define करता है।",
+
+  Cinema:
+   "यह movie, poster और cinematic scene जैसा presentation देता है।",
+
+  Architecture:
+   "यह building, house, palace और architectural environment को define करता है।",
+
+  Vehicle:
+   "यह car, bike, aircraft या दूसरे vehicles के visual को define करता है।",
+
+  Fantasy:
+   "यह magical, mythical और fantasy world जैसा environment बनाता है।",
+
+  Food:
+   "यह food photography और खाने की presentation के लिए उपयोगी है।",
+
+  Social:
+   "यह Instagram, YouTube और social media content के लिए visual style देता है।"
+
+ };
+
+ return descriptions[category] ||
+  `${clean} command AI image के ${category.toLowerCase()} style या visual को बेहतर बनाने में मदद करता है।`;
+
+}
+
+
+/* CATEGORY */
+
+let selectedCategory="All";
+
+
+function createCategories(){
+
+ const bar=document.getElementById("categoryBar");
+
+ const categories=[
+  "All",
+  ...Object.keys(commandGroups)
+ ];
+
+ bar.innerHTML="";
+
+ categories.forEach(category=>{
+
+  const button=document.createElement("button");
+
+  button.className=
+   "categoryBtn"+
+   (category==="All" ? " active":"");
+
+  button.textContent=
+   category==="All"
+   ?"✨ All"
+   :"📌 "+category;
+
+  button.onclick=()=>{
+
+   selectedCategory=category;
+
+   document
+    .querySelectorAll(".categoryBtn")
+    .forEach(x=>x.classList.remove("active"));
+
+   button.classList.add("active");
+
+   renderCommands();
+
+  };
+
+  bar.appendChild(button);
+
+ });
+
+}
+
+
+/* RENDER COMMANDS */
+
+function renderCommands(){
+
+ const grid=
+  document.getElementById("commandsGrid");
+
+ const search=
+  document
+   .getElementById("commandSearch")
+   .value
+   .toLowerCase()
+   .trim();
+
+ const filtered=
+  aiCommands.filter(item=>{
+
+   const categoryOK=
+    selectedCategory==="All" ||
+    item.category===selectedCategory;
+
+   const desc=
+    commandDescription(
+     item.name,
+     item.category
+    );
+
+   const searchOK=
+    !search ||
+    item.name.toLowerCase().includes(search) ||
+    desc.toLowerCase().includes(search);
+
+   return categoryOK && searchOK;
+
+  });
+
+
+ document.getElementById("commandCount").textContent=
+  `Showing ${filtered.length} commands • Total ${aiCommands.length} commands`;
+
+
+ if(!filtered.length){
+
+  grid.innerHTML=`
+   <div class="noResult">
+    😕 कोई command नहीं मिला।
+   </div>
+  `;
+
+  return;
+
+ }
+
+
+ grid.innerHTML="";
+
+
+ filtered.forEach(item=>{
+
+  const card=document.createElement("div");
+
+  card.className="commandCard";
+
+  card.innerHTML=`
+
+   <div class="commandName">
+    ${escapeHTML(item.name)}
+   </div>
+
+   <div class="commandDesc">
+    ${escapeHTML(
+     commandDescription(
+      item.name,
+      item.category
+     )
+    )}
+   </div>
+
+   <button class="copyCommand">
+    📋 Copy Command
+   </button>
+
+  `;
+
+
+  const copyButton=
+   card.querySelector(".copyCommand");
+
+
+  copyButton.onclick=async()=>{
+
+   try{
+
+    await navigator.clipboard.writeText(item.name);
+
+   }catch(e){
+
+    const textarea=
+     document.createElement("textarea");
+
+    textarea.value=item.name;
+
+    document.body.appendChild(textarea);
+
+    textarea.select();
+
+    document.execCommand("copy");
+
+    textarea.remove();
+
+   }
+
+
+   copyButton.textContent="✅ Copied!";
+
+   setTimeout(()=>{
+
+    copyButton.textContent=
+     "📋 Copy Command";
+
+   },1200);
+
+  };
+
+
+  grid.appendChild(card);
+
+ });
+
+}
+
+
+function escapeHTML(text){
+
+ return String(text)
+  .replace(/&/g,"&amp;")
+  .replace(/</g,"&lt;")
+  .replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;")
+  .replace(/'/g,"&#039;");
+
+}
+
+
+createCategories();
+renderCommands();
 
 </script>
 
