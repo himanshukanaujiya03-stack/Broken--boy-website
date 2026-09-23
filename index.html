@@ -1061,7 +1061,7 @@ input:focus{
 }
 
 /* =========================
-   MODAL - IMAGE VIEWER
+   MODAL - FIXED IMAGE VIEWER
 ========================= */
 
 #modal{
@@ -1071,20 +1071,21 @@ input:focus{
   display:none;
   align-items:center;
   justify-content:center;
-  padding:15px;
-  background:rgba(0,0,0,.88);
+  padding:12px;
+  background:rgba(0,0,0,.90);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
 }
 
 .modalBox{
   max-width:1100px;
-  width:100%;
+  width:auto;
+  max-width:96vw;
   max-height:95vh;
   overflow:auto;
-  border:1px solid rgba(0,234,255,.22);
+  border:1px solid rgba(0,234,255,.25);
   border-radius:22px;
-  background:rgba(5,8,18,.96);
+  background:rgba(5,8,18,.97);
   padding:12px;
   position:relative;
   box-shadow:
@@ -1096,11 +1097,12 @@ input:focus{
   display:block;
   width:auto;
   height:auto;
-  max-width:100%;
-  max-height:78vh;
+  max-width:94vw;
+  max-height:80vh;
   margin:auto;
   object-fit:contain;
   border-radius:15px;
+  cursor:zoom-out;
 }
 
 .closeModal{
@@ -1111,7 +1113,7 @@ input:focus{
   height:42px;
   border-radius:50%;
   border:1px solid rgba(255,255,255,.18);
-  background:rgba(0,0,0,.75);
+  background:rgba(0,0,0,.78);
   color:white;
   z-index:10;
   font-size:18px;
@@ -1124,6 +1126,21 @@ input:focus{
   border-color:var(--cyan);
   color:var(--cyan);
   box-shadow:0 0 20px rgba(0,234,255,.2);
+}
+
+.modalTitle{
+  color:white;
+  font-size:18px;
+  font-weight:900;
+}
+
+.modalPrompt{
+  color:#9ba8c9;
+  line-height:1.7;
+  margin-top:8px;
+  font-size:13px;
+  white-space:pre-wrap;
+  word-break:break-word;
 }
 
 /* =========================
@@ -1311,17 +1328,19 @@ footer{
   }
 
   #modal{
-    padding:8px;
+    padding:6px;
   }
 
   .modalBox{
-    max-height:94vh;
+    max-width:98vw;
+    max-height:96vh;
     padding:8px;
     border-radius:18px;
   }
 
   .modalBox img{
-    max-height:72vh;
+    max-width:96vw;
+    max-height:74vh;
   }
 
   .closeModal{
@@ -1373,10 +1392,6 @@ footer{
 </header>
 
 <main>
-
-<!-- =========================
-     HOME
-========================= -->
 
 <section id="home" class="hero">
 
@@ -1444,10 +1459,6 @@ footer{
 
 </section>
 
-<!-- =========================
-     PROFILE
-========================= -->
-
 <section id="profile">
 
   <div class="container">
@@ -1478,8 +1489,6 @@ footer{
         <div class="profileRole">
           AI Creator • Digital Designer • Broken AI
         </div>
-
-        <!-- UNIQUE TELEGRAM + WHATSAPP -->
 
         <div class="contactBtns">
 
@@ -1579,10 +1588,6 @@ footer{
 
 </section>
 
-<!-- =========================
-     ABOUT
-========================= -->
-
 <section id="about">
 
   <div class="container">
@@ -1603,105 +1608,57 @@ footer{
     <div class="features">
 
       <div class="feature">
-
-        <div class="icon">
-          ⚡
-        </div>
-
-        <h3>
-          500+ AI Commands
-        </h3>
-
+        <div class="icon">⚡</div>
+        <h3>500+ AI Commands</h3>
         <p>
           Camera angles, styles, characters, nature, lighting,
           effects, fashion, cinema, fantasy and social media commands.
         </p>
-
       </div>
 
       <div class="feature">
-
-        <div class="icon">
-          🧠
-        </div>
-
-        <h3>
-          AI Image Prompts
-        </h3>
-
+        <div class="icon">🧠</div>
+        <h3>AI Image Prompts</h3>
         <p>
           Creative AI image prompts and AI photo prompts for
           professional and artistic image generation.
         </p>
-
       </div>
 
       <div class="feature">
-
-        <div class="icon">
-          🎬
-        </div>
-
-        <h3>
-          Cinematic Prompts
-        </h3>
-
+        <div class="icon">🎬</div>
+        <h3>Cinematic Prompts</h3>
         <p>
           Cinematic composition, dramatic lighting, camera angles,
           film looks and professional visual styles.
         </p>
-
       </div>
 
       <div class="feature">
-
-        <div class="icon">
-          🖼️
-        </div>
-
-        <h3>
-          Portrait Prompts
-        </h3>
-
+        <div class="icon">🖼️</div>
+        <h3>Portrait Prompts</h3>
         <p>
           Portrait, close-up, full-body, fashion and professional
           photoshoot prompt ideas.
         </p>
-
       </div>
 
       <div class="feature">
-
-        <div class="icon">
-          💙
-        </div>
-
-        <h3>
-          Sad Image Prompts
-        </h3>
-
+        <div class="icon">💙</div>
+        <h3>Sad Image Prompts</h3>
         <p>
           Emotional and mood-based AI image prompt ideas for
           creative visual storytelling.
         </p>
-
       </div>
 
       <div class="feature">
-
-        <div class="icon">
-          🔥
-        </div>
-
-        <h3>
-          4K & 8K AI Images
-        </h3>
-
+        <div class="icon">🔥</div>
+        <h3>4K & 8K AI Images</h3>
         <p>
           4K, 8K, HDR, photorealistic and high-detail commands
           for detailed AI artwork.
         </p>
-
       </div>
 
     </div>
@@ -1709,10 +1666,6 @@ footer{
   </div>
 
 </section>
-
-<!-- =========================
-     PROMPT LAB
-========================= -->
 
 <section id="studio">
 
@@ -1730,10 +1683,7 @@ footer{
       Enter your idea and generate a professional AI image prompt.
     </p>
 
-    <div
-      class="glass lab"
-      style="margin-top:28px"
-    >
+    <div class="glass lab" style="margin-top:28px">
 
       <textarea
         id="promptInput"
@@ -1765,10 +1715,7 @@ footer{
 
       </div>
 
-      <div
-        id="promptOutput"
-        class="output"
-      >
+      <div id="promptOutput" class="output">
         Your generated professional AI prompt will appear here.
       </div>
 
@@ -1777,10 +1724,6 @@ footer{
   </div>
 
 </section>
-
-<!-- =========================
-     COMMANDS
-========================= -->
 
 <section id="commands">
 
@@ -1816,23 +1759,13 @@ footer{
 
     </div>
 
-    <div
-      id="categoryBar"
-      class="categoryBar"
-    ></div>
+    <div id="categoryBar" class="categoryBar"></div>
 
-    <div
-      id="commandGrid"
-      class="commandGrid"
-    ></div>
+    <div id="commandGrid" class="commandGrid"></div>
 
   </div>
 
 </section>
-
-<!-- =========================
-     SEO CONTENT
-========================= -->
 
 <section id="ai-prompts">
 
@@ -1858,18 +1791,14 @@ footer{
 
     <div class="seoText">
 
-      <h3>
-        AI Images
-      </h3>
+      <h3>AI Images</h3>
 
       <p>
         Explore creative AI images and professional AI artwork
         with different camera angles, lighting effects and visual styles.
       </p>
 
-      <h3>
-        AI Image Prompts
-      </h3>
+      <h3>AI Image Prompts</h3>
 
       <p>
         Find AI image prompts and AI photo prompts for portraits,
@@ -1877,9 +1806,7 @@ footer{
         and professional photoshoots.
       </p>
 
-      <h3>
-        AI Commands
-      </h3>
+      <h3>AI Commands</h3>
 
       <p>
         Use 500+ AI commands covering camera, style, character,
@@ -1887,9 +1814,7 @@ footer{
         architecture, vehicles, fantasy, food and social media.
       </p>
 
-      <h3>
-        Cinematic & Portrait Prompts
-      </h3>
+      <h3>Cinematic & Portrait Prompts</h3>
 
       <p>
         Create cinematic images, portrait images, close-up images,
@@ -1902,10 +1827,6 @@ footer{
   </div>
 
 </section>
-
-<!-- =========================
-     GALLERY
-========================= -->
 
 <section id="gallery">
 
@@ -1964,22 +1885,17 @@ footer{
 
     </div>
 
-    <div
-      id="galleryGrid"
-      class="galleryGrid"
-    >
+    <div id="galleryGrid" class="galleryGrid">
+
       <div class="empty">
         Loading AI gallery...
       </div>
+
     </div>
 
   </div>
 
 </section>
-
-<!-- =========================
-     ADMIN
-========================= -->
 
 <section id="admin">
 
@@ -2024,17 +1940,11 @@ footer{
 
         </div>
 
-        <div
-          id="loginStatus"
-          class="adminStatus"
-        ></div>
+        <div id="loginStatus" class="adminStatus"></div>
 
       </div>
 
-      <div
-        id="adminPanel"
-        class="hidden"
-      >
+      <div id="adminPanel" class="hidden">
 
         <h3>
           Upload AI Image
@@ -2082,10 +1992,7 @@ footer{
 
         </div>
 
-        <div
-          id="uploadStatus"
-          class="adminStatus"
-        ></div>
+        <div id="uploadStatus" class="adminStatus"></div>
 
       </div>
 
@@ -2096,10 +2003,6 @@ footer{
 </section>
 
 </main>
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -2129,6 +2032,7 @@ footer{
       class="closeModal"
       onclick="closeModal()"
       aria-label="Close image"
+      type="button"
     >
       ✕
     </button>
@@ -2137,6 +2041,7 @@ footer{
       id="modalImg"
       src=""
       alt="Broken AI Image"
+      draggable="false"
     >
 
     <div
@@ -2936,6 +2841,10 @@ function(filter,button){
 };
 
 
+/* =========================
+   FIXED GALLERY RENDER
+========================= */
+
 window.renderGallery =
 function(){
 
@@ -3039,11 +2948,7 @@ function(){
           )}"
           loading="lazy"
           decoding="async"
-          onclick="openModal(
-            '${jsSafe(item.url)}',
-            '${jsSafe(item.title||"AI Image")}',
-            '${jsSafe(item.prompt||"")}'
-          )"
+          onclick="openModalById('${jsSafe(item.id)}')"
         >
 
         <div class="cardBody">
@@ -3066,18 +2971,21 @@ function(){
 
             <button
               onclick="likeImage('${jsSafe(item.id)}')"
+              type="button"
             >
               ❤️ ${Number(item.likes||0)}
             </button>
 
             <button
               onclick="copyPrompt('${jsSafe(item.prompt||"")}')"
+              type="button"
             >
               📋 Copy
             </button>
 
             <button
               onclick="saveImage('${jsSafe(item.id)}')"
+              type="button"
             >
               ${
                 saved
@@ -3093,6 +3001,7 @@ function(){
               ?
               `<button
                 onclick="deleteImage('${jsSafe(item.id)}')"
+                type="button"
               >
                 🗑 Delete
               </button>`
@@ -3276,9 +3185,54 @@ function(id){
 };
 
 
-/* =========================
-   MODAL IMAGE VIEWER
-========================= */
+/* ==================================================
+   FIXED MODAL IMAGE VIEWER
+================================================== */
+
+/*
+  IMPORTANT FIX:
+
+  पहले image URL/title/prompt सीधे onclick में जा रहे थे.
+  अब सिर्फ Firestore document ID जाता है.
+
+  दूसरा बड़ा bug:
+  closeModal() में src="" करने से पुराने onerror
+  event के कारण "Image could not be loaded" दोबारा
+  खुल रहा था.
+
+  अब close करते समय onload/onerror हटाए जाते हैं
+  और src की जगह removeAttribute("src") किया जाता है.
+*/
+
+
+window.openModalById =
+function(id){
+
+  const item =
+    galleryItems.find(
+      x => x.id === id
+    );
+
+
+  if(!item){
+
+    showToast(
+      "Image data not found"
+    );
+
+    return;
+
+  }
+
+
+  openModal(
+    item.url,
+    item.title || "AI Image",
+    item.prompt || ""
+  );
+
+};
+
 
 window.openModal =
 function(url,title,prompt){
@@ -3299,6 +3253,105 @@ function(url,title,prompt){
     );
 
 
+  if(!url){
+
+    showToast(
+      "Image URL not available"
+    );
+
+    return;
+
+  }
+
+
+  /*
+    पुराने handlers पहले हटाओ.
+    इससे close/open के समय पुराना error event
+    नई image को disturb नहीं करेगा.
+  */
+
+  modalImg.onload = null;
+  modalImg.onerror = null;
+
+
+  /*
+    पुरानी image हटाओ.
+  */
+
+  modalImg.removeAttribute("src");
+
+
+  /*
+    Title और prompt को innerHTML से नहीं,
+    textContent से डाल रहे हैं.
+    इससे "Aerial ViewAerial View" जैसे
+    broken HTML/text issues नहीं होंगे.
+  */
+
+  modalInfo.innerHTML = "";
+
+
+  const titleElement =
+    document.createElement("h3");
+
+  titleElement.className =
+    "modalTitle";
+
+  titleElement.textContent =
+    title || "AI Image";
+
+
+  const promptElement =
+    document.createElement("p");
+
+  promptElement.className =
+    "modalPrompt";
+
+  promptElement.textContent =
+    prompt || "Professional AI image prompt";
+
+
+  const copyButton =
+    document.createElement("button");
+
+  copyButton.type =
+    "button";
+
+  copyButton.className =
+    "btn btnPrimary";
+
+  copyButton.style.marginTop =
+    "15px";
+
+  copyButton.textContent =
+    "📋 Copy Prompt";
+
+
+  copyButton.addEventListener(
+    "click",
+    ()=>{
+      copyPrompt(prompt || "");
+    }
+  );
+
+
+  modalInfo.appendChild(
+    titleElement
+  );
+
+  modalInfo.appendChild(
+    promptElement
+  );
+
+  modalInfo.appendChild(
+    copyButton
+  );
+
+
+  /*
+    Image load होने के बाद modal दिखाओ.
+  */
+
   modalImg.onload =
   function(){
 
@@ -3311,6 +3364,14 @@ function(url,title,prompt){
   };
 
 
+  /*
+    अगर वास्तव में URL load नहीं होता,
+    तभी error दिखाओ.
+
+    closeModal() के दौरान यह handler मौजूद
+    नहीं रहेगा.
+  */
+
   modalImg.onerror =
   function(){
 
@@ -3320,68 +3381,69 @@ function(url,title,prompt){
     document.body.style.overflow =
       "hidden";
 
-    modalInfo.innerHTML = `
+    modalInfo.innerHTML = "";
 
-      <p style="
-        color:#ff4269;
-        line-height:1.7;
-        font-size:13px;
-      ">
-        Image could not be loaded.
-      </p>
+    const errorText =
+      document.createElement("p");
 
-    `;
+    errorText.style.color =
+      "#ff4269";
+
+    errorText.style.lineHeight =
+      "1.7";
+
+    errorText.style.fontSize =
+      "13px";
+
+    errorText.textContent =
+      "Image could not be loaded from the stored image URL.";
+
+    modalInfo.appendChild(
+      errorText
+    );
 
   };
 
 
+  /*
+    सबसे अंत में सही Cloudinary URL लगाओ.
+  */
+
   modalImg.src =
-    url;
+    String(url);
 
 
   modalImg.alt =
-    title ||
-    "Broken AI Image";
+    title || "Broken AI Image";
 
 
-  modalInfo.innerHTML = `
-
-    <h3>
-      ${safe(title)}
-    </h3>
-
-    <p style="
-      color:#9ba8c9;
-      line-height:1.7;
-      margin-top:8px;
-      font-size:13px;
-    ">
-      ${safe(prompt)}
-    </p>
-
-    <button
-      class="btn btnPrimary"
-      style="margin-top:15px"
-      onclick="copyPrompt('${jsSafe(prompt)}')"
-    >
-      📋 Copy Prompt
-    </button>
-
-  `;
-
+  /*
+    Cached image होने पर onload event कभी-कभी
+    पहले ही complete हो सकता है.
+  */
 
   if(modalImg.complete){
 
-    modal.style.display =
-      "flex";
+    if(
+      modalImg.naturalWidth > 0
+    ){
 
-    document.body.style.overflow =
-      "hidden";
+      modal.style.display =
+        "flex";
+
+      document.body.style.overflow =
+        "hidden";
+
+    }
 
   }
 
 };
 
+
+/* =========================
+   CLOSE MODAL - FIXED
+========================= */
 
 window.closeModal =
 function(){
@@ -3391,23 +3453,61 @@ function(){
       "modal"
     );
 
-  modal.style.display =
-    "none";
-
-  document.body.style.overflow =
-    "";
-
-
   const modalImg =
     document.getElementById(
       "modalImg"
     );
 
-  modalImg.src =
+  const modalInfo =
+    document.getElementById(
+      "modalInfo"
+    );
+
+
+  /*
+    सबसे पहले event handlers हटाओ.
+    यही पुराने "Image could not be loaded"
+    वाले bug का main fix है.
+  */
+
+  modalImg.onload = null;
+  modalImg.onerror = null;
+
+
+  /*
+    Modal hide करो.
+  */
+
+  modal.style.display =
+    "none";
+
+
+  document.body.style.overflow =
     "";
+
+
+  /*
+    src="" मत लगाओ.
+    इससे browser error event trigger कर सकता है.
+  */
+
+  modalImg.removeAttribute("src");
+
+  modalImg.removeAttribute("alt");
+
+
+  /*
+    पुरानी title/prompt भी साफ करो.
+  */
+
+  modalInfo.innerHTML = "";
 
 };
 
+
+/* =========================
+   MODAL BACKDROP CLICK
+========================= */
 
 document
   .getElementById("modal")
@@ -3415,9 +3515,16 @@ document
     "click",
     e=>{
 
+      /*
+        सिर्फ black background पर tap करने से
+        modal बंद होगा.
+
+        Image या modalBox पर tap करने से
+        modal बंद नहीं होगा.
+      */
+
       if(
-        e.target.id ===
-        "modal"
+        e.target.id === "modal"
       ){
 
         closeModal();
@@ -3428,13 +3535,30 @@ document
   );
 
 
+/* =========================
+   ESCAPE KEY
+========================= */
+
 document.addEventListener(
   "keydown",
   e=>{
 
-    if(e.key==="Escape"){
+    if(
+      e.key === "Escape"
+    ){
 
-      closeModal();
+      const modal =
+        document.getElementById(
+          "modal"
+        );
+
+      if(
+        modal.style.display === "flex"
+      ){
+
+        closeModal();
+
+      }
 
     }
 
