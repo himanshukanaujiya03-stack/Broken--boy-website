@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#050816">
 
-<meta name="description" content="Broken AI HIMANSHU — AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts, sad image prompts, 4K AI images and 500+ copyable AI commands for creative AI artwork.">
+<meta name="description" content="Broken AI HIMANSHU — AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts, sad image prompts, 4K and 8K AI images, and 500+ copyable AI commands.">
 
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
 <meta name="author" content="HIMANSHU">
 
 <link rel="canonical" href="https://broken--boy-website.pages.dev/">
@@ -16,11 +15,11 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://broken--boy-website.pages.dev/">
 <meta property="og:title" content="Broken AI HIMANSHU | AI Images, AI Prompts & 500+ AI Commands">
-<meta property="og:description" content="Discover AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts and 500+ copyable AI commands on Broken AI HIMANSHU.">
+<meta property="og:description" content="Discover AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts and 500+ copyable AI commands.">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Broken AI HIMANSHU | AI Images, AI Prompts & 500+ AI Commands">
-<meta name="twitter:description" content="AI images, AI image prompts, cinematic prompts, portrait prompts and 500+ AI commands.">
+<meta name="twitter:description" content="AI images, AI prompts, cinematic prompts, portrait prompts and 500+ AI commands.">
 
 <meta name="google-site-verification" content="px4if5Xe8_DG2hEbGlh0kYsZ4Gxt3bEF6CAnEBOm-zM">
 
@@ -41,906 +40,1125 @@
 </script>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-
 :root{
- --bg:#040611;
- --bg2:#080c1c;
- --card:rgba(13,18,38,.72);
- --line:rgba(255,255,255,.11);
- --text:#f7f9ff;
- --muted:#9aa6c5;
- --cyan:#00eaff;
- --blue:#4d7cff;
- --purple:#8c5cff;
- --pink:#ff31d2;
- --green:#35ff9a;
- --red:#ff3d67;
+  --bg:#03040b;
+  --bg2:#070b18;
+  --card:rgba(11,16,36,.72);
+  --card2:rgba(18,25,52,.75);
+  --line:rgba(255,255,255,.11);
+  --text:#f7f9ff;
+  --muted:#9ba8c9;
+  --cyan:#00eaff;
+  --blue:#4d7cff;
+  --purple:#8c5cff;
+  --pink:#ff31d2;
+  --green:#35ff9a;
+  --red:#ff4269;
+  --shadow:0 25px 80px rgba(0,0,0,.45);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
- color:var(--text);
- background:
- radial-gradient(circle at 10% 0%,rgba(0,234,255,.13),transparent 28%),
- radial-gradient(circle at 90% 10%,rgba(140,92,255,.15),transparent 30%),
- radial-gradient(circle at 50% 100%,rgba(255,49,210,.09),transparent 30%),
- var(--bg);
- font-family:Inter,Arial,sans-serif;
- overflow-x:hidden;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(0,234,255,.08),transparent 25%),
+    radial-gradient(circle at 90% 20%,rgba(140,92,255,.09),transparent 28%),
+    radial-gradient(circle at 50% 90%,rgba(255,49,210,.06),transparent 30%),
+    var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
 }
 
 body:before{
- content:"";
- position:fixed;
- inset:0;
- pointer-events:none;
- z-index:-2;
- opacity:.13;
- background-image:
- linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
- linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
- background-size:42px 42px;
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:45px 45px;
+  mask-image:linear-gradient(to bottom,black,transparent 85%);
 }
 
-canvas{
- position:fixed;
- inset:0;
- pointer-events:none;
- z-index:-1;
- opacity:.55;
+body:after{
+  content:"";
+  position:fixed;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:rgba(0,234,255,.06);
+  filter:blur(100px);
+  top:-150px;
+  left:-150px;
+  pointer-events:none;
+  z-index:-1;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+#particles{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:-1;
 }
 
 /* LOADER */
+
 #loader{
- position:fixed;
- inset:0;
- z-index:99999;
- display:flex;
- align-items:center;
- justify-content:center;
- background:#02030a;
- transition:.7s;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:
+    radial-gradient(circle at center,rgba(0,234,255,.09),transparent 35%),
+    #02030a;
+  transition:.8s ease;
 }
 
-.loader{text-align:center}
-
-.loaderOrb{
- width:100px;
- height:100px;
- border-radius:50%;
- border:2px solid var(--cyan);
- box-shadow:0 0 25px var(--cyan),inset 0 0 25px var(--cyan);
- animation:spin 1.7s linear infinite;
- position:relative;
- margin:auto;
+.loaderCore{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:1px solid rgba(0,234,255,.35);
+  box-shadow:
+    0 0 25px rgba(0,234,255,.35),
+    inset 0 0 30px rgba(140,92,255,.18);
+  display:grid;
+  place-items:center;
+  position:relative;
+  animation:spin 5s linear infinite;
 }
 
-.loaderOrb:before{
- content:"";
- position:absolute;
- inset:15px;
- border-radius:50%;
- border:2px solid var(--pink);
- animation:spin 1s linear infinite reverse;
+.loaderCore:before,
+.loaderCore:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(140,92,255,.5);
+}
+
+.loaderCore:before{
+  inset:12px;
+}
+
+.loaderCore:after{
+  inset:27px;
+  border-color:rgba(255,49,210,.45);
+}
+
+.loaderDot{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 30px var(--cyan);
 }
 
 .loaderText{
- margin-top:24px;
- color:var(--cyan);
- font-size:11px;
- letter-spacing:5px;
- font-weight:900;
+  margin-top:28px;
+  color:var(--cyan);
+  font-size:12px;
+  letter-spacing:4px;
+  animation:pulse 1.5s infinite;
 }
 
-@keyframes spin{to{transform:rotate(360deg)}}
-
 /* HEADER */
+
 header{
- position:sticky;
- top:0;
- z-index:5000;
- background:rgba(3,6,17,.72);
- backdrop-filter:blur(20px);
- border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(22px);
+  background:rgba(3,4,11,.72);
+  border-bottom:1px solid var(--line);
 }
 
 .nav{
- max-width:1280px;
- height:76px;
- margin:auto;
- padding:0 20px;
- display:flex;
- align-items:center;
- justify-content:space-between;
+  max-width:1250px;
+  margin:auto;
+  min-height:74px;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
- font-size:23px;
- font-weight:1000;
- letter-spacing:1px;
- background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));
- -webkit-background-clip:text;
- color:transparent;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:900;
+  letter-spacing:2px;
 }
 
-.logo small{
- display:block;
- font-size:7px;
- letter-spacing:4px;
- color:#8c98b7;
- -webkit-text-fill-color:#8c98b7;
- margin-top:3px;
+.logoCube{
+  width:38px;
+  height:38px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:#001014;
+  background:linear-gradient(135deg,var(--cyan),var(--blue),var(--purple));
+  box-shadow:
+    0 0 25px rgba(0,234,255,.3),
+    inset 0 1px 1px rgba(255,255,255,.5);
+  transform:rotate(8deg);
+}
+
+.logoText small{
+  display:block;
+  color:var(--cyan);
+  font-size:8px;
+  letter-spacing:3px;
+  margin-top:3px;
 }
 
 .navLinks{
- display:flex;
- gap:20px;
- align-items:center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:5px;
 }
 
 .navLinks a{
- color:#cbd4ec;
- text-decoration:none;
- font-size:13px;
- font-weight:800;
- transition:.3s;
+  color:#cdd6ef;
+  font-size:12px;
+  padding:9px 10px;
+  border-radius:10px;
+  transition:.25s;
 }
 
 .navLinks a:hover{
- color:var(--cyan);
- text-shadow:0 0 15px var(--cyan);
+  color:white;
+  background:rgba(0,234,255,.08);
+  box-shadow:inset 0 0 0 1px rgba(0,234,255,.12);
 }
 
-.menu{
- display:none;
- color:white;
- background:none;
- border:0;
- font-size:27px;
- cursor:pointer;
+/* COMMON */
+
+.container{
+  max-width:1250px;
+  margin:auto;
+  padding:0 20px;
 }
 
-/* HERO */
-.hero{
- max-width:1280px;
- min-height:730px;
- margin:auto;
- padding:95px 20px 70px;
- display:grid;
- grid-template-columns:1.05fr .95fr;
- align-items:center;
- gap:40px;
-}
-
-.status{
- display:inline-flex;
- align-items:center;
- gap:9px;
- padding:9px 14px;
- border:1px solid rgba(0,234,255,.25);
- border-radius:50px;
- background:rgba(0,234,255,.05);
- color:var(--cyan);
- font-size:11px;
- font-weight:900;
- letter-spacing:1px;
-}
-
-.statusDot{
- width:8px;
- height:8px;
- border-radius:50%;
- background:var(--green);
- box-shadow:0 0 15px var(--green);
-}
-
-.hero h1{
- margin-top:25px;
- font-size:clamp(58px,8vw,110px);
- line-height:.86;
- letter-spacing:-6px;
- font-weight:1000;
-}
-
-.gradient{
- background:linear-gradient(90deg,var(--cyan),white,var(--purple),var(--pink));
- background-size:300%;
- -webkit-background-clip:text;
- color:transparent;
- animation:gradient 8s ease infinite;
-}
-
-@keyframes gradient{50%{background-position:100%}}
-
-.hero p{
- margin-top:30px;
- max-width:680px;
- color:var(--muted);
- line-height:1.8;
- font-size:16px;
-}
-
-.buttons{
- display:flex;
- flex-wrap:wrap;
- gap:12px;
- margin-top:32px;
-}
-
-.btn{
- display:inline-flex;
- align-items:center;
- justify-content:center;
- border:1px solid var(--line);
- color:white;
- background:rgba(255,255,255,.055);
- border-radius:13px;
- padding:13px 19px;
- cursor:pointer;
- text-decoration:none;
- font-weight:850;
- transition:.3s;
-}
-
-.btn:hover{
- transform:translateY(-3px);
- border-color:var(--cyan);
- box-shadow:0 0 25px rgba(0,234,255,.14);
-}
-
-.primary{
- border:0;
- background:linear-gradient(135deg,#00bcd4,#6d55ff,#ef35c9);
-}
-
-/* AI CORE */
-.scene{
- height:500px;
- display:flex;
- justify-content:center;
- align-items:center;
- perspective:1000px;
-}
-
-.core{
- width:235px;
- height:235px;
- border-radius:50%;
- display:flex;
- align-items:center;
- justify-content:center;
- position:relative;
- background:
- radial-gradient(circle at 35% 27%,white 0 4%,#7df7ff 7%,#1267a1 25%,#100928 67%,#05030f 100%);
- box-shadow:
- 0 0 30px var(--cyan),
- 0 0 90px rgba(92,83,255,.55),
- inset 0 0 45px rgba(255,255,255,.22);
- animation:float 5s ease-in-out infinite;
-}
-
-.core:before,
-.core:after{
- content:"";
- position:absolute;
- border:2px solid rgba(0,234,255,.45);
- border-radius:50%;
-}
-
-.core:before{
- width:330px;
- height:110px;
- transform:rotate(25deg);
- animation:orbit 5s linear infinite;
-}
-
-.core:after{
- width:380px;
- height:135px;
- transform:rotate(-35deg);
- border-color:rgba(255,49,210,.4);
- animation:orbit 7s linear infinite reverse;
-}
-
-.coreText{
- text-align:center;
- z-index:5;
-}
-
-.coreText b{
- display:block;
- font-size:38px;
- letter-spacing:5px;
-}
-
-.coreText span{
- color:var(--cyan);
- font-size:9px;
- letter-spacing:4px;
-}
-
-@keyframes float{50%{transform:translateY(-18px) rotateY(8deg)}}
-@keyframes orbit{to{transform:rotate(385deg)}}
-
-/* SECTIONS */
 section{
- max-width:1280px;
- margin:auto;
- padding:90px 20px;
+  padding:90px 0;
+  position:relative;
 }
 
 .kicker{
- color:var(--cyan);
- font-size:11px;
- font-weight:950;
- letter-spacing:3px;
+  color:var(--cyan);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:13px;
 }
 
 .sectionTitle{
- font-size:42px;
- margin-top:7px;
+  font-size:clamp(30px,5vw,55px);
+  line-height:1;
+  letter-spacing:-2px;
+  margin-bottom:16px;
+  text-shadow:0 0 35px rgba(0,234,255,.08);
 }
 
 .sectionDesc{
- color:var(--muted);
- margin-top:10px;
- line-height:1.6;
+  max-width:800px;
+  color:var(--muted);
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:calc(100vh - 74px);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.heroGrid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
+
+.status{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:8px 13px;
+  border:1px solid rgba(53,255,154,.25);
+  background:rgba(53,255,154,.06);
+  border-radius:999px;
+  color:var(--green);
+  font-size:10px;
+  letter-spacing:2px;
+  margin-bottom:22px;
+}
+
+.status i{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green);
+  animation:pulse 1.3s infinite;
+}
+
+.hero h1{
+  font-size:clamp(60px,11vw,145px);
+  line-height:.78;
+  letter-spacing:-8px;
+  margin-bottom:28px;
+  font-weight:1000;
+  background:linear-gradient(
+    110deg,
+    #fff 10%,
+    var(--cyan) 38%,
+    var(--blue) 62%,
+    var(--purple) 85%
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 15px 35px rgba(0,234,255,.12));
+}
+
+.hero h1 span{
+  display:block;
+}
+
+.heroText{
+  max-width:680px;
+  color:#bac5df;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.heroButtons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.btn{
+  border:0;
+  border-radius:14px;
+  padding:13px 19px;
+  font-weight:800;
+  transition:.25s;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(110deg,transparent,rgba(255,255,255,.18),transparent);
+  transform:translateX(-120%);
+  transition:.6s;
+}
+
+.btn:hover:before{
+  transform:translateX(120%);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btnPrimary{
+  color:#001014;
+  background:linear-gradient(135deg,var(--cyan),#75f7ff);
+  box-shadow:0 15px 40px rgba(0,234,255,.18);
+}
+
+.btnSecondary{
+  color:white;
+  background:rgba(255,255,255,.055);
+  border:1px solid var(--line);
+}
+
+.btnDanger{
+  color:white;
+  background:rgba(255,66,105,.12);
+  border:1px solid rgba(255,66,105,.3);
+}
+
+/* 3D CORE */
+
+.coreScene{
+  min-height:480px;
+  display:grid;
+  place-items:center;
+  perspective:1000px;
+}
+
+.aiCore{
+  width:290px;
+  height:290px;
+  position:relative;
+  transform-style:preserve-3d;
+  animation:floatCore 6s ease-in-out infinite;
+}
+
+.coreSphere{
+  position:absolute;
+  inset:35px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 28%,#fff 0 2%,transparent 3%),
+    radial-gradient(circle at 60% 35%,rgba(0,234,255,.9),transparent 30%),
+    radial-gradient(circle at 45% 70%,rgba(140,92,255,.7),transparent 40%),
+    #071329;
+  border:1px solid rgba(0,234,255,.5);
+  box-shadow:
+    0 0 35px rgba(0,234,255,.4),
+    0 0 100px rgba(77,124,255,.2),
+    inset -25px -20px 50px rgba(0,0,0,.5);
+  transform:translateZ(25px);
+}
+
+.coreRing{
+  position:absolute;
+  inset:5px;
+  border:1px solid rgba(0,234,255,.38);
+  border-radius:50%;
+  transform:rotateX(70deg) rotateZ(20deg);
+  box-shadow:0 0 30px rgba(0,234,255,.12);
+}
+
+.coreRing.r2{
+  inset:25px;
+  transform:rotateY(70deg) rotateZ(-25deg);
+  border-color:rgba(140,92,255,.4);
+}
+
+.coreRing.r3{
+  inset:-25px;
+  transform:rotateX(65deg) rotateY(20deg);
+  border-color:rgba(255,49,210,.25);
+}
+
+.coreLabel{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  z-index:5;
+  text-align:center;
+  font-weight:900;
+  letter-spacing:3px;
+  font-size:18px;
+  text-shadow:0 0 20px var(--cyan);
 }
 
 /* PROFILE */
-.profile{
- display:grid;
- grid-template-columns:190px 1fr;
- gap:30px;
- padding:32px;
- border:1px solid var(--line);
- border-radius:26px;
- background:
- linear-gradient(135deg,
- rgba(0,234,255,.07),
- rgba(140,92,255,.08),
- rgba(255,49,210,.06));
- box-shadow:0 25px 80px rgba(0,0,0,.3);
- position:relative;
- overflow:hidden;
+
+.profileGrid{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:35px;
+  align-items:stretch;
 }
 
-.profile:after{
- content:"";
- position:absolute;
- width:260px;
- height:260px;
- right:-90px;
- top:-110px;
- background:var(--purple);
- filter:blur(110px);
- opacity:.15;
+.glass{
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.07),
+    rgba(255,255,255,.025)
+  );
+  border:1px solid var(--line);
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(20px);
+}
+
+.profileCard{
+  padding:25px;
+  text-align:center;
+  transform-style:preserve-3d;
+  transition:.35s;
+}
+
+.profileCard:hover{
+  transform:perspective(900px) rotateX(4deg) rotateY(-4deg) translateY(-5px);
 }
 
 .profileImg{
- width:170px;
- height:170px;
- object-fit:cover;
- border-radius:50%;
- border:3px solid var(--cyan);
- box-shadow:0 0 20px var(--cyan),0 0 60px rgba(140,92,255,.45);
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  padding:5px;
+  border:1px solid rgba(0,234,255,.35);
+  background:linear-gradient(135deg,var(--cyan),var(--purple),var(--pink));
+  box-shadow:0 0 50px rgba(0,234,255,.15);
 }
 
-.profileInfo{position:relative;z-index:2}
-.profileInfo h2{font-size:42px}
+.profileName{
+  margin-top:20px;
+  font-size:27px;
+  font-weight:900;
+}
 
-.role{
- color:var(--cyan);
- font-weight:850;
- margin:5px 0 15px;
+.profileRole{
+  color:var(--cyan);
+  font-size:12px;
+  margin-top:5px;
+}
+
+.contactBtns{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.contactBtns a{
+  padding:10px 13px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  font-size:12px;
+  background:rgba(255,255,255,.04);
+}
+
+.profileInfo{
+  padding:30px;
 }
 
 .profileInfo p{
- max-width:720px;
- color:var(--muted);
- line-height:1.7;
-}
-
-.social{
- display:flex;
- flex-wrap:wrap;
- gap:9px;
- margin-top:20px;
-}
-
-.social a{
- color:white;
- text-decoration:none;
- padding:10px 14px;
- border:1px solid var(--line);
- border-radius:10px;
- background:rgba(255,255,255,.04);
+  color:var(--muted);
+  line-height:1.9;
 }
 
 /* STATS */
+
 .stats{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:15px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:30px;
 }
 
 .stat{
- padding:25px 15px;
- text-align:center;
- border:1px solid var(--line);
- border-radius:18px;
- background:var(--card);
+  padding:25px 15px;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(255,255,255,.035);
+  transform-style:preserve-3d;
+  transition:.3s;
 }
 
-.stat b{
- display:block;
- color:var(--cyan);
- font-size:31px;
+.stat:hover{
+  transform:translateY(-5px) rotateX(3deg);
+  border-color:rgba(0,234,255,.25);
+}
+
+.stat strong{
+  display:block;
+  font-size:30px;
+  color:white;
 }
 
 .stat span{
- color:var(--muted);
- font-size:10px;
- letter-spacing:1px;
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:5px;
 }
 
 /* FEATURES */
+
 .features{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:18px;
- margin-top:35px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:35px;
 }
 
 .feature{
- padding:26px;
- border:1px solid var(--line);
- border-radius:20px;
- background:var(--card);
- transition:.35s;
+  min-height:190px;
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.02));
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
+  transition:.35s;
+  transform-style:preserve-3d;
 }
 
 .feature:hover{
- transform:translateY(-6px);
- border-color:rgba(0,234,255,.4);
- box-shadow:0 20px 50px rgba(0,234,255,.07);
+  transform:perspective(900px) rotateX(5deg) rotateY(-5deg) translateY(-6px);
+  border-color:rgba(0,234,255,.28);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.3),
+    0 0 30px rgba(0,234,255,.05);
 }
 
-.icon{font-size:30px;margin-bottom:15px}
-.feature h3{margin-bottom:9px}
+.icon{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(0,234,255,.08);
+  border:1px solid rgba(0,234,255,.15);
+  font-size:22px;
+  margin-bottom:17px;
+}
+
+.feature h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
 
 .feature p{
- color:var(--muted);
- font-size:13px;
- line-height:1.7;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
 }
 
 /* PROMPT LAB */
-.promptLab{
- padding:28px;
- border:1px solid var(--line);
- border-radius:24px;
- background:linear-gradient(135deg,rgba(0,234,255,.05),rgba(140,92,255,.06));
+
+.lab{
+  padding:25px;
 }
 
-.promptLab textarea{
- width:100%;
- min-height:125px;
- resize:vertical;
- margin-top:18px;
- padding:15px;
- border:1px solid var(--line);
- border-radius:13px;
- outline:none;
- background:rgba(0,0,0,.25);
- color:white;
- font-size:14px;
+textarea,
+input{
+  width:100%;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.28);
+  color:white;
+  outline:none;
+  border-radius:15px;
+  padding:15px;
+  transition:.25s;
 }
 
-.promptLab textarea:focus{border-color:var(--cyan)}
+textarea{
+  min-height:150px;
+  resize:vertical;
+  line-height:1.7;
+}
 
-.promptOutput{
- margin-top:15px;
- min-height:70px;
- padding:15px;
- border:1px dashed rgba(0,234,255,.25);
- border-radius:13px;
- color:#c9d3ef;
- background:rgba(0,234,255,.025);
- line-height:1.7;
- font-size:13px;
+textarea:focus,
+input:focus{
+  border-color:rgba(0,234,255,.5);
+  box-shadow:0 0 25px rgba(0,234,255,.06);
+}
+
+.labButtons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:13px;
+}
+
+.output{
+  margin-top:18px;
+  padding:18px;
+  min-height:90px;
+  border:1px dashed rgba(0,234,255,.22);
+  border-radius:15px;
+  color:#dce6ff;
+  white-space:pre-wrap;
+  line-height:1.7;
+  background:rgba(0,234,255,.025);
 }
 
 /* COMMANDS */
-.commandsSection{
- padding-top:50px;
-}
 
-.commandTools{
- margin-top:30px;
+.commandControls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:25px 0;
 }
 
 .commandSearch{
- width:100%;
- padding:15px 18px;
- border-radius:13px;
- border:1px solid rgba(255,255,255,.12);
- background:#060918;
- color:white;
- outline:none;
- margin-bottom:15px;
- font-size:14px;
+  max-width:500px;
 }
-
-.commandSearch:focus{border-color:var(--cyan)}
 
 .categoryBar{
- display:flex;
- flex-wrap:wrap;
- gap:8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:25px;
 }
 
-.categoryBtn{
- padding:9px 13px;
- border-radius:10px;
- border:1px solid rgba(255,255,255,.12);
- background:rgba(255,255,255,.04);
- color:#9aa6c5;
- cursor:pointer;
- font-weight:800;
- font-size:12px;
+.catBtn{
+  padding:9px 12px;
+  color:#cbd5ed;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  font-size:11px;
 }
 
-.categoryBtn.active,
-.categoryBtn:hover{
- background:var(--cyan);
- color:#001018;
- border-color:var(--cyan);
+.catBtn.active,
+.catBtn:hover{
+  color:#001014;
+  background:var(--cyan);
+  border-color:var(--cyan);
 }
 
-.commandCount{
- color:#9aa6c5;
- margin:20px 0 18px;
- font-size:13px;
-}
-
-.commandsGrid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:14px;
+.commandGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px;
 }
 
 .commandCard{
- padding:17px;
- border-radius:15px;
- border:1px solid rgba(255,255,255,.11);
- background:rgba(13,18,38,.72);
- transition:.2s;
+  padding:17px;
+  border-radius:17px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+  transition:.25s;
+  transform-style:preserve-3d;
 }
 
 .commandCard:hover{
- transform:translateY(-3px);
- border-color:var(--cyan);
- box-shadow:0 10px 35px rgba(0,234,255,.07);
+  transform:translateY(-5px) rotateX(3deg);
+  border-color:rgba(0,234,255,.25);
 }
 
 .commandName{
- color:var(--cyan);
- font-weight:900;
- font-size:17px;
- margin-bottom:8px;
+  color:white;
+  font-weight:900;
+  font-size:14px;
+}
+
+.commandCategory{
+  color:var(--cyan);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin:6px 0;
 }
 
 .commandDesc{
- color:#9aa6c5;
- font-size:13px;
- line-height:1.55;
- min-height:42px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.6;
+  min-height:52px;
 }
 
 .copyCommand{
- width:100%;
- margin-top:12px;
- padding:10px;
- border-radius:9px;
- border:1px solid rgba(0,234,255,.25);
- background:rgba(0,234,255,.06);
- color:var(--cyan);
- cursor:pointer;
- font-weight:bold;
-}
-
-.copyCommand:hover{
- background:rgba(0,234,255,.15);
-}
-
-.noResult{
- grid-column:1/-1;
- text-align:center;
- padding:40px;
- color:#9aa6c5;
-}
-
-/* SEARCH */
-.search{
- display:flex;
- gap:10px;
- margin:30px 0 20px;
-}
-
-.search input{
- flex:1;
- padding:15px;
- border-radius:12px;
- border:1px solid var(--line);
- outline:none;
- background:rgba(255,255,255,.045);
- color:white;
-}
-
-.search input:focus{border-color:var(--cyan)}
-
-/* FILTERS */
-.filters{
- display:flex;
- flex-wrap:wrap;
- gap:8px;
- margin-bottom:22px;
-}
-
-.filter{
- padding:9px 13px;
- border-radius:10px;
- border:1px solid var(--line);
- color:#bbc5df;
- background:rgba(255,255,255,.035);
- cursor:pointer;
- font-size:12px;
- font-weight:800;
-}
-
-.filter.active,
-.filter:hover{
- color:white;
- border-color:var(--cyan);
- background:rgba(0,234,255,.08);
+  width:100%;
+  margin-top:12px;
+  border:1px solid rgba(0,234,255,.2);
+  border-radius:9px;
+  background:rgba(0,234,255,.06);
+  color:var(--cyan);
+  padding:8px;
+  font-size:11px;
+  font-weight:800;
 }
 
 /* GALLERY */
-.gallery{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:18px;
+
+.galleryTools{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  margin:25px 0 18px;
 }
 
-.card{
- overflow:hidden;
- border:1px solid var(--line);
- border-radius:20px;
- background:var(--card);
- transition:.35s;
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
-.card:hover{
- transform:translateY(-5px);
- border-color:rgba(0,234,255,.38);
+.filter{
+  padding:9px 13px;
+  border-radius:10px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  color:#cdd6ef;
+  font-size:11px;
+}
+
+.filter.active{
+  color:#001014;
+  background:var(--cyan);
+}
+
+.galleryGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:17px;
+}
+
+.galleryCard{
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:var(--card);
+  box-shadow:0 20px 50px rgba(0,0,0,.22);
+  transform-style:preserve-3d;
+  transition:.35s;
+}
+
+.galleryCard:hover{
+  transform:perspective(1000px) rotateX(3deg) rotateY(-3deg) translateY(-6px);
+  border-color:rgba(0,234,255,.25);
 }
 
 .cardImg{
- width:100%;
- height:275px;
- object-fit:cover;
- display:block;
- cursor:pointer;
+  width:100%;
+  aspect-ratio:1/1;
+  display:block;
+  object-fit:cover;
+  cursor:pointer;
+  transition:.45s;
 }
 
-.cardBody{padding:16px}
-.cardBody h3{margin-bottom:7px}
-
-.caption{
- color:var(--muted);
- font-size:13px;
- line-height:1.55;
- min-height:20px;
+.galleryCard:hover .cardImg{
+  transform:scale(1.035);
 }
 
-.actions{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:7px;
- margin-top:14px;
+.cardBody{
+  padding:15px;
 }
 
-.action{
- padding:9px 5px;
- border:1px solid var(--line);
- border-radius:9px;
- background:rgba(255,255,255,.04);
- color:white;
- cursor:pointer;
- font-size:11px;
- font-weight:800;
+.cardTitle{
+  font-weight:800;
+  font-size:14px;
+  margin-bottom:9px;
 }
 
-.action:hover{border-color:var(--cyan)}
-.delete:hover{border-color:var(--red);color:#ff6685}
+.cardPrompt{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.6;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.cardActions{
+  display:flex;
+  gap:7px;
+  margin-top:13px;
+  flex-wrap:wrap;
+}
+
+.cardActions button{
+  flex:1;
+  min-width:70px;
+  padding:8px;
+  border-radius:9px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  color:#dce5fb;
+  font-size:10px;
+}
+
+.cardActions button:hover{
+  border-color:rgba(0,234,255,.3);
+  color:var(--cyan);
+}
+
+.empty{
+  grid-column:1/-1;
+  padding:50px 20px;
+  text-align:center;
+  color:var(--muted);
+  border:1px dashed var(--line);
+  border-radius:18px;
+}
 
 /* ADMIN */
-.admin{
- padding:28px;
- border:1px solid rgba(0,234,255,.2);
- border-radius:23px;
- background:rgba(0,234,255,.025);
+
+.adminBox{
+  max-width:800px;
+  margin:auto;
+  padding:25px;
 }
 
-.form{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:12px;
+.adminGrid{
+  display:grid;
+  gap:12px;
+  margin-top:15px;
 }
 
-.form input,
-.form textarea{
- width:100%;
- padding:13px;
- border:1px solid var(--line);
- border-radius:10px;
- outline:none;
- background:rgba(255,255,255,.045);
- color:white;
+.hidden{
+  display:none!important;
 }
 
-.form textarea{
- min-height:110px;
- resize:vertical;
+.adminStatus{
+  margin-top:12px;
+  color:var(--green);
+  font-size:12px;
 }
 
-.full{grid-column:1/-1}
-
-.adminButtons{
- display:flex;
- flex-wrap:wrap;
- gap:10px;
- margin-top:15px;
-}
-
-.statusText{
- margin-top:12px;
- color:var(--muted);
- font-size:13px;
+.uploadPreview{
+  width:100%;
+  max-height:350px;
+  object-fit:contain;
+  border-radius:15px;
+  margin-top:12px;
+  display:none;
 }
 
 /* MODAL */
-.modal{
- display:none;
- position:fixed;
- inset:0;
- z-index:9990;
- background:rgba(0,0,0,.94);
- backdrop-filter:blur(16px);
- align-items:center;
- justify-content:center;
- padding:25px;
+
+#modal{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(0,0,0,.84);
+  backdrop-filter:blur(15px);
 }
 
-.modal.show{display:flex}
-
-.modalInner{
- max-width:1050px;
- width:100%;
- text-align:center;
+.modalBox{
+  max-width:950px;
+  width:100%;
+  max-height:92vh;
+  overflow:auto;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#070a14;
+  padding:15px;
+  position:relative;
 }
 
-.modalInner img{
- max-width:100%;
- max-height:78vh;
- border-radius:15px;
- box-shadow:0 0 55px rgba(0,234,255,.18);
+.modalBox img{
+  width:100%;
+  max-height:75vh;
+  object-fit:contain;
+  border-radius:15px;
 }
 
-.close{
- position:fixed;
- top:16px;
- right:16px;
- width:62px;
- height:62px;
- border-radius:50%;
- border:3px solid white;
- background:#ff1744;
- color:white;
- font-size:40px;
- line-height:1;
- font-weight:1000;
- cursor:pointer;
- box-shadow:0 0 30px rgba(255,23,68,.7);
- z-index:9999;
+.closeModal{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.6);
+  color:white;
+  z-index:3;
+}
+
+/* SEO */
+
+.seoText{
+  margin-top:30px;
+  padding:28px;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+}
+
+.seoText h3{
+  margin:18px 0 8px;
+}
+
+.seoText p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:14px;
 }
 
 /* FOOTER */
+
 footer{
- border-top:1px solid var(--line);
- padding:35px 20px;
- text-align:center;
- color:#75809d;
+  border-top:1px solid var(--line);
+  padding:35px 20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
 }
 
-footer strong{color:white}
+.footerLogo{
+  color:white;
+  font-weight:900;
+  letter-spacing:3px;
+  margin-bottom:8px;
+}
 
-/* MOBILE */
+/* TOAST */
+
+#toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
+  z-index:10000;
+  padding:12px 18px;
+  border-radius:12px;
+  color:#001014;
+  background:var(--cyan);
+  font-weight:800;
+  font-size:12px;
+  box-shadow:0 10px 35px rgba(0,234,255,.25);
+  transition:.3s;
+}
+
+#toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+/* ANIMATION */
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+@keyframes pulse{
+  50%{opacity:.45}
+}
+
+@keyframes floatCore{
+  0%,100%{transform:translateY(0) rotateX(0) rotateY(0)}
+  50%{transform:translateY(-18px) rotateX(7deg) rotateY(8deg)}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+  .commandGrid,
+  .galleryGrid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
 @media(max-width:850px){
+  .heroGrid,
+  .profileGrid{
+    grid-template-columns:1fr;
+  }
 
- .navLinks{
-  display:none;
-  position:absolute;
-  top:76px;
-  left:0;
-  right:0;
-  padding:20px;
-  flex-direction:column;
-  background:#060918;
-  border-bottom:1px solid var(--line);
- }
+  .hero{
+    min-height:auto;
+  }
 
- .navLinks.open{display:flex}
- .menu{display:block}
+  .coreScene{
+    min-height:360px;
+  }
 
- .hero{
-  grid-template-columns:1fr;
-  text-align:center;
-  padding-top:65px;
- }
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
 
- .hero p{
-  margin-left:auto;
-  margin-right:auto;
- }
+  .commandGrid,
+  .galleryGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
- .buttons{justify-content:center}
- .scene{height:370px}
- .core{transform:scale(.75)}
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
 
- .profile{
-  grid-template-columns:1fr;
-  text-align:center;
-  justify-items:center;
- }
+  .nav{
+    align-items:flex-start;
+    flex-direction:column;
+  }
 
- .social{justify-content:center}
-
- .stats{grid-template-columns:repeat(2,1fr)}
-
- .features,
- .gallery{
-  grid-template-columns:1fr;
- }
-
- .form{grid-template-columns:1fr}
- .full{grid-column:auto}
-
- .sectionTitle{font-size:34px}
-
- .commandsGrid{
-  grid-template-columns:repeat(2,1fr);
- }
+  .navLinks{
+    width:100%;
+    overflow-x:auto;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    padding-bottom:4px;
+  }
 }
 
-@media(max-width:500px){
+@media(max-width:560px){
+  section{
+    padding:65px 0;
+  }
 
- .hero h1{
-  font-size:60px;
-  letter-spacing:-4px;
- }
+  .container{
+    padding:0 14px;
+  }
 
- .profileInfo h2{font-size:34px}
+  .hero h1{
+    font-size:62px;
+    letter-spacing:-5px;
+  }
 
- .actions{grid-template-columns:1fr 1fr}
+  .features,
+  .commandGrid,
+  .galleryGrid{
+    grid-template-columns:1fr;
+  }
 
- .cardImg{height:245px}
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
 
- .commandsGrid{
-  grid-template-columns:1fr;
- }
+  .galleryTools{
+    grid-template-columns:1fr;
+  }
+
+  .profileImg{
+    width:150px;
+    height:150px;
+  }
+
+  .aiCore{
+    transform:scale(.8);
+  }
+
+  .heroButtons .btn{
+    width:100%;
+  }
 }
 </style>
 </head>
@@ -949,1687 +1167,1829 @@ footer strong{color:white}
 
 <canvas id="particles"></canvas>
 
-<!-- LOADER -->
 <div id="loader">
- <div class="loader">
-  <div class="loaderOrb"></div>
+  <div class="loaderCore">
+    <div class="loaderDot"></div>
+  </div>
   <div class="loaderText">BROKEN AI • INITIALIZING</div>
- </div>
 </div>
 
-<!-- NAV -->
 <header>
- <nav class="nav">
+  <nav class="nav">
+    <a href="#home" class="logo">
+      <div class="logoCube">AI</div>
+      <div class="logoText">
+        BROKEN AI
+        <small>AI VISUAL NETWORK</small>
+      </div>
+    </a>
 
-  <div class="logo">
-   BROKEN AI
-   <small>AI VISUAL NETWORK</small>
-  </div>
-
-  <button class="menu" onclick="toggleMenu()">☰</button>
-
-  <div class="navLinks" id="navLinks">
-   <a href="#home">Home</a>
-   <a href="#profile">Profile</a>
-   <a href="#studio">AI Studio</a>
-   <a href="#commands">⚡ Commands</a>
-   <a href="#gallery">Gallery</a>
-   <a href="#about">About</a>
-   <a href="#admin">Admin</a>
-  </div>
-
- </nav>
+    <div class="navLinks">
+      <a href="#home">Home</a>
+      <a href="#profile">Profile</a>
+      <a href="#studio">AI Studio</a>
+      <a href="#commands">⚡ Commands</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#admin">Admin</a>
+    </div>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<main>
 
- <div>
+<section id="home" class="hero">
+  <div class="container">
+    <div class="heroGrid">
 
-  <div class="status">
-   <span class="statusDot"></span>
-   SYSTEM ONLINE • NEXT GENERATION AI
+      <div>
+        <div class="status">
+          <i></i>
+          SYSTEM ONLINE • NEXT GENERATION AI
+        </div>
+
+        <h1>
+          BROKEN
+          <span>AI</span>
+        </h1>
+
+        <p class="heroText">
+          Broken AI HIMANSHU is a creative AI platform for discovering
+          AI images, AI image prompts, AI photo prompts, cinematic prompts,
+          portrait prompts, 4K and 8K AI styles and 500+ copyable AI commands.
+        </p>
+
+        <div class="heroButtons">
+          <a href="#gallery" class="btn btnPrimary">
+            🚀 Explore Gallery
+          </a>
+
+          <a href="#studio" class="btn btnSecondary">
+            🧠 Open AI Studio
+          </a>
+
+          <a href="#commands" class="btn btnSecondary">
+            ⚡ 500+ Commands
+          </a>
+        </div>
+      </div>
+
+      <div class="coreScene">
+        <div class="aiCore">
+          <div class="coreRing"></div>
+          <div class="coreRing r2"></div>
+          <div class="coreRing r3"></div>
+          <div class="coreSphere"></div>
+          <div class="coreLabel">
+            AI<br>
+            NEURAL CORE
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-  <h1>
-   BROKEN<br>
-   <span class="gradient">AI</span>
-  </h1>
-
-  <p>
-   Broken AI HIMANSHU is a creative AI platform for discovering
-   AI images, AI image prompts, AI photo prompts, cinematic prompts,
-   portrait prompts, 4K AI styles and 500+ copyable AI commands.
-  </p>
-
-  <div class="buttons">
-   <a href="#gallery" class="btn primary">
-    🚀 Explore Gallery
-   </a>
-
-   <a href="#studio" class="btn">
-    🧠 Open AI Studio
-   </a>
-  </div>
-
- </div>
-
- <div class="scene">
-  <div class="core">
-   <div class="coreText">
-    <b>AI</b>
-    <span>NEURAL CORE</span>
-   </div>
-  </div>
- </div>
-
 </section>
 
-<!-- SEO CONTENT -->
-<section id="ai-prompts">
-
- <div class="kicker">AI IMAGE PROMPT LIBRARY</div>
-
- <h2 class="sectionTitle">
-  AI Images, AI Prompts & 500+ AI Commands
- </h2>
-
- <p class="sectionDesc">
-  Broken AI HIMANSHU is a creative library for AI images,
-  AI image prompts, AI photo prompts and professional AI commands.
-  Discover cinematic, portrait, fashion, emotional, sad image,
-  4K, 8K, HDR, camera angle, lighting, fantasy and social media prompts.
- </p>
-
- <div class="features">
-
-  <div class="feature">
-   <div class="icon">⚡</div>
-   <h3>AI Commands</h3>
-   <p>
-    Explore 500+ AI commands for camera angles, styles,
-    characters, nature, lighting, effects, fashion and more.
-   </p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">🧠</div>
-   <h3>AI Image Prompts</h3>
-   <p>
-    Find creative AI image prompts and AI photo prompts
-    for professional and artistic image generation.
-   </p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">🎬</div>
-   <h3>Cinematic Prompts</h3>
-   <p>
-    Create cinematic scenes using professional camera angles,
-    dramatic lighting, film looks and cinematic composition.
-   </p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">🖼️</div>
-   <h3>Portrait Prompts</h3>
-   <p>
-    Explore portrait, close-up, full-body, fashion and
-    professional photoshoot prompt ideas.
-   </p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">💙</div>
-   <h3>Sad Image Prompts</h3>
-   <p>
-    Discover emotional and mood-based AI image prompt ideas
-    for creative visual storytelling.
-   </p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">🔥</div>
-   <h3>4K & 8K AI Images</h3>
-   <p>
-    Use 4K, 8K, HDR, photorealistic and high-detail commands
-    for detailed AI artwork.
-   </p>
-  </div>
-
- </div>
-
-</section>
-
-<!-- PROFILE -->
 <section id="profile">
+  <div class="container">
 
- <div class="kicker">CREATOR IDENTITY</div>
- <h2 class="sectionTitle">Meet the Creator</h2>
- <p class="sectionDesc">
-  The creator behind Broken AI.
- </p>
+    <div class="kicker">CREATOR PROFILE</div>
+    <h2 class="sectionTitle">Meet the Creator</h2>
 
- <div class="profile" style="margin-top:30px">
+    <div class="profileGrid">
 
-  <img
-   src="./profile-1.png"
-   class="profileImg"
-   alt="HIMANSHU — Broken AI creator"
-   onerror="this.onerror=null;this.src='./profile.png';"
-  >
+      <div class="glass profileCard">
+        <img
+          class="profileImg"
+          src="./profile-1.png"
+          alt="HIMANSHU - Broken AI creator"
+          onerror="this.src='./profile.png'"
+        >
 
-  <div class="profileInfo">
+        <div class="profileName">HIMANSHU</div>
+        <div class="profileRole">
+          AI Creator • Digital Designer • Broken AI
+        </div>
 
-   <h2>HIMANSHU</h2>
+        <div class="contactBtns">
+          <a href="https://t.me/Brokenboy221716" target="_blank">
+            Telegram
+          </a>
 
-   <div class="role">
-    AI Creator • Digital Designer • Broken AI
-   </div>
+          <a href="https://wa.me/917318399281" target="_blank">
+            WhatsApp
+          </a>
+        </div>
+      </div>
 
-   <p>
-    Creating futuristic digital experiences with
-    artificial intelligence, visual design and creative technology.
-   </p>
+      <div class="glass profileInfo">
+        <div class="kicker">BROKEN AI HIMANSHU</div>
 
-   <div class="social">
+        <h2 class="sectionTitle">
+          Creative AI Visual Network
+        </h2>
 
-    <a href="https://t.me/Brokenboy221716" target="_blank" rel="noopener noreferrer">
-     ✈️ Telegram
-    </a>
+        <p>
+          Explore professional AI images, AI prompts, photo prompts,
+          cinematic styles, portrait ideas, camera angles, lighting,
+          fantasy concepts and creative AI commands.
+        </p>
 
-    <a href="https://wa.me/917318399281" target="_blank" rel="noopener noreferrer">
-     💬 WhatsApp
-    </a>
+        <p style="margin-top:15px">
+          Choose an image from the gallery, copy its prompt and use the
+          prompt with your own image in an AI image generator to create
+          your own creative result.
+        </p>
 
-   </div>
+        <div class="stats">
+          <div class="stat">
+            <strong id="imageCount">0</strong>
+            <span>AI IMAGES</span>
+          </div>
 
+          <div class="stat">
+            <strong id="likeCount">0</strong>
+            <span>TOTAL LIKES</span>
+          </div>
+
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>AI ACCESS</span>
+          </div>
+
+          <div class="stat">
+            <strong>∞</strong>
+            <span>CREATIVITY</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-
- </div>
-
 </section>
 
-<!-- STATS -->
-<section>
-
- <div class="stats">
-
-  <div class="stat">
-   <b id="imageCount">0</b>
-   <span>AI IMAGES</span>
-  </div>
-
-  <div class="stat">
-   <b id="likeCount">0</b>
-   <span>TOTAL LIKES</span>
-  </div>
-
-  <div class="stat">
-   <b>24/7</b>
-   <span>SYSTEM</span>
-  </div>
-
-  <div class="stat">
-   <b>∞</b>
-   <span>CREATIVITY</span>
-  </div>
-
- </div>
-
-</section>
-
-<!-- ABOUT -->
 <section id="about">
+  <div class="container">
 
- <div class="kicker">PLATFORM</div>
- <h2 class="sectionTitle">Built for the Future</h2>
- <p class="sectionDesc">
-  A premium interface designed around AI creativity,
-  AI images, AI prompts and professional AI commands.
- </p>
+    <div class="kicker">BROKEN AI FEATURES</div>
 
- <div class="features">
+    <h2 class="sectionTitle">
+      Everything for Creative AI
+    </h2>
 
-  <div class="feature">
-   <div class="icon">🧠</div>
-   <h3>Prompt Intelligence</h3>
-   <p>Create and improve professional AI prompts directly inside the platform.</p>
+    <p class="sectionDesc">
+      Discover AI images, AI image prompts, AI photo prompts,
+      professional AI commands and creative visual styles.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3>500+ AI Commands</h3>
+        <p>
+          Camera angles, styles, characters, nature, lighting,
+          effects, fashion, cinema, fantasy and social media commands.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🧠</div>
+        <h3>AI Image Prompts</h3>
+        <p>
+          Creative AI image prompts and AI photo prompts for
+          professional and artistic image generation.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🎬</div>
+        <h3>Cinematic Prompts</h3>
+        <p>
+          Cinematic composition, dramatic lighting, camera angles,
+          film looks and professional visual styles.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🖼️</div>
+        <h3>Portrait Prompts</h3>
+        <p>
+          Portrait, close-up, full-body, fashion and professional
+          photoshoot prompt ideas.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">💙</div>
+        <h3>Sad Image Prompts</h3>
+        <p>
+          Emotional and mood-based AI image prompt ideas for
+          creative visual storytelling.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🔥</div>
+        <h3>4K & 8K AI Images</h3>
+        <p>
+          4K, 8K, HDR, photorealistic and high-detail commands
+          for detailed AI artwork.
+        </p>
+      </div>
+
+    </div>
   </div>
-
-  <div class="feature">
-   <div class="icon">🎨</div>
-   <h3>Visual Gallery</h3>
-   <p>Discover a growing collection of futuristic AI creations.</p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">🔥</div>
-   <h3>Trending Content</h3>
-   <p>Find popular creations based on community likes.</p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">❤️</div>
-   <h3>Community Likes</h3>
-   <p>Support your favourite AI artwork with a like.</p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">📋</div>
-   <h3>Prompt Copy</h3>
-   <p>Copy prompts instantly and use them in your favourite AI tools.</p>
-  </div>
-
-  <div class="feature">
-   <div class="icon">🔐</div>
-   <h3>Protected Admin</h3>
-   <p>Gallery management remains restricted to the authorized administrator.</p>
-  </div>
-
- </div>
-
 </section>
 
-<!-- AI STUDIO -->
 <section id="studio">
+  <div class="container">
 
- <div class="kicker">BROKEN AI STUDIO</div>
- <h2 class="sectionTitle">Prompt Lab</h2>
- <p class="sectionDesc">
-  Turn a simple idea into a more professional AI image prompt.
- </p>
+    <div class="kicker">AI CREATIVE LAB</div>
 
- <div class="promptLab" style="margin-top:30px">
+    <h2 class="sectionTitle">
+      AI Prompt Lab
+    </h2>
 
-  <textarea
-   id="promptInput"
-   placeholder="Example: a futuristic city at night..."
-  ></textarea>
+    <p class="sectionDesc">
+      Enter your idea and generate a professional AI image prompt.
+    </p>
 
-  <div class="buttons">
+    <div class="glass lab" style="margin-top:28px">
 
-   <button class="btn primary" onclick="generatePrompt()">
-    ✨ Enhance Prompt
-   </button>
+      <textarea
+        id="promptInput"
+        placeholder="Example: A cinematic portrait of a young man standing in a rainy city..."
+      ></textarea>
 
-   <button class="btn" onclick="clearPrompt()">
-    Clear
-   </button>
+      <div class="labButtons">
+        <button class="btn btnPrimary" onclick="generatePrompt()">
+          ✨ Generate Prompt
+        </button>
 
-   <button class="btn" onclick="copyGenerated()">
-    📋 Copy Result
-   </button>
+        <button class="btn btnSecondary" onclick="clearPrompt()">
+          Clear
+        </button>
 
+        <button class="btn btnSecondary" onclick="copyGenerated()">
+          Copy
+        </button>
+      </div>
+
+      <div id="promptOutput" class="output">
+        Your generated professional AI prompt will appear here.
+      </div>
+
+    </div>
   </div>
-
-  <div class="promptOutput" id="promptOutput">
-   Your enhanced prompt will appear here.
-  </div>
-
- </div>
-
 </section>
 
-<!-- COMMANDS -->
-<section id="commands" class="commandsSection">
+<section id="commands">
+  <div class="container">
 
- <div class="kicker">BROKEN AI COMMANDS</div>
+    <div class="kicker">BROKEN AI COMMANDS</div>
 
- <h2 class="sectionTitle">
-  ⚡ 500+ AI Commands & Prompts
- </h2>
+    <h2 class="sectionTitle">
+      ⚡ 500+ AI Commands
+    </h2>
 
- <p class="sectionDesc">
-  Explore 500+ AI commands for AI images, AI image prompts,
-  camera angles, cinematic styles, portraits, lighting, fashion,
-  nature, fantasy, 4K, 8K, HDR and social media.
-  किसी भी AI command को copy करके अपने AI image prompt में इस्तेमाल करें।
- </p>
+    <p class="sectionDesc">
+      Explore 500+ AI commands for AI images, AI image prompts,
+      AI photo prompts, camera angles, cinematic styles, portraits,
+      lighting, fashion, nature, fantasy, 4K, 8K, HDR and social media.
+      किसी भी AI command को copy करके अपने AI image prompt में इस्तेमाल करें।
+    </p>
 
- <div class="commandTools">
+    <div class="commandControls">
+      <input
+        id="commandSearch"
+        class="commandSearch"
+        type="search"
+        placeholder="Search AI command..."
+        oninput="renderCommands()"
+      >
+    </div>
 
-  <input
-   id="commandSearch"
-   class="commandSearch"
-   type="text"
-   placeholder="🔎 Search Command, AI Command, Prompt..."
-   oninput="renderCommands()"
-  >
+    <div id="categoryBar" class="categoryBar"></div>
 
-  <div class="categoryBar" id="categoryBar"></div>
+    <div id="commandGrid" class="commandGrid"></div>
 
- </div>
-
- <div class="commandCount" id="commandCount"></div>
-
- <div class="commandsGrid" id="commandsGrid"></div>
-
+  </div>
 </section>
 
-<!-- GALLERY -->
+<section id="ai-prompts">
+  <div class="container">
+
+    <div class="kicker">AI IMAGE PROMPT LIBRARY</div>
+
+    <h2 class="sectionTitle">
+      AI Images, AI Prompts & 500+ AI Commands
+    </h2>
+
+    <p class="sectionDesc">
+      Broken AI HIMANSHU is a creative library for AI images,
+      AI image prompts, AI photo prompts and professional AI commands.
+      Discover cinematic, portrait, fashion, emotional, sad image,
+      4K, 8K, HDR, camera angle, lighting, fantasy and social media prompts.
+    </p>
+
+    <div class="seoText">
+
+      <h3>AI Images</h3>
+      <p>
+        Explore creative AI images and professional AI artwork
+        with different camera angles, lighting effects and visual styles.
+      </p>
+
+      <h3>AI Image Prompts</h3>
+      <p>
+        Find AI image prompts and AI photo prompts for portraits,
+        cinematic scenes, fashion, travel, fantasy, emotional artwork
+        and professional photoshoots.
+      </p>
+
+      <h3>AI Commands</h3>
+      <p>
+        Use 500+ AI commands covering camera, style, character,
+        nature, lighting, quality, effects, fashion, cinema,
+        architecture, vehicles, fantasy, food and social media.
+      </p>
+
+      <h3>Cinematic & Portrait Prompts</h3>
+      <p>
+        Create cinematic images, portrait images, close-up images,
+        full-body images and professional photos using creative
+        AI prompts and commands.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
 <section id="gallery">
+  <div class="container">
 
- <div class="kicker">AI VISUAL DATABASE</div>
+    <div class="kicker">AI IMAGE GALLERY</div>
 
- <h2 class="sectionTitle">
-  AI Images Gallery
- </h2>
+    <h2 class="sectionTitle">
+      AI Images & Creative Artwork
+    </h2>
 
- <p class="sectionDesc">
-  Explore Broken AI images and creative AI artwork with
-  AI image prompts for cinematic, portrait, emotional,
-  sad image, fashion, travel, fantasy, 4K and 8K styles.
- </p>
+    <p class="sectionDesc">
+      Explore Broken AI images and creative AI artwork with
+      AI image prompts for cinematic, portrait, emotional,
+      sad image, fashion, travel, fantasy, 4K and 8K styles.
+    </p>
 
- <div class="search">
-  <input
-   id="searchInput"
-   type="text"
-   placeholder="🔍 Search title, caption or AI prompt..."
-   oninput="renderGallery()"
-  >
- </div>
+    <div class="galleryTools">
 
- <div class="filters">
+      <input
+        id="gallerySearch"
+        type="search"
+        placeholder="Search gallery..."
+        oninput="renderGallery()"
+      >
 
-  <button class="filter active" onclick="setFilter('all',this)">
-   All
-  </button>
+      <div class="filters">
+        <button
+          class="filter active"
+          id="allFilter"
+          onclick="setFilter('all',this)"
+        >
+          All
+        </button>
 
-  <button class="filter" onclick="setFilter('popular',this)">
-   🔥 Popular
-  </button>
+        <button
+          class="filter"
+          onclick="setFilter('popular',this)"
+        >
+          Popular
+        </button>
 
-  <button class="filter" onclick="setFilter('latest',this)">
-   ⚡ Latest
-  </button>
+        <button
+          class="filter"
+          onclick="setFilter('latest',this)"
+        >
+          Latest
+        </button>
+      </div>
 
- </div>
+    </div>
 
- <div id="galleryGrid" class="gallery">
-  <p style="color:#8994b5">Loading AI gallery...</p>
- </div>
+    <div id="galleryGrid" class="galleryGrid">
+      <div class="empty">Loading AI gallery...</div>
+    </div>
 
+  </div>
 </section>
 
-<!-- ADMIN -->
 <section id="admin">
+  <div class="container">
 
- <div class="kicker">CONTROL CENTER</div>
- <h2 class="sectionTitle">Admin</h2>
+    <div class="kicker">CONTROL PANEL</div>
 
- <p class="sectionDesc">
-  Secure content management.
- </p>
+    <h2 class="sectionTitle">
+      Admin
+    </h2>
 
- <div class="admin" style="margin-top:30px">
+    <div class="glass adminBox">
 
-  <div id="loginArea">
+      <div id="loginPanel">
 
-   <div class="form">
+        <h3>Admin Login</h3>
 
-    <input id="email" type="email" placeholder="Admin Email">
-    <input id="password" type="password" placeholder="Password">
+        <div class="adminGrid">
 
-   </div>
+          <input
+            id="adminEmail"
+            type="email"
+            placeholder="Admin email"
+          >
 
-   <div class="adminButtons">
-    <button class="btn primary" onclick="adminLogin()">
-     🔐 Login
-    </button>
-   </div>
+          <input
+            id="adminPassword"
+            type="password"
+            placeholder="Password"
+          >
 
-   <div id="loginStatus" class="statusText"></div>
+          <button
+            class="btn btnPrimary"
+            onclick="adminLogin()"
+          >
+            Login
+          </button>
+
+        </div>
+
+        <div id="loginStatus" class="adminStatus"></div>
+
+      </div>
+
+      <div id="adminPanel" class="hidden">
+
+        <h3>Upload AI Image</h3>
+
+        <div class="adminGrid">
+
+          <input
+            id="imageTitle"
+            type="text"
+            placeholder="Image title"
+          >
+
+          <textarea
+            id="imagePrompt"
+            placeholder="AI image prompt..."
+            style="min-height:110px"
+          ></textarea>
+
+          <input
+            id="imageFile"
+            type="file"
+            accept="image/*"
+            onchange="previewUpload(event)"
+          >
+
+          <img id="uploadPreview" class="uploadPreview">
+
+          <button
+            class="btn btnPrimary"
+            onclick="uploadImage()"
+          >
+            🚀 Upload AI Image
+          </button>
+
+          <button
+            class="btn btnSecondary"
+            onclick="adminLogout()"
+          >
+            Logout
+          </button>
+
+        </div>
+
+        <div id="uploadStatus" class="adminStatus"></div>
+
+      </div>
+
+    </div>
 
   </div>
-
-  <div id="uploadArea" style="display:none">
-
-   <h3>⚡ Creator Control Center</h3>
-
-   <div class="form" style="margin-top:16px">
-
-    <input id="title" placeholder="Image Title">
-    <input id="caption" placeholder="Caption">
-
-    <textarea
-     id="prompt"
-     class="full"
-     placeholder="AI Image Prompt"
-    ></textarea>
-
-    <input
-     id="fileInput"
-     class="full"
-     type="file"
-     accept="image/*"
-    >
-
-   </div>
-
-   <div class="adminButtons">
-
-    <button class="btn primary" onclick="uploadImage()">
-     🚀 Upload Image
-    </button>
-
-    <button class="btn" onclick="logout()">
-     Logout
-    </button>
-
-   </div>
-
-   <div id="uploadStatus" class="statusText"></div>
-
-  </div>
-
- </div>
-
 </section>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-
- <button class="close" onclick="closeModal()">×</button>
-
- <div class="modalInner">
-  <img id="modalImage" src="" alt="Broken AI image preview">
- </div>
-
-</div>
+</main>
 
 <footer>
- © 2026 <strong>Broken AI</strong> • HIMANSHU • AI Visual Network
+  <div class="footerLogo">BROKEN AI HIMANSHU</div>
+  <div>
+    AI Images • AI Prompts • AI Commands • Creative AI Artwork
+  </div>
+  <div style="margin-top:8px">
+    © <span id="year"></span> Broken AI HIMANSHU
+  </div>
 </footer>
 
-<!-- FIREBASE -->
+<div id="modal">
+  <div class="modalBox">
+    <button class="closeModal" onclick="closeModal()">✕</button>
+    <img id="modalImg" src="" alt="Broken AI Image">
+    <div id="modalInfo" style="padding:15px"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
 <script type="module">
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
- getAuth,
- signInWithEmailAndPassword,
- onAuthStateChanged,
- signOut
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 import {
- getFirestore,
- collection,
- addDoc,
- getDocs,
- deleteDoc,
- doc,
- updateDoc,
- increment,
- serverTimestamp
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  doc,
+  updateDoc,
+  increment,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+/* =========================
+   FIREBASE
+========================= */
 
 const firebaseConfig = {
- apiKey:"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
- authDomain:"broken-boy-f5087.firebaseapp.com",
- projectId:"broken-boy-f5087",
- storageBucket:"broken-boy-f5087.firebasestorage.app",
- messagingSenderId:"1086620986469",
- appId:"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
- measurementId:"G-F2E1B5LWEN"
+  apiKey:"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+  authDomain:"broken-boy-f5087.firebaseapp.com",
+  projectId:"broken-boy-f5087",
+  storageBucket:"broken-boy-f5087.firebasestorage.app",
+  messagingSenderId:"1086620986469",
+  appId:"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
+  measurementId:"G-F2E1B5LWEN"
 };
 
-const ADMIN_EMAIL="himanshu731839@gmail.com";
-const CLOUD_NAME="g33rvuls";
-const UPLOAD_PRESET="brokenai";
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-const app=initializeApp(firebaseConfig);
-const auth=getAuth(app);
-const db=getFirestore(app);
+const ADMIN_EMAIL = "himanshu731839@gmail.com";
 
-let images=[];
-let currentFilter="all";
+const CLOUD_NAME = "g33rvuls";
+const UPLOAD_PRESET = "brokenai";
 
-onAuthStateChanged(auth,user=>{
 
- const loginArea=document.getElementById("loginArea");
- const uploadArea=document.getElementById("uploadArea");
+/* =========================
+   GLOBALS
+========================= */
 
- if(user && user.email===ADMIN_EMAIL){
-  loginArea.style.display="none";
-  uploadArea.style.display="block";
- }else{
-  loginArea.style.display="block";
-  uploadArea.style.display="none";
- }
+let galleryItems = [];
+let currentFilter = "all";
+let selectedCategory = "All";
+let currentUser = null;
 
- renderGallery();
 
-});
-
-window.adminLogin=async function(){
-
- const email=document.getElementById("email").value.trim();
- const password=document.getElementById("password").value;
- const status=document.getElementById("loginStatus");
-
- try{
-
-  if(email!==ADMIN_EMAIL){
-   throw new Error("Unauthorized admin email.");
-  }
-
-  await signInWithEmailAndPassword(auth,email,password);
-
-  status.style.color="#35ff9a";
-  status.textContent="Admin login successful.";
-
- }catch(error){
-
-  status.style.color="#ff5578";
-  status.textContent="Login failed: "+error.message;
-
- }
-
-};
-
-window.logout=async function(){
- await signOut(auth);
-};
-
-window.uploadImage=async function(){
-
- const user=auth.currentUser;
-
- if(!user || user.email!==ADMIN_EMAIL){
-  alert("Admin login required.");
-  return;
- }
-
- const file=document.getElementById("fileInput").files[0];
- const title=document.getElementById("title").value.trim();
- const caption=document.getElementById("caption").value.trim();
- const prompt=document.getElementById("prompt").value.trim();
- const status=document.getElementById("uploadStatus");
-
- if(!file){
-  status.textContent="Please select an image.";
-  return;
- }
-
- try{
-
-  status.style.color="#00eaff";
-  status.textContent="Uploading to Cloudinary...";
-
-  const formData=new FormData();
-
-  formData.append("file",file);
-  formData.append("upload_preset",UPLOAD_PRESET);
-
-  const response=await fetch(
-   `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-   {
-    method:"POST",
-    body:formData
-   }
-  );
-
-  const cloud=await response.json();
-
-  if(!cloud.secure_url){
-   throw new Error("Cloudinary upload failed.");
-  }
-
-  await addDoc(
-   collection(db,"images"),
-   {
-    url:cloud.secure_url,
-    title:title || "Broken AI Creation",
-    caption:caption || "",
-    prompt:prompt || "",
-    likes:0,
-    createdAt:serverTimestamp()
-   }
-  );
-
-  status.style.color="#35ff9a";
-  status.textContent="Image uploaded successfully 🚀";
-
-  document.getElementById("fileInput").value="";
-  document.getElementById("title").value="";
-  document.getElementById("caption").value="";
-  document.getElementById("prompt").value="";
-
-  await loadImages();
-
- }catch(error){
-
-  status.style.color="#ff5578";
-  status.textContent="Upload failed: "+error.message;
-
- }
-
-};
-
-async function loadImages(){
-
- try{
-
-  const snapshot=await getDocs(
-   collection(db,"images")
-  );
-
-  images=snapshot.docs.map(item=>({
-   id:item.id,
-   ...item.data()
-  }));
-
-  images.sort((a,b)=>{
-   return (b.createdAt?.seconds||0)
-    -(a.createdAt?.seconds||0);
-  });
-
-  updateStats();
-  renderGallery();
-
- }catch(error){
-
-  console.error(error);
-
-  document.getElementById("galleryGrid").innerHTML=
-   `<p style="color:#ff5578">Gallery could not be loaded.</p>`;
-
- }
-
-}
-
-window.setFilter=function(filter,button){
-
- currentFilter=filter;
-
- document.querySelectorAll(".filter")
-  .forEach(x=>x.classList.remove("active"));
-
- button.classList.add("active");
-
- renderGallery();
-
-};
-
-window.renderGallery=function(){
-
- const grid=document.getElementById("galleryGrid");
-
- const search=document
-  .getElementById("searchInput")
-  .value
-  .toLowerCase()
-  .trim();
-
- let result=[...images];
-
- if(currentFilter==="popular"){
-  result.sort((a,b)=>
-   Number(b.likes||0)-Number(a.likes||0)
-  );
- }
-
- if(currentFilter==="latest"){
-  result.sort((a,b)=>
-   (b.createdAt?.seconds||0)-
-   (a.createdAt?.seconds||0)
-  );
- }
-
- result=result.filter(item=>{
-
-  const text=
-   `${item.title||""}
-    ${item.caption||""}
-    ${item.prompt||""}`
-    .toLowerCase();
-
-  return text.includes(search);
-
- });
-
- if(!result.length){
-
-  grid.innerHTML=
-   `<p style="color:#8994b5">
-     No matching AI creations found.
-    </p>`;
-
-  return;
- }
-
- grid.innerHTML=result.map(item=>`
-
-  <article class="card">
-
-   <img
-    class="cardImg"
-    src="${safe(item.url)}"
-    alt="${safe((item.title||"Broken AI Image")+" — AI image prompt and creative artwork")}"
-    loading="lazy"
-    decoding="async"
-    onclick="openModal('${jsSafe(item.url)}')"
-   >
-
-   <div class="cardBody">
-
-    <h3>${safe(item.title||"Broken AI Creation")}</h3>
-
-    <div class="caption">
-     ${safe(item.caption||"AI Creation")}
-    </div>
-
-    <div class="actions">
-
-     <button
-      class="action"
-      onclick="likeImage('${item.id}')"
-     >
-      ❤️ ${Number(item.likes||0)}
-     </button>
-
-     <button
-      class="action"
-      onclick="copyPrompt(\`${templateSafe(item.prompt||"")}\`)"
-     >
-      📋 Prompt
-     </button>
-
-     <button
-      class="action"
-      onclick="downloadImage('${jsSafe(item.url)}')"
-     >
-      ⬇️ Save
-     </button>
-
-     ${
-      auth.currentUser &&
-      auth.currentUser.email===ADMIN_EMAIL
-      ?
-      `<button
-       class="action delete"
-       onclick="deleteImage('${item.id}')"
-      >
-       🗑️ Delete
-      </button>`
-      :""
-     }
-
-    </div>
-
-   </div>
-
-  </article>
-
- `).join("");
-
-};
-
-window.likeImage=async function(id){
-
- try{
-
-  await updateDoc(
-   doc(db,"images",id),
-   {
-    likes:increment(1)
-   }
-  );
-
-  const item=images.find(x=>x.id===id);
-
-  if(item){
-   item.likes=Number(item.likes||0)+1;
-  }
-
-  updateStats();
-  renderGallery();
-
- }catch(error){
-
-  alert("Like failed: "+error.message);
-
- }
-
-};
-
-window.copyPrompt=async function(prompt){
-
- if(!prompt){
-  alert("No prompt available.");
-  return;
- }
-
- try{
-
-  await navigator.clipboard.writeText(prompt);
-  alert("Prompt copied ✅");
-
- }catch{
-
-  alert(prompt);
-
- }
-
-};
-
-window.downloadImage=function(url){
-
- const a=document.createElement("a");
- a.href=url;
- a.target="_blank";
- a.rel="noopener";
- document.body.appendChild(a);
- a.click();
- a.remove();
-
-};
-
-window.deleteImage=async function(id){
-
- const user=auth.currentUser;
-
- if(!user || user.email!==ADMIN_EMAIL){
-  alert("Admin only.");
-  return;
- }
-
- if(!confirm("Delete this gallery image?")){
-  return;
- }
-
- try{
-
-  await deleteDoc(
-   doc(db,"images",id)
-  );
-
-  await loadImages();
-
- }catch(error){
-
-  alert("Delete failed: "+error.message);
-
- }
-
-};
-
-window.openModal=function(url){
-
- document.getElementById("modalImage").src=url;
- document.getElementById("modal").classList.add("show");
-
-};
-
-window.closeModal=function(){
-
- document.getElementById("modal").classList.remove("show");
- document.getElementById("modalImage").src="";
-
-};
-
-document.getElementById("modal")
- .addEventListener("click",e=>{
-
-  if(e.target.id==="modal"){
-   closeModal();
-  }
-
- });
-
-function updateStats(){
-
- document.getElementById("imageCount")
-  .textContent=images.length;
-
- const total=images.reduce(
-  (sum,item)=>
-   sum+Number(item.likes||0),
-  0
- );
-
- document.getElementById("likeCount")
-  .textContent=total;
-
-}
+/* =========================
+   HELPERS
+========================= */
 
 function safe(value){
-
- return String(value)
-  .replaceAll("&","&amp;")
-  .replaceAll("<","&lt;")
-  .replaceAll(">","&gt;")
-  .replaceAll('"',"&quot;")
-  .replaceAll("'","&#039;");
-
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 }
 
 function jsSafe(value){
-
- return String(value)
-  .replaceAll("\\","\\\\")
-  .replaceAll("'","\\'")
-  .replaceAll("\n"," ");
-
+  return String(value ?? "")
+    .replace(/\\/g,"\\\\")
+    .replace(/'/g,"\\'")
+    .replace(/\n/g,"\\n")
+    .replace(/\r/g,"");
 }
 
-function templateSafe(value){
-
- return String(value)
-  .replaceAll("\\","\\\\")
-  .replaceAll("`","\\`")
-  .replaceAll("${","\\${");
-
-}
-
-loadImages();
-
-</script>
-
-<script>
-
-/* MOBILE MENU */
-
-function toggleMenu(){
-
- document
-  .getElementById("navLinks")
-  .classList.toggle("open");
-
-}
-
-/* PROMPT LAB */
-
-function generatePrompt(){
-
- const input=
-  document.getElementById("promptInput")
-  .value.trim();
-
- const output=
-  document.getElementById("promptOutput");
-
- if(!input){
-
-  output.textContent="Pehle apna idea likho.";
-
-  return;
-
- }
-
- output.textContent=
-  `${input}, ultra detailed professional AI artwork, `
-  +`cinematic composition, dramatic lighting, `
-  +`volumetric atmosphere, realistic textures, `
-  +`highly detailed environment, depth of field, `
-  +`premium color grading, sharp focus, `
-  +`professional digital art, 8K quality`;
-
-}
-
-function clearPrompt(){
-
- document.getElementById("promptInput").value="";
-
- document.getElementById("promptOutput").textContent=
-  "Your enhanced prompt will appear here.";
-
-}
-
-async function copyGenerated(){
-
- const text=
-  document.getElementById("promptOutput")
-  .textContent;
-
- if(!text ||
-    text==="Your enhanced prompt will appear here."){
-  return;
- }
-
- try{
-
-  await navigator.clipboard.writeText(text);
-  alert("Enhanced prompt copied ✅");
-
- }catch{
-
-  alert(text);
-
- }
-
-}
-
-/* LOADER */
-
-window.addEventListener("load",()=>{
-
- setTimeout(()=>{
-
-  const loader=document.getElementById("loader");
-
-  loader.style.opacity="0";
+function showToast(message){
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
 
   setTimeout(()=>{
-   loader.style.display="none";
-  },700);
+    toast.classList.remove("show");
+  },2200);
+}
 
- },800);
+window.showToast = showToast;
+
+
+/* =========================
+   LOADER
+========================= */
+
+window.addEventListener("load",()=>{
+  setTimeout(()=>{
+    const loader = document.getElementById("loader");
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+
+    setTimeout(()=>{
+      loader.remove();
+    },800);
+
+  },900);
+});
+
+
+/* =========================
+   YEAR
+========================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================
+   PROMPT LAB
+========================= */
+
+window.generatePrompt = function(){
+
+  const input =
+    document.getElementById("promptInput").value.trim();
+
+  const output =
+    document.getElementById("promptOutput");
+
+  if(!input){
+    output.textContent =
+      "Please enter your image idea first.";
+    return;
+  }
+
+  output.textContent =
+    `${input}, ultra detailed professional AI artwork, `
+    + `cinematic composition, dramatic lighting, `
+    + `volumetric atmosphere, realistic textures, `
+    + `highly detailed environment, depth of field, `
+    + `premium color grading, sharp focus, `
+    + `professional digital art, 8K quality`;
+
+  showToast("Professional prompt generated");
+};
+
+
+window.clearPrompt = function(){
+
+  document.getElementById("promptInput").value = "";
+
+  document.getElementById("promptOutput").textContent =
+    "Your generated professional AI prompt will appear here.";
+};
+
+
+window.copyGenerated = async function(){
+
+  const text =
+    document.getElementById("promptOutput").textContent;
+
+  if(!text || text.startsWith("Your generated")){
+    showToast("Generate a prompt first");
+    return;
+  }
+
+  try{
+    await navigator.clipboard.writeText(text);
+    showToast("Prompt copied");
+  }catch{
+    showToast("Copy failed");
+  }
+};
+
+
+/* =========================
+   COMMAND LIBRARY
+========================= */
+
+const commandGroups = {
+  Camera:[
+    "Droneview","Aerialview","Wideangle","Lowangle",
+    "Highangle","Birdseye","Topview","Sideview",
+    "Backview","Frontview","Closeup","UltraCloseup",
+    "Macro","Overtheshoulder","Dutchangle","POV",
+    "TrackingShot","Handheld","Telephoto","WideLens"
+  ],
+
+  Style:[
+    "Cinematic","Portrait","Fullbody","Halfbody",
+    "Streetstyle","Travel","Luxury","Royal",
+    "Traditional","Modern","Vintage","Retro",
+    "Filmlook","Editorial","Minimal","Moody",
+    "Dreamy","Professional","Artistic","Premium"
+  ],
+
+  Character:[
+    "Hero","Masslook","Action","Warrior",
+    "King","Prince","Queen","Princess",
+    "Leader","Explorer","Detective","Model",
+    "Celebritylook","Superhero","Villain","Soldier",
+    "Pilot","Artist","Creator","Traveler"
+  ],
+
+  Nature:[
+    "Village","City","Nature","Forest",
+    "Mountain","Beach","Waterfall","River",
+    "Lake","Desert","Snow","Rain",
+    "Jungle","Island","Canyon","Valley",
+    "Garden","Ocean","SunsetBeach","Countryside"
+  ],
+
+  Lighting:[
+    "Sunset","Sunrise","Goldenhour","Bluehour",
+    "Night","Moonlight","Softlight","Dramaticlight",
+    "Rimlight","Backlight","Volumetriclight",
+    "Neonlight","StudioLight","NaturalLight",
+    "CinematicLight","Lowkey","Highkey","AmbientLight"
+  ],
+
+  Quality:[
+    "4K","8K","HDR","Photorealistic",
+    "UltraRealistic","Sharp","Detailed","UltraDetailed",
+    "HighResolution","ProfessionalQuality","RealisticTexture",
+    "Crisp","FineDetails","PremiumQuality","Masterpiece"
+  ],
+
+  Effects:[
+    "Backgroundblur","Bokeh","Lensflare","Motionblur",
+    "Slowmotion","DepthofField","LightRays",
+    "Fog","Smoke","RainDrops","FilmGrain",
+    "Glow","Bloom","Reflection","Shadow",
+    "ParticleEffect","SpeedEffect","GlowEdge"
+  ],
+
+  Fashion:[
+    "Fashion","Model","Magazine","Wedding",
+    "Engagement","Festival","TraditionalWear",
+    "LuxuryFashion","StreetFashion","CasualLook",
+    "FormalLook","DesignerLook","Runway",
+    "Photoshoot","FashionEditorial","RoyalOutfit"
+  ],
+
+  Cinema:[
+    "Bollywood","Kollywood","Hollywood","Movieposter",
+    "Albumcover","Musicvideo","Cinematicposter",
+    "FilmScene","ActionScene","DramaScene",
+    "RomanticScene","ThrillerScene","EpicScene",
+    "MovieCharacter","TrailerLook"
+  ],
+
+  Architecture:[
+    "ModernHouse","LuxuryHouse","Skyscraper",
+    "Palace","Temple","Castle","Fort",
+    "AncientArchitecture","ModernArchitecture",
+    "FuturisticCity","InteriorDesign","LuxuryInterior",
+    "StreetArchitecture","UrbanDesign"
+  ],
+
+  Vehicle:[
+    "SportsCar","Supercar","LuxuryCar","VintageCar",
+    "Bike","SportsBike","Motorcycle","SUV",
+    "Jeep","RacingCar","ClassicCar","FutureCar",
+    "PrivateJet","Helicopter","Yacht","Train"
+  ],
+
+  Fantasy:[
+    "Futuristic","Cyberpunk","Neon","Fantasy",
+    "Epic","Superhero","Mythology","Historical",
+    "Magic","Dragon","Galaxy","Space",
+    "AlienWorld","SciFi","DarkFantasy","DreamWorld"
+  ],
+
+  Food:[
+    "FoodPhotography","RestaurantStyle","StreetFood",
+    "LuxuryFood","Dessert","CoffeePhotography",
+    "ProductFood","CinematicFood","FoodCloseup",
+    "ChefStyle"
+  ],
+
+  Social:[
+    "Instagram","YouTubeShorts","Reels","SocialMedia",
+    "ProfilePhoto","ViralLook","TrendingStyle",
+    "ThumbnailStyle","CreatorLook","InfluencerStyle",
+    "4KReels","CinematicReels","ShortsThumbnail"
+  ]
+};
+
+
+/* =========================
+   GENERATE 500+ COMMANDS
+========================= */
+
+let originalCommands = [];
+
+Object.entries(commandGroups).forEach(([category,items])=>{
+  items.forEach(command=>{
+    originalCommands.push({
+      command,
+      category
+    });
+  });
+});
+
+
+const combinationWords = [
+  "Professional","Cinematic","Premium","UltraDetailed",
+  "Realistic","Creative","Epic","Luxury",
+  "Trending","Viral","Modern","Futuristic",
+  "Dramatic","Artistic","HighQuality","Studio",
+  "Magazine","Editorial","DigitalArt","Masterpiece"
+];
+
+const baseCommands = [...originalCommands];
+
+for(let i=0;i<600 && originalCommands.length<650;i++){
+
+  const base =
+    baseCommands[i % baseCommands.length];
+
+  const modifier =
+    combinationWords[
+      Math.floor(i / baseCommands.length) %
+      combinationWords.length
+    ];
+
+  originalCommands.push({
+    command:modifier + base.command,
+    category:base.category
+  });
+}
+
+
+function commandDescription(command,category){
+
+  const descriptions = {
+
+    Camera:`Use ${command} to create a specific camera angle, framing or photography perspective.`,
+
+    Style:`Use ${command} to give the AI image a distinct visual style and creative appearance.`,
+
+    Character:`Use ${command} to create a strong character-focused visual identity and cinematic presence.`,
+
+    Nature:`Use ${command} to create an environment, landscape or natural background.`,
+
+    Lighting:`Use ${command} to control the mood, atmosphere and direction of light.`,
+
+    Quality:`Use ${command} to improve image detail, clarity, resolution and overall visual quality.`,
+
+    Effects:`Use ${command} to add visual effects, atmosphere, depth or cinematic details.`,
+
+    Fashion:`Use ${command} for fashion photography, clothing, styling and professional photoshoot looks.`,
+
+    Cinema:`Use ${command} to create movie-inspired compositions, scenes and cinematic visuals.`,
+
+    Architecture:`Use ${command} to create detailed buildings, interiors, cities and architectural environments.`,
+
+    Vehicle:`Use ${command} to create detailed vehicle-focused AI images and cinematic scenes.`,
+
+    Fantasy:`Use ${command} for fantasy, futuristic, mythology, science-fiction and imaginative artwork.`,
+
+    Food:`Use ${command} for professional food photography and attractive food visuals.`,
+
+    Social:`Use ${command} to create social-media-ready AI images and creator visuals.`
+
+  };
+
+  return descriptions[category] || "Use this AI command to enhance your creative image prompt.";
+}
+
+
+function createCategories(){
+
+  const bar =
+    document.getElementById("categoryBar");
+
+  const categories =
+    ["All",...Object.keys(commandGroups)];
+
+  bar.innerHTML = categories.map(category=>`
+
+    <button
+      class="catBtn ${category==="All"?"active":""}"
+      onclick="selectCategory('${jsSafe(category)}',this)"
+    >
+      ${safe(category)}
+    </button>
+
+  `).join("");
+}
+
+
+window.selectCategory = function(category,button){
+
+  selectedCategory = category;
+
+  document.querySelectorAll(".catBtn")
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  renderCommands();
+};
+
+
+window.renderCommands = function(){
+
+  const grid =
+    document.getElementById("commandGrid");
+
+  const search =
+    document.getElementById("commandSearch")
+      .value
+      .trim()
+      .toLowerCase();
+
+  let filtered = originalCommands.filter(item=>{
+
+    const categoryMatch =
+      selectedCategory==="All" ||
+      item.category===selectedCategory;
+
+    const searchMatch =
+      !search ||
+      item.command.toLowerCase().includes(search) ||
+      item.category.toLowerCase().includes(search) ||
+      commandDescription(
+        item.command,
+        item.category
+      ).toLowerCase().includes(search);
+
+    return categoryMatch && searchMatch;
+  });
+
+  if(!filtered.length){
+
+    grid.innerHTML =
+      `<div class="empty">No AI command found.</div>`;
+
+    return;
+  }
+
+  grid.innerHTML = filtered.map(item=>`
+
+    <article class="commandCard">
+
+      <div class="commandName">
+        ${safe(item.command)}
+      </div>
+
+      <div class="commandCategory">
+        ${safe(item.category)}
+      </div>
+
+      <div class="commandDesc">
+        ${safe(
+          commandDescription(
+            item.command,
+            item.category
+          )
+        )}
+      </div>
+
+      <button
+        class="copyCommand"
+        onclick="copyCommand('${jsSafe(item.command)}')"
+      >
+        📋 Copy Command
+      </button>
+
+    </article>
+
+  `).join("");
+};
+
+
+window.copyCommand = async function(command){
+
+  try{
+
+    await navigator.clipboard.writeText(command);
+
+    showToast(
+      `${command} copied`
+    );
+
+  }catch{
+
+    showToast("Copy failed");
+
+  }
+};
+
+
+createCategories();
+renderCommands();
+
+
+/* =========================
+   FIREBASE GALLERY
+========================= */
+
+async function loadGallery(){
+
+  const grid =
+    document.getElementById("galleryGrid");
+
+  try{
+
+    const snapshot =
+      await getDocs(
+        collection(db,"images")
+      );
+
+    galleryItems =
+      snapshot.docs.map(item=>({
+        id:item.id,
+        ...item.data()
+      }));
+
+    galleryItems.sort((a,b)=>{
+
+      const at =
+        a.createdAt?.seconds || 0;
+
+      const bt =
+        b.createdAt?.seconds || 0;
+
+      return bt-at;
+
+    });
+
+    updateStats();
+    renderGallery();
+
+  }catch(error){
+
+    console.error(error);
+
+    grid.innerHTML =
+      `<div class="empty">
+        Gallery could not be loaded.
+      </div>`;
+
+  }
+}
+
+
+function updateStats(){
+
+  document.getElementById("imageCount").textContent =
+    galleryItems.length;
+
+  const likes =
+    galleryItems.reduce(
+      (sum,item)=>
+        sum + Number(item.likes || 0),
+      0
+    );
+
+  document.getElementById("likeCount").textContent =
+    likes;
+}
+
+
+window.setFilter = function(filter,button){
+
+  currentFilter = filter;
+
+  document.querySelectorAll(".filter")
+    .forEach(btn=>btn.classList.remove("active"));
+
+  button.classList.add("active");
+
+  renderGallery();
+};
+
+
+window.renderGallery = function(){
+
+  const grid =
+    document.getElementById("galleryGrid");
+
+  const search =
+    document.getElementById("gallerySearch")
+      .value
+      .trim()
+      .toLowerCase();
+
+  let items =
+    galleryItems.filter(item=>{
+
+      if(!search) return true;
+
+      return (
+        String(item.title||"")
+          .toLowerCase()
+          .includes(search) ||
+
+        String(item.prompt||"")
+          .toLowerCase()
+          .includes(search)
+      );
+
+    });
+
+  if(currentFilter==="popular"){
+
+    items.sort(
+      (a,b)=>
+        Number(b.likes||0) -
+        Number(a.likes||0)
+    );
+
+  }else if(currentFilter==="latest"){
+
+    items.sort((a,b)=>{
+
+      const at =
+        a.createdAt?.seconds || 0;
+
+      const bt =
+        b.createdAt?.seconds || 0;
+
+      return bt-at;
+
+    });
+
+  }
+
+  if(!items.length){
+
+    grid.innerHTML =
+      `<div class="empty">
+        No AI images found.
+      </div>`;
+
+    return;
+  }
+
+  grid.innerHTML =
+    items.map(item=>{
+
+      const saved =
+        isSaved(item.id);
+
+      return `
+
+      <article class="galleryCard">
+
+        <img
+          class="cardImg"
+          src="${safe(item.url)}"
+          alt="${safe(
+            (item.title||"Broken AI Image") +
+            " — AI image prompt and creative artwork"
+          )}"
+          loading="lazy"
+          decoding="async"
+          onclick="openModal('${jsSafe(item.url)}','${jsSafe(item.title||"AI Image")}','${jsSafe(item.prompt||"")}')"
+        >
+
+        <div class="cardBody">
+
+          <div class="cardTitle">
+            ${safe(item.title||"AI Image")}
+          </div>
+
+          <div class="cardPrompt">
+            ${safe(item.prompt||"Professional AI image prompt")}
+          </div>
+
+          <div class="cardActions">
+
+            <button
+              onclick="likeImage('${jsSafe(item.id)}')"
+            >
+              ❤️ ${Number(item.likes||0)}
+            </button>
+
+            <button
+              onclick="copyPrompt('${jsSafe(item.prompt||"")}')"
+            >
+              📋 Copy
+            </button>
+
+            <button
+              onclick="saveImage('${jsSafe(item.id)}')"
+            >
+              ${saved?"⭐ Saved":"☆ Save"}
+            </button>
+
+            ${
+              currentUser?.email===ADMIN_EMAIL
+              ?
+              `<button
+                onclick="deleteImage('${jsSafe(item.id)}')"
+              >
+                🗑 Delete
+              </button>`
+              :
+              ""
+            }
+
+          </div>
+
+        </div>
+
+      </article>
+
+      `;
+
+    }).join("");
+};
+
+
+/* =========================
+   COPY PROMPT
+========================= */
+
+window.copyPrompt = async function(prompt){
+
+  if(!prompt){
+
+    showToast("Prompt not available");
+    return;
+
+  }
+
+  try{
+
+    await navigator.clipboard.writeText(prompt);
+
+    showToast("Prompt copied");
+
+  }catch{
+
+    showToast("Copy failed");
+
+  }
+};
+
+
+/* =========================
+   LIKE
+========================= */
+
+window.likeImage = async function(id){
+
+  try{
+
+    await updateDoc(
+      doc(db,"images",id),
+      {
+        likes:increment(1)
+      }
+    );
+
+    const item =
+      galleryItems.find(x=>x.id===id);
+
+    if(item){
+      item.likes =
+        Number(item.likes||0)+1;
+    }
+
+    updateStats();
+    renderGallery();
+
+    showToast("Liked ❤️");
+
+  }catch(error){
+
+    console.error(error);
+    showToast("Like failed");
+
+  }
+};
+
+
+/* =========================
+   SAVE
+========================= */
+
+function getSaved(){
+
+  try{
+
+    return JSON.parse(
+      localStorage.getItem("brokenAI_saved") || "[]"
+    );
+
+  }catch{
+
+    return [];
+
+  }
+}
+
+
+function isSaved(id){
+
+  return getSaved().includes(id);
+
+}
+
+
+window.saveImage = function(id){
+
+  let saved = getSaved();
+
+  if(saved.includes(id)){
+
+    saved =
+      saved.filter(x=>x!==id);
+
+    showToast("Removed from saved");
+
+  }else{
+
+    saved.push(id);
+
+    showToast("Image saved ⭐");
+
+  }
+
+  localStorage.setItem(
+    "brokenAI_saved",
+    JSON.stringify(saved)
+  );
+
+  renderGallery();
+};
+
+
+/* =========================
+   MODAL
+========================= */
+
+window.openModal = function(url,title,prompt){
+
+  const modal =
+    document.getElementById("modal");
+
+  document.getElementById("modalImg").src =
+    url;
+
+  document.getElementById("modalInfo").innerHTML = `
+
+    <h3>${safe(title)}</h3>
+
+    <p style="
+      color:#9ba8c9;
+      line-height:1.7;
+      margin-top:8px;
+      font-size:13px;
+    ">
+      ${safe(prompt)}
+    </p>
+
+    <button
+      class="btn btnPrimary"
+      style="margin-top:15px"
+      onclick="copyPrompt('${jsSafe(prompt)}')"
+    >
+      📋 Copy Prompt
+    </button>
+
+  `;
+
+  modal.style.display = "flex";
+
+};
+
+
+window.closeModal = function(){
+
+  document.getElementById("modal").style.display =
+    "none";
+
+};
+
+
+document.getElementById("modal")
+  .addEventListener("click",e=>{
+
+    if(e.target.id==="modal"){
+      closeModal();
+    }
+
+  });
+
+
+/* =========================
+   ADMIN AUTH
+========================= */
+
+window.adminLogin = async function(){
+
+  const email =
+    document.getElementById("adminEmail")
+      .value
+      .trim();
+
+  const password =
+    document.getElementById("adminPassword")
+      .value;
+
+  const status =
+    document.getElementById("loginStatus");
+
+  if(!email || !password){
+
+    status.textContent =
+      "Email and password required.";
+
+    return;
+
+  }
+
+  try{
+
+    const result =
+      await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+    if(result.user.email !== ADMIN_EMAIL){
+
+      await signOut(auth);
+
+      status.textContent =
+        "This account is not the admin account.";
+
+      return;
+
+    }
+
+    status.textContent =
+      "Login successful.";
+
+  }catch(error){
+
+    console.error(error);
+
+    status.textContent =
+      "Login failed. Check email/password.";
+
+  }
+
+};
+
+
+window.adminLogout = async function(){
+
+  await signOut(auth);
+
+  showToast("Logged out");
+
+};
+
+
+onAuthStateChanged(auth,user=>{
+
+  currentUser = user;
+
+  const loginPanel =
+    document.getElementById("loginPanel");
+
+  const adminPanel =
+    document.getElementById("adminPanel");
+
+  if(user && user.email===ADMIN_EMAIL){
+
+    loginPanel.classList.add("hidden");
+    adminPanel.classList.remove("hidden");
+
+  }else{
+
+    loginPanel.classList.remove("hidden");
+    adminPanel.classList.add("hidden");
+
+  }
+
+  renderGallery();
 
 });
 
-/* PARTICLES */
 
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
+/* =========================
+   CLOUDINARY PREVIEW
+========================= */
 
-let particles=[];
+window.previewUpload = function(event){
 
-function resize(){
+  const file =
+    event.target.files[0];
 
- canvas.width=window.innerWidth;
- canvas.height=window.innerHeight;
+  const preview =
+    document.getElementById("uploadPreview");
+
+  if(!file){
+
+    preview.style.display="none";
+    return;
+
+  }
+
+  const url =
+    URL.createObjectURL(file);
+
+  preview.src = url;
+  preview.style.display="block";
+
+};
+
+
+/* =========================
+   CLOUDINARY UPLOAD
+========================= */
+
+window.uploadImage = async function(){
+
+  if(!currentUser ||
+     currentUser.email!==ADMIN_EMAIL){
+
+    showToast("Admin login required");
+    return;
+
+  }
+
+  const file =
+    document.getElementById("imageFile")
+      .files[0];
+
+  const title =
+    document.getElementById("imageTitle")
+      .value.trim();
+
+  const prompt =
+    document.getElementById("imagePrompt")
+      .value.trim();
+
+  const status =
+    document.getElementById("uploadStatus");
+
+  if(!file){
+
+    status.textContent =
+      "Please select an image.";
+
+    return;
+
+  }
+
+  status.textContent =
+    "Uploading image...";
+
+  try{
+
+    const form =
+      new FormData();
+
+    form.append("file",file);
+    form.append("upload_preset",UPLOAD_PRESET);
+
+    const response =
+      await fetch(
+        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+        {
+          method:"POST",
+          body:form
+        }
+      );
+
+    if(!response.ok){
+
+      throw new Error(
+        "Cloudinary upload failed"
+      );
+
+    }
+
+    const data =
+      await response.json();
+
+    await addDoc(
+      collection(db,"images"),
+      {
+        url:data.secure_url,
+        title:title || "Broken AI Image",
+        prompt:prompt || "AI image prompt",
+        likes:0,
+        createdAt:serverTimestamp()
+      }
+    );
+
+    status.textContent =
+      "Image uploaded successfully.";
+
+    document.getElementById("imageTitle").value="";
+    document.getElementById("imagePrompt").value="";
+    document.getElementById("imageFile").value="";
+
+    document.getElementById("uploadPreview")
+      .style.display="none";
+
+    await loadGallery();
+
+    showToast("AI image uploaded 🚀");
+
+  }catch(error){
+
+    console.error(error);
+
+    status.textContent =
+      "Upload failed.";
+
+  }
+
+};
+
+
+/* =========================
+   DELETE
+========================= */
+
+window.deleteImage = async function(id){
+
+  if(!currentUser ||
+     currentUser.email!==ADMIN_EMAIL){
+
+    showToast("Admin access required");
+    return;
+
+  }
+
+  const ok =
+    confirm(
+      "Delete this AI image?"
+    );
+
+  if(!ok) return;
+
+  try{
+
+    await deleteDoc(
+      doc(db,"images",id)
+    );
+
+    galleryItems =
+      galleryItems.filter(
+        item=>item.id!==id
+      );
+
+    updateStats();
+    renderGallery();
+
+    showToast("Image deleted");
+
+  }catch(error){
+
+    console.error(error);
+    showToast("Delete failed");
+
+  }
+
+};
+
+
+/* =========================
+   PARTICLES
+========================= */
+
+const canvas =
+  document.getElementById("particles");
+
+const ctx =
+  canvas.getContext("2d");
+
+let particles = [];
+
+function resizeCanvas(){
+
+  canvas.width =
+    window.innerWidth;
+
+  canvas.height =
+    window.innerHeight;
 
 }
 
-resize();
-window.addEventListener("resize",resize);
+resizeCanvas();
 
-for(let i=0;i<65;i++){
+window.addEventListener(
+  "resize",
+  resizeCanvas
+);
 
- particles.push({
-  x:Math.random()*innerWidth,
-  y:Math.random()*innerHeight,
-  r:Math.random()*1.7+.3,
-  dx:(Math.random()-.5)*.25,
-  dy:(Math.random()-.5)*.25
- });
+
+function createParticles(){
+
+  const amount =
+    Math.min(
+      90,
+      Math.floor(
+        window.innerWidth / 13
+      )
+    );
+
+  particles =
+    Array.from(
+      {length:amount},
+      ()=>({
+
+        x:Math.random()*canvas.width,
+
+        y:Math.random()*canvas.height,
+
+        r:Math.random()*1.5+.3,
+
+        vx:(Math.random()-.5)*.25,
+
+        vy:(Math.random()-.5)*.25
+
+      })
+    );
 
 }
+
+createParticles();
+
 
 function animateParticles(){
 
- ctx.clearRect(
-  0,0,
-  canvas.width,
-  canvas.height
- );
-
- for(const p of particles){
-
-  p.x+=p.dx;
-  p.y+=p.dy;
-
-  if(p.x<0)p.x=canvas.width;
-  if(p.x>canvas.width)p.x=0;
-  if(p.y<0)p.y=canvas.height;
-  if(p.y>canvas.height)p.y=0;
-
-  ctx.beginPath();
-
-  ctx.arc(
-   p.x,p.y,p.r,
-   0,Math.PI*2
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
   );
 
-  ctx.fillStyle="rgba(0,234,255,.55)";
-  ctx.fill();
+  for(const p of particles){
 
- }
+    p.x += p.vx;
+    p.y += p.vy;
 
- requestAnimationFrame(animateParticles);
+    if(p.x<0) p.x=canvas.width;
+    if(p.x>canvas.width) p.x=0;
+
+    if(p.y<0) p.y=canvas.height;
+    if(p.y>canvas.height) p.y=0;
+
+    ctx.beginPath();
+
+    ctx.arc(
+      p.x,
+      p.y,
+      p.r,
+      0,
+      Math.PI*2
+    );
+
+    ctx.fillStyle =
+      "rgba(0,234,255,.35)";
+
+    ctx.fill();
+
+  }
+
+  requestAnimationFrame(
+    animateParticles
+  );
 
 }
 
 animateParticles();
 
-/* ==========================================
-   500+ BROKEN AI COMMAND LIBRARY
-   ========================================== */
 
-const commandGroups={
+/* =========================
+   INITIAL LOAD
+========================= */
 
-Camera:[
-"Droneview","Aerialview","Cinematic","Portrait","Closeup",
-"UltraCloseup","Wideangle","Lowangle","Highangle","Birdseye",
-"Topview","Sideview","Backview","Frontview","Fullbody",
-"Halfbody","Mediumshot","Longshot","ExtremeLongshot",
-"Overtheshoulder","POV","Firstperson","Thirdperson","Macro",
-"Microshot","Dutchangle","Eyelevel","Wormseye","TrackingShot",
-"PanShot","TiltShot","ZoomShot","StaticShot","DynamicShot",
-"Handheld","Steadicam","DollyShot","CraneShot","OrbitShot",
-"FollowShot","RevealShot","EstablishingShot","TwoShot",
-"GroupShot","ProfileShot","ReflectionShot","SilhouetteShot",
-"FrameWithinFrame","DepthShot","PerspectiveShot"
-],
-
-Style:[
-"Streetstyle","Travel","Luxury","Royal","Traditional","Modern",
-"Vintage","Retro","Filmlook","Bollywood","Kollywood","Hero",
-"Masslook","Action","Warrior","King","Prince","Mythology",
-"Historical","Futuristic","Cyberpunk","Neon","Fantasy","Epic",
-"Superhero","Hollywood","Movieposter","Albumcover","Musicvideo",
-"Instagram","YouTubeShorts","Reels","Dreamy","Romantic",
-"Emotional","ProfessionalPhotoshoot","Editorial","Minimalist",
-"Maximalist","Artistic","Creative","Premium","Classic","Elegant",
-"Stylish","Trendy","Urban","Rustic","Bohemian","AvantGarde"
-],
-
-Character:[
-"MalePortrait","FemalePortrait","YoungHero","YoungPrince",
-"RoyalKing","RoyalQueen","WarriorMan","WarriorWoman",
-"AncientWarrior","ModernHero","Superhero","Villain","Detective",
-"Explorer","Adventurer","Traveler","Photographer","Artist",
-"Musician","Singer","Dancer","Actor","Director","Model",
-"FashionModel","Businessman","Businesswoman","Student","Teacher",
-"Scientist","Engineer","Doctor","Pilot","Soldier","PoliceOfficer",
-"Farmer","VillageMan","VillageWoman","Monk","KingdomPrince",
-"KingdomPrincess","Emperor","Empress","Knight","Samurai",
-"Ninja","Pirate","Rider","Biker","Athlete","Champion"
-],
-
-Nature:[
-"Nature","Forest","Mountain","Beach","Waterfall","River","Lake",
-"Desert","Snow","Rain","Sunset","Sunrise","Goldenhour","Bluehour",
-"Night","Moonlight","Jungle","Canyon","Valley","Island","Ocean",
-"Seaside","Cliff","Hilltop","Meadow","Grassland","Flowerfield",
-"Garden","Park","BambooForest","PineForest","AutumnForest",
-"TropicalForest","Rainforest","FoggyForest","MistyMountain",
-"SnowMountain","Volcano","Glacier","CoralReef","WaterCave",
-"IceCave","CrystalCave","Riverbank","Lakeside","Riverside",
-"Countryside","Farmland","VillageLandscape"
-],
-
-Lighting:[
-"Studio","Softlight","Dramaticlight","Hardlight","Rimlight",
-"Backlight","Frontlight","SideLighting","TopLighting",
-"BottomLighting","Neonlight","Volumetriclight","Godrays",
-"Sunlight","Moonlight","Starlight","Candlelight","Firelight",
-"Lanternlight","Streetlight","Windowlight","Goldenlight",
-"BlueLight","RedLight","PurpleLight","PinkLight","OrangeLight",
-"CoolLight","WarmLight","NaturalLight","AmbientLight",
-"AmbientGlow","Glowlight","SoftGlow","Dreamlight","MysticLight",
-"EpicLighting","CinematicLighting","MovieLighting",
-"PortraitLighting","FashionLighting","StudioLighting",
-"LowkeyLighting","HighkeyLighting","SilhouetteLighting",
-"FogLighting","RainLighting","SunsetLighting","SunriseLighting",
-"NightLighting","ColorfulLighting"
-],
-
-Quality:[
-"4K","8K","12K","HDR","Photorealistic","UltraRealistic",
-"HyperRealistic","Sharp","UltraSharp","HighDetail","ExtremeDetail",
-"FineDetail","RealisticTexture","SkinDetail","HairDetail",
-"EyeDetail","FabricDetail","EnvironmentDetail",
-"ArchitecturalDetail","NaturalTexture","PremiumQuality",
-"ProfessionalQuality","Masterpiece","HighResolution","UltraHD",
-"HD","CrystalClear","CleanImage","PerfectFocus","SharpFocus",
-"DetailedFace","DetailedEyes","DetailedHair","DetailedClothing",
-"RealisticSkin","RealisticLighting","RealisticShadow",
-"RealisticReflection","RealisticMaterial","ProfessionalCamera",
-"DSLRQuality","MirrorlessQuality","StudioQuality",
-"MagazineQuality","CommercialQuality","AdvertisingQuality",
-"PosterQuality","PrintQuality","GalleryQuality","MasterQuality",
-"PremiumRender"
-],
-
-Effects:[
-"Backgroundblur","Bokeh","Lensflare","Motionblur","Slowmotion",
-"DepthOfField","ShallowDepth","DeepFocus","Filmgrain","Lightleak",
-"DustParticles","SmokeEffect","FogEffect","RainEffect",
-"SnowEffect","FireEffect","SparkEffect","GlowEffect",
-"ParticleEffect","EnergyEffect","LightningEffect","MagicEffect",
-"WaterSplash","WindEffect","FlyingParticles","FloatingDust",
-"VolumetricFog","AtmosphericFog","LensReflection",
-"GlassReflection","WaterReflection","MirrorReflection",
-"WetSurface","RainDrops","SnowParticles","FireSparks",
-"LightParticles","MotionEffect","SpeedEffect","ActionBlur",
-"RadialBlur","SoftFocus","DreamyGlow","MysticGlow","NeonGlow",
-"CyberGlow","ElectricGlow","GoldenGlow","BlueGlow","RedGlow"
-],
-
-Fashion:[
-"Fashion","StreetFashion","LuxuryFashion","RoyalFashion",
-"TraditionalFashion","ModernFashion","VintageFashion",
-"RetroFashion","DesignerOutfit","LuxuryOutfit","RoyalOutfit",
-"TraditionalOutfit","WeddingOutfit","FestivalOutfit",
-"CasualOutfit","FormalOutfit","PartyOutfit","WinterOutfit",
-"SummerOutfit","BeachOutfit","DenimStyle","LeatherStyle",
-"SuitStyle","KurtaStyle","SherwaniStyle","SareeStyle",
-"LehengaStyle","EthnicStyle","WesternStyle","UrbanFashion",
-"RunwayFashion","MagazineFashion","EditorialFashion",
-"ModelPhotoshoot","FashionPhotoshoot","LuxuryPhotoshoot",
-"DesignerPhotoshoot","StudioFashion","OutdoorFashion",
-"StreetPhotoshoot","FashionPortrait","FashionEditorial",
-"PremiumFashion","ElegantFashion","BoldFashion",
-"ClassicFashion","ModernLuxury","RoyalLuxury","MinimalFashion",
-"HighFashion"
-],
-
-Cinema:[
-"Cinematicposter","MoviePoster","ActionPoster","RomancePoster",
-"WarPoster","HistoricalPoster","FantasyPoster","SuperheroPoster",
-"ThrillerPoster","HorrorPoster","AdventurePoster","DramaPoster",
-"BollywoodPoster","HollywoodPoster","SouthIndianPoster",
-"MassCinema","EpicCinema","FilmScene","MovieScene","OpeningScene",
-"FinalScene","HeroEntry","VillainEntry","ActionScene","FightScene",
-"ChaseScene","DanceScene","RomanticScene","EmotionalScene",
-"ClimaxScene","RainScene","NightScene","VillageScene","CityScene",
-"PalaceScene","TempleScene","ForestScene","MountainScene",
-"BeachScene","TrainScene","CarScene","BikeScene","AirportScene",
-"StreetScene","MarketScene","FestivalScene","ConcertScene",
-"MusicScene","DancePerformance","TrailerStyle"
-],
-
-Architecture:[
-"ModernHouse","LuxuryHouse","RoyalPalace","AncientPalace",
-"ModernBuilding","Skyscraper","FuturisticBuilding",
-"CyberpunkBuilding","TraditionalHouse","VillageHouse",
-"IndianArchitecture","TempleArchitecture","Castle","Fortress",
-"AncientCity","ModernCity","FutureCity","SmartCity","SkyCity",
-"FloatingCity","UndergroundCity","GlassBuilding","NeonBuilding",
-"LuxuryHotel","LuxuryResort","BeachResort","MountainResort",
-"ForestCabin","WoodenHouse","StoneHouse","DesertHouse",
-"SnowHouse","CityApartment","Penthouse","Rooftop","BalconyView",
-"InteriorDesign","LuxuryInterior","ModernInterior","RoyalInterior",
-"TraditionalInterior","MinimalInterior","FuturisticInterior",
-"BedroomDesign","LivingRoomDesign","OfficeDesign","StudioInterior",
-"RestaurantInterior","CafeInterior","TempleInterior"
-],
-
-Vehicle:[
-"SportsCar","Supercar","LuxuryCar","VintageCar","ClassicCar",
-"MuscleCar","RaceCar","RallyCar","ElectricCar","FuturisticCar",
-"CyberpunkCar","RoyalCar","OffroadCar","SUV","Jeep","Motorcycle",
-"SportsBike","RoyalBike","VintageBike","ElectricBike","RacingBike",
-"MountainBike","ClassicBike","Scooter","Bicycle","Truck","Bus",
-"Train","BulletTrain","Metro","Airplane","PrivateJet","Helicopter",
-"Drone","Boat","Yacht","Speedboat","Sailboat","Spaceship","Rocket",
-"FutureVehicle","FlyingCar","HoverBike","MilitaryVehicle",
-"PoliceCar","FireTruck","Ambulance","Taxi","CityBus"
-],
-
-Fantasy:[
-"Dragon","Phoenix","Unicorn","MagicForest","MagicCastle",
-"MagicKingdom","FantasyVillage","FantasyCity","FantasyMountain",
-"FantasyOcean","FantasyIsland","Wizard","Witch","Mage","Knight",
-"Elf","Fairy","Mermaid","Centaur","MythicalBeast","AncientDragon",
-"IceDragon","FireDragon","DarkDragon","SkyDragon","MagicPortal",
-"MagicSword","MagicArmor","MagicCrystal","EnchantedForest",
-"MysticLake","MysticMountain","FantasyTemple","FantasyPalace",
-"FantasyBattle","EpicBattle","LegendaryHero","LegendaryWarrior",
-"FantasyPrincess","FantasyKing","FantasyQueen","DarkFantasy",
-"EpicFantasy","HighFantasy","Fairyland","DreamWorld","MagicWorld",
-"LostKingdom","AncientLegend","MythicWorld"
-],
-
-Food:[
-"FoodPhotography","RestaurantFood","IndianFood","StreetFood",
-"RoyalFood","LuxuryFood","Dessert","Cake","Chocolate","Pizza",
-"Burger","Pasta","Noodles","Biryani","Samosa","Dosa","Idli",
-"Thali","IndianSweets","GulabJamun","Jalebi","Rasgulla","IceCream",
-"FruitBowl","HealthyFood","FreshFood","OrganicFood","Breakfast",
-"Lunch","Dinner","Coffee","Tea","Juice","Smoothie","Mocktail",
-"ChefSpecial","FoodMenu","RestaurantMenu","LuxuryRestaurant",
-"StreetFoodStall","FoodMarket","KitchenScene","CookingScene",
-"ChefPortrait","FoodCloseup","MacroFood","CinematicFood",
-"PremiumFood","CommercialFood","FoodAdvertisement"
-],
-
-Social:[
-"InstagramPost","InstagramStory","InstagramReels",
-"YouTubeThumbnail","YouTubeShorts","FacebookPost","SocialMediaPost",
-"ViralPost","TrendingPost","ProfilePicture","CoverPhoto",
-"ChannelBanner","GamingThumbnail","GamingBanner","CreatorThumbnail",
-"InfluencerStyle","CreatorPortrait","ProfessionalProfile",
-"BusinessProfile","BrandPoster","ProductPoster","Advertisement",
-"DigitalAdvertisement","MarketingPoster","EventPoster",
-"FestivalPoster","BirthdayPoster","WeddingPoster",
-"InvitationPoster","AnnouncementPoster","MotivationalPoster",
-"QuotePoster","MusicPoster","AlbumCover","SingleCover",
-"PodcastCover","PodcastThumbnail","NewsThumbnail","BreakingNews",
-"SportsPoster","CricketPoster","FootballPoster","GamingPoster",
-"EsportsPoster","YouTubeBanner","ChannelLogo","BrandLogo",
-"ProductBanner","PromoPoster"
-]
-
-};
-
-const originalCommands=[
-"Droneview","Aerialview","Cinematic","Portrait","Closeup",
-"UltraCloseup","Wideangle","Lowangle","Highangle","Birdseye",
-"Topview","Sideview","Backview","Frontview","Fullbody","Halfbody",
-"Streetstyle","Travel","Luxury","Royal","Traditional","Modern",
-"Vintage","Retro","Filmlook","Bollywood","Kollywood","Hero",
-"Masslook","Action","Warrior","King","Prince","Village","City",
-"Nature","Forest","Mountain","Beach","Waterfall","River","Lake",
-"Desert","Snow","Rain","Sunset","Sunrise","Goldenhour","Bluehour",
-"Night","Moonlight","Studio","Fashion","Model","Magazine","Wedding",
-"Engagement","Festival","Temple","Chola","Raman","Lakshman",
-"Mythology","Historical","Futuristic","Cyberpunk","Neon","Fantasy",
-"Epic","Superhero","Hollywood","Movieposter","Albumcover",
-"Musicvideo","Instagram","YouTubeShorts","Reels","4K","8K","HDR",
-"Photorealistic","UltraRealistic","Sharp","Softlight","Dramaticlight",
-"Moody","Dreamy","Romantic","Emotional","Blackandwhite",
-"Monochrome","Sepia","Colorgrade","Backgroundblur","Bokeh",
-"Lensflare","Motionblur","Slowmotion","Cinematicposter",
-"ProfessionalPhotoshoot"
-];
-
-let aiCommands=[];
-const used=new Set();
-
-function addCommand(name,category){
-
- if(!used.has(name)){
-
-  used.add(name);
-
-  aiCommands.push({
-   name:"/"+name,
-   category:category
-  });
-
- }
-
-}
-
-originalCommands.forEach(name=>{
-
- let category="Style";
-
- for(const cat in commandGroups){
-
-  if(commandGroups[cat].includes(name)){
-   category=cat;
-   break;
-  }
-
- }
-
- addCommand(name,category);
-
-});
-
-for(const category in commandGroups){
-
- commandGroups[category].forEach(name=>{
-  addCommand(name,category);
- });
-
-}
-
-const words1=[
-"Cinematic","Professional","UltraRealistic",
-"Photorealistic","Premium","Epic","Luxury",
-"Modern","Vintage","Fantasy","Royal","Dramatic",
-"Natural","Futuristic","Creative","Realistic"
-];
-
-const words2=[
-"Portrait","Scene","Photography","Photoshoot",
-"Composition","Lighting","Background","Environment",
-"Artwork","Visual","Frame","Shot","Poster",
-"Landscape","Character","Style","Image",
-"View","Camera","Design","Look","Render"
-];
-
-for(const a of words1){
-
- for(const b of words2){
-
-  addCommand(a+b,"Style");
-
-  if(aiCommands.length>=550) break;
-
- }
-
- if(aiCommands.length>=550) break;
-
-}
-
-function commandDescription(command,category){
-
- const clean=command.replace("/","");
-
- const descriptions={
-
-  Camera:
-   "यह camera angle, framing या photography view को control करने में मदद करता है।",
-
-  Style:
-   "यह image की overall visual style और appearance को बदलने में मदद करता है।",
-
-  Character:
-   "यह character की appearance और presentation को बेहतर define करता है।",
-
-  Nature:
-   "यह natural environment, location या landscape का feel देता है।",
-
-  Lighting:
-   "यह image में light, shadow और atmosphere को control करने में मदद करता है।",
-
-  Quality:
-   "यह image की detail, sharpness और overall quality को improve करने के लिए उपयोगी है।",
-
-  Effects:
-   "यह image में blur, glow, particles और cinematic effects जोड़ने में मदद करता है।",
-
-  Fashion:
-   "यह clothing, fashion और professional photoshoot style को define करता है।",
-
-  Cinema:
-   "यह movie, poster और cinematic scene जैसा presentation देता है।",
-
-  Architecture:
-   "यह building, house, palace और architectural environment को define करता है।",
-
-  Vehicle:
-   "यह car, bike, aircraft या दूसरे vehicles के visual को define करता है।",
-
-  Fantasy:
-   "यह magical, mythical और fantasy world जैसा environment बनाता है।",
-
-  Food:
-   "यह food photography और खाने की presentation के लिए उपयोगी है।",
-
-  Social:
-   "यह Instagram, YouTube और social media content के लिए visual style देता है।"
-
- };
-
- return descriptions[category] ||
-  `${clean} command AI image के ${category.toLowerCase()} style या visual को बेहतर बनाने में मदद करता है।`;
-
-}
-
-let selectedCategory="All";
-
-function createCategories(){
-
- const bar=document.getElementById("categoryBar");
-
- const categories=[
-  "All",
-  ...Object.keys(commandGroups)
- ];
-
- bar.innerHTML="";
-
- categories.forEach(category=>{
-
-  const button=document.createElement("button");
-
-  button.className=
-   "categoryBtn"+
-   (category==="All" ? " active":"");
-
-  button.textContent=
-   category==="All"
-   ?"✨ All"
-   :"📌 "+category;
-
-  button.onclick=()=>{
-
-   selectedCategory=category;
-
-   document
-    .querySelectorAll(".categoryBtn")
-    .forEach(x=>x.classList.remove("active"));
-
-   button.classList.add("active");
-
-   renderCommands();
-
-  };
-
-  bar.appendChild(button);
-
- });
-
-}
-
-function renderCommands(){
-
- const grid=
-  document.getElementById("commandsGrid");
-
- const search=
-  document
-   .getElementById("commandSearch")
-   .value
-   .toLowerCase()
-   .trim();
-
- const filtered=
-  aiCommands.filter(item=>{
-
-   const categoryOK=
-    selectedCategory==="All" ||
-    item.category===selectedCategory;
-
-   const desc=
-    commandDescription(
-     item.name,
-     item.category
-    );
-
-   const searchOK=
-    !search ||
-    item.name.toLowerCase().includes(search) ||
-    desc.toLowerCase().includes(search);
-
-   return categoryOK && searchOK;
-
-  });
-
- document.getElementById("commandCount").textContent=
-  `Showing ${filtered.length} commands • Total ${aiCommands.length} commands`;
-
- if(!filtered.length){
-
-  grid.innerHTML=`
-   <div class="noResult">
-    😕 कोई command नहीं मिला।
-   </div>
-  `;
-
-  return;
-
- }
-
- grid.innerHTML="";
-
- filtered.forEach(item=>{
-
-  const card=document.createElement("div");
-
-  card.className="commandCard";
-
-  card.innerHTML=`
-
-   <div class="commandName">
-    ${escapeHTML(item.name)}
-   </div>
-
-   <div class="commandDesc">
-    ${escapeHTML(
-     commandDescription(
-      item.name,
-      item.category
-     )
-    )}
-   </div>
-
-   <button class="copyCommand">
-    📋 Copy Command
-   </button>
-
-  `;
-
-  const copyButton=
-   card.querySelector(".copyCommand");
-
-  copyButton.onclick=async()=>{
-
-   try{
-
-    await navigator.clipboard.writeText(item.name);
-
-   }catch(e){
-
-    const textarea=
-     document.createElement("textarea");
-
-    textarea.value=item.name;
-
-    document.body.appendChild(textarea);
-
-    textarea.select();
-
-    document.execCommand("copy");
-
-    textarea.remove();
-
-   }
-
-   copyButton.textContent="✅ Copied!";
-
-   setTimeout(()=>{
-
-    copyButton.textContent=
-     "📋 Copy Command";
-
-   },1200);
-
-  };
-
-  grid.appendChild(card);
-
- });
-
-}
-
-function escapeHTML(text){
-
- return String(text)
-  .replace(/&/g,"&amp;")
-  .replace(/</g,"&lt;")
-  .replace(/>/g,"&gt;")
-  .replace(/"/g,"&quot;")
-  .replace(/'/g,"&#039;");
-
-}
-
-createCategories();
-renderCommands();
+loadGallery();
 
 </script>
 
