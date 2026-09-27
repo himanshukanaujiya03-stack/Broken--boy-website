@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="theme-color" content="#050816">
 
 <meta name="description" content="Broken AI HIMANSHU — AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts, sad image prompts, 4K and 8K AI images, and 500+ copyable AI commands.">
 
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="HIMANSHU">
+<meta name="application-name" content="Broken AI HIMANSHU">
 
 <link rel="canonical" href="https://broken--boy-website.pages.dev/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://broken--boy-website.pages.dev/">
 <meta property="og:title" content="Broken AI HIMANSHU | AI Images, AI Prompts & 500+ AI Commands">
 <meta property="og:description" content="Discover AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts and 500+ copyable AI commands.">
+<meta property="og:site_name" content="Broken AI HIMANSHU">
+<meta property="og:image" content="https://broken--boy-website.pages.dev/profile-1.png">
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Broken AI HIMANSHU | AI Images, AI Prompts & 500+ AI Commands">
 <meta name="twitter:description" content="AI images, AI prompts, cinematic prompts, portrait prompts and 500+ AI commands.">
+<meta name="twitter:image" content="https://broken--boy-website.pages.dev/profile-1.png">
 
 <meta name="google-site-verification" content="px4if5Xe8_DG2hEbGlh0kYsZ4Gxt3bEF6CAnEBOm-zM">
 
@@ -30,12 +35,35 @@
   "@context":"https://schema.org",
   "@type":"WebSite",
   "name":"Broken AI HIMANSHU",
+  "alternateName":"Broken AI",
   "url":"https://broken--boy-website.pages.dev/",
   "description":"AI images, AI image prompts, AI photo prompts, cinematic prompts, portrait prompts and 500+ copyable AI commands.",
   "creator":{
     "@type":"Person",
     "name":"HIMANSHU"
-  }
+  },
+  "inLanguage":"en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"HIMANSHU",
+  "url":"https://broken--boy-website.pages.dev/",
+  "jobTitle":"AI Creator and Digital Designer",
+  "image":"https://broken--boy-website.pages.dev/profile-1.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Broken AI HIMANSHU AI Image and Prompt Library",
+  "url":"https://broken--boy-website.pages.dev/#gallery",
+  "description":"AI images, AI prompts, creative artwork and 500+ AI commands."
 }
 </script>
 
@@ -54,6 +82,7 @@
   --pink:#ff31d2;
   --green:#35ff9a;
   --red:#ff4269;
+  --gold:#ffd45a;
   --shadow:0 25px 80px rgba(0,0,0,.45);
 }
 
@@ -65,6 +94,7 @@
 
 html{
   scroll-behavior:smooth;
+  scroll-padding-top:90px;
 }
 
 body{
@@ -120,6 +150,14 @@ button{
   cursor:pointer;
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
+
 #particles{
   position:fixed;
   inset:0;
@@ -130,7 +168,7 @@ button{
 }
 
 /* =========================
-   LOADER
+LOADER
 ========================= */
 
 #loader{
@@ -195,7 +233,7 @@ button{
 }
 
 /* =========================
-   HEADER
+HEADER
 ========================= */
 
 header{
@@ -203,6 +241,7 @@ header{
   top:0;
   z-index:1000;
   backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
   background:rgba(3,4,11,.72);
   border-bottom:1px solid var(--line);
 }
@@ -224,6 +263,7 @@ header{
   gap:11px;
   font-weight:900;
   letter-spacing:2px;
+  flex-shrink:0;
 }
 
 .logoCube{
@@ -261,6 +301,7 @@ header{
   padding:9px 10px;
   border-radius:10px;
   transition:.25s;
+  white-space:nowrap;
 }
 
 .navLinks a:hover{
@@ -270,7 +311,7 @@ header{
 }
 
 /* =========================
-   COMMON
+COMMON
 ========================= */
 
 .container{
@@ -308,8 +349,57 @@ section{
   font-size:15px;
 }
 
+.glass{
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.07),
+    rgba(255,255,255,.025)
+  );
+  border:1px solid var(--line);
+  border-radius:24px;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+.miniBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 10px;
+  border-radius:999px;
+  color:var(--cyan);
+  border:1px solid rgba(0,234,255,.2);
+  background:rgba(0,234,255,.05);
+  font-size:10px;
+  font-weight:800;
+}
+
+.anchorLinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:22px;
+}
+
+.anchorLinks a{
+  padding:8px 11px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  color:#ccd6ee;
+  background:rgba(255,255,255,.035);
+  font-size:11px;
+  transition:.25s;
+}
+
+.anchorLinks a:hover{
+  color:var(--cyan);
+  border-color:rgba(0,234,255,.3);
+  transform:translateY(-2px);
+}
+
 /* =========================
-   HERO
+HERO
 ========================= */
 
 .hero{
@@ -432,7 +522,7 @@ section{
 }
 
 /* =========================
-   3D CORE
+3D CORE
 ========================= */
 
 .coreScene{
@@ -502,7 +592,84 @@ section{
 }
 
 /* =========================
-   PROFILE
+CREATOR HERO SPOTLIGHT
+========================= */
+
+.creatorSpotlight{
+  margin-top:45px;
+  padding:16px;
+  position:relative;
+  overflow:hidden;
+  transform-style:preserve-3d;
+}
+
+.creatorSpotlight:before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(0,234,255,.22),
+    transparent,
+    rgba(140,92,255,.2),
+    transparent
+  );
+  animation:spinSlow 9s linear infinite;
+}
+
+.creatorSpotlightInner{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:150px 1fr auto;
+  gap:20px;
+  align-items:center;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(4,7,18,.8);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.creatorHeroImageWrap{
+  width:140px;
+  height:140px;
+  padding:5px;
+  border-radius:30px;
+  transform:rotate(-5deg) rotateY(12deg);
+  background:linear-gradient(135deg,var(--cyan),var(--purple),var(--pink));
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.4),
+    0 0 40px rgba(0,234,255,.16);
+}
+
+.creatorHeroImage{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:25px;
+  display:block;
+}
+
+.creatorSpotlight h3{
+  font-size:25px;
+  margin:6px 0;
+}
+
+.creatorSpotlight p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:13px;
+}
+
+.creatorAction{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* =========================
+PROFILE
 ========================= */
 
 .profileGrid{
@@ -510,18 +677,6 @@ section{
   grid-template-columns:320px 1fr;
   gap:35px;
   align-items:stretch;
-}
-
-.glass{
-  background:linear-gradient(
-    145deg,
-    rgba(255,255,255,.07),
-    rgba(255,255,255,.025)
-  );
-  border:1px solid var(--line);
-  border-radius:24px;
-  box-shadow:var(--shadow);
-  backdrop-filter:blur(20px);
 }
 
 .profileCard{
@@ -557,8 +712,6 @@ section{
   font-size:12px;
   margin-top:5px;
 }
-
-/* UNIQUE CONTACT BUTTONS */
 
 .contactBtns{
   display:grid;
@@ -619,35 +772,14 @@ section{
 
 .contactBtns a.telegram{
   border-color:rgba(0,234,255,.3);
-  box-shadow:
-    0 0 25px rgba(0,234,255,.08),
-    0 15px 35px rgba(0,0,0,.25);
-}
-
-.contactBtns a.telegram:hover{
-  border-color:var(--cyan);
-  box-shadow:
-    0 0 30px rgba(0,234,255,.22),
-    0 18px 40px rgba(0,0,0,.3);
 }
 
 .contactBtns a.whatsapp{
   border-color:rgba(53,255,154,.3);
-  box-shadow:
-    0 0 25px rgba(53,255,154,.07),
-    0 15px 35px rgba(0,0,0,.25);
-}
-
-.contactBtns a.whatsapp:hover{
-  border-color:var(--green);
-  box-shadow:
-    0 0 30px rgba(53,255,154,.2),
-    0 18px 40px rgba(0,0,0,.3);
 }
 
 .contactEmoji{
   font-size:21px;
-  filter:drop-shadow(0 0 8px rgba(255,255,255,.2));
 }
 
 .contactText{
@@ -674,7 +806,7 @@ section{
 }
 
 /* =========================
-   STATS
+STATS
 ========================= */
 
 .stats{
@@ -713,7 +845,7 @@ section{
 }
 
 /* =========================
-   FEATURES
+FEATURES
 ========================= */
 
 .features{
@@ -738,9 +870,6 @@ section{
 .feature:hover{
   transform:perspective(900px) rotateX(5deg) rotateY(-5deg) translateY(-6px);
   border-color:rgba(0,234,255,.28);
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.3),
-    0 0 30px rgba(0,234,255,.05);
 }
 
 .icon{
@@ -767,7 +896,7 @@ section{
 }
 
 /* =========================
-   PROMPT LAB
+PROMPT LAB
 ========================= */
 
 .lab{
@@ -818,8 +947,36 @@ input:focus{
 }
 
 /* =========================
-   COMMANDS
+COMMANDS
 ========================= */
+
+.commandHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+}
+
+.commandCount{
+  padding:14px 18px;
+  border-radius:16px;
+  border:1px solid rgba(0,234,255,.22);
+  background:rgba(0,234,255,.05);
+  text-align:center;
+  min-width:130px;
+}
+
+.commandCount strong{
+  display:block;
+  color:var(--cyan);
+  font-size:28px;
+}
+
+.commandCount span{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:1px;
+}
 
 .commandControls{
   display:flex;
@@ -879,6 +1036,7 @@ input:focus{
   color:white;
   font-weight:900;
   font-size:14px;
+  word-break:break-word;
 }
 
 .commandCategory{
@@ -909,7 +1067,7 @@ input:focus{
 }
 
 /* =========================
-   GALLERY
+GALLERY
 ========================= */
 
 .galleryTools{
@@ -967,6 +1125,7 @@ input:focus{
   object-fit:cover;
   cursor:pointer;
   transition:.45s;
+  background:#070b18;
 }
 
 .galleryCard:hover .cardImg{
@@ -1026,7 +1185,7 @@ input:focus{
 }
 
 /* =========================
-   ADMIN
+ADMIN
 ========================= */
 
 .adminBox{
@@ -1061,7 +1220,7 @@ input:focus{
 }
 
 /* =========================
-   MODAL - FIXED IMAGE VIEWER
+MODAL
 ========================= */
 
 #modal{
@@ -1144,7 +1303,7 @@ input:focus{
 }
 
 /* =========================
-   SEO
+SEO CONTENT
 ========================= */
 
 .seoText{
@@ -1165,8 +1324,30 @@ input:focus{
   font-size:14px;
 }
 
+.keywordCloud{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:22px;
+}
+
+.keywordTag{
+  padding:8px 10px;
+  border-radius:10px;
+  color:#bdc9e4;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  font-size:10px;
+  transition:.2s;
+}
+
+.keywordTag:hover{
+  color:var(--cyan);
+  border-color:rgba(0,234,255,.25);
+}
+
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
 
 footer{
@@ -1184,8 +1365,25 @@ footer{
   margin-bottom:8px;
 }
 
+.footerLinks{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
+}
+
+.footerLinks a{
+  color:#aebbd8;
+  padding:7px 9px;
+}
+
+.footerLinks a:hover{
+  color:var(--cyan);
+}
+
 /* =========================
-   TOAST
+TOAST
 ========================= */
 
 #toast{
@@ -1212,10 +1410,14 @@ footer{
 }
 
 /* =========================
-   ANIMATION
+ANIMATION
 ========================= */
 
 @keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+@keyframes spinSlow{
   to{transform:rotate(360deg)}
 }
 
@@ -1229,13 +1431,22 @@ footer{
 }
 
 /* =========================
-   RESPONSIVE
+RESPONSIVE
 ========================= */
 
 @media(max-width:1050px){
   .commandGrid,
   .galleryGrid{
     grid-template-columns:repeat(3,1fr);
+  }
+
+  .creatorSpotlightInner{
+    grid-template-columns:120px 1fr;
+  }
+
+  .creatorAction{
+    grid-column:1/-1;
+    flex-direction:row;
   }
 }
 
@@ -1327,6 +1538,31 @@ footer{
     grid-template-columns:1fr;
   }
 
+  .commandHeader{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .commandCount{
+    width:100%;
+  }
+
+  .creatorSpotlightInner{
+    grid-template-columns:1fr;
+    text-align:center;
+    justify-items:center;
+  }
+
+  .creatorHeroImageWrap{
+    width:160px;
+    height:160px;
+  }
+
+  .creatorAction{
+    width:100%;
+    flex-direction:column;
+  }
+
   #modal{
     padding:6px;
   }
@@ -1348,12 +1584,23 @@ footer{
     height:38px;
   }
 }
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *:before,
+  *:after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<canvas id="particles"></canvas>
+<canvas id="particles" aria-hidden="true"></canvas>
 
 <div id="loader">
   <div class="loaderCore">
@@ -1365,17 +1612,13 @@ footer{
 <header>
   <nav class="nav">
 
-    <a href="#home" class="logo">
-
-      <div class="logoCube">
-        AI
-      </div>
+    <a href="#home" class="logo" aria-label="Broken AI HIMANSHU Home">
+      <div class="logoCube">AI</div>
 
       <div class="logoText">
         BROKEN AI
         <small>AI VISUAL NETWORK</small>
       </div>
-
     </a>
 
     <div class="navLinks">
@@ -1437,7 +1680,7 @@ footer{
 
       <div class="coreScene">
 
-        <div class="aiCore">
+        <div class="aiCore" aria-label="Broken AI neural core">
 
           <div class="coreRing"></div>
           <div class="coreRing r2"></div>
@@ -1448,6 +1691,52 @@ footer{
             AI<br>
             NEURAL CORE
           </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- NEW 3D CREATOR IMAGE -->
+    <div class="creatorSpotlight glass">
+
+      <div class="creatorSpotlightInner">
+
+        <div class="creatorHeroImageWrap">
+          <img
+            class="creatorHeroImage"
+            src="./profile-1.png"
+            alt="HIMANSHU, creator of Broken AI"
+            width="140"
+            height="140"
+            loading="eager"
+            onerror="this.onerror=null;this.src='./profile.png'"
+          >
+        </div>
+
+        <div>
+          <span class="miniBadge">✦ CREATOR • BROKEN AI</span>
+
+          <h3>
+            HIMANSHU
+          </h3>
+
+          <p>
+            AI Creator • Digital Designer • Broken AI.
+            Explore AI images, creative prompts and 500+ AI commands.
+          </p>
+        </div>
+
+        <div class="creatorAction">
+
+          <a href="#profile" class="btn btnSecondary">
+            👤 View Profile
+          </a>
+
+          <a href="#commands" class="btn btnPrimary">
+            ⚡ Explore Commands
+          </a>
 
         </div>
 
@@ -1478,8 +1767,11 @@ footer{
         <img
           class="profileImg"
           src="./profile-1.png"
-          alt="HIMANSHU - Broken AI creator"
-          onerror="this.src='./profile.png'"
+          alt="HIMANSHU - Broken AI creator and digital designer"
+          width="180"
+          height="180"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='./profile.png'"
         >
 
         <div class="profileName">
@@ -1496,36 +1788,28 @@ footer{
             class="telegram"
             href="https://t.me/Brokenboy221716"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-
-            <span class="contactEmoji">
-              ✈️
-            </span>
+            <span class="contactEmoji">✈️</span>
 
             <span class="contactText">
               <strong>Telegram</strong>
               <small>JOIN AI NETWORK</small>
             </span>
-
           </a>
 
           <a
             class="whatsapp"
             href="https://wa.me/917318399281"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-
-            <span class="contactEmoji">
-              💬
-            </span>
+            <span class="contactEmoji">💬</span>
 
             <span class="contactText">
               <strong>WhatsApp</strong>
               <small>CONNECT WITH HIMANSHU</small>
             </span>
-
           </a>
 
         </div>
@@ -1549,12 +1833,17 @@ footer{
         </p>
 
         <p style="margin-top:15px">
-
           Choose an image from the gallery, copy its prompt and use the
           prompt with your own image in an AI image generator to create
           your own creative result.
-
         </p>
+
+        <div class="anchorLinks">
+          <a href="#studio">AI Prompt Lab</a>
+          <a href="#commands">500+ Commands</a>
+          <a href="#gallery">AI Gallery</a>
+          <a href="#ai-prompts">Prompt Library</a>
+        </div>
 
         <div class="stats">
 
@@ -1687,29 +1976,21 @@ footer{
 
       <textarea
         id="promptInput"
+        aria-label="AI image idea"
         placeholder="Example: A cinematic portrait of a young man standing in a rainy city..."
       ></textarea>
 
       <div class="labButtons">
 
-        <button
-          class="btn btnPrimary"
-          onclick="generatePrompt()"
-        >
+        <button class="btn btnPrimary" onclick="generatePrompt()" type="button">
           ✨ Generate Prompt
         </button>
 
-        <button
-          class="btn btnSecondary"
-          onclick="clearPrompt()"
-        >
+        <button class="btn btnSecondary" onclick="clearPrompt()" type="button">
           Clear
         </button>
 
-        <button
-          class="btn btnSecondary"
-          onclick="copyGenerated()"
-        >
+        <button class="btn btnSecondary" onclick="copyGenerated()" type="button">
           Copy
         </button>
 
@@ -1729,13 +2010,24 @@ footer{
 
   <div class="container">
 
-    <div class="kicker">
-      BROKEN AI COMMANDS
-    </div>
+    <div class="commandHeader">
 
-    <h2 class="sectionTitle">
-      ⚡ 500+ AI Commands
-    </h2>
+      <div>
+        <div class="kicker">
+          BROKEN AI COMMANDS
+        </div>
+
+        <h2 class="sectionTitle">
+          ⚡ 500+ AI Commands
+        </h2>
+      </div>
+
+      <div class="commandCount">
+        <strong id="commandTotal">500+</strong>
+        <span>COPYABLE COMMANDS</span>
+      </div>
+
+    </div>
 
     <p class="sectionDesc">
 
@@ -1753,6 +2045,7 @@ footer{
         id="commandSearch"
         class="commandSearch"
         type="search"
+        aria-label="Search AI command"
         placeholder="Search AI command..."
         oninput="renderCommands()"
       >
@@ -1822,6 +2115,15 @@ footer{
         AI prompts and commands.
       </p>
 
+      <h3>100 AI Search Topics</h3>
+
+      <p>
+        These topics are included as useful site content and navigation
+        topics rather than hidden keyword stuffing.
+      </p>
+
+      <div id="keywordCloud" class="keywordCloud"></div>
+
     </div>
 
   </div>
@@ -1853,31 +2155,22 @@ footer{
       <input
         id="gallerySearch"
         type="search"
+        aria-label="Search AI gallery"
         placeholder="Search gallery..."
         oninput="renderGallery()"
       >
 
       <div class="filters">
 
-        <button
-          class="filter active"
-          id="allFilter"
-          onclick="setFilter('all',this)"
-        >
+        <button class="filter active" id="allFilter" onclick="setFilter('all',this)" type="button">
           All
         </button>
 
-        <button
-          class="filter"
-          onclick="setFilter('popular',this)"
-        >
+        <button class="filter" onclick="setFilter('popular',this)" type="button">
           Popular
         </button>
 
-        <button
-          class="filter"
-          onclick="setFilter('latest',this)"
-        >
+        <button class="filter" onclick="setFilter('latest',this)" type="button">
           Latest
         </button>
 
@@ -1919,22 +2212,11 @@ footer{
 
         <div class="adminGrid">
 
-          <input
-            id="adminEmail"
-            type="email"
-            placeholder="Admin email"
-          >
+          <input id="adminEmail" type="email" autocomplete="username" placeholder="Admin email">
 
-          <input
-            id="adminPassword"
-            type="password"
-            placeholder="Password"
-          >
+          <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Password">
 
-          <button
-            class="btn btnPrimary"
-            onclick="adminLogin()"
-          >
+          <button class="btn btnPrimary" onclick="adminLogin()" type="button">
             Login
           </button>
 
@@ -1952,41 +2234,19 @@ footer{
 
         <div class="adminGrid">
 
-          <input
-            id="imageTitle"
-            type="text"
-            placeholder="Image title"
-          >
+          <input id="imageTitle" type="text" placeholder="Image title">
 
-          <textarea
-            id="imagePrompt"
-            placeholder="AI image prompt..."
-            style="min-height:110px"
-          ></textarea>
+          <textarea id="imagePrompt" placeholder="AI image prompt..." style="min-height:110px"></textarea>
 
-          <input
-            id="imageFile"
-            type="file"
-            accept="image/*"
-            onchange="previewUpload(event)"
-          >
+          <input id="imageFile" type="file" accept="image/*" onchange="previewUpload(event)">
 
-          <img
-            id="uploadPreview"
-            class="uploadPreview"
-          >
+          <img id="uploadPreview" class="uploadPreview" alt="Upload preview">
 
-          <button
-            class="btn btnPrimary"
-            onclick="uploadImage()"
-          >
+          <button class="btn btnPrimary" onclick="uploadImage()" type="button">
             🚀 Upload AI Image
           </button>
 
-          <button
-            class="btn btnSecondary"
-            onclick="adminLogout()"
-          >
+          <button class="btn btnSecondary" onclick="adminLogout()" type="button">
             Logout
           </button>
 
@@ -2014,24 +2274,32 @@ footer{
     AI Images • AI Prompts • AI Commands • Creative AI Artwork
   </div>
 
+  <div class="footerLinks">
+    <a href="#home">Home</a>
+    <a href="#profile">Creator</a>
+    <a href="#studio">AI Studio</a>
+    <a href="#commands">AI Commands</a>
+    <a href="#gallery">AI Gallery</a>
+    <a href="#ai-prompts">Prompts</a>
+    <a href="#about">About</a>
+  </div>
+
   <div style="margin-top:8px">
     © <span id="year"></span> Broken AI HIMANSHU
   </div>
 
 </footer>
 
-<!-- =========================
-     IMAGE MODAL
-========================= -->
+<!-- IMAGE MODAL -->
 
-<div id="modal">
+<div id="modal" role="dialog" aria-modal="true" aria-label="AI image viewer">
 
   <div class="modalBox">
 
     <button
       class="closeModal"
       onclick="closeModal()"
-      aria-label="Close image"
+      aria-label="Close image viewer"
       type="button"
     >
       ✕
@@ -2044,21 +2312,18 @@ footer{
       draggable="false"
     >
 
-    <div
-      id="modalInfo"
-      style="padding:15px"
-    ></div>
+    <div id="modalInfo" style="padding:15px"></div>
 
   </div>
 
 </div>
 
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
 
 <script type="module">
 
 /* =========================
-   FIREBASE IMPORTS
+FIREBASE IMPORTS
 ========================= */
 
 import {
@@ -2086,7 +2351,7 @@ import {
 
 
 /* =========================
-   FIREBASE
+FIREBASE
 ========================= */
 
 const firebaseConfig = {
@@ -2127,7 +2392,7 @@ const UPLOAD_PRESET =
 
 
 /* =========================
-   GLOBALS
+GLOBALS
 ========================= */
 
 let galleryItems = [];
@@ -2143,7 +2408,7 @@ let currentUser =
 
 
 /* =========================
-   HELPERS
+HELPERS
 ========================= */
 
 function safe(value){
@@ -2157,7 +2422,6 @@ function safe(value){
 
 }
 
-
 function jsSafe(value){
 
   return String(value ?? "")
@@ -2167,7 +2431,6 @@ function jsSafe(value){
     .replace(/\r/g,"");
 
 }
-
 
 function showToast(message){
 
@@ -2179,11 +2442,14 @@ function showToast(message){
 
   toast.classList.add("show");
 
-  setTimeout(()=>{
+  clearTimeout(window.__toastTimer);
 
-    toast.classList.remove("show");
+  window.__toastTimer =
+    setTimeout(()=>{
 
-  },2200);
+      toast.classList.remove("show");
+
+    },2200);
 
 }
 
@@ -2192,7 +2458,7 @@ window.showToast =
 
 
 /* =========================
-   LOADER
+LOADER
 ========================= */
 
 window.addEventListener("load",()=>{
@@ -2201,6 +2467,9 @@ window.addEventListener("load",()=>{
 
     const loader =
       document.getElementById("loader");
+
+    if(!loader)
+      return;
 
     loader.style.opacity =
       "0";
@@ -2220,7 +2489,7 @@ window.addEventListener("load",()=>{
 
 
 /* =========================
-   YEAR
+YEAR
 ========================= */
 
 document.getElementById("year").textContent =
@@ -2228,7 +2497,7 @@ document.getElementById("year").textContent =
 
 
 /* =========================
-   PROMPT LAB
+PROMPT LAB
 ========================= */
 
 window.generatePrompt = function(){
@@ -2296,27 +2565,64 @@ window.copyGenerated = async function(){
 
   }
 
-  try{
-
-    await navigator.clipboard.writeText(text);
-
-    showToast(
-      "Prompt copied"
-    );
-
-  }catch{
-
-    showToast(
-      "Copy failed"
-    );
-
-  }
+  await copyText(text,"Prompt copied");
 
 };
 
 
 /* =========================
-   COMMAND LIBRARY
+UNIVERSAL COPY
+========================= */
+
+async function copyText(text,successMessage="Copied"){
+
+  try{
+
+    if(navigator.clipboard){
+      await navigator.clipboard.writeText(text);
+    }else{
+
+      const area =
+        document.createElement("textarea");
+
+      area.value =
+        text;
+
+      area.style.position =
+        "fixed";
+
+      area.style.opacity =
+        "0";
+
+      document.body.appendChild(area);
+
+      area.select();
+
+      document.execCommand("copy");
+
+      area.remove();
+
+    }
+
+    showToast(successMessage);
+
+    return true;
+
+  }catch(error){
+
+    console.error(error);
+
+    showToast("Copy failed");
+
+    return false;
+
+  }
+
+}
+
+
+/* =========================
+COMMAND LIBRARY
 ========================= */
 
 const commandGroups = {
@@ -2432,7 +2738,7 @@ const commandGroups = {
 
 
 /* =========================
-   GENERATE 500+ COMMANDS
+GENERATE 500+ COMMANDS
 ========================= */
 
 let originalCommands = [];
@@ -2477,48 +2783,61 @@ const combinationWords = [
 
 ];
 
-
 const baseCommands =
   [...originalCommands];
 
+let combinationIndex = 0;
 
-for(
-  let i=0;
-  i<600 && originalCommands.length<650;
-  i++
+while(
+  originalCommands.length < 650
 ){
 
   const base =
     baseCommands[
-      i % baseCommands.length
+      combinationIndex %
+      baseCommands.length
     ];
 
   const modifier =
     combinationWords[
       Math.floor(
-        i / baseCommands.length
-      )
-      %
+        combinationIndex /
+        baseCommands.length
+      ) %
       combinationWords.length
     ];
 
-  originalCommands.push({
+  const generated =
+    modifier +
+    base.command;
 
-    command:
-      modifier + base.command,
+  if(
+    !originalCommands.some(
+      item=>item.command===generated
+    )
+  ){
 
-    category:
-      base.category
+    originalCommands.push({
 
-  });
+      command:generated,
+
+      category:base.category
+
+    });
+
+  }
+
+  combinationIndex++;
 
 }
 
+document.getElementById(
+  "commandTotal"
+).textContent =
+  originalCommands.length + "+";
 
-function commandDescription(
-  command,
-  category
-){
+
+function commandDescription(command,category){
 
   const descriptions = {
 
@@ -2591,6 +2910,7 @@ function createCategories(){
       <button
         class="catBtn ${category==="All"?"active":""}"
         onclick="selectCategory('${jsSafe(category)}',this)"
+        type="button"
       >
         ${safe(category)}
       </button>
@@ -2638,30 +2958,21 @@ function(){
         selectedCategory==="All" ||
         item.category===selectedCategory;
 
-      const searchMatch =
-        !search ||
-        item.command
-          .toLowerCase()
-          .includes(search) ||
-
-        item.category
-          .toLowerCase()
-          .includes(search) ||
-
+      const description =
         commandDescription(
           item.command,
           item.category
-        )
-        .toLowerCase()
-        .includes(search);
+        );
 
-      return (
-        categoryMatch &&
-        searchMatch
-      );
+      const searchMatch =
+        !search ||
+        item.command.toLowerCase().includes(search) ||
+        item.category.toLowerCase().includes(search) ||
+        description.toLowerCase().includes(search);
+
+      return categoryMatch && searchMatch;
 
     });
-
 
   if(!filtered.length){
 
@@ -2674,14 +2985,13 @@ function(){
 
   }
 
-
   grid.innerHTML =
-    filtered.map(item=>`
+    filtered.map((item,index)=>`
 
       <article class="commandCard">
 
         <div class="commandName">
-          ${safe(item.command)}
+          /${safe(item.command)}
         </div>
 
         <div class="commandCategory">
@@ -2700,6 +3010,7 @@ function(){
         <button
           class="copyCommand"
           onclick="copyCommand('${jsSafe(item.command)}')"
+          type="button"
         >
           📋 Copy Command
         </button>
@@ -2714,34 +3025,146 @@ function(){
 window.copyCommand =
 async function(command){
 
-  try{
-
-    await navigator.clipboard.writeText(
-      command
-    );
-
-    showToast(
-      `${command} copied`
-    );
-
-  }catch{
-
-    showToast(
-      "Copy failed"
-    );
-
-  }
+  await copyText(
+    "/" + command,
+    `${command} copied`
+  );
 
 };
 
 
 createCategories();
-
 renderCommands();
 
 
 /* =========================
-   FIREBASE GALLERY
+100 SEO TOPICS
+========================= */
+
+const seoKeywords = [
+
+"AI images",
+"AI image generator",
+"AI image prompts",
+"AI photo prompts",
+"AI art",
+"AI artwork",
+"AI portrait prompts",
+"AI cinematic prompts",
+"AI photography prompts",
+"AI photo generator",
+"AI art prompts",
+"AI prompt ideas",
+"AI prompt library",
+"AI commands",
+"500 AI commands",
+"AI image commands",
+"AI photo ideas",
+"AI portrait ideas",
+"cinematic AI images",
+"cinematic photo prompts",
+"4K AI images",
+"8K AI images",
+"HDR AI images",
+"photorealistic AI images",
+"ultra realistic AI images",
+"realistic AI portraits",
+"professional AI photos",
+"AI fashion photography",
+"AI fashion prompts",
+"AI model prompts",
+"AI photoshoot prompts",
+"AI studio prompts",
+"AI camera commands",
+"AI camera angles",
+"AI drone view",
+"AI aerial view",
+"AI close up prompts",
+"AI full body prompts",
+"AI half body prompts",
+"AI wide angle prompts",
+"AI low angle prompts",
+"AI high angle prompts",
+"AI bird eye view",
+"AI front view",
+"AI back view",
+"AI side view",
+"AI lighting prompts",
+"AI dramatic lighting",
+"AI cinematic lighting",
+"AI golden hour",
+"AI sunset prompts",
+"AI night photography",
+"AI neon lighting",
+"AI rim lighting",
+"AI studio lighting",
+"AI nature prompts",
+"AI forest prompts",
+"AI beach prompts",
+"AI mountain prompts",
+"AI village prompts",
+"AI city prompts",
+"AI travel prompts",
+"AI fantasy images",
+"AI fantasy prompts",
+"AI cyberpunk prompts",
+"AI futuristic images",
+"AI mythology prompts",
+"AI superhero prompts",
+"AI action prompts",
+"AI hero images",
+"AI royal portraits",
+"AI luxury images",
+"AI vintage images",
+"AI retro prompts",
+"AI Bollywood prompts",
+"AI movie poster prompts",
+"AI album cover prompts",
+"AI social media images",
+"AI Instagram prompts",
+"AI reels prompts",
+"AI YouTube thumbnail prompts",
+"AI profile photo prompts",
+"AI creator images",
+"AI influencer prompts",
+"AI food photography",
+"AI product photography",
+"AI architecture prompts",
+"AI luxury house prompts",
+"AI car prompts",
+"AI supercar images",
+"AI bike images",
+"AI travel photography",
+"AI emotional images",
+"AI sad image prompts",
+"AI mood prompts",
+"AI creative prompts",
+"AI digital art prompts",
+"AI professional artwork",
+"Broken AI HIMANSHU",
+"Broken AI",
+"Broken AI commands",
+"Broken AI prompts",
+"Broken AI images",
+"Broken AI gallery"
+
+];
+
+const keywordCloud =
+  document.getElementById("keywordCloud");
+
+keywordCloud.innerHTML =
+  seoKeywords.map(keyword=>`
+
+    <span class="keywordTag">
+      ${safe(keyword)}
+    </span>
+
+  `).join("");
+
+
+/* =========================
+FIREBASE GALLERY
 ========================= */
 
 async function loadGallery(){
@@ -2760,11 +3183,9 @@ async function loadGallery(){
       snapshot.docs.map(item=>({
 
         id:item.id,
-
         ...item.data()
 
       }));
-
 
     galleryItems.sort((a,b)=>{
 
@@ -2778,9 +3199,7 @@ async function loadGallery(){
 
     });
 
-
     updateStats();
-
     renderGallery();
 
   }catch(error){
@@ -2804,7 +3223,6 @@ function updateStats(){
   ).textContent =
     galleryItems.length;
 
-
   const likes =
     galleryItems.reduce(
       (sum,item)=>
@@ -2812,7 +3230,6 @@ function updateStats(){
         Number(item.likes || 0),
       0
     );
-
 
   document.getElementById(
     "likeCount"
@@ -2842,26 +3259,20 @@ function(filter,button){
 
 
 /* =========================
-   FIXED GALLERY RENDER
+GALLERY RENDER
 ========================= */
 
 window.renderGallery =
 function(){
 
   const grid =
-    document.getElementById(
-      "galleryGrid"
-    );
-
+    document.getElementById("galleryGrid");
 
   const search =
-    document.getElementById(
-      "gallerySearch"
-    )
-    .value
-    .trim()
-    .toLowerCase();
-
+    document.getElementById("gallerySearch")
+      .value
+      .trim()
+      .toLowerCase();
 
   let items =
     galleryItems.filter(item=>{
@@ -2869,9 +3280,7 @@ function(){
       if(!search)
         return true;
 
-
       return (
-
         String(item.title||"")
           .toLowerCase()
           .includes(search)
@@ -2886,10 +3295,7 @@ function(){
 
     });
 
-
-  if(
-    currentFilter==="popular"
-  ){
+  if(currentFilter==="popular"){
 
     items.sort(
       (a,b)=>
@@ -2897,9 +3303,7 @@ function(){
         Number(a.likes||0)
     );
 
-  }else if(
-    currentFilter==="latest"
-  ){
+  }else if(currentFilter==="latest"){
 
     items.sort((a,b)=>{
 
@@ -2915,7 +3319,6 @@ function(){
 
   }
 
-
   if(!items.length){
 
     grid.innerHTML =
@@ -2927,13 +3330,22 @@ function(){
 
   }
 
-
   grid.innerHTML =
     items.map(item=>{
 
       const saved =
         isSaved(item.id);
 
+      const title =
+        item.title ||
+        "Broken AI Image";
+
+      const prompt =
+        item.prompt ||
+        "Professional AI image prompt";
+
+      const altText =
+        `${title} — Broken AI HIMANSHU AI image, AI artwork and creative image prompt`;
 
       return `
 
@@ -2942,29 +3354,24 @@ function(){
         <img
           class="cardImg"
           src="${safe(item.url)}"
-          alt="${safe(
-            (item.title||"Broken AI Image") +
-            " — AI image prompt and creative artwork"
-          )}"
+          alt="${safe(altText)}"
+          title="${safe(title)}"
           loading="lazy"
           decoding="async"
+          width="600"
+          height="600"
           onclick="openModalById('${jsSafe(item.id)}')"
+          onerror="this.style.opacity='.35'"
         >
 
         <div class="cardBody">
 
           <div class="cardTitle">
-            ${safe(
-              item.title ||
-              "AI Image"
-            )}
+            ${safe(title)}
           </div>
 
           <div class="cardPrompt">
-            ${safe(
-              item.prompt ||
-              "Professional AI image prompt"
-            )}
+            ${safe(prompt)}
           </div>
 
           <div class="cardActions">
@@ -2972,12 +3379,13 @@ function(){
             <button
               onclick="likeImage('${jsSafe(item.id)}')"
               type="button"
+              aria-label="Like ${safe(title)}"
             >
               ❤️ ${Number(item.likes||0)}
             </button>
 
             <button
-              onclick="copyPrompt('${jsSafe(item.prompt||"")}')"
+              onclick="copyPrompt('${jsSafe(prompt)}')"
               type="button"
             >
               📋 Copy
@@ -2987,13 +3395,7 @@ function(){
               onclick="saveImage('${jsSafe(item.id)}')"
               type="button"
             >
-              ${
-                saved
-                ?
-                "⭐ Saved"
-                :
-                "☆ Save"
-              }
+              ${saved ? "⭐ Saved" : "☆ Save"}
             </button>
 
             ${
@@ -3023,7 +3425,7 @@ function(){
 
 
 /* =========================
-   COPY PROMPT
+COPY PROMPT
 ========================= */
 
 window.copyPrompt =
@@ -3039,30 +3441,16 @@ async function(prompt){
 
   }
 
-
-  try{
-
-    await navigator.clipboard.writeText(
-      prompt
-    );
-
-    showToast(
-      "Prompt copied"
-    );
-
-  }catch{
-
-    showToast(
-      "Copy failed"
-    );
-
-  }
+  await copyText(
+    prompt,
+    "Prompt copied"
+  );
 
 };
 
 
 /* =========================
-   LIKE
+LIKE
 ========================= */
 
 window.likeImage =
@@ -3077,12 +3465,10 @@ async function(id){
       }
     );
 
-
     const item =
       galleryItems.find(
         x=>x.id===id
       );
-
 
     if(item){
 
@@ -3091,9 +3477,7 @@ async function(id){
 
     }
 
-
     updateStats();
-
     renderGallery();
 
     showToast(
@@ -3114,7 +3498,7 @@ async function(id){
 
 
 /* =========================
-   SAVE
+SAVE
 ========================= */
 
 function getSaved(){
@@ -3151,7 +3535,6 @@ function(id){
   let saved =
     getSaved();
 
-
   if(saved.includes(id)){
 
     saved =
@@ -3173,37 +3556,19 @@ function(id){
 
   }
 
-
   localStorage.setItem(
     "brokenAI_saved",
     JSON.stringify(saved)
   );
-
 
   renderGallery();
 
 };
 
 
-/* ==================================================
-   FIXED MODAL IMAGE VIEWER
-================================================== */
-
-/*
-  IMPORTANT FIX:
-
-  पहले image URL/title/prompt सीधे onclick में जा रहे थे.
-  अब सिर्फ Firestore document ID जाता है.
-
-  दूसरा बड़ा bug:
-  closeModal() में src="" करने से पुराने onerror
-  event के कारण "Image could not be loaded" दोबारा
-  खुल रहा था.
-
-  अब close करते समय onload/onerror हटाए जाते हैं
-  और src की जगह removeAttribute("src") किया जाता है.
-*/
-
+/* =========================
+MODAL
+========================= */
 
 window.openModalById =
 function(id){
@@ -3212,7 +3577,6 @@ function(id){
     galleryItems.find(
       x => x.id === id
     );
-
 
   if(!item){
 
@@ -3223,7 +3587,6 @@ function(id){
     return;
 
   }
-
 
   openModal(
     item.url,
@@ -3238,20 +3601,13 @@ window.openModal =
 function(url,title,prompt){
 
   const modal =
-    document.getElementById(
-      "modal"
-    );
+    document.getElementById("modal");
 
   const modalImg =
-    document.getElementById(
-      "modalImg"
-    );
+    document.getElementById("modalImg");
 
   const modalInfo =
-    document.getElementById(
-      "modalInfo"
-    );
-
+    document.getElementById("modalInfo");
 
   if(!url){
 
@@ -3263,33 +3619,12 @@ function(url,title,prompt){
 
   }
 
-
-  /*
-    पुराने handlers पहले हटाओ.
-    इससे close/open के समय पुराना error event
-    नई image को disturb नहीं करेगा.
-  */
-
   modalImg.onload = null;
   modalImg.onerror = null;
 
-
-  /*
-    पुरानी image हटाओ.
-  */
-
   modalImg.removeAttribute("src");
 
-
-  /*
-    Title और prompt को innerHTML से नहीं,
-    textContent से डाल रहे हैं.
-    इससे "Aerial ViewAerial View" जैसे
-    broken HTML/text issues नहीं होंगे.
-  */
-
   modalInfo.innerHTML = "";
-
 
   const titleElement =
     document.createElement("h3");
@@ -3300,7 +3635,6 @@ function(url,title,prompt){
   titleElement.textContent =
     title || "AI Image";
 
-
   const promptElement =
     document.createElement("p");
 
@@ -3309,7 +3643,6 @@ function(url,title,prompt){
 
   promptElement.textContent =
     prompt || "Professional AI image prompt";
-
 
   const copyButton =
     document.createElement("button");
@@ -3326,14 +3659,12 @@ function(url,title,prompt){
   copyButton.textContent =
     "📋 Copy Prompt";
 
-
   copyButton.addEventListener(
     "click",
     ()=>{
       copyPrompt(prompt || "");
     }
   );
-
 
   modalInfo.appendChild(
     titleElement
@@ -3347,11 +3678,6 @@ function(url,title,prompt){
     copyButton
   );
 
-
-  /*
-    Image load होने के बाद modal दिखाओ.
-  */
-
   modalImg.onload =
   function(){
 
@@ -3362,15 +3688,6 @@ function(url,title,prompt){
       "hidden";
 
   };
-
-
-  /*
-    अगर वास्तव में URL load नहीं होता,
-    तभी error दिखाओ.
-
-    closeModal() के दौरान यह handler मौजूद
-    नहीं रहेगा.
-  */
 
   modalImg.onerror =
   function(){
@@ -3392,9 +3709,6 @@ function(url,title,prompt){
     errorText.style.lineHeight =
       "1.7";
 
-    errorText.style.fontSize =
-      "13px";
-
     errorText.textContent =
       "Image could not be loaded from the stored image URL.";
 
@@ -3404,124 +3718,60 @@ function(url,title,prompt){
 
   };
 
-
-  /*
-    सबसे अंत में सही Cloudinary URL लगाओ.
-  */
-
   modalImg.src =
     String(url);
-
 
   modalImg.alt =
     title || "Broken AI Image";
 
+  if(modalImg.complete &&
+     modalImg.naturalWidth > 0){
 
-  /*
-    Cached image होने पर onload event कभी-कभी
-    पहले ही complete हो सकता है.
-  */
+    modal.style.display =
+      "flex";
 
-  if(modalImg.complete){
-
-    if(
-      modalImg.naturalWidth > 0
-    ){
-
-      modal.style.display =
-        "flex";
-
-      document.body.style.overflow =
-        "hidden";
-
-    }
+    document.body.style.overflow =
+      "hidden";
 
   }
 
 };
 
 
-/* =========================
-   CLOSE MODAL - FIXED
-========================= */
-
 window.closeModal =
 function(){
 
   const modal =
-    document.getElementById(
-      "modal"
-    );
+    document.getElementById("modal");
 
   const modalImg =
-    document.getElementById(
-      "modalImg"
-    );
+    document.getElementById("modalImg");
 
   const modalInfo =
-    document.getElementById(
-      "modalInfo"
-    );
-
-
-  /*
-    सबसे पहले event handlers हटाओ.
-    यही पुराने "Image could not be loaded"
-    वाले bug का main fix है.
-  */
+    document.getElementById("modalInfo");
 
   modalImg.onload = null;
   modalImg.onerror = null;
 
-
-  /*
-    Modal hide करो.
-  */
-
   modal.style.display =
     "none";
-
 
   document.body.style.overflow =
     "";
 
-
-  /*
-    src="" मत लगाओ.
-    इससे browser error event trigger कर सकता है.
-  */
-
   modalImg.removeAttribute("src");
-
   modalImg.removeAttribute("alt");
-
-
-  /*
-    पुरानी title/prompt भी साफ करो.
-  */
 
   modalInfo.innerHTML = "";
 
 };
 
 
-/* =========================
-   MODAL BACKDROP CLICK
-========================= */
-
 document
   .getElementById("modal")
   .addEventListener(
     "click",
     e=>{
-
-      /*
-        सिर्फ black background पर tap करने से
-        modal बंद होगा.
-
-        Image या modalBox पर tap करने से
-        modal बंद नहीं होगा.
-      */
 
       if(
         e.target.id === "modal"
@@ -3535,22 +3785,14 @@ document
   );
 
 
-/* =========================
-   ESCAPE KEY
-========================= */
-
 document.addEventListener(
   "keydown",
   e=>{
 
-    if(
-      e.key === "Escape"
-    ){
+    if(e.key==="Escape"){
 
       const modal =
-        document.getElementById(
-          "modal"
-        );
+        document.getElementById("modal");
 
       if(
         modal.style.display === "flex"
@@ -3567,32 +3809,23 @@ document.addEventListener(
 
 
 /* =========================
-   ADMIN AUTH
+ADMIN AUTH
 ========================= */
 
 window.adminLogin =
 async function(){
 
   const email =
-    document.getElementById(
-      "adminEmail"
-    )
-    .value
-    .trim();
-
+    document.getElementById("adminEmail")
+      .value
+      .trim();
 
   const password =
-    document.getElementById(
-      "adminPassword"
-    )
-    .value;
-
+    document.getElementById("adminPassword")
+      .value;
 
   const status =
-    document.getElementById(
-      "loginStatus"
-    );
-
+    document.getElementById("loginStatus");
 
   if(!email || !password){
 
@@ -3603,7 +3836,6 @@ async function(){
 
   }
 
-
   try{
 
     const result =
@@ -3612,7 +3844,6 @@ async function(){
         email,
         password
       );
-
 
     if(
       result.user.email !==
@@ -3627,7 +3858,6 @@ async function(){
       return;
 
     }
-
 
     status.textContent =
       "Login successful.";
@@ -3663,18 +3893,11 @@ onAuthStateChanged(
     currentUser =
       user;
 
-
     const loginPanel =
-      document.getElementById(
-        "loginPanel"
-      );
-
+      document.getElementById("loginPanel");
 
     const adminPanel =
-      document.getElementById(
-        "adminPanel"
-      );
-
+      document.getElementById("adminPanel");
 
     if(
       user &&
@@ -3701,7 +3924,6 @@ onAuthStateChanged(
 
     }
 
-
     renderGallery();
 
   }
@@ -3709,7 +3931,7 @@ onAuthStateChanged(
 
 
 /* =========================
-   CLOUDINARY PREVIEW
+CLOUDINARY PREVIEW
 ========================= */
 
 window.previewUpload =
@@ -3718,12 +3940,8 @@ function(event){
   const file =
     event.target.files[0];
 
-
   const preview =
-    document.getElementById(
-      "uploadPreview"
-    );
-
+    document.getElementById("uploadPreview");
 
   if(!file){
 
@@ -3734,12 +3952,21 @@ function(event){
 
   }
 
+  if(
+    preview.dataset.objectUrl
+  ){
 
-  const url =
-    URL.createObjectURL(
-      file
+    URL.revokeObjectURL(
+      preview.dataset.objectUrl
     );
 
+  }
+
+  const url =
+    URL.createObjectURL(file);
+
+  preview.dataset.objectUrl =
+    url;
 
   preview.src =
     url;
@@ -3751,7 +3978,7 @@ function(event){
 
 
 /* =========================
-   CLOUDINARY UPLOAD
+CLOUDINARY UPLOAD
 ========================= */
 
 window.uploadImage =
@@ -3771,35 +3998,22 @@ async function(){
 
   }
 
-
   const file =
-    document.getElementById(
-      "imageFile"
-    )
-    .files[0];
-
+    document.getElementById("imageFile")
+      .files[0];
 
   const title =
-    document.getElementById(
-      "imageTitle"
-    )
-    .value
-    .trim();
-
+    document.getElementById("imageTitle")
+      .value
+      .trim();
 
   const prompt =
-    document.getElementById(
-      "imagePrompt"
-    )
-    .value
-    .trim();
-
+    document.getElementById("imagePrompt")
+      .value
+      .trim();
 
   const status =
-    document.getElementById(
-      "uploadStatus"
-    );
-
+    document.getElementById("uploadStatus");
 
   if(!file){
 
@@ -3810,28 +4024,23 @@ async function(){
 
   }
 
-
   status.textContent =
     "Uploading image...";
-
 
   try{
 
     const form =
       new FormData();
 
-
     form.append(
       "file",
       file
     );
 
-
     form.append(
       "upload_preset",
       UPLOAD_PRESET
     );
-
 
     const response =
       await fetch(
@@ -3842,7 +4051,6 @@ async function(){
         }
       );
 
-
     if(!response.ok){
 
       throw new Error(
@@ -3851,10 +4059,8 @@ async function(){
 
     }
 
-
     const data =
       await response.json();
-
 
     await addDoc(
       collection(
@@ -3862,55 +4068,49 @@ async function(){
         "images"
       ),
       {
-
-        url:
-          data.secure_url,
-
-        title:
-          title ||
-          "Broken AI Image",
-
-        prompt:
-          prompt ||
-          "AI image prompt",
-
-        likes:
-          0,
-
-        createdAt:
-          serverTimestamp()
-
+        url:data.secure_url,
+        title:title || "Broken AI Image",
+        prompt:prompt || "AI image prompt",
+        likes:0,
+        createdAt:serverTimestamp()
       }
     );
 
-
     status.textContent =
       "Image uploaded successfully.";
-
 
     document.getElementById(
       "imageTitle"
     ).value = "";
 
-
     document.getElementById(
       "imagePrompt"
     ).value = "";
-
 
     document.getElementById(
       "imageFile"
     ).value = "";
 
+    const preview =
+      document.getElementById(
+        "uploadPreview"
+      );
 
-    document.getElementById(
-      "uploadPreview"
-    ).style.display =
+    if(preview.dataset.objectUrl){
+
+      URL.revokeObjectURL(
+        preview.dataset.objectUrl
+      );
+
+      delete preview.dataset.objectUrl;
+
+    }
+
+    preview.removeAttribute("src");
+    preview.style.display =
       "none";
 
-
     await loadGallery();
-
 
     showToast(
       "AI image uploaded 🚀"
@@ -3929,7 +4129,7 @@ async function(){
 
 
 /* =========================
-   DELETE
+DELETE
 ========================= */
 
 window.deleteImage =
@@ -3949,16 +4149,13 @@ async function(id){
 
   }
 
-
   const ok =
     confirm(
       "Delete this AI image?"
     );
 
-
   if(!ok)
     return;
-
 
   try{
 
@@ -3970,17 +4167,13 @@ async function(id){
       )
     );
 
-
     galleryItems =
       galleryItems.filter(
         item=>item.id!==id
       );
 
-
     updateStats();
-
     renderGallery();
-
 
     showToast(
       "Image deleted"
@@ -4000,23 +4193,16 @@ async function(id){
 
 
 /* =========================
-   PARTICLES
+PARTICLES
 ========================= */
 
 const canvas =
-  document.getElementById(
-    "particles"
-  );
-
+  document.getElementById("particles");
 
 const ctx =
-  canvas.getContext(
-    "2d"
-  );
-
+  canvas.getContext("2d");
 
 let particles = [];
-
 
 function resizeCanvas(){
 
@@ -4028,15 +4214,15 @@ function resizeCanvas(){
 
 }
 
-
 resizeCanvas();
-
 
 window.addEventListener(
   "resize",
-  resizeCanvas
+  ()=>{
+    resizeCanvas();
+    createParticles();
+  }
 );
-
 
 function createParticles(){
 
@@ -4048,13 +4234,9 @@ function createParticles(){
       )
     );
 
-
   particles =
     Array.from(
-      {
-        length:
-          amount
-      },
+      {length:amount},
       ()=>({
 
         x:
@@ -4083,9 +4265,7 @@ function createParticles(){
 
 }
 
-
 createParticles();
-
 
 function animateParticles(){
 
@@ -4096,48 +4276,26 @@ function animateParticles(){
     canvas.height
   );
 
-
   for(
     const p of particles
   ){
 
-    p.x +=
-      p.vx;
+    p.x += p.vx;
+    p.y += p.vy;
 
-    p.y +=
-      p.vy;
+    if(p.x < 0)
+      p.x = canvas.width;
 
-
-    if(
-      p.x < 0
-    )
-      p.x =
-        canvas.width;
-
-
-    if(
-      p.x >
-      canvas.width
-    )
+    if(p.x > canvas.width)
       p.x = 0;
 
+    if(p.y < 0)
+      p.y = canvas.height;
 
-    if(
-      p.y < 0
-    )
-      p.y =
-        canvas.height;
-
-
-    if(
-      p.y >
-      canvas.height
-    )
+    if(p.y > canvas.height)
       p.y = 0;
 
-
     ctx.beginPath();
-
 
     ctx.arc(
       p.x,
@@ -4147,15 +4305,12 @@ function animateParticles(){
       Math.PI*2
     );
 
-
     ctx.fillStyle =
       "rgba(0,234,255,.35)";
-
 
     ctx.fill();
 
   }
-
 
   requestAnimationFrame(
     animateParticles
@@ -4163,12 +4318,11 @@ function animateParticles(){
 
 }
 
-
 animateParticles();
 
 
 /* =========================
-   INITIAL LOAD
+INITIAL LOAD
 ========================= */
 
 loadGallery();
