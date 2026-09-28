@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
 <meta name="theme-color" content="#050816">
+<meta name="color-scheme" content="dark">
 
 <title>Broken AI HIMANSHU | AI Images, AI Prompts & 500+ AI Commands</title>
-<meta name="description" content="Broken AI HIMANSHU — AI images, professional prompts, creative AI artwork, futuristic styles and 500+ AI image commands.">
+
+<meta name="description" content="Broken AI HIMANSHU — explore AI images, professional AI prompts, creative AI artwork, futuristic styles and 500+ AI image commands.">
 <meta name="author" content="HIMANSHU">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="googlebot" content="index,follow,max-image-preview:large">
@@ -55,7 +58,11 @@
 
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+html{
+ scroll-behavior:smooth;
+}
+
 body{
  margin:0;
  font-family:Arial,Helvetica,sans-serif;
@@ -66,10 +73,28 @@ body{
  color:#fff;
  overflow-x:hidden;
 }
-a{text-decoration:none;color:inherit}
-button,input,textarea{font:inherit}
-button{cursor:pointer}
-::selection{background:#00eaff;color:#000}
+
+a{
+ text-decoration:none;
+ color:inherit;
+}
+
+button,input,textarea{
+ font:inherit;
+}
+
+button{
+ cursor:pointer;
+}
+
+::selection{
+ background:#00eaff;
+ color:#000;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
  position:sticky;
@@ -79,6 +104,7 @@ header{
  background:rgba(4,6,17,.78);
  border-bottom:1px solid rgba(0,234,255,.14);
 }
+
 .nav{
  max-width:1250px;
  margin:auto;
@@ -89,6 +115,7 @@ header{
  justify-content:space-between;
  gap:15px;
 }
+
 .logo{
  display:flex;
  align-items:center;
@@ -96,17 +123,31 @@ header{
  font-weight:900;
  letter-spacing:1px;
 }
+
 .logoIcon{
- width:42px;height:42px;
- display:grid;place-items:center;
+ width:42px;
+ height:42px;
+ display:grid;
+ place-items:center;
  border-radius:14px;
  background:linear-gradient(135deg,#00eaff,#8c5cff,#ff31d2);
  box-shadow:0 0 25px rgba(0,234,255,.3);
  color:#000;
 }
-.logoText span{display:block}
-.logoMain{font-size:18px}
-.logoSub{font-size:9px;color:#8da1bd;letter-spacing:2px}
+
+.logoText span{
+ display:block;
+}
+
+.logoMain{
+ font-size:18px;
+}
+
+.logoSub{
+ font-size:9px;
+ color:#8da1bd;
+ letter-spacing:2px;
+}
 
 .navlinks{
  display:flex;
@@ -114,6 +155,7 @@ header{
  flex-wrap:wrap;
  justify-content:flex-end;
 }
+
 .navlinks a{
  padding:9px 11px;
  border-radius:12px;
@@ -121,17 +163,30 @@ header{
  font-size:13px;
  transition:.25s;
 }
+
 .navlinks a:hover{
  color:#fff;
  background:rgba(0,234,255,.09);
  box-shadow:0 0 15px rgba(0,234,255,.08);
 }
 
-section{scroll-margin-top:90px}
+/* =========================
+   GENERAL
+========================= */
+
+section{
+ scroll-margin-top:90px;
+}
+
 .container{
  width:min(1180px,calc(100% - 28px));
  margin:auto;
 }
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
  min-height:720px;
  display:grid;
@@ -141,6 +196,7 @@ section{scroll-margin-top:90px}
  padding:65px 0 50px;
  position:relative;
 }
+
 .heroBadge{
  display:inline-flex;
  padding:8px 13px;
@@ -151,30 +207,35 @@ section{scroll-margin-top:90px}
  font-size:12px;
  letter-spacing:1px;
 }
+
 .hero h1{
  margin:18px 0 8px;
  font-size:clamp(52px,8vw,105px);
  line-height:.86;
  letter-spacing:-5px;
 }
+
 .hero h1 span{
  display:block;
  background:linear-gradient(90deg,#00eaff,#4d7cff,#8c5cff,#ff31d2);
  -webkit-background-clip:text;
  color:transparent;
 }
+
 .hero p{
  max-width:650px;
  color:#aebbd0;
  line-height:1.8;
  font-size:16px;
 }
+
 .heroButtons{
  display:flex;
  gap:12px;
  flex-wrap:wrap;
  margin-top:25px;
 }
+
 .btn{
  border:0;
  padding:13px 18px;
@@ -184,7 +245,11 @@ section{scroll-margin-top:90px}
  border:1px solid rgba(255,255,255,.12);
  transition:.25s;
 }
-.btn:hover{transform:translateY(-3px)}
+
+.btn:hover{
+ transform:translateY(-3px);
+}
+
 .btnPrimary{
  background:linear-gradient(135deg,#00eaff,#4d7cff);
  color:#001018;
@@ -192,12 +257,17 @@ section{scroll-margin-top:90px}
  box-shadow:0 10px 35px rgba(0,234,255,.18);
 }
 
+/* =========================
+   HERO CORE
+========================= */
+
 .heroVisual{
  display:grid;
  place-items:center;
  min-height:450px;
  position:relative;
 }
+
 .core{
  width:min(430px,80vw);
  aspect-ratio:1;
@@ -214,7 +284,9 @@ section{scroll-margin-top:90px}
  inset 0 0 60px rgba(0,234,255,.15);
  animation:float 5s ease-in-out infinite;
 }
-.core:before,.core:after{
+
+.core:before,
+.core:after{
  content:"";
  position:absolute;
  inset:-25px;
@@ -223,25 +295,41 @@ section{scroll-margin-top:90px}
  transform:rotate(35deg) scaleX(1.5);
  animation:spin 12s linear infinite;
 }
+
 .core:after{
  inset:-55px;
  transform:rotate(-45deg) scaleX(1.6);
  border-color:rgba(255,49,210,.2);
  animation-duration:18s;
 }
-.coreText{text-align:center;z-index:2}
+
+.coreText{
+ text-align:center;
+ z-index:2;
+}
+
 .coreText strong{
  display:block;
  font-size:40px;
  letter-spacing:5px;
 }
+
 .coreText small{
  color:#66efff;
  letter-spacing:3px;
 }
 
-@keyframes float{50%{transform:translateY(-14px)}}
-@keyframes spin{to{transform:rotate(395deg) scaleX(1.5)}}
+@keyframes float{
+ 50%{transform:translateY(-14px)}
+}
+
+@keyframes spin{
+ to{transform:rotate(395deg) scaleX(1.5)}
+}
+
+/* =========================
+   PROFILE
+========================= */
 
 .profile{
  display:grid;
@@ -250,6 +338,7 @@ section{scroll-margin-top:90px}
  align-items:center;
  padding:70px 0;
 }
+
 .profileCard{
  padding:18px;
  border-radius:30px;
@@ -257,12 +346,14 @@ section{scroll-margin-top:90px}
  border:1px solid rgba(0,234,255,.2);
  box-shadow:0 20px 60px rgba(0,0,0,.3);
 }
+
 .profileImageWrap{
  position:relative;
  overflow:hidden;
  border-radius:24px;
  cursor:pointer;
 }
+
 .profileImage{
  width:100%;
  aspect-ratio:1;
@@ -270,7 +361,11 @@ section{scroll-margin-top:90px}
  display:block;
  transition:.5s;
 }
-.profileImageWrap:hover .profileImage{transform:scale(1.05)}
+
+.profileImageWrap:hover .profileImage{
+ transform:scale(1.05);
+}
+
 .profileGlow{
  position:absolute;
  inset:auto 10% -20px;
@@ -279,6 +374,7 @@ section{scroll-margin-top:90px}
  filter:blur(35px);
  opacity:.25;
 }
+
 .kicker{
  color:#00eaff;
  text-transform:uppercase;
@@ -286,12 +382,21 @@ section{scroll-margin-top:90px}
  font-size:11px;
  font-weight:bold;
 }
+
 .sectionTitle{
  font-size:clamp(32px,5vw,58px);
  margin:8px 0 15px;
  letter-spacing:-2px;
 }
-.muted{color:#9eacc1;line-height:1.8}
+
+.muted{
+ color:#9eacc1;
+ line-height:1.8;
+}
+
+/* =========================
+   STATS
+========================= */
 
 .stats{
  display:grid;
@@ -299,6 +404,7 @@ section{scroll-margin-top:90px}
  gap:12px;
  margin-top:25px;
 }
+
 .stat{
  padding:20px 12px;
  text-align:center;
@@ -306,8 +412,21 @@ section{scroll-margin-top:90px}
  background:rgba(255,255,255,.035);
  border:1px solid rgba(255,255,255,.08);
 }
-.stat b{display:block;font-size:25px;color:#00eaff}
-.stat span{font-size:11px;color:#8492a9}
+
+.stat b{
+ display:block;
+ font-size:25px;
+ color:#00eaff;
+}
+
+.stat span{
+ font-size:11px;
+ color:#8492a9;
+}
+
+/* =========================
+   PANELS
+========================= */
 
 .panel{
  padding:28px;
@@ -317,6 +436,7 @@ section{scroll-margin-top:90px}
  box-shadow:0 25px 70px rgba(0,0,0,.2);
  margin:35px 0;
 }
+
 .sectionHead{
  display:flex;
  justify-content:space-between;
@@ -324,6 +444,7 @@ section{scroll-margin-top:90px}
  gap:15px;
  margin-bottom:20px;
 }
+
 .search{
  width:100%;
  padding:14px 16px;
@@ -333,13 +454,22 @@ section{scroll-margin-top:90px}
  color:#fff;
  outline:none;
 }
-.search:focus{border-color:#00eaff;box-shadow:0 0 20px rgba(0,234,255,.08)}
+
+.search:focus{
+ border-color:#00eaff;
+ box-shadow:0 0 20px rgba(0,234,255,.08);
+}
+
+/* =========================
+   GALLERY
+========================= */
 
 .galleryGrid{
  display:grid;
  grid-template-columns:repeat(3,1fr);
  gap:18px;
 }
+
 .galleryCard{
  overflow:hidden;
  border-radius:22px;
@@ -347,17 +477,20 @@ section{scroll-margin-top:90px}
  border:1px solid rgba(255,255,255,.08);
  transition:.3s;
 }
+
 .galleryCard:hover{
  transform:translateY(-5px);
  border-color:rgba(0,234,255,.35);
  box-shadow:0 15px 45px rgba(0,0,0,.35);
 }
+
 .galleryImgWrap{
  position:relative;
  cursor:pointer;
  overflow:hidden;
  background:#050816;
 }
+
 .galleryImg{
  width:100%;
  aspect-ratio:4/5;
@@ -365,7 +498,11 @@ section{scroll-margin-top:90px}
  display:block;
  transition:.4s;
 }
-.galleryImgWrap:hover .galleryImg{transform:scale(1.04)}
+
+.galleryImgWrap:hover .galleryImg{
+ transform:scale(1.04);
+}
+
 .imageZoom{
  position:absolute;
  right:10px;
@@ -375,41 +512,154 @@ section{scroll-margin-top:90px}
  background:rgba(0,0,0,.65);
  backdrop-filter:blur(8px);
 }
-.cardBody{padding:15px}
+
+.cardBody{
+ padding:15px;
+}
+
 .cardTitle{
  font-weight:bold;
  white-space:nowrap;
  overflow:hidden;
  text-overflow:ellipsis;
 }
+
+.cardDescription{
+ margin-top:8px;
+ color:#a8b5c8;
+ font-size:12px;
+ line-height:1.6;
+}
+
 .cardPrompt{
- margin-top:7px;
+ margin-top:9px;
  color:#7f8ca2;
  font-size:12px;
  line-height:1.5;
  max-height:38px;
  overflow:hidden;
 }
+
 .cardActions{
- display:flex;
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
  gap:7px;
  margin-top:13px;
 }
+
+.cardActionsBottom{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:7px;
+ margin-top:7px;
+}
+
 .smallBtn{
- flex:1;
  border:1px solid rgba(255,255,255,.09);
  background:#0d1324;
  color:#dce7f6;
  padding:9px 7px;
  border-radius:11px;
  font-size:12px;
+ transition:.2s;
 }
-.smallBtn:hover{border-color:#00eaff;color:#fff}
+
+.smallBtn:hover{
+ border-color:#00eaff;
+ color:#fff;
+ transform:translateY(-1px);
+}
+
+.downloadBtn{
+ background:linear-gradient(135deg,rgba(0,234,255,.15),rgba(77,124,255,.12));
+}
+
+.shareBtn{
+ background:linear-gradient(135deg,rgba(140,92,255,.15),rgba(255,49,210,.10));
+}
+
 .empty{
  text-align:center;
  padding:50px 20px;
  color:#74839a;
 }
+
+/* =========================
+   GALLERY INFO BADGE
+========================= */
+
+.galleryBadge{
+ position:absolute;
+ left:10px;
+ top:10px;
+ padding:7px 9px;
+ border-radius:10px;
+ background:rgba(0,0,0,.62);
+ backdrop-filter:blur(8px);
+ color:#bffaff;
+ font-size:10px;
+ border:1px solid rgba(0,234,255,.2);
+}
+
+/* =========================
+   WHATSAPP SECTION
+========================= */
+
+.whatsappSection{
+ margin-top:25px;
+ padding:20px;
+ border-radius:22px;
+ border:1px solid rgba(37,211,102,.22);
+ background:
+ linear-gradient(135deg,rgba(37,211,102,.09),rgba(0,234,255,.04)),
+ rgba(255,255,255,.02);
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:18px;
+}
+
+.whatsappInfo{
+ display:flex;
+ align-items:center;
+ gap:14px;
+}
+
+.whatsappIcon{
+ width:50px;
+ height:50px;
+ flex:0 0 50px;
+ display:grid;
+ place-items:center;
+ border-radius:16px;
+ background:rgba(37,211,102,.14);
+ border:1px solid rgba(37,211,102,.3);
+ font-size:26px;
+ box-shadow:0 0 25px rgba(37,211,102,.08);
+}
+
+.whatsappTitle{
+ font-weight:900;
+ font-size:17px;
+}
+
+.whatsappText{
+ color:#8f9eb3;
+ font-size:12px;
+ margin-top:4px;
+ line-height:1.5;
+}
+
+.whatsappBtn{
+ background:linear-gradient(135deg,#25d366,#128c7e);
+ color:#fff;
+ font-weight:900;
+ border:0;
+}
+
+/* =========================
+   COMMANDS
+========================= */
 
 .commandTools{
  display:flex;
@@ -417,12 +667,14 @@ section{scroll-margin-top:90px}
  flex-wrap:wrap;
  margin-bottom:20px;
 }
+
 .categories{
  display:flex;
  gap:8px;
  overflow-x:auto;
  padding-bottom:8px;
 }
+
 .catBtn{
  white-space:nowrap;
  padding:9px 13px;
@@ -431,16 +683,20 @@ section{scroll-margin-top:90px}
  color:#9cabc0;
  border-radius:999px;
 }
-.catBtn.active,.catBtn:hover{
+
+.catBtn.active,
+.catBtn:hover{
  background:linear-gradient(135deg,#00eaff,#8c5cff);
  color:#02040a;
  font-weight:bold;
 }
+
 .commandGrid{
  display:grid;
  grid-template-columns:repeat(4,1fr);
  gap:13px;
 }
+
 .commandCard{
  min-height:145px;
  padding:16px;
@@ -456,31 +712,38 @@ section{scroll-margin-top:90px}
  0 12px 30px rgba(0,0,0,.18);
  transition:.25s;
 }
+
 .commandCard:before{
  content:"";
  position:absolute;
- width:100px;height:100px;
- right:-45px;top:-45px;
+ width:100px;
+ height:100px;
+ right:-45px;
+ top:-45px;
  background:#ff31d2;
  filter:blur(45px);
  opacity:.15;
 }
+
 .commandCard:hover{
  transform:translateY(-5px) rotateX(2deg);
  border-color:#00eaff;
  box-shadow:0 15px 40px rgba(0,234,255,.12);
 }
+
 .commandName{
  font-weight:900;
  color:#fff;
  font-size:16px;
 }
+
 .commandDesc{
  color:#8593a9;
  font-size:12px;
  line-height:1.5;
  margin:10px 0;
 }
+
 .copyCommand{
  width:100%;
  padding:9px;
@@ -490,17 +753,23 @@ section{scroll-margin-top:90px}
  color:#001018;
  font-weight:900;
 }
+
 .commandCount{
  color:#00eaff;
  font-size:12px;
  margin-top:10px;
 }
 
+/* =========================
+   PROMPT LAB
+========================= */
+
 .lab{
  display:grid;
  grid-template-columns:1fr 1fr;
  gap:15px;
 }
+
 textarea{
  width:100%;
  min-height:230px;
@@ -512,6 +781,7 @@ textarea{
  color:#fff;
  outline:none;
 }
+
 .output{
  min-height:230px;
  padding:18px;
@@ -523,26 +793,47 @@ textarea{
  line-height:1.7;
 }
 
+/* =========================
+   ABOUT
+========================= */
+
 .aboutGrid{
  display:grid;
  grid-template-columns:repeat(4,1fr);
  gap:15px;
 }
+
 .feature{
  padding:22px;
  border-radius:20px;
  background:rgba(255,255,255,.035);
  border:1px solid rgba(255,255,255,.08);
 }
-.featureIcon{font-size:28px}
-.feature h3{margin:12px 0 7px}
-.feature p{font-size:13px;color:#8492a7;line-height:1.6}
+
+.featureIcon{
+ font-size:28px;
+}
+
+.feature h3{
+ margin:12px 0 7px;
+}
+
+.feature p{
+ font-size:13px;
+ color:#8492a7;
+ line-height:1.6;
+}
+
+/* =========================
+   KEYWORDS
+========================= */
 
 .keywords{
  display:flex;
  flex-wrap:wrap;
  gap:8px;
 }
+
 .keyword{
  padding:7px 10px;
  border-radius:999px;
@@ -552,23 +843,51 @@ textarea{
  border:1px solid rgba(255,255,255,.08);
 }
 
+/* =========================
+   ADMIN
+========================= */
+
 .adminGrid{
  display:grid;
  grid-template-columns:1fr 1fr;
  gap:15px;
 }
+
 .field{
  display:flex;
  flex-direction:column;
  gap:7px;
  margin-bottom:13px;
 }
-.field label{font-size:12px;color:#8e9cb0}
-.field input,.field textarea{
+
+.field label{
+ font-size:12px;
+ color:#8e9cb0;
+}
+
+.field input,
+.field textarea{
  min-height:auto;
  padding:13px;
 }
-#adminPanel{display:none}
+
+.field textarea{
+ min-height:130px;
+}
+
+.fieldHint{
+ color:#64738b;
+ font-size:10px;
+ line-height:1.5;
+}
+
+#adminPanel{
+ display:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
  margin-top:60px;
@@ -577,11 +896,16 @@ footer{
  color:#718097;
  border-top:1px solid rgba(255,255,255,.07);
 }
+
 .footerLogo{
  font-size:25px;
  font-weight:900;
  color:#fff;
 }
+
+/* =========================
+   MODAL
+========================= */
 
 .modal{
  display:none;
@@ -593,7 +917,11 @@ footer{
  justify-content:center;
  padding:20px;
 }
-.modal.show{display:flex}
+
+.modal.show{
+ display:flex;
+}
+
 .modalContent{
  max-width:1100px;
  max-height:95vh;
@@ -602,30 +930,61 @@ footer{
  flex-direction:column;
  align-items:center;
 }
+
 .modalImage{
  max-width:95vw;
- max-height:82vh;
+ max-height:75vh;
  object-fit:contain;
  border-radius:15px;
  box-shadow:0 0 60px rgba(0,234,255,.12);
 }
+
+.modalInfo{
+ width:min(800px,95vw);
+ margin-top:12px;
+ padding:13px;
+ border-radius:14px;
+ background:rgba(10,16,31,.9);
+ border:1px solid rgba(0,234,255,.12);
+}
+
+.modalTitle{
+ font-weight:900;
+}
+
+.modalDescription{
+ color:#9baac0;
+ font-size:12px;
+ line-height:1.6;
+ margin-top:5px;
+}
+
 .modalBar{
  display:flex;
  gap:8px;
  margin-top:10px;
+ flex-wrap:wrap;
+ justify-content:center;
 }
+
 .closeModal{
  position:fixed;
  right:20px;
  top:20px;
  z-index:3;
- width:44px;height:44px;
+ width:44px;
+ height:44px;
  border-radius:50%;
  border:1px solid rgba(255,255,255,.15);
  background:#101522;
  color:#fff;
  font-size:24px;
 }
+
+/* =========================
+   TOAST
+========================= */
+
 .toast{
  position:fixed;
  right:18px;
@@ -640,7 +999,15 @@ footer{
  box-shadow:0 15px 40px rgba(0,0,0,.4);
  transition:.3s;
 }
-.toast.show{transform:translateY(0);opacity:1}
+
+.toast.show{
+ transform:translateY(0);
+ opacity:1;
+}
+
+/* =========================
+   LOADER
+========================= */
 
 .loader{
  position:fixed;
@@ -651,19 +1018,46 @@ footer{
  background:#040611;
  transition:.5s;
 }
-.loader.hide{opacity:0;pointer-events:none}
+
+.loader.hide{
+ opacity:0;
+ pointer-events:none;
+}
+
 .loaderCore{
  text-align:center;
 }
+
 .loaderRing{
- width:70px;height:70px;
+ width:70px;
+ height:70px;
  margin:auto auto 15px;
  border:3px solid rgba(0,234,255,.15);
  border-top-color:#00eaff;
  border-radius:50%;
  animation:spinLoader .8s linear infinite;
 }
-@keyframes spinLoader{to{transform:rotate(360deg)}}
+
+.loaderBrand{
+ font-size:22px;
+ font-weight:900;
+ letter-spacing:2px;
+}
+
+.loaderSub{
+ font-size:11px;
+ color:#00eaff;
+ margin-top:7px;
+ letter-spacing:2px;
+}
+
+@keyframes spinLoader{
+ to{transform:rotate(360deg)}
+}
+
+/* =========================
+   PARTICLES
+========================= */
 
 #particles{
  position:fixed;
@@ -673,63 +1067,219 @@ footer{
  opacity:.35;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media(max-width:900px){
- .hero{grid-template-columns:1fr;padding-top:45px}
- .heroVisual{min-height:380px}
- .profile{grid-template-columns:1fr}
- .galleryGrid{grid-template-columns:repeat(2,1fr)}
- .commandGrid{grid-template-columns:repeat(3,1fr)}
- .aboutGrid{grid-template-columns:repeat(2,1fr)}
- .adminGrid,.lab{grid-template-columns:1fr}
- .navlinks{display:none}
+
+ .hero{
+  grid-template-columns:1fr;
+  padding-top:45px;
+ }
+
+ .heroVisual{
+  min-height:380px;
+ }
+
+ .profile{
+  grid-template-columns:1fr;
+ }
+
+ .galleryGrid{
+  grid-template-columns:repeat(2,1fr);
+ }
+
+ .commandGrid{
+  grid-template-columns:repeat(3,1fr);
+ }
+
+ .aboutGrid{
+  grid-template-columns:repeat(2,1fr);
+ }
+
+ .adminGrid,
+ .lab{
+  grid-template-columns:1fr;
+ }
+
+ .navlinks{
+  display:none;
+ }
+
 }
+
 @media(max-width:600px){
- .container{width:min(100% - 20px,1180px)}
- .hero h1{font-size:55px;letter-spacing:-3px}
- .hero{min-height:auto;padding:45px 0}
- .heroVisual{min-height:300px}
- .core{width:290px}
- .coreText strong{font-size:28px}
- .stats{grid-template-columns:repeat(2,1fr)}
- .panel{padding:17px;border-radius:20px}
- .galleryGrid{grid-template-columns:repeat(2,1fr);gap:10px}
- .commandGrid{grid-template-columns:repeat(2,1fr);gap:9px}
- .commandCard{min-height:155px;padding:12px}
- .commandName{font-size:14px}
- .aboutGrid{grid-template-columns:1fr 1fr;gap:9px}
- .feature{padding:15px}
- .sectionHead{display:block}
- .logoMain{font-size:15px}
- .logoIcon{width:36px;height:36px}
+
+ .container{
+  width:min(100% - 20px,1180px);
+ }
+
+ .hero h1{
+  font-size:55px;
+  letter-spacing:-3px;
+ }
+
+ .hero{
+  min-height:auto;
+  padding:45px 0;
+ }
+
+ .heroVisual{
+  min-height:300px;
+ }
+
+ .core{
+  width:290px;
+ }
+
+ .coreText strong{
+  font-size:28px;
+ }
+
+ .stats{
+  grid-template-columns:repeat(2,1fr);
+ }
+
+ .panel{
+  padding:17px;
+  border-radius:20px;
+ }
+
+ .galleryGrid{
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+ }
+
+ .commandGrid{
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+ }
+
+ .commandCard{
+  min-height:155px;
+  padding:12px;
+ }
+
+ .commandName{
+  font-size:14px;
+ }
+
+ .aboutGrid{
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+ }
+
+ .feature{
+  padding:15px;
+ }
+
+ .sectionHead{
+  display:block;
+ }
+
+ .logoMain{
+  font-size:15px;
+ }
+
+ .logoIcon{
+  width:36px;
+  height:36px;
+ }
+
+ .cardActions{
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+ }
+
+ .cardActionsBottom{
+  grid-template-columns:1fr 1fr;
+  gap:5px;
+ }
+
+ .smallBtn{
+  font-size:10px;
+  padding:8px 4px;
+ }
+
+ .cardDescription{
+  max-height:55px;
+  overflow:hidden;
+ }
+
+ .whatsappSection{
+  flex-direction:column;
+  align-items:stretch;
+ }
+
+ .whatsappBtn{
+  width:100%;
+ }
+
+ .modalImage{
+  max-height:65vh;
+ }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     LOADER
+========================= -->
+
 <div class="loader" id="loader">
+
  <div class="loaderCore">
+
   <div class="loaderRing"></div>
-  <b>BROKEN AI</b>
-  <div style="font-size:11px;color:#00eaff;margin-top:7px;letter-spacing:2px">
-   INITIALIZING
+
+  <div class="loaderBrand">
+   BROKEN AI
   </div>
+
+  <div class="loaderSub">
+   AI VISUAL NETWORK • INITIALIZING
+  </div>
+
  </div>
+
 </div>
 
 <canvas id="particles"></canvas>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
 <nav class="nav">
+
  <a href="#home" class="logo">
-  <div class="logoIcon">AI</div>
-  <div class="logoText">
-   <span class="logoMain">BROKEN AI</span>
-   <span class="logoSub">AI VISUAL NETWORK</span>
+
+  <div class="logoIcon">
+   AI
   </div>
+
+  <div class="logoText">
+
+   <span class="logoMain">
+    BROKEN AI
+   </span>
+
+   <span class="logoSub">
+    AI VISUAL NETWORK
+   </span>
+
+  </div>
+
  </a>
 
  <div class="navlinks">
+
   <a href="#home">Home</a>
   <a href="#profile">Profile</a>
   <a href="#studio">AI Studio</a>
@@ -737,281 +1287,826 @@ footer{
   <a href="#commands">Commands</a>
   <a href="#about">About</a>
   <a href="#admin">Admin</a>
+
  </div>
+
 </nav>
+
 </header>
 
 <main>
 
-<section id="home" class="container hero">
- <div>
-  <div class="heroBadge">● SYSTEM ONLINE • NEXT GENERATION AI</div>
+<!-- =========================
+     HERO
+========================= -->
 
-  <h1>BROKEN <span>AI</span></h1>
+<section id="home" class="container hero">
+
+ <div>
+
+  <div class="heroBadge">
+   ● SYSTEM ONLINE • NEXT GENERATION AI
+  </div>
+
+  <h1>
+   BROKEN
+   <span>AI</span>
+  </h1>
 
   <p>
    Welcome to Broken AI HIMANSHU — a futuristic AI visual network
-   for creative images, professional prompts, cinematic styles and
-   powerful AI image commands.
+   for creative images, professional prompts, cinematic styles,
+   AI image commands and creative digital artwork.
   </p>
 
   <div class="heroButtons">
-   <a class="btn btnPrimary" href="#gallery">🚀 Explore Gallery</a>
-   <a class="btn" href="#studio">🧠 Open AI Studio</a>
-   <a class="btn" href="#commands">⚡ 500+ Commands</a>
+
+   <a class="btn btnPrimary" href="#gallery">
+    🚀 Explore Gallery
+   </a>
+
+   <a class="btn" href="#studio">
+    🧠 Open AI Studio
+   </a>
+
+   <a class="btn" href="#commands">
+    ⚡ 500+ Commands
+   </a>
+
   </div>
+
  </div>
 
  <div class="heroVisual">
+
   <div class="core">
+
    <div class="coreText">
-    <strong>AI</strong>
-    <small>NEURAL CORE</small>
+
+    <strong>
+     AI
+    </strong>
+
+    <small>
+     NEURAL CORE
+    </small>
+
    </div>
+
   </div>
+
  </div>
+
 </section>
 
+<!-- =========================
+     PROFILE
+========================= -->
+
 <section id="profile" class="container profile">
+
  <div class="profileCard">
-  <div class="profileImageWrap" onclick="openModal('./profile-1.png','HIMANSHU — Broken AI Creator')">
+
+  <div
+   class="profileImageWrap"
+   onclick="openModal('./profile-1.png','HIMANSHU — Broken AI Creator','','')"
+  >
+
    <img
     class="profileImage"
     src="./profile-1.png"
     onerror="this.onerror=null;this.src='./profile.png'"
     alt="HIMANSHU Broken AI Creator profile"
    >
+
    <div class="profileGlow"></div>
+
   </div>
+
  </div>
 
  <div>
-  <div class="kicker">Meet the Creator</div>
-  <h2 class="sectionTitle">HIMANSHU</h2>
+
+  <div class="kicker">
+   Meet the Creator
+  </div>
+
+  <h2 class="sectionTitle">
+   HIMANSHU
+  </h2>
+
   <p class="muted">
+
    AI Creator • Digital Designer • Broken AI
+
    <br><br>
+
    Broken AI is a creative space focused on AI-generated visuals,
    image prompts, futuristic designs and practical AI commands.
+
   </p>
 
   <div class="heroButtons">
-   <a class="btn btnPrimary" href="https://t.me/Brokenboy221716" target="_blank" rel="noopener">Telegram</a>
-   <a class="btn" href="https://wa.me/917318399281" target="_blank" rel="noopener">WhatsApp</a>
+
+   <a
+    class="btn btnPrimary"
+    href="https://t.me/Brokenboy221716"
+    target="_blank"
+    rel="noopener"
+   >
+    ✈️ Telegram
+   </a>
+
+   <a
+    class="btn"
+    href="https://wa.me/917318399281"
+    target="_blank"
+    rel="noopener"
+   >
+    💚 WhatsApp
+   </a>
+
+  </div>
+
+  <!-- CUTE WHATSAPP SECTION -->
+
+  <div class="whatsappSection">
+
+   <div class="whatsappInfo">
+
+    <div class="whatsappIcon">
+     💚
+    </div>
+
+    <div>
+
+     <div class="whatsappTitle">
+      💬 Connect on WhatsApp
+     </div>
+
+     <div class="whatsappText">
+      AI images, prompts और Broken AI से जुड़ी जानकारी के लिए संपर्क करें।
+     </div>
+
+    </div>
+
+   </div>
+
+   <a
+    class="btn whatsappBtn"
+    href="https://wa.me/917318399281"
+    target="_blank"
+    rel="noopener"
+   >
+    💚 WhatsApp पर जाएँ
+   </a>
+
   </div>
 
   <div class="stats">
-   <div class="stat"><b id="imageCount">0</b><span>AI IMAGES</span></div>
-   <div class="stat"><b id="likeCount">0</b><span>LIKES</span></div>
-   <div class="stat"><b>24/7</b><span>CREATIVE</span></div>
-   <div class="stat"><b>∞</b><span>IDEAS</span></div>
+
+   <div class="stat">
+    <b id="imageCount">0</b>
+    <span>AI IMAGES</span>
+   </div>
+
+   <div class="stat">
+    <b id="likeCount">0</b>
+    <span>LIKES</span>
+   </div>
+
+   <div class="stat">
+    <b>24/7</b>
+    <span>CREATIVE</span>
+   </div>
+
+   <div class="stat">
+    <b>∞</b>
+    <span>IDEAS</span>
+   </div>
+
   </div>
+
  </div>
+
 </section>
 
+<!-- =========================
+     AI STUDIO
+========================= -->
+
 <section id="studio" class="container">
+
  <div class="panel">
+
   <div class="sectionHead">
+
    <div>
-    <div class="kicker">AI Prompt Lab</div>
-    <h2 class="sectionTitle">Create Your Prompt</h2>
+
+    <div class="kicker">
+     AI Prompt Lab
+    </div>
+
+    <h2 class="sectionTitle">
+     Create Your Prompt
+    </h2>
+
    </div>
+
   </div>
 
   <div class="lab">
+
    <div>
-    <textarea id="promptInput"
-     placeholder="Example: cinematic portrait of a futuristic AI creator, neon city, dramatic lighting, ultra realistic..."></textarea>
+
+    <textarea
+     id="promptInput"
+     placeholder="Example: cinematic portrait of a futuristic AI creator, neon city, dramatic lighting, ultra realistic..."
+    ></textarea>
 
     <div class="heroButtons">
-     <button class="btn btnPrimary" onclick="generatePrompt()">✨ Generate</button>
-     <button class="btn" onclick="clearPrompt()">Clear</button>
+
+     <button
+      class="btn btnPrimary"
+      onclick="generatePrompt()"
+     >
+      ✨ Generate
+     </button>
+
+     <button
+      class="btn"
+      onclick="clearPrompt()"
+     >
+      Clear
+     </button>
+
     </div>
+
    </div>
 
    <div>
-    <div id="promptOutput" class="output">
+
+    <div
+     id="promptOutput"
+     class="output"
+    >
      Your professional AI prompt will appear here.
     </div>
+
     <div class="heroButtons">
-     <button class="btn" onclick="copyGenerated()">📋 Copy Prompt</button>
+
+     <button
+      class="btn"
+      onclick="copyGenerated()"
+     >
+      📋 Copy Prompt
+     </button>
+
     </div>
+
    </div>
+
   </div>
+
  </div>
+
 </section>
 
-<!-- GALLERY BEFORE COMMANDS -->
+<!-- =========================
+     GALLERY
+========================= -->
+
 <section id="gallery" class="container">
+
  <div class="panel">
+
   <div class="sectionHead">
+
    <div>
-    <div class="kicker">Visual Network</div>
-    <h2 class="sectionTitle">AI Gallery</h2>
+
+    <div class="kicker">
+     Visual Network
+    </div>
+
+    <h2 class="sectionTitle">
+     AI Gallery
+    </h2>
+
+    <p class="muted" style="font-size:13px;margin-top:-5px">
+     Explore AI images, creative artwork and professional prompts by Broken AI HIMANSHU.
+    </p>
+
    </div>
+
    <div style="min-width:min(350px,100%)">
-    <input id="gallerySearch" class="search"
+
+    <input
+     id="gallerySearch"
+     class="search"
      placeholder="🔍 Search AI images..."
-     oninput="renderGallery()">
+     oninput="renderGallery()"
+    >
+
    </div>
+
   </div>
 
   <div class="commandTools">
-   <button class="catBtn active" onclick="setGalleryFilter('all',this)">All</button>
-   <button class="catBtn" onclick="setGalleryFilter('popular',this)">Popular</button>
-   <button class="catBtn" onclick="setGalleryFilter('latest',this)">Latest</button>
+
+   <button
+    class="catBtn active"
+    onclick="setGalleryFilter('all',this)"
+   >
+    All
+   </button>
+
+   <button
+    class="catBtn"
+    onclick="setGalleryFilter('popular',this)"
+   >
+    Popular
+   </button>
+
+   <button
+    class="catBtn"
+    onclick="setGalleryFilter('latest',this)"
+   >
+    Latest
+   </button>
+
   </div>
 
-  <div id="galleryGrid" class="galleryGrid"></div>
+  <div
+   id="galleryGrid"
+   class="galleryGrid"
+  ></div>
+
  </div>
+
 </section>
 
+<!-- =========================
+     COMMANDS
+========================= -->
+
 <section id="commands" class="container">
+
  <div class="panel">
+
   <div class="sectionHead">
+
    <div>
-    <div class="kicker">Prompt Command Network</div>
-    <h2 class="sectionTitle">500+ AI Commands</h2>
+
+    <div class="kicker">
+     Prompt Command Network
+    </div>
+
+    <h2 class="sectionTitle">
+     500+ AI Commands
+    </h2>
+
     <p class="muted">
      हर command को copy करके अपने AI image prompt में इस्तेमाल करें।
     </p>
+
    </div>
+
    <div style="min-width:min(350px,100%)">
-    <input id="commandSearch" class="search"
+
+    <input
+     id="commandSearch"
+     class="search"
      placeholder="🔍 Search command..."
-     oninput="renderCommands()">
+     oninput="renderCommands()"
+    >
+
    </div>
+
   </div>
 
   <div id="categories" class="categories"></div>
 
   <div style="margin:15px 0;color:#7f8da3;font-size:12px">
-   Available Commands: <b id="commandCount" style="color:#00eaff">0</b>
+
+   Available Commands:
+   <b
+    id="commandCount"
+    style="color:#00eaff"
+   >
+    0
+   </b>
+
   </div>
 
-  <div id="commandGrid" class="commandGrid"></div>
+  <div
+   id="commandGrid"
+   class="commandGrid"
+  ></div>
+
  </div>
+
 </section>
 
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about" class="container">
+
  <div class="panel">
-  <div class="kicker">Broken AI Network</div>
-  <h2 class="sectionTitle">AI Creative Tools</h2>
+
+  <div class="kicker">
+   Broken AI Network
+  </div>
+
+  <h2 class="sectionTitle">
+   AI Creative Tools
+  </h2>
 
   <div class="aboutGrid">
+
    <div class="feature">
-    <div class="featureIcon">⚡</div>
-    <h3>500+ Commands</h3>
-    <p>Camera, style, lighting, cinema, nature, fashion and many more AI commands.</p>
+
+    <div class="featureIcon">
+     ⚡
+    </div>
+
+    <h3>
+     500+ Commands
+    </h3>
+
+    <p>
+     Camera, style, lighting, cinema, nature, fashion and many more AI commands.
+    </p>
+
    </div>
 
    <div class="feature">
-    <div class="featureIcon">🎨</div>
-    <h3>AI Image Prompts</h3>
-    <p>Create creative and professional prompts for AI image generation.</p>
+
+    <div class="featureIcon">
+     🎨
+    </div>
+
+    <h3>
+     AI Image Prompts
+    </h3>
+
+    <p>
+     Create creative and professional prompts for AI image generation.
+    </p>
+
    </div>
 
    <div class="feature">
-    <div class="featureIcon">🎬</div>
-    <h3>Cinematic</h3>
-    <p>Build cinematic scenes, dramatic lighting and professional visual styles.</p>
+
+    <div class="featureIcon">
+     🎬
+    </div>
+
+    <h3>
+     Cinematic
+    </h3>
+
+    <p>
+     Build cinematic scenes, dramatic lighting and professional visual styles.
+    </p>
+
    </div>
 
    <div class="feature">
-    <div class="featureIcon">📱</div>
-    <h3>Mobile Friendly</h3>
-    <p>Designed to work smoothly on phones, tablets and desktop screens.</p>
+
+    <div class="featureIcon">
+     📱
+    </div>
+
+    <h3>
+     Mobile Friendly
+    </h3>
+
+    <p>
+     Designed to work smoothly on phones, tablets and desktop screens.
+    </p>
+
    </div>
+
   </div>
 
   <div style="margin-top:35px">
-   <div class="kicker">AI Topics & Search Keywords</div>
-   <h3>Explore AI Creative Topics</h3>
 
-   <div id="keywords" class="keywords"></div>
+   <div class="kicker">
+    AI Topics & Search Keywords
+   </div>
+
+   <h3>
+    Explore AI Creative Topics
+   </h3>
+
+   <div
+    id="keywords"
+    class="keywords"
+   ></div>
+
   </div>
+
  </div>
+
 </section>
 
+<!-- =========================
+     ADMIN
+========================= -->
+
 <section id="admin" class="container">
+
  <div class="panel">
-  <div class="kicker">Creator Control</div>
-  <h2 class="sectionTitle">Admin</h2>
+
+  <div class="kicker">
+   Creator Control
+  </div>
+
+  <h2 class="sectionTitle">
+   Admin
+  </h2>
 
   <div id="loginPanel">
+
    <div class="adminGrid">
+
     <div>
+
      <div class="field">
-      <label>Email</label>
-      <input id="loginEmail" type="email" placeholder="Admin email">
+
+      <label>
+       Email
+      </label>
+
+      <input
+       id="loginEmail"
+       type="email"
+       placeholder="Admin email"
+      >
+
      </div>
 
      <div class="field">
-      <label>Password</label>
-      <input id="loginPassword" type="password" placeholder="Password">
+
+      <label>
+       Password
+      </label>
+
+      <input
+       id="loginPassword"
+       type="password"
+       placeholder="Password"
+      >
+
      </div>
 
-     <button class="btn btnPrimary" onclick="adminLogin()">🔐 Login</button>
+     <button
+      class="btn btnPrimary"
+      onclick="adminLogin()"
+     >
+      🔐 Login
+     </button>
+
     </div>
+
    </div>
+
   </div>
 
   <div id="adminPanel">
+
    <div class="adminGrid">
+
     <div>
+
      <div class="field">
-      <label>Image Title</label>
-      <input id="imageTitle" placeholder="AI Image Title">
+
+      <label>
+       Image Title
+      </label>
+
+      <input
+       id="imageTitle"
+       placeholder="Example: Dussehra 8K AI Image | Broken AI HIMANSHU"
+      >
+
      </div>
 
      <div class="field">
-      <label>Prompt</label>
-      <textarea id="imagePrompt" placeholder="Image prompt..."></textarea>
+
+      <label>
+       Caption / Description
+      </label>
+
+      <textarea
+       id="imageCaption"
+       placeholder="Short description of this AI image..."
+      ></textarea>
+
      </div>
 
      <div class="field">
-      <label>Image File</label>
-      <input id="imageFile" type="file" accept="image/*">
+
+      <label>
+       Prompt
+      </label>
+
+      <textarea
+       id="imagePrompt"
+       placeholder="Image prompt..."
+      ></textarea>
+
      </div>
 
-     <button class="btn btnPrimary" onclick="uploadImage()">☁️ Upload Image</button>
-     <button class="btn" onclick="adminLogout()">Logout</button>
+     <div class="field">
+
+      <label>
+       SEO Alt Text
+      </label>
+
+      <input
+       id="imageAlt"
+       placeholder="Example: Dussehra 8K AI image, Indian festival artwork"
+      >
+
+      <div class="fieldHint">
+       Image को describe करने वाला natural text लिखें। केवल keywords भरने की जरूरत नहीं है।
+      </div>
+
+     </div>
+
+     <div class="field">
+
+      <label>
+       Image File
+      </label>
+
+      <input
+       id="imageFile"
+       type="file"
+       accept="image/*"
+      >
+
+     </div>
+
+     <button
+      class="btn btnPrimary"
+      onclick="uploadImage()"
+     >
+      ☁️ Upload Image
+     </button>
+
+     <button
+      class="btn"
+      onclick="adminLogout()"
+     >
+      Logout
+     </button>
+
     </div>
 
     <div>
-     <div id="uploadPreview"
-      style="min-height:250px;border:1px dashed rgba(0,234,255,.25);border-radius:18px;display:grid;place-items:center;color:#64738b">
+
+     <div
+      id="uploadPreview"
+      style="
+       min-height:250px;
+       border:1px dashed rgba(0,234,255,.25);
+       border-radius:18px;
+       display:grid;
+       place-items:center;
+       color:#64738b;
+       padding:10px
+      "
+     >
       Image preview
      </div>
+
     </div>
+
    </div>
+
   </div>
+
  </div>
+
 </section>
 
 </main>
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
- <div class="footerLogo">BROKEN AI</div>
- <p>AI VISUAL NETWORK • Created by HIMANSHU</p>
- <p style="font-size:11px">AI Images • AI Prompts • 500+ Commands • Creative AI</p>
+
+ <div class="footerLogo">
+  BROKEN AI
+ </div>
+
+ <p>
+  AI VISUAL NETWORK • Created by HIMANSHU
+ </p>
+
+ <p style="font-size:11px">
+  AI Images • AI Prompts • 500+ Commands • Creative AI
+ </p>
+
+ <p style="font-size:11px;color:#4e6078">
+  💚 AI creativity made simple
+ </p>
+
 </footer>
 
-<div id="imageModal" class="modal" onclick="modalBackdrop(event)">
- <button class="closeModal" onclick="closeModal()">×</button>
+<!-- =========================
+     MODAL
+========================= -->
+
+<div
+ id="imageModal"
+ class="modal"
+ onclick="modalBackdrop(event)"
+>
+
+ <button
+  class="closeModal"
+  onclick="closeModal()"
+ >
+  ×
+ </button>
 
  <div class="modalContent">
-  <img id="modalImage" class="modalImage" alt="">
-  <div class="modalBar">
-   <button class="btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
-   <button class="btn" onclick="closeModal()">✕ Close</button>
+
+  <img
+   id="modalImage"
+   class="modalImage"
+   alt=""
+  >
+
+  <div
+   id="modalInfo"
+   class="modalInfo"
+  >
+
+   <div
+    id="modalTitle"
+    class="modalTitle"
+   ></div>
+
+   <div
+    id="modalDescription"
+    class="modalDescription"
+   ></div>
+
   </div>
+
+  <div class="modalBar">
+
+   <button
+    class="btn"
+    onclick="toggleFullscreen()"
+   >
+    ⛶ Fullscreen
+   </button>
+
+   <button
+    id="modalDownload"
+    class="btn"
+    onclick="downloadModalImage()"
+   >
+    ⬇️ Download
+   </button>
+
+   <button
+    id="modalShare"
+    class="btn"
+    onclick="shareModalImage()"
+   >
+    🔗 Share
+   </button>
+
+   <button
+    class="btn"
+    onclick="closeModal()"
+   >
+    ✕ Close
+   </button>
+
+  </div>
+
  </div>
+
 </div>
 
 <div id="toast" class="toast"></div>
 
 <script type="module">
+
+/* =========================
+   FIREBASE IMPORTS
+========================= */
 
 import { initializeApp }
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -1026,14 +2121,16 @@ import {
  updateDoc,
  increment,
  serverTimestamp
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 import {
  getAuth,
  signInWithEmailAndPassword,
  signOut,
  onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 
 /* =========================
@@ -1041,38 +2138,54 @@ import {
 ========================= */
 
 const firebaseConfig = {
+
  apiKey:"AIzaSyDE3twTS8yuRDzpHvjCfZFzDnAK0pi-6Ho",
+
  authDomain:"broken-boy-f5087.firebaseapp.com",
+
  projectId:"broken-boy-f5087",
+
  storageBucket:"broken-boy-f5087.firebasestorage.app",
+
  messagingSenderId:"1086620986469",
+
  appId:"1:1086620986469:web:0c08c7c876e5389ae8aa8c",
+
  measurementId:"G-F2E1B5LWEN"
+
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+const app=initializeApp(firebaseConfig);
 
-const ADMIN_EMAIL = "himanshu731839@gmail.com";
+const db=getFirestore(app);
+
+const auth=getAuth(app);
+
+const ADMIN_EMAIL="himanshu731839@gmail.com";
 
 
 /* =========================
    CLOUDINARY
 ========================= */
 
-const CLOUD_NAME = "g33rvuls";
-const UPLOAD_PRESET = "brokenai";
+const CLOUD_NAME="g33rvuls";
+
+const UPLOAD_PRESET="brokenai";
 
 
 /* =========================
    GLOBALS
 ========================= */
 
-let galleryItems = [];
-let currentGalleryFilter = "all";
-let selectedCategory = "All";
-let currentUser = null;
+let galleryItems=[];
+
+let currentGalleryFilter="all";
+
+let selectedCategory="All";
+
+let currentUser=null;
+
+let currentModalData=null;
 
 
 /* =========================
@@ -1081,14 +2194,18 @@ let currentUser = null;
 
 function toast(message){
 
- const box = document.getElementById("toast");
+ const box=document.getElementById("toast");
 
- box.textContent = message;
+ box.textContent=message;
+
  box.classList.add("show");
 
  setTimeout(()=>{
+
   box.classList.remove("show");
+
  },2200);
+
 }
 
 
@@ -1096,44 +2213,71 @@ function toast(message){
    PROMPT LAB
 ========================= */
 
-window.generatePrompt = function(){
+window.generatePrompt=function(){
 
- const input = document.getElementById("promptInput").value.trim();
+ const input=
+ document.getElementById("promptInput")
+ .value
+ .trim();
 
  if(!input){
+
   toast("पहले prompt लिखो");
+
   return;
+
  }
 
- const prompt =
+ const prompt=
  `${input}, professional AI artwork, cinematic composition, `
  +`ultra realistic details, realistic skin texture, dramatic lighting, `
  +`volumetric light, depth of field, highly detailed, sharp focus, `
  +`professional photography, premium color grading, 8K quality`;
 
- document.getElementById("promptOutput").textContent = prompt;
+ document.getElementById("promptOutput")
+ .textContent=prompt;
+
 };
 
 
-window.clearPrompt = function(){
+window.clearPrompt=function(){
 
  document.getElementById("promptInput").value="";
+
  document.getElementById("promptOutput").textContent=
  "Your professional AI prompt will appear here.";
+
 };
 
 
-window.copyGenerated = async function(){
+window.copyGenerated=async function(){
 
- const text=document.getElementById("promptOutput").textContent;
+ const text=
+ document.getElementById("promptOutput").textContent;
 
- if(!text || text.includes("will appear here")){
+ if(
+  !text ||
+  text.includes("will appear here")
+ ){
+
   toast("पहले prompt generate करो");
+
   return;
+
  }
 
- await navigator.clipboard.writeText(text);
- toast("Prompt copied ✓");
+ try{
+
+  await navigator.clipboard.writeText(text);
+
+  toast("Prompt copied ✓");
+
+ }catch(error){
+
+  toast("Copy failed");
+
+ }
+
 };
 
 
@@ -1141,7 +2285,7 @@ window.copyGenerated = async function(){
    COMMAND LIBRARY
 ========================= */
 
-const commandGroups = {
+const commandGroups={
 
  Camera:[
   "Droneview","Aerialview","Cinematic","Portrait","Closeup",
@@ -1242,24 +2386,33 @@ const commandGroups = {
 
 
 /* =========================
-   CREATE 500+ COMMANDS
+   CREATE COMMANDS
 ========================= */
 
 let commands=[];
 
-Object.entries(commandGroups).forEach(([category,list])=>{
+Object.entries(commandGroups).forEach(
+ ([category,list])=>{
 
- list.forEach(command=>{
+  list.forEach(command=>{
 
-  commands.push({
-   command:"/"+command,
-   category,
-   description:getDescription(category,command)
+   commands.push({
+
+    command:"/"+command,
+
+    category:category,
+
+    description:getDescription(
+     category,
+     command
+    )
+
+   });
+
   });
 
- });
-
-});
+ }
+);
 
 
 const combinationWords=[
@@ -1273,16 +2426,33 @@ const combinationStyles=[
  "Composition","Visual","Design","Look"
 ];
 
+
 for(let i=0;i<500;i++){
 
- const word=combinationWords[i%combinationWords.length];
- const style=combinationStyles[Math.floor(i/combinationWords.length)%combinationStyles.length];
+ const word=
+ combinationWords[
+  i%combinationWords.length
+ ];
+
+ const style=
+ combinationStyles[
+  Math.floor(
+   i/combinationWords.length
+  )%combinationStyles.length
+ ];
 
  commands.push({
+
   command:"/"+word+style+(i+1),
+
   category:"AI Mix",
-  description:"AI image prompt enhancement for "+word+" "+style
+
+  description:
+  "AI image prompt enhancement for "
+  +word+" "+style
+
  });
+
 }
 
 
@@ -1290,24 +2460,55 @@ function getDescription(category,command){
 
  const descriptions={
 
-  Camera:"Camera angle, framing or professional photography composition.",
-  Style:"Visual style and overall artistic appearance.",
-  Character:"Character concept, personality and visual identity.",
-  Nature:"Natural environment, landscape or outdoor scene.",
-  Lighting:"Lighting setup and cinematic illumination.",
-  Quality:"Image quality, detail and resolution enhancement.",
-  Effects:"Visual effects for atmosphere and cinematic impact.",
-  Fashion:"Clothing, fashion and styling direction.",
-  Cinema:"Movie-inspired cinematic visual composition.",
-  Architecture:"Buildings, locations and architectural environments.",
-  Vehicle:"Vehicle and transportation themed visuals.",
-  Fantasy:"Fantasy, magical and imaginative visual concepts.",
-  Food:"Food photography and presentation style.",
-  Social:"Social media, profile and promotional image style.",
-  "AI Mix":"Combined AI visual enhancement command."
+  Camera:
+  "Camera angle, framing or professional photography composition.",
+
+  Style:
+  "Visual style and overall artistic appearance.",
+
+  Character:
+  "Character concept, personality and visual identity.",
+
+  Nature:
+  "Natural environment, landscape or outdoor scene.",
+
+  Lighting:
+  "Lighting setup and cinematic illumination.",
+
+  Quality:
+  "Image quality, detail and resolution enhancement.",
+
+  Effects:
+  "Visual effects for atmosphere and cinematic impact.",
+
+  Fashion:
+  "Clothing, fashion and styling direction.",
+
+  Cinema:
+  "Movie-inspired cinematic visual composition.",
+
+  Architecture:
+  "Buildings, locations and architectural environments.",
+
+  Vehicle:
+  "Vehicle and transportation themed visuals.",
+
+  Fantasy:
+  "Fantasy, magical and imaginative visual concepts.",
+
+  Food:
+  "Food photography and presentation style.",
+
+  Social:
+  "Social media, profile and promotional image style.",
+
+  "AI Mix":
+  "Combined AI visual enhancement command."
+
  };
 
- return descriptions[category] || "AI image generation command.";
+ return descriptions[category]
+ ||"AI image generation command.";
 
 }
 
@@ -1318,37 +2519,48 @@ function getDescription(category,command){
 
 function renderCategories(){
 
- const box=document.getElementById("categories");
+ const box=
+ document.getElementById("categories");
 
- const cats=["All",...Object.keys(commandGroups),"AI Mix"];
+ const cats=[
+  "All",
+  ...Object.keys(commandGroups),
+  "AI Mix"
+ ];
 
- box.innerHTML=cats.map(cat=>`
+ box.innerHTML=
+ cats.map(cat=>`
 
   <button
    class="catBtn ${selectedCategory===cat?"active":""}"
-   onclick="selectCategory('${cat}')">
+   onclick="selectCategory('${cat}')"
+  >
    ${cat}
   </button>
 
  `).join("");
+
 }
 
 
 window.selectCategory=function(category){
 
  selectedCategory=category;
+
  renderCategories();
+
  renderCommands();
+
 };
 
 
 window.renderCommands=function(){
 
- const search=document
-  .getElementById("commandSearch")
-  .value
-  .toLowerCase()
-  .trim();
+ const search=
+ document.getElementById("commandSearch")
+ .value
+ .toLowerCase()
+ .trim();
 
  let list=commands.filter(item=>{
 
@@ -1365,13 +2577,18 @@ window.renderCommands=function(){
 
  });
 
- document.getElementById("commandCount").textContent=list.length;
+ document.getElementById("commandCount")
+ .textContent=list.length;
 
- document.getElementById("commandGrid").innerHTML=list.map((item,index)=>`
+ document.getElementById("commandGrid")
+ .innerHTML=
+ list.map(item=>`
 
   <div class="commandCard">
 
-   <div class="commandName">${escapeHtml(item.command)}</div>
+   <div class="commandName">
+    ${escapeHtml(item.command)}
+   </div>
 
    <div class="commandDesc">
     ${escapeHtml(item.description)}
@@ -1379,7 +2596,8 @@ window.renderCommands=function(){
 
    <button
     class="copyCommand"
-    onclick="copyCommand(${commands.indexOf(item)})">
+    onclick="copyCommand(${commands.indexOf(item)})"
+   >
     📋 Copy Command
    </button>
 
@@ -1396,9 +2614,22 @@ window.copyCommand=async function(index){
 
  if(!item)return;
 
- await navigator.clipboard.writeText(item.command);
+ try{
 
- toast(item.command+" copied ✓");
+  await navigator.clipboard.writeText(
+   item.command
+  );
+
+  toast(
+   item.command+" copied ✓"
+  );
+
+ }catch(error){
+
+  toast("Copy failed");
+
+ }
+
 };
 
 
@@ -1407,162 +2638,389 @@ window.copyCommand=async function(index){
 ========================= */
 
 const keywords=[
-"AI Images","AI Image Generator","AI Art","AI Artwork",
-"AI Prompts","AI Image Prompts","AI Photo","AI Portrait",
-"AI Photography","AI Creator","AI Design","AI Visuals",
-"AI Art Prompts","Cinematic AI","Cinematic Prompt",
-"Portrait Prompt","Photo Prompt","4K AI Images","8K AI Images",
-"Ultra Realistic AI","Photorealistic AI","AI Character",
-"AI Avatar","AI Profile Photo","AI Wallpaper","AI Poster",
-"AI Thumbnail","AI Social Media","AI Instagram Images",
-"AI YouTube Thumbnail","AI Fashion","AI Model",
-"AI Cinematic Photo","AI Fantasy Art","AI Cyberpunk",
-"AI Superhero","AI Warrior","AI Royal Portrait",
-"AI Wedding Photo","AI Bollywood Style","AI Street Style",
-"AI Luxury","AI Futuristic","AI Neon","AI Dark Style",
-"AI Nature","AI Landscape","AI Beach Image",
-"AI Forest Image","AI Mountain Image","AI Desert Image",
-"AI Snow Image","AI City Image","AI Architecture",
-"AI Car Image","AI Bike Image","AI Sports Car",
-"AI Food Photography","AI Product Image","AI Advertisement",
-"AI Branding","AI Digital Art","AI Creative Design",
-"AI Prompt Commands","500 AI Commands","AI Command Library",
-"Image Prompt Commands","AI Studio","Broken AI",
-"Broken AI HIMANSHU","HIMANSHU AI","AI Visual Network",
-"Creative AI","Future AI","AI Technology","Generative AI",
-"AI Creator India","Indian AI Creator","AI Design India",
-"AI Photo Editing","AI Image Editing","AI Visual Effects",
-"AI Lighting","AI Camera Angles","AI Photography Styles",
-"Drone View Prompt","Aerial View Prompt","Close Up Prompt",
-"Wide Angle Prompt","Low Angle Prompt","High Angle Prompt",
-"Golden Hour Prompt","Night Photography Prompt",
-"Dramatic Lighting Prompt","Bokeh Prompt","HDR AI",
-"Professional AI Prompt","Masterpiece Prompt","Ultra HD Prompt"
+
+ "AI Images",
+ "AI Image Generator",
+ "AI Art",
+ "AI Artwork",
+ "AI Prompts",
+ "AI Image Prompts",
+ "AI Photo",
+ "AI Portrait",
+ "AI Photography",
+ "AI Creator",
+ "AI Design",
+ "AI Visuals",
+ "AI Art Prompts",
+ "Cinematic AI",
+ "Cinematic Prompt",
+ "Portrait Prompt",
+ "Photo Prompt",
+ "4K AI Images",
+ "8K AI Images",
+ "Ultra Realistic AI",
+ "Photorealistic AI",
+ "AI Character",
+ "AI Avatar",
+ "AI Profile Photo",
+ "AI Wallpaper",
+ "AI Poster",
+ "AI Thumbnail",
+ "AI Social Media",
+ "AI Instagram Images",
+ "AI YouTube Thumbnail",
+ "AI Fashion",
+ "AI Model",
+ "AI Cinematic Photo",
+ "AI Fantasy Art",
+ "AI Cyberpunk",
+ "AI Superhero",
+ "AI Warrior",
+ "AI Royal Portrait",
+ "AI Wedding Photo",
+ "AI Bollywood Style",
+ "AI Street Style",
+ "AI Luxury",
+ "AI Futuristic",
+ "AI Neon",
+ "AI Dark Style",
+ "AI Nature",
+ "AI Landscape",
+ "AI Beach Image",
+ "AI Forest Image",
+ "AI Mountain Image",
+ "AI Desert Image",
+ "AI Snow Image",
+ "AI City Image",
+ "AI Architecture",
+ "AI Car Image",
+ "AI Bike Image",
+ "AI Sports Car",
+ "AI Food Photography",
+ "AI Product Image",
+ "AI Advertisement",
+ "AI Branding",
+ "AI Digital Art",
+ "AI Creative Design",
+ "AI Prompt Commands",
+ "500 AI Commands",
+ "AI Command Library",
+ "Image Prompt Commands",
+ "AI Studio",
+ "Broken AI",
+ "Broken AI HIMANSHU",
+ "HIMANSHU AI",
+ "AI Visual Network",
+ "Creative AI",
+ "Future AI",
+ "AI Technology",
+ "Generative AI",
+ "AI Creator India",
+ "Indian AI Creator",
+ "AI Design India",
+ "AI Photo Editing",
+ "AI Image Editing",
+ "AI Visual Effects",
+ "AI Lighting",
+ "AI Camera Angles",
+ "AI Photography Styles",
+ "Drone View Prompt",
+ "Aerial View Prompt",
+ "Close Up Prompt",
+ "Wide Angle Prompt",
+ "Low Angle Prompt",
+ "High Angle Prompt",
+ "Golden Hour Prompt",
+ "Night Photography Prompt",
+ "Dramatic Lighting Prompt",
+ "Bokeh Prompt",
+ "HDR AI",
+ "Professional AI Prompt",
+ "Masterpiece Prompt",
+ "Ultra HD Prompt"
+
 ];
 
 document.getElementById("keywords").innerHTML=
-keywords.map(k=>`<span class="keyword">${escapeHtml(k)}</span>`).join("");
+keywords
+.map(k=>
+ `<span class="keyword">${escapeHtml(k)}</span>`
+)
+.join("");
 
 
 /* =========================
-   GALLERY
+   GALLERY FILTER
 ========================= */
 
-window.setGalleryFilter=function(filter,button){
+window.setGalleryFilter=function(
+ filter,
+ button
+){
 
  currentGalleryFilter=filter;
 
- document.querySelectorAll("#gallery .catBtn")
-  .forEach(b=>b.classList.remove("active"));
+ document
+ .querySelectorAll("#gallery .catBtn")
+ .forEach(
+  b=>b.classList.remove("active")
+ );
 
- if(button)button.classList.add("active");
+ if(button){
+  button.classList.add("active");
+ }
 
  renderGallery();
+
 };
 
 
+/* =========================
+   GALLERY RENDER
+========================= */
+
 window.renderGallery=function(){
 
- const grid=document.getElementById("galleryGrid");
+ const grid=
+ document.getElementById("galleryGrid");
 
- const search=document
-  .getElementById("gallerySearch")
-  .value
-  .toLowerCase()
-  .trim();
+ const search=
+ document.getElementById("gallerySearch")
+ .value
+ .toLowerCase()
+ .trim();
 
  let list=[...galleryItems];
 
+
  if(currentGalleryFilter==="popular"){
-  list.sort((a,b)=>(b.likes||0)-(a.likes||0));
- }
 
- if(currentGalleryFilter==="latest"){
-  list.sort((a,b)=>getTime(b)-getTime(a));
- }
-
- if(search){
-
-  list=list.filter(item=>
-   String(item.title||"").toLowerCase().includes(search) ||
-   String(item.prompt||"").toLowerCase().includes(search)
+  list.sort(
+   (a,b)=>
+   (Number(b.likes||0))
+   -
+   (Number(a.likes||0))
   );
 
  }
 
- if(!list.length){
 
-  grid.innerHTML=`
-   <div class="empty" style="grid-column:1/-1">
-    <div style="font-size:40px">🖼️</div>
-    <p>No AI images found.</p>
-   </div>
-  `;
+ if(currentGalleryFilter==="latest"){
 
-  return;
+  list.sort(
+   (a,b)=>getTime(b)-getTime(a)
+  );
+
  }
 
 
- grid.innerHTML=list.map(item=>{
+ if(search){
 
-  const safeUrl=escapeAttribute(item.url);
-  const title=escapeHtml(item.title||"AI Image");
-  const prompt=escapeHtml(item.prompt||"Creative AI artwork");
-  const likes=Number(item.likes||0);
+  list=list.filter(item=>{
+
+   const title=
+   String(item.title||"")
+   .toLowerCase();
+
+   const caption=
+   String(
+    item.caption||
+    item.description||
+    ""
+   )
+   .toLowerCase();
+
+   const prompt=
+   String(item.prompt||"")
+   .toLowerCase();
+
+   const alt=
+   String(item.alt||"")
+   .toLowerCase();
+
+   return(
+    title.includes(search) ||
+    caption.includes(search) ||
+    prompt.includes(search) ||
+    alt.includes(search)
+   );
+
+  });
+
+ }
+
+
+ if(!list.length){
+
+  grid.innerHTML=`
+
+   <div
+    class="empty"
+    style="grid-column:1/-1"
+   >
+
+    <div style="font-size:40px">
+     🖼️
+    </div>
+
+    <p>
+     No AI images found.
+    </p>
+
+   </div>
+
+  `;
+
+  return;
+
+ }
+
+
+ grid.innerHTML=
+ list.map(item=>{
+
+  const safeUrl=
+  escapeAttribute(item.url);
+
+  const title=
+  escapeHtml(
+   item.title||
+   "AI Image"
+  );
+
+  const caption=
+  escapeHtml(
+   item.caption||
+   item.description||
+   "Creative AI artwork by Broken AI HIMANSHU."
+  );
+
+  const prompt=
+  escapeHtml(
+   item.prompt||
+   "Creative AI artwork"
+  );
+
+  const likes=
+  Number(item.likes||0);
+
+  const alt=
+  escapeAttribute(
+   item.alt||
+   (
+    item.title||
+    "AI generated creative artwork"
+   )
+  );
 
   return`
 
-  <article class="galleryCard">
+  <article
+   class="galleryCard"
+  >
 
-   <div class="galleryImgWrap"
-    onclick="openModal('${safeUrl}','${escapeAttribute(item.title||"AI Image")}')">
+   <div
+    class="galleryImgWrap"
+    onclick="openModal(
+     '${safeUrl}',
+     '${escapeAttribute(item.title||"AI Image")}',
+     '${escapeAttribute(item.caption||item.description||"")}',
+     '${escapeAttribute(item.prompt||"")}'
+    )"
+   >
 
     <img
      class="galleryImg"
      src="${safeUrl}"
      loading="lazy"
      decoding="async"
-     alt="${escapeAttribute((item.title||"AI image")+" — AI generated creative artwork")}"
-     onerror="this.style.display='none'">
+     alt="${alt}"
+     title="${escapeAttribute(item.title||"AI Image")}"
+     onerror="this.style.display='none'"
+    >
 
-    <div class="imageZoom">⛶</div>
+    <div class="galleryBadge">
+     AI ART
+    </div>
+
+    <div class="imageZoom">
+     ⛶
+    </div>
 
    </div>
 
    <div class="cardBody">
 
-    <div class="cardTitle">${title}</div>
+    <div class="cardTitle">
+     ${title}
+    </div>
 
-    <div class="cardPrompt">${prompt}</div>
+    <div class="cardDescription">
+     ${caption}
+    </div>
+
+    <div class="cardPrompt">
+     ${prompt}
+    </div>
 
     <div class="cardActions">
 
-     <button class="smallBtn"
-      onclick="likeImage('${item.id}')">
+     <button
+      class="smallBtn"
+      onclick="likeImage('${item.id}')"
+     >
       ❤️ ${likes}
      </button>
 
-     <button class="smallBtn"
-      onclick="saveImage('${item.id}')">
+     <button
+      class="smallBtn"
+      onclick="saveImage('${item.id}')"
+     >
       🔖 Save
      </button>
 
-     <button class="smallBtn"
-      onclick="copyText('${escapeAttribute(item.prompt||"")}')">
-      📋
+     <button
+      class="smallBtn"
+      onclick="copyText('${escapeAttribute(item.prompt||"")}')"
+     >
+      📋 Copy
+     </button>
+
+    </div>
+
+    <div class="cardActionsBottom">
+
+     <button
+      class="smallBtn downloadBtn"
+      onclick="downloadImage('${safeUrl}','${escapeAttribute(item.title||"AI-Image")}')"
+     >
+      ⬇️ Download
+     </button>
+
+     <button
+      class="smallBtn shareBtn"
+      onclick="shareImage('${safeUrl}','${escapeAttribute(item.title||"AI Image")}')"
+     >
+      🔗 Share
      </button>
 
     </div>
 
     ${
-     currentUser && currentUser.email===ADMIN_EMAIL
+     currentUser &&
+     currentUser.email===ADMIN_EMAIL
      ?
-     `<button class="smallBtn"
+     `
+      <button
+       class="smallBtn"
        style="width:100%;margin-top:7px"
-       onclick="deleteImage('${item.id}')">
+       onclick="deleteImage('${item.id}')"
+      >
        🗑 Delete
-      </button>`
-     :""
+      </button>
+     `
+     :
+     ""
     }
 
    </div>
@@ -1573,23 +3031,38 @@ window.renderGallery=function(){
 
  }).join("");
 
- document.getElementById("imageCount").textContent=galleryItems.length;
 
- document.getElementById("likeCount").textContent=
- galleryItems.reduce((sum,item)=>sum+Number(item.likes||0),0);
+ document.getElementById("imageCount")
+ .textContent=galleryItems.length;
+
+
+ document.getElementById("likeCount")
+ .textContent=
+ galleryItems.reduce(
+  (sum,item)=>
+  sum+Number(item.likes||0),
+  0
+ );
 
 };
 
+
+/* =========================
+   TIME
+========================= */
 
 function getTime(item){
 
  if(!item)return 0;
 
  if(item.createdAt?.seconds){
+
   return item.createdAt.seconds;
+
  }
 
  return 0;
+
 }
 
 
@@ -1601,14 +3074,23 @@ async function loadGallery(){
 
  try{
 
-  const snap=await getDocs(collection(db,"images"));
+  const snap=
+  await getDocs(
+   collection(db,"images")
+  );
 
-  galleryItems=snap.docs.map(d=>({
+  galleryItems=
+  snap.docs.map(d=>({
+
    id:d.id,
+
    ...d.data()
+
   }));
 
-  galleryItems.sort((a,b)=>getTime(b)-getTime(a));
+  galleryItems.sort(
+   (a,b)=>getTime(b)-getTime(a)
+  );
 
   renderGallery();
 
@@ -1616,10 +3098,17 @@ async function loadGallery(){
 
   console.error(error);
 
-  document.getElementById("galleryGrid").innerHTML=`
-   <div class="empty" style="grid-column:1/-1">
+  document.getElementById(
+   "galleryGrid"
+  ).innerHTML=`
+
+   <div
+    class="empty"
+    style="grid-column:1/-1"
+   >
     Gallery load नहीं हो पाई।
    </div>
+
   `;
 
  }
@@ -1637,12 +3126,22 @@ window.likeImage=async function(id){
 
   await updateDoc(
    doc(db,"images",id),
-   {likes:increment(1)}
+   {
+    likes:increment(1)
+   }
   );
 
-  const item=galleryItems.find(x=>x.id===id);
+  const item=
+  galleryItems.find(
+   x=>x.id===id
+  );
 
-  if(item)item.likes=Number(item.likes||0)+1;
+  if(item){
+
+   item.likes=
+   Number(item.likes||0)+1;
+
+  }
 
   renderGallery();
 
@@ -1651,6 +3150,7 @@ window.likeImage=async function(id){
  }catch(error){
 
   console.error(error);
+
   toast("Like नहीं हो पाया");
 
  }
@@ -1667,15 +3167,32 @@ window.saveImage=function(id){
  let saved=[];
 
  try{
-  saved=JSON.parse(localStorage.getItem("brokenAI_saved")||"[]");
+
+  saved=
+  JSON.parse(
+   localStorage.getItem(
+    "brokenAI_saved"
+   )||"[]"
+  );
+
  }catch(e){}
 
+
  if(!saved.includes(id)){
+
   saved.push(id);
-  localStorage.setItem("brokenAI_saved",JSON.stringify(saved));
+
+  localStorage.setItem(
+   "brokenAI_saved",
+   JSON.stringify(saved)
+  );
+
   toast("Image saved 🔖");
+
  }else{
+
   toast("Already saved");
+
  }
 
 };
@@ -1689,7 +3206,9 @@ window.copyText=async function(text){
 
  try{
 
-  await navigator.clipboard.writeText(text);
+  await navigator.clipboard.writeText(
+   text
+  );
 
   toast("Copied ✓");
 
@@ -1703,42 +3222,244 @@ window.copyText=async function(text){
 
 
 /* =========================
+   DOWNLOAD IMAGE
+========================= */
+
+window.downloadImage=async function(
+ url,
+ title
+){
+
+ try{
+
+  toast("Preparing download...");
+
+  const response=
+  await fetch(url);
+
+  const blob=
+  await response.blob();
+
+  const blobUrl=
+  URL.createObjectURL(blob);
+
+  const a=
+  document.createElement("a");
+
+  a.href=blobUrl;
+
+  a.download=
+  safeFileName(title)+".jpg";
+
+  document.body.appendChild(a);
+
+  a.click();
+
+  a.remove();
+
+  setTimeout(()=>{
+   URL.revokeObjectURL(blobUrl);
+  },1000);
+
+  toast("Download started ✓");
+
+ }catch(error){
+
+  console.error(error);
+
+  /*
+   Some external image hosts may block
+   browser downloads because of CORS.
+   In that case the image is opened directly.
+  */
+
+  window.open(
+   url,
+   "_blank",
+   "noopener"
+  );
+
+  toast("Image opened — save it from there");
+
+ }
+
+};
+
+
+/* =========================
+   SHARE IMAGE
+========================= */
+
+window.shareImage=async function(
+ url,
+ title
+){
+
+ const shareData={
+
+  title:
+  title||
+  "Broken AI HIMANSHU",
+
+  text:
+  title+
+  " — Broken AI HIMANSHU",
+
+  url:
+  url
+
+ };
+
+
+ if(
+  navigator.share
+ ){
+
+  try{
+
+   await navigator.share(
+    shareData
+   );
+
+   toast("Shared ✓");
+
+   return;
+
+  }catch(error){
+
+   if(
+    error?.name==="AbortError"
+   ){
+
+    return;
+
+   }
+
+  }
+
+ }
+
+
+ try{
+
+  await navigator.clipboard.writeText(
+   url
+  );
+
+  toast("Image link copied ✓");
+
+ }catch(error){
+
+  window.open(
+   url,
+   "_blank",
+   "noopener"
+  );
+
+ }
+
+};
+
+
+/* =========================
    IMAGE MODAL
 ========================= */
 
-window.openModal=function(src,alt){
+window.openModal=function(
+ src,
+ title,
+ description,
+ prompt
+){
 
- const modal=document.getElementById("imageModal");
- const image=document.getElementById("modalImage");
+ const modal=
+ document.getElementById(
+  "imageModal"
+ );
+
+ const image=
+ document.getElementById(
+  "modalImage"
+ );
 
  image.src=src;
- image.alt=alt||"AI image";
+
+ image.alt=
+ title||
+ "AI image";
+
+ document.getElementById(
+  "modalTitle"
+ ).textContent=
+ title||
+ "AI Image";
+
+ document.getElementById(
+  "modalDescription"
+ ).textContent=
+ description||
+ "Creative AI artwork by Broken AI HIMANSHU.";
+
+ currentModalData={
+
+  src:src,
+
+  title:
+  title||
+  "AI Image",
+
+  description:
+  description||
+  "",
+
+  prompt:
+  prompt||
+  ""
+
+ };
 
  modal.classList.add("show");
 
  document.body.style.overflow="hidden";
+
 };
 
 
 window.closeModal=function(){
 
- const modal=document.getElementById("imageModal");
- const image=document.getElementById("modalImage");
+ const modal=
+ document.getElementById(
+  "imageModal"
+ );
+
+ const image=
+ document.getElementById(
+  "modalImage"
+ );
 
  modal.classList.remove("show");
 
  setTimeout(()=>{
+
   image.src="";
+
  },200);
 
+ currentModalData=null;
+
  document.body.style.overflow="";
+
 };
 
 
 window.modalBackdrop=function(event){
 
- if(event.target.id==="imageModal"){
+ if(
+  event.target.id==="imageModal"
+ ){
+
   closeModal();
+
  }
 
 };
@@ -1746,7 +3467,10 @@ window.modalBackdrop=function(event){
 
 window.toggleFullscreen=function(){
 
- const image=document.getElementById("modalImage");
+ const image=
+ document.getElementById(
+  "modalImage"
+ );
 
  if(!document.fullscreenElement){
 
@@ -1761,13 +3485,42 @@ window.toggleFullscreen=function(){
 };
 
 
-document.addEventListener("keydown",e=>{
+window.downloadModalImage=function(){
 
- if(e.key==="Escape"){
-  closeModal();
+ if(!currentModalData)return;
+
+ downloadImage(
+  currentModalData.src,
+  currentModalData.title
+ );
+
+};
+
+
+window.shareModalImage=function(){
+
+ if(!currentModalData)return;
+
+ shareImage(
+  currentModalData.src,
+  currentModalData.title
+ );
+
+};
+
+
+document.addEventListener(
+ "keydown",
+ e=>{
+
+  if(e.key==="Escape"){
+
+   closeModal();
+
+  }
+
  }
-
-});
+);
 
 
 /* =========================
@@ -1776,33 +3529,55 @@ document.addEventListener("keydown",e=>{
 
 window.adminLogin=async function(){
 
- const email=document.getElementById("loginEmail").value.trim();
- const password=document.getElementById("loginPassword").value;
+ const email=
+ document.getElementById(
+  "loginEmail"
+ ).value.trim();
+
+ const password=
+ document.getElementById(
+  "loginPassword"
+ ).value;
 
  if(email!==ADMIN_EMAIL){
 
-  toast("Admin email सही नहीं है");
+  toast(
+   "Admin email सही नहीं है"
+  );
+
   return;
 
  }
 
  if(!password){
 
-  toast("Password डालो");
+  toast(
+   "Password डालो"
+  );
+
   return;
 
  }
 
  try{
 
-  await signInWithEmailAndPassword(auth,email,password);
+  await signInWithEmailAndPassword(
+   auth,
+   email,
+   password
+  );
 
-  toast("Admin login successful ✓");
+  toast(
+   "Admin login successful ✓"
+  );
 
  }catch(error){
 
   console.error(error);
-  toast("Login failed");
+
+  toast(
+   "Login failed"
+  );
 
  }
 
@@ -1814,7 +3589,10 @@ window.adminLogout=async function(){
  try{
 
   await signOut(auth);
-  toast("Logged out");
+
+  toast(
+   "Logged out"
+  );
 
  }catch(error){
 
@@ -1825,46 +3603,81 @@ window.adminLogout=async function(){
 };
 
 
-onAuthStateChanged(auth,user=>{
+onAuthStateChanged(
+ auth,
+ user=>{
 
- currentUser=user;
+  currentUser=user;
 
- const loginPanel=document.getElementById("loginPanel");
- const adminPanel=document.getElementById("adminPanel");
+  const loginPanel=
+  document.getElementById(
+   "loginPanel"
+  );
 
- if(user && user.email===ADMIN_EMAIL){
+  const adminPanel=
+  document.getElementById(
+   "adminPanel"
+  );
 
-  loginPanel.style.display="none";
-  adminPanel.style.display="block";
 
- }else{
+  if(
+   user &&
+   user.email===ADMIN_EMAIL
+  ){
 
-  loginPanel.style.display="block";
-  adminPanel.style.display="none";
+   loginPanel.style.display="none";
+
+   adminPanel.style.display="block";
+
+  }else{
+
+   loginPanel.style.display="block";
+
+   adminPanel.style.display="none";
+
+  }
+
+  renderGallery();
 
  }
-
- renderGallery();
-
-});
+);
 
 
 /* =========================
    UPLOAD PREVIEW
 ========================= */
 
-document.getElementById("imageFile").addEventListener("change",function(){
+document
+.getElementById("imageFile")
+.addEventListener(
+ "change",
+ function(){
 
- const file=this.files[0];
+  const file=this.files[0];
 
- if(!file)return;
+  if(!file)return;
 
- const url=URL.createObjectURL(file);
+  const url=
+  URL.createObjectURL(file);
 
- document.getElementById("uploadPreview").innerHTML=
- `<img src="${url}" style="width:100%;height:250px;object-fit:contain;border-radius:15px">`;
+  document.getElementById(
+   "uploadPreview"
+  ).innerHTML=`
 
-});
+   <img
+    src="${url}"
+    style="
+     width:100%;
+     height:250px;
+     object-fit:contain;
+     border-radius:15px
+    "
+   >
+
+  `;
+
+ }
+);
 
 
 /* =========================
@@ -1873,41 +3686,97 @@ document.getElementById("imageFile").addEventListener("change",function(){
 
 window.uploadImage=async function(){
 
- if(!currentUser || currentUser.email!==ADMIN_EMAIL){
+ if(
+  !currentUser ||
+  currentUser.email!==ADMIN_EMAIL
+ ){
 
-  toast("Admin login required");
+  toast(
+   "Admin login required"
+  );
+
   return;
 
  }
 
- const file=document.getElementById("imageFile").files[0];
- const title=document.getElementById("imageTitle").value.trim();
- const prompt=document.getElementById("imagePrompt").value.trim();
+
+ const file=
+ document.getElementById(
+  "imageFile"
+ ).files[0];
+
+
+ const title=
+ document.getElementById(
+  "imageTitle"
+ ).value.trim();
+
+
+ const caption=
+ document.getElementById(
+  "imageCaption"
+ ).value.trim();
+
+
+ const prompt=
+ document.getElementById(
+  "imagePrompt"
+ ).value.trim();
+
+
+ const alt=
+ document.getElementById(
+  "imageAlt"
+ ).value.trim();
+
 
  if(!file){
 
-  toast("Image select करो");
+  toast(
+   "Image select करो"
+  );
+
   return;
 
  }
+
 
  if(!title){
 
-  toast("Image title डालो");
+  toast(
+   "Image title डालो"
+  );
+
   return;
 
  }
 
+
  try{
 
-  toast("Uploading...");
+  toast(
+   "Uploading..."
+  );
 
-  const formData=new FormData();
 
-  formData.append("file",file);
-  formData.append("upload_preset",UPLOAD_PRESET);
+  const formData=
+  new FormData();
 
-  const response=await fetch(
+
+  formData.append(
+   "file",
+   file
+  );
+
+
+  formData.append(
+   "upload_preset",
+   UPLOAD_PRESET
+  );
+
+
+  const response=
+  await fetch(
    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
    {
     method:"POST",
@@ -1915,41 +3784,100 @@ window.uploadImage=async function(){
    }
   );
 
-  const data=await response.json();
+
+  const data=
+  await response.json();
+
 
   if(!data.secure_url){
 
    console.error(data);
-   throw new Error("Cloudinary upload failed");
+
+   throw new Error(
+    "Cloudinary upload failed"
+   );
 
   }
 
-  await addDoc(collection(db,"images"),{
 
-   url:data.secure_url,
-   title:title,
-   prompt:prompt,
-   likes:0,
-   createdAt:serverTimestamp()
+  await addDoc(
+   collection(db,"images"),
+   {
 
-  });
+    url:data.secure_url,
 
-  document.getElementById("imageTitle").value="";
-  document.getElementById("imagePrompt").value="";
-  document.getElementById("imageFile").value="";
+    title:title,
 
-  document.getElementById("uploadPreview").innerHTML=
-   "Image preview";
+    caption:
+    caption||
+    "Creative AI artwork by Broken AI HIMANSHU.",
 
-  toast("Image uploaded successfully ✓");
+    description:
+    caption||
+    "Creative AI artwork by Broken AI HIMANSHU.",
+
+    prompt:prompt,
+
+    alt:
+    alt||
+    title+
+    " — Broken AI HIMANSHU AI artwork",
+
+    likes:0,
+
+    createdAt:
+    serverTimestamp()
+
+   }
+  );
+
+
+  document.getElementById(
+   "imageTitle"
+  ).value="";
+
+
+  document.getElementById(
+   "imageCaption"
+  ).value="";
+
+
+  document.getElementById(
+   "imagePrompt"
+  ).value="";
+
+
+  document.getElementById(
+   "imageAlt"
+  ).value="";
+
+
+  document.getElementById(
+   "imageFile"
+  ).value="";
+
+
+  document.getElementById(
+   "uploadPreview"
+  ).innerHTML=
+  "Image preview";
+
+
+  toast(
+   "Image uploaded successfully ✓"
+  );
+
 
   await loadGallery();
+
 
  }catch(error){
 
   console.error(error);
 
-  toast("Upload failed");
+  toast(
+   "Upload failed"
+  );
 
  }
 
@@ -1962,32 +3890,57 @@ window.uploadImage=async function(){
 
 window.deleteImage=async function(id){
 
- if(!currentUser || currentUser.email!==ADMIN_EMAIL){
+ if(
+  !currentUser ||
+  currentUser.email!==ADMIN_EMAIL
+ ){
 
-  toast("Admin only");
+  toast(
+   "Admin only"
+  );
+
   return;
 
  }
 
- const ok=confirm("क्या इस image को delete करना है?");
+
+ const ok=
+ confirm(
+  "क्या इस image को delete करना है?"
+ );
+
 
  if(!ok)return;
 
+
  try{
 
-  await deleteDoc(doc(db,"images",id));
+  await deleteDoc(
+   doc(db,"images",id)
+  );
+
 
   galleryItems=
-   galleryItems.filter(item=>item.id!==id);
+  galleryItems.filter(
+   item=>item.id!==id
+  );
+
 
   renderGallery();
 
-  toast("Image deleted");
+
+  toast(
+   "Image deleted"
+  );
+
 
  }catch(error){
 
   console.error(error);
-  toast("Delete failed");
+
+  toast(
+   "Delete failed"
+  );
 
  }
 
@@ -2001,11 +3954,26 @@ window.deleteImage=async function(id){
 function escapeHtml(value){
 
  return String(value??"")
-  .replaceAll("&","&amp;")
-  .replaceAll("<","&lt;")
-  .replaceAll(">","&gt;")
-  .replaceAll('"',"&quot;")
-  .replaceAll("'","&#039;");
+  .replaceAll(
+   "&",
+   "&amp;"
+  )
+  .replaceAll(
+   "<",
+   "&lt;"
+  )
+  .replaceAll(
+   ">",
+   "&gt;"
+  )
+  .replaceAll(
+   '"',
+   "&quot;"
+  )
+  .replaceAll(
+   "'",
+   "&#039;"
+  );
 
 }
 
@@ -2013,11 +3981,47 @@ function escapeHtml(value){
 function escapeAttribute(value){
 
  return String(value??"")
-  .replaceAll("&","&amp;")
-  .replaceAll('"',"&quot;")
-  .replaceAll("'","&#039;")
-  .replaceAll("<","&lt;")
-  .replaceAll(">","&gt;");
+  .replaceAll(
+   "&",
+   "&amp;"
+  )
+  .replaceAll(
+   '"',
+   "&quot;"
+  )
+  .replaceAll(
+   "'",
+   "&#039;"
+  )
+  .replaceAll(
+   "<",
+   "&lt;"
+  )
+  .replaceAll(
+   ">",
+   "&gt;"
+  );
+
+}
+
+
+function safeFileName(value){
+
+ return String(value||"AI-Image")
+  .replace(
+   /[^a-z0-9-_ ]/gi,
+   ""
+  )
+  .trim()
+  .replace(
+   /\s+/g,
+   "-"
+  )
+  .slice(
+   0,
+   80
+  )
+  ||"AI-Image";
 
 }
 
@@ -2026,30 +4030,60 @@ function escapeAttribute(value){
    PARTICLES
 ========================= */
 
-const canvas=document.getElementById("particles");
-const ctx=canvas.getContext("2d");
+const canvas=
+document.getElementById(
+ "particles"
+);
+
+const ctx=
+canvas.getContext("2d");
 
 let particles=[];
 
+
 function resizeCanvas(){
 
- canvas.width=innerWidth;
- canvas.height=innerHeight;
+ canvas.width=
+ innerWidth;
+
+ canvas.height=
+ innerHeight;
 
 }
 
+
 resizeCanvas();
 
-window.addEventListener("resize",resizeCanvas);
 
-for(let i=0;i<55;i++){
+window.addEventListener(
+ "resize",
+ resizeCanvas
+);
+
+
+for(
+ let i=0;
+ i<55;
+ i++
+){
 
  particles.push({
-  x:Math.random()*innerWidth,
-  y:Math.random()*innerHeight,
-  r:Math.random()*1.5+.4,
-  dx:(Math.random()-.5)*.3,
-  dy:(Math.random()-.5)*.3
+
+  x:
+  Math.random()*innerWidth,
+
+  y:
+  Math.random()*innerHeight,
+
+  r:
+  Math.random()*1.5+.4,
+
+  dx:
+  (Math.random()-.5)*.3,
+
+  dy:
+  (Math.random()-.5)*.3
+
  });
 
 }
@@ -2057,28 +4091,60 @@ for(let i=0;i<55;i++){
 
 function animateParticles(){
 
- ctx.clearRect(0,0,canvas.width,canvas.height);
+ ctx.clearRect(
+  0,
+  0,
+  canvas.width,
+  canvas.height
+ );
 
- for(const p of particles){
+
+ for(
+  const p of particles
+ ){
 
   p.x+=p.dx;
+
   p.y+=p.dy;
 
-  if(p.x<0)p.x=canvas.width;
-  if(p.x>canvas.width)p.x=0;
-  if(p.y<0)p.y=canvas.height;
-  if(p.y>canvas.height)p.y=0;
+
+  if(p.x<0)
+   p.x=canvas.width;
+
+  if(p.x>canvas.width)
+   p.x=0;
+
+  if(p.y<0)
+   p.y=canvas.height;
+
+  if(p.y>canvas.height)
+   p.y=0;
+
 
   ctx.beginPath();
-  ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-  ctx.fillStyle="rgba(0,234,255,.55)";
+
+  ctx.arc(
+   p.x,
+   p.y,
+   p.r,
+   0,
+   Math.PI*2
+  );
+
+  ctx.fillStyle=
+  "rgba(0,234,255,.55)";
+
   ctx.fill();
 
  }
 
- requestAnimationFrame(animateParticles);
+
+ requestAnimationFrame(
+  animateParticles
+ );
 
 }
+
 
 animateParticles();
 
@@ -2088,12 +4154,17 @@ animateParticles();
 ========================= */
 
 renderCategories();
+
 renderCommands();
+
 loadGallery();
+
 
 setTimeout(()=>{
 
- document.getElementById("loader").classList.add("hide");
+ document
+ .getElementById("loader")
+ .classList.add("hide");
 
 },900);
 
