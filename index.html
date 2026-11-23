@@ -1,1281 +1,752 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050816">
-<meta name="color-scheme" content="dark">
 
-<title>Broken AI HIMANSHU | AI Images, AI Prompts & 500+ AI Commands</title>
-
-<meta name="description" content="Broken AI HIMANSHU — explore AI images, professional AI prompts, creative AI artwork, futuristic styles and 500+ AI image commands.">
+<title>BROKEN AI HIMANSHU | AI Creative Studio</title>
+<meta name="description" content="Welcome to BROKEN AI HIMANSHU - Explore professional AI prompts, creative AI images, futuristic art and digital creativity.">
+<meta name="keywords" content="Broken AI HIMANSHU, AI Images, AI Prompts, 3D AI Art, AI Photo Editing, Professional AI Prompts">
 <meta name="author" content="HIMANSHU">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="googlebot" content="index,follow,max-image-preview:large">
-
+<meta name="google-site-verification" content="px4if5Xe8_DG2hEbGlh0kYsZ4Gxt3bEF6CAnEBOm-zM">
 <link rel="canonical" href="https://broken--boy-website.pages.dev/">
 
+<meta property="og:title" content="BROKEN AI HIMANSHU">
+<meta property="og:description" content="Explore AI creativity, professional prompts and futuristic digital art.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Broken AI HIMANSHU | AI Images & Prompts">
-<meta property="og:description" content="Explore AI images, creative prompts, futuristic styles and 500+ AI commands by HIMANSHU.">
 <meta property="og:url" content="https://broken--boy-website.pages.dev/">
-<meta property="og:site_name" content="Broken AI HIMANSHU">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Broken AI HIMANSHU">
-<meta name="twitter:description" content="AI images, prompts, styles and 500+ AI commands.">
-
-<meta name="google-site-verification" content="px4if5Xe8_DG2hEbGlh0kYsZ4Gxt3bEF6CAnEBOm-zM">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"WebSite",
-      "@id":"https://broken--boy-website.pages.dev/#website",
-      "url":"https://broken--boy-website.pages.dev/",
-      "name":"Broken AI HIMANSHU",
-      "description":"AI images, AI prompts and 500+ AI commands.",
-      "publisher":{"@id":"https://broken--boy-website.pages.dev/#person"}
-    },
-    {
-      "@type":"Person",
-      "@id":"https://broken--boy-website.pages.dev/#person",
-      "name":"HIMANSHU",
-      "jobTitle":"AI Creator • Digital Designer",
-      "url":"https://broken--boy-website.pages.dev/"
-    },
-    {
-      "@type":"CollectionPage",
-      "name":"Broken AI Gallery",
-      "url":"https://broken--boy-website.pages.dev/#gallery"
-    }
-  ]
-}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
-
-html{
- scroll-behavior:smooth;
+:root{
+  --bg:#050816;
+  --panel:#0c1429;
+  --cyan:#00eaff;
+  --blue:#4d7cff;
+  --purple:#8c5cff;
+  --pink:#ff31d2;
+  --text:#f4f7ff;
+  --muted:#9ba9c5;
+  --border:rgba(0,234,255,.22);
 }
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
- margin:0;
- font-family:Arial,Helvetica,sans-serif;
- background:
- radial-gradient(circle at 15% 10%,rgba(0,234,255,.09),transparent 28%),
- radial-gradient(circle at 85% 20%,rgba(140,92,255,.10),transparent 28%),
- #040611;
- color:#fff;
- overflow-x:hidden;
+  font-family:Poppins,sans-serif;
+  background:
+    radial-gradient(ellipse at 15% 10%,rgba(0,234,255,.12),transparent 35%),
+    radial-gradient(ellipse at 85% 30%,rgba(140,92,255,.13),transparent 35%),
+    var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
 }
-
-a{
- text-decoration:none;
- color:inherit;
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.bg-orb{
+  position:fixed;width:260px;height:260px;border-radius:50%;
+  filter:blur(100px);opacity:.18;pointer-events:none;z-index:-1;
 }
-
-button,input,textarea{
- font:inherit;
-}
-
-button{
- cursor:pointer;
-}
-
-::selection{
- background:#00eaff;
- color:#000;
-}
-
-/* =========================
-   HEADER
-========================= */
-
+.orb1{background:var(--cyan);top:10%;left:-100px}
+.orb2{background:var(--purple);right:-100px;top:55%}
 header{
- position:sticky;
- top:0;
- z-index:1000;
- backdrop-filter:blur(18px);
- background:rgba(4,6,17,.78);
- border-bottom:1px solid rgba(0,234,255,.14);
+  position:sticky;top:0;z-index:100;
+  background:rgba(5,8,22,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
 }
-
 .nav{
- max-width:1250px;
- margin:auto;
- min-height:70px;
- padding:10px 18px;
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:15px;
+  max-width:1200px;margin:auto;padding:13px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
 }
-
 .logo{
- display:flex;
- align-items:center;
- gap:10px;
- font-weight:900;
- letter-spacing:1px;
+  font-family:Orbitron,sans-serif;font-weight:900;
+  color:var(--cyan);font-size:17px;letter-spacing:1px;
+  text-shadow:0 0 15px rgba(0,234,255,.65);
 }
-
-.logoIcon{
- width:42px;
- height:42px;
- display:grid;
- place-items:center;
- border-radius:14px;
- background:linear-gradient(135deg,#00eaff,#8c5cff,#ff31d2);
- box-shadow:0 0 25px rgba(0,234,255,.3);
- color:#000;
-}
-
-.logoText span{
- display:block;
-}
-
-.logoMain{
- font-size:18px;
-}
-
-.logoSub{
- font-size:9px;
- color:#8da1bd;
- letter-spacing:2px;
-}
-
-.navlinks{
- display:flex;
- gap:6px;
- flex-wrap:wrap;
- justify-content:flex-end;
-}
-
-.navlinks a{
- padding:9px 11px;
- border-radius:12px;
- color:#b8c6dc;
- font-size:13px;
- transition:.25s;
-}
-
-.navlinks a:hover{
- color:#fff;
- background:rgba(0,234,255,.09);
- box-shadow:0 0 15px rgba(0,234,255,.08);
-}
-
-/* =========================
-   GENERAL
-========================= */
-
-section{
- scroll-margin-top:90px;
-}
-
-.container{
- width:min(1180px,calc(100% - 28px));
- margin:auto;
-}
-
-/* =========================
-   HERO
-========================= */
-
+.navlinks{display:flex;gap:17px;align-items:center;flex-wrap:wrap}
+.navlinks a{font-size:12px;color:#d4def3;transition:.2s}
+.navlinks a:hover{color:var(--cyan)}
+.menuBtn{display:none}
+.container{max-width:1200px;margin:auto;padding:25px 18px}
 .hero{
- min-height:720px;
- display:grid;
- grid-template-columns:1.05fr .95fr;
- align-items:center;
- gap:35px;
- padding:65px 0 50px;
- position:relative;
+  min-height:490px;display:grid;place-items:center;text-align:center;
+  padding:65px 15px;position:relative;
 }
-
-.heroBadge{
- display:inline-flex;
- padding:8px 13px;
- border:1px solid rgba(0,234,255,.3);
- background:rgba(0,234,255,.06);
- border-radius:999px;
- color:#71f3ff;
- font-size:12px;
- letter-spacing:1px;
+.hero-inner{max-width:850px}
+.hero-tag{
+  display:inline-block;border:1px solid var(--border);
+  color:var(--cyan);padding:9px 17px;border-radius:30px;
+  background:rgba(0,234,255,.07);font-size:11px;letter-spacing:2px;
 }
-
 .hero h1{
- margin:18px 0 8px;
- font-size:clamp(52px,8vw,105px);
- line-height:.86;
- letter-spacing:-5px;
+  font-family:Orbitron,sans-serif;font-size:clamp(34px,7vw,72px);
+  line-height:1.18;margin:24px 0;
+  background:linear-gradient(90deg,#fff,var(--cyan),var(--purple),var(--pink));
+  background-size:250%;background-clip:text;color:transparent;
+  animation:shine 6s linear infinite;
 }
-
-.hero h1 span{
- display:block;
- background:linear-gradient(90deg,#00eaff,#4d7cff,#8c5cff,#ff31d2);
- -webkit-background-clip:text;
- color:transparent;
-}
-
-.hero p{
- max-width:650px;
- color:#aebbd0;
- line-height:1.8;
- font-size:16px;
-}
-
-.heroButtons{
- display:flex;
- gap:12px;
- flex-wrap:wrap;
- margin-top:25px;
-}
-
+@keyframes shine{to{background-position:250% center}}
+.hero p{color:var(--muted);font-size:14px;line-height:1.9}
 .btn{
- border:0;
- padding:13px 18px;
- border-radius:14px;
- color:#fff;
- background:#10172c;
- border:1px solid rgba(255,255,255,.12);
- transition:.25s;
+  border:0;border-radius:12px;padding:12px 19px;
+  background:linear-gradient(120deg,var(--cyan),var(--blue),var(--purple));
+  color:#03101a;font-weight:800;font-size:12px;
+  box-shadow:0 8px 25px rgba(0,234,255,.18);
+  transition:.25s;display:inline-block;
 }
-
-.btn:hover{
- transform:translateY(-3px);
+.btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 12px 30px rgba(0,234,255,.3)}
+.btn.secondary{
+  background:rgba(255,255,255,.06);color:white;
+  border:1px solid var(--border);box-shadow:none;
 }
-
-.btnPrimary{
- background:linear-gradient(135deg,#00eaff,#4d7cff);
- color:#001018;
- font-weight:900;
- box-shadow:0 10px 35px rgba(0,234,255,.18);
-}
-
-/* =========================
-   HERO CORE
-========================= */
-
-.heroVisual{
- display:grid;
- place-items:center;
- min-height:450px;
- position:relative;
-}
-
-.core{
- width:min(430px,80vw);
- aspect-ratio:1;
- border-radius:50%;
- display:grid;
- place-items:center;
- position:relative;
- background:
- radial-gradient(circle at 35% 30%,#fff 0 2%,#00eaff 7%,transparent 25%),
- radial-gradient(circle,#071d34 0 30%,#050816 62%);
- box-shadow:
- 0 0 40px rgba(0,234,255,.35),
- 0 0 100px rgba(77,124,255,.18),
- inset 0 0 60px rgba(0,234,255,.15);
- animation:float 5s ease-in-out infinite;
-}
-
-.core:before,
-.core:after{
- content:"";
- position:absolute;
- inset:-25px;
- border:1px solid rgba(0,234,255,.35);
- border-radius:50%;
- transform:rotate(35deg) scaleX(1.5);
- animation:spin 12s linear infinite;
-}
-
-.core:after{
- inset:-55px;
- transform:rotate(-45deg) scaleX(1.6);
- border-color:rgba(255,49,210,.2);
- animation-duration:18s;
-}
-
-.coreText{
- text-align:center;
- z-index:2;
-}
-
-.coreText strong{
- display:block;
- font-size:40px;
- letter-spacing:5px;
-}
-
-.coreText small{
- color:#66efff;
- letter-spacing:3px;
-}
-
-@keyframes float{
- 50%{transform:translateY(-14px)}
-}
-
-@keyframes spin{
- to{transform:rotate(395deg) scaleX(1.5)}
-}
-
-/* =========================
-   PROFILE
-========================= */
-
-.profile{
- display:grid;
- grid-template-columns:380px 1fr;
- gap:40px;
- align-items:center;
- padding:70px 0;
-}
-
-.profileCard{
- padding:18px;
- border-radius:30px;
- background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));
- border:1px solid rgba(0,234,255,.2);
- box-shadow:0 20px 60px rgba(0,0,0,.3);
-}
-
-.profileImageWrap{
- position:relative;
- overflow:hidden;
- border-radius:24px;
- cursor:pointer;
-}
-
-.profileImage{
- width:100%;
- aspect-ratio:1;
- object-fit:cover;
- display:block;
- transition:.5s;
-}
-
-.profileImageWrap:hover .profileImage{
- transform:scale(1.05);
-}
-
-.profileGlow{
- position:absolute;
- inset:auto 10% -20px;
- height:70px;
- background:#00eaff;
- filter:blur(35px);
- opacity:.25;
-}
-
-.kicker{
- color:#00eaff;
- text-transform:uppercase;
- letter-spacing:3px;
- font-size:11px;
- font-weight:bold;
-}
-
-.sectionTitle{
- font-size:clamp(32px,5vw,58px);
- margin:8px 0 15px;
- letter-spacing:-2px;
-}
-
-.muted{
- color:#9eacc1;
- line-height:1.8;
-}
-
-/* =========================
-   STATS
-========================= */
-
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
 .stats{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:12px;
- margin-top:25px;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:13px;margin-top:35px;
 }
-
-.stat{
- padding:20px 12px;
- text-align:center;
- border-radius:18px;
- background:rgba(255,255,255,.035);
- border:1px solid rgba(255,255,255,.08);
+.stat,.card,.panel{
+  background:linear-gradient(145deg,rgba(18,31,57,.92),rgba(7,13,29,.95));
+  border:1px solid var(--border);border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.24);
 }
-
-.stat b{
- display:block;
- font-size:25px;
- color:#00eaff;
+.stat{padding:17px}
+.stat strong{display:block;color:var(--cyan);font:700 24px Orbitron}
+.stat span{font-size:10px;color:var(--muted)}
+.section{padding:35px 0;scroll-margin-top:85px}
+.section-head{text-align:center;margin-bottom:24px}
+.section-head h2{
+  font:800 clamp(22px,4vw,34px) Orbitron,sans-serif;
+  margin-bottom:9px;
 }
-
-.stat span{
- font-size:11px;
- color:#8492a9;
+.section-head p{font-size:12px;color:var(--muted)}
+.glow{color:var(--cyan);text-shadow:0 0 14px rgba(0,234,255,.4)}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;
 }
-
-/* =========================
-   PANELS
-========================= */
-
-.panel{
- padding:28px;
- border-radius:28px;
- background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
- border:1px solid rgba(255,255,255,.09);
- box-shadow:0 25px 70px rgba(0,0,0,.2);
- margin:35px 0;
+.card{padding:19px;transition:.25s;min-width:0}
+.card:hover{
+  transform:translateY(-6px) perspective(800px) rotateX(2deg);
+  border-color:rgba(0,234,255,.55);
+  box-shadow:0 18px 35px rgba(0,234,255,.09);
 }
-
-.sectionHead{
- display:flex;
- justify-content:space-between;
- align-items:end;
- gap:15px;
- margin-bottom:20px;
+.card h3{font-size:15px;margin-bottom:9px}
+.card p{font-size:12px;color:var(--muted);line-height:1.8}
+.card-icon{font-size:28px;margin-bottom:12px}
+.profile-box{text-align:center;padding:28px}
+.profile-img{
+  width:145px;height:145px;object-fit:cover;border-radius:50%;
+  border:3px solid var(--cyan);padding:4px;
+  box-shadow:0 0 30px rgba(0,234,255,.25);
+  background:#111a30;
 }
-
-.search{
- width:100%;
- padding:14px 16px;
- border-radius:14px;
- border:1px solid rgba(255,255,255,.12);
- background:#070b19;
- color:#fff;
- outline:none;
-}
-
-.search:focus{
- border-color:#00eaff;
- box-shadow:0 0 20px rgba(0,234,255,.08);
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.galleryGrid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:18px;
-}
-
-.galleryCard{
- overflow:hidden;
- border-radius:22px;
- background:#080c1a;
- border:1px solid rgba(255,255,255,.08);
- transition:.3s;
-}
-
-.galleryCard:hover{
- transform:translateY(-5px);
- border-color:rgba(0,234,255,.35);
- box-shadow:0 15px 45px rgba(0,0,0,.35);
-}
-
-.galleryImgWrap{
- position:relative;
- cursor:pointer;
- overflow:hidden;
- background:#050816;
-}
-
-.galleryImg{
- width:100%;
- aspect-ratio:4/5;
- object-fit:cover;
- display:block;
- transition:.4s;
-}
-
-.galleryImgWrap:hover .galleryImg{
- transform:scale(1.04);
-}
-
-.imageZoom{
- position:absolute;
- right:10px;
- top:10px;
- padding:8px 10px;
- border-radius:10px;
- background:rgba(0,0,0,.65);
- backdrop-filter:blur(8px);
-}
-
-.cardBody{
- padding:15px;
-}
-
-.cardTitle{
- font-weight:bold;
- white-space:nowrap;
- overflow:hidden;
- text-overflow:ellipsis;
-}
-
-.cardDescription{
- margin-top:8px;
- color:#a8b5c8;
- font-size:12px;
- line-height:1.6;
-}
-
-.cardPrompt{
- margin-top:9px;
- color:#7f8ca2;
- font-size:12px;
- line-height:1.5;
- max-height:38px;
- overflow:hidden;
-}
-
-.cardActions{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:7px;
- margin-top:13px;
-}
-
-.cardActionsBottom{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:7px;
- margin-top:7px;
-}
-
-.smallBtn{
- border:1px solid rgba(255,255,255,.09);
- background:#0d1324;
- color:#dce7f6;
- padding:9px 7px;
- border-radius:11px;
- font-size:12px;
- transition:.2s;
-}
-
-.smallBtn:hover{
- border-color:#00eaff;
- color:#fff;
- transform:translateY(-1px);
-}
-
-.downloadBtn{
- background:linear-gradient(135deg,rgba(0,234,255,.15),rgba(77,124,255,.12));
-}
-
-.shareBtn{
- background:linear-gradient(135deg,rgba(140,92,255,.15),rgba(255,49,210,.10));
-}
-
-.empty{
- text-align:center;
- padding:50px 20px;
- color:#74839a;
-}
-
-/* =========================
-   GALLERY INFO BADGE
-========================= */
-
-.galleryBadge{
- position:absolute;
- left:10px;
- top:10px;
- padding:7px 9px;
- border-radius:10px;
- background:rgba(0,0,0,.62);
- backdrop-filter:blur(8px);
- color:#bffaff;
- font-size:10px;
- border:1px solid rgba(0,234,255,.2);
-}
-
-/* =========================
-   WHATSAPP SECTION
-========================= */
-
-.whatsappSection{
- margin-top:25px;
- padding:20px;
- border-radius:22px;
- border:1px solid rgba(37,211,102,.22);
- background:
- linear-gradient(135deg,rgba(37,211,102,.09),rgba(0,234,255,.04)),
- rgba(255,255,255,.02);
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:18px;
-}
-
-.whatsappInfo{
- display:flex;
- align-items:center;
- gap:14px;
-}
-
-.whatsappIcon{
- width:50px;
- height:50px;
- flex:0 0 50px;
- display:grid;
- place-items:center;
- border-radius:16px;
- background:rgba(37,211,102,.14);
- border:1px solid rgba(37,211,102,.3);
- font-size:26px;
- box-shadow:0 0 25px rgba(37,211,102,.08);
-}
-
-.whatsappTitle{
- font-weight:900;
- font-size:17px;
-}
-
-.whatsappText{
- color:#8f9eb3;
- font-size:12px;
- margin-top:4px;
- line-height:1.5;
-}
-
-.whatsappBtn{
- background:linear-gradient(135deg,#25d366,#128c7e);
- color:#fff;
- font-weight:900;
- border:0;
-}
-
-/* =========================
-   COMMANDS
-========================= */
-
-.commandTools{
- display:flex;
- gap:10px;
- flex-wrap:wrap;
- margin-bottom:20px;
-}
-
-.categories{
- display:flex;
- gap:8px;
- overflow-x:auto;
- padding-bottom:8px;
-}
-
-.catBtn{
- white-space:nowrap;
- padding:9px 13px;
- border:1px solid rgba(255,255,255,.09);
- background:#080d1c;
- color:#9cabc0;
- border-radius:999px;
-}
-
-.catBtn.active,
-.catBtn:hover{
- background:linear-gradient(135deg,#00eaff,#8c5cff);
- color:#02040a;
- font-weight:bold;
-}
-
-.commandGrid{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:13px;
-}
-
-.commandCard{
- min-height:145px;
- padding:16px;
- border-radius:19px;
- position:relative;
- overflow:hidden;
- background:
- linear-gradient(145deg,rgba(0,234,255,.08),rgba(140,92,255,.05)),
- #080c1a;
- border:1px solid rgba(0,234,255,.12);
- box-shadow:
- inset 0 1px rgba(255,255,255,.06),
- 0 12px 30px rgba(0,0,0,.18);
- transition:.25s;
-}
-
-.commandCard:before{
- content:"";
- position:absolute;
- width:100px;
- height:100px;
- right:-45px;
- top:-45px;
- background:#ff31d2;
- filter:blur(45px);
- opacity:.15;
-}
-
-.commandCard:hover{
- transform:translateY(-5px) rotateX(2deg);
- border-color:#00eaff;
- box-shadow:0 15px 40px rgba(0,234,255,.12);
-}
-
-.commandName{
- font-weight:900;
- color:#fff;
- font-size:16px;
-}
-
-.commandDesc{
- color:#8593a9;
- font-size:12px;
- line-height:1.5;
- margin:10px 0;
-}
-
-.copyCommand{
- width:100%;
- padding:9px;
- border:0;
- border-radius:10px;
- background:linear-gradient(135deg,#00eaff,#4d7cff);
- color:#001018;
- font-weight:900;
-}
-
-.commandCount{
- color:#00eaff;
- font-size:12px;
- margin-top:10px;
-}
-
-/* =========================
-   PROMPT LAB
-========================= */
-
-.lab{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:15px;
-}
-
-textarea{
- width:100%;
- min-height:230px;
- resize:vertical;
- padding:15px;
- border-radius:16px;
- border:1px solid rgba(255,255,255,.1);
- background:#050816;
- color:#fff;
- outline:none;
-}
-
-.output{
- min-height:230px;
- padding:18px;
- border-radius:16px;
- background:#050816;
- border:1px solid rgba(0,234,255,.12);
- color:#dce8f8;
- white-space:pre-wrap;
- line-height:1.7;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.aboutGrid{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:15px;
-}
-
-.feature{
- padding:22px;
- border-radius:20px;
- background:rgba(255,255,255,.035);
- border:1px solid rgba(255,255,255,.08);
-}
-
-.featureIcon{
- font-size:28px;
-}
-
-.feature h3{
- margin:12px 0 7px;
-}
-
-.feature p{
- font-size:13px;
- color:#8492a7;
- line-height:1.6;
-}
-
-/* =========================
-   KEYWORDS
-========================= */
-
-.keywords{
- display:flex;
- flex-wrap:wrap;
- gap:8px;
-}
-
-.keyword{
- padding:7px 10px;
- border-radius:999px;
- font-size:11px;
- color:#a9b7cb;
- background:#090f20;
- border:1px solid rgba(255,255,255,.08);
-}
-
-/* =========================
-   ADMIN
-========================= */
-
-.adminGrid{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:15px;
-}
-
+.profile-name{font:800 22px Orbitron;margin:15px 0 7px}
+.small{font-size:11px;color:var(--muted)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
 .field{
- display:flex;
- flex-direction:column;
- gap:7px;
- margin-bottom:13px;
+  background:#080f20;color:white;border:1px solid var(--border);
+  border-radius:10px;padding:11px 13px;outline:none;min-width:0;
 }
-
-.field label{
- font-size:12px;
- color:#8e9cb0;
+.field:focus{border-color:var(--cyan)}
+.toolbar .field{flex:1;min-width:150px}
+.prompt-card{display:flex;flex-direction:column;gap:12px}
+.prompt-text{
+  color:#c8d5ec;font-size:12px;line-height:1.8;
+  background:rgba(0,0,0,.22);padding:12px;border-radius:10px;
+  flex:1;overflow-wrap:anywhere;
 }
-
-.field input,
-.field textarea{
- min-height:auto;
- padding:13px;
+.prompt-actions{display:flex;gap:8px;flex-wrap:wrap}
+.mini-btn{
+  border:1px solid var(--border);background:rgba(0,234,255,.08);
+  color:var(--cyan);padding:8px 11px;border-radius:9px;font-size:10px;
 }
-
-.field textarea{
- min-height:130px;
+.mini-btn:hover{background:rgba(0,234,255,.18)}
+.gallery-img{
+  width:100%;height:210px;object-fit:cover;border-radius:12px;
+  background:#101b30;cursor:pointer;
 }
-
-.fieldHint{
- color:#64738b;
- font-size:10px;
- line-height:1.5;
-}
-
-#adminPanel{
- display:none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
- margin-top:60px;
- padding:35px 15px;
- text-align:center;
- color:#718097;
- border-top:1px solid rgba(255,255,255,.07);
-}
-
-.footerLogo{
- font-size:25px;
- font-weight:900;
- color:#fff;
-}
-
-/* =========================
-   MODAL
-========================= */
-
+.gallery-card{overflow:hidden}
+.gallery-card .card{height:100%}
+.gallery-meta{display:flex;justify-content:space-between;gap:7px;align-items:center;margin-top:10px}
+.gallery-meta span{font-size:10px;color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:30px;font-size:13px}
+.panel{padding:20px;margin:15px 0}
+.panel h3{font-size:16px;margin-bottom:15px;color:var(--cyan)}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.form-grid>*{width:100%}
+textarea.field{min-height:85px;resize:vertical}
+.admin-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.hidden{display:none!important}
 .modal{
- display:none;
- position:fixed;
- inset:0;
- z-index:5000;
- background:rgba(0,0,0,.92);
- align-items:center;
- justify-content:center;
- padding:20px;
+  position:fixed;inset:0;background:rgba(0,0,0,.88);
+  display:none;align-items:center;justify-content:center;
+  z-index:500;padding:18px;
 }
-
-.modal.show{
- display:flex;
+.modal.show{display:flex}
+.modal-content{
+  max-width:900px;width:100%;max-height:90vh;overflow:auto;
+  background:#0a1226;border:1px solid var(--border);
+  border-radius:18px;padding:18px;
 }
-
-.modalContent{
- max-width:1100px;
- max-height:95vh;
- position:relative;
- display:flex;
- flex-direction:column;
- align-items:center;
+.modal-content img{max-width:100%;max-height:65vh;display:block;margin:auto;border-radius:12px}
+.close{
+  float:right;background:#1a2946;color:white;border:0;
+  padding:8px 12px;border-radius:8px;
 }
-
-.modalImage{
- max-width:95vw;
- max-height:75vh;
- object-fit:contain;
- border-radius:15px;
- box-shadow:0 0 60px rgba(0,234,255,.12);
+footer{
+  border-top:1px solid var(--border);padding:30px 15px;
+  text-align:center;color:var(--muted);font-size:11px;margin-top:40px;
 }
-
-.modalInfo{
- width:min(800px,95vw);
- margin-top:12px;
- padding:13px;
- border-radius:14px;
- background:rgba(10,16,31,.9);
- border:1px solid rgba(0,234,255,.12);
-}
-
-.modalTitle{
- font-weight:900;
-}
-
-.modalDescription{
- color:#9baac0;
- font-size:12px;
- line-height:1.6;
- margin-top:5px;
-}
-
-.modalBar{
- display:flex;
- gap:8px;
- margin-top:10px;
- flex-wrap:wrap;
- justify-content:center;
-}
-
-.closeModal{
- position:fixed;
- right:20px;
- top:20px;
- z-index:3;
- width:44px;
- height:44px;
- border-radius:50%;
- border:1px solid rgba(255,255,255,.15);
- background:#101522;
- color:#fff;
- font-size:24px;
-}
-
-/* =========================
-   TOAST
-========================= */
-
+footer strong{color:var(--cyan)}
 .toast{
- position:fixed;
- right:18px;
- bottom:18px;
- z-index:9000;
- transform:translateY(120px);
- opacity:0;
- padding:13px 17px;
- border-radius:13px;
- background:#0d1527;
- border:1px solid rgba(0,234,255,.25);
- box-shadow:0 15px 40px rgba(0,0,0,.4);
- transition:.3s;
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  background:#10213b;border:1px solid var(--cyan);color:white;
+  padding:12px 18px;border-radius:12px;z-index:1000;
+  font-size:12px;display:none;max-width:90%;
 }
-
-.toast.show{
- transform:translateY(0);
- opacity:1;
-}
-
-/* =========================
-   LOADER
-========================= */
-
-.loader{
- position:fixed;
- inset:0;
- z-index:10000;
- display:grid;
- place-items:center;
- background:#040611;
- transition:.5s;
-}
-
-.loader.hide{
- opacity:0;
- pointer-events:none;
-}
-
-.loaderCore{
- text-align:center;
-}
-
-.loaderRing{
- width:70px;
- height:70px;
- margin:auto auto 15px;
- border:3px solid rgba(0,234,255,.15);
- border-top-color:#00eaff;
- border-radius:50%;
- animation:spinLoader .8s linear infinite;
-}
-
-.loaderBrand{
- font-size:22px;
- font-weight:900;
- letter-spacing:2px;
-}
-
-.loaderSub{
- font-size:11px;
- color:#00eaff;
- margin-top:7px;
- letter-spacing:2px;
-}
-
-@keyframes spinLoader{
- to{transform:rotate(360deg)}
-}
-
-/* =========================
-   PARTICLES
-========================= */
-
-#particles{
- position:fixed;
- inset:0;
- pointer-events:none;
- z-index:-1;
- opacity:.35;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
-
- .hero{
-  grid-template-columns:1fr;
-  padding-top:45px;
- }
-
- .heroVisual{
-  min-height:380px;
- }
-
- .profile{
-  grid-template-columns:1fr;
- }
-
- .galleryGrid{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .commandGrid{
-  grid-template-columns:repeat(3,1fr);
- }
-
- .aboutGrid{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .adminGrid,
- .lab{
-  grid-template-columns:1fr;
- }
-
- .navlinks{
-  display:none;
- }
-
-}
-
-@media(max-width:600px){
-
- .container{
-  width:min(100% - 20px,1180px);
- }
-
- .hero h1{
-  font-size:55px;
-  letter-spacing:-3px;
- }
-
- .hero{
-  min-height:auto;
-  padding:45px 0;
- }
-
- .heroVisual{
-  min-height:300px;
- }
-
- .core{
-  width:290px;
- }
-
- .coreText strong{
-  font-size:28px;
- }
-
- .stats{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .panel{
-  padding:17px;
-  border-radius:20px;
- }
-
- .galleryGrid{
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
- }
-
- .commandGrid{
-  grid-template-columns:repeat(2,1fr);
-  gap:9px;
- }
-
- .commandCard{
-  min-height:155px;
-  padding:12px;
- }
-
- .commandName{
-  font-size:14px;
- }
-
- .aboutGrid{
-  grid-template-columns:1fr 1fr;
-  gap:9px;
- }
-
- .feature{
-  padding:15px;
- }
-
- .sectionHead{
-  display:block;
- }
-
- .logoMain{
-  font-size:15px;
- }
-
- .logoIcon{
-  width:36px;
-  height:36px;
- }
-
- .cardActions{
-  grid-template-columns:repeat(3,1fr);
-  gap:5px;
- }
-
- .cardActionsBottom{
-  grid-template-columns:1fr 1fr;
-  gap:5px;
- }
-
- .smallBtn{
-  font-size:10px;
-  padding:8px 4px;
- }
-
- .cardDescription{
-  max-height:55px;
-  overflow:hidden;
- }
-
- .whatsappSection{
-  flex-direction:column;
-  align-items:stretch;
- }
-
- .whatsappBtn{
-  width:100%;
- }
-
- .modalImage{
-  max-height:65vh;
- }
-
+@media(max-width:700px){
+  .nav{align-items:flex-start}
+  .menuBtn{display:block;background:transparent;color:var(--cyan);border:1px solid var(--border);padding:7px 10px;border-radius:8px}
+  .navlinks{display:none;position:absolute;top:60px;left:0;right:0;background:#080f20;padding:18px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--border)}
+  .navlinks.open{display:flex}
+  .stats{gap:7px}
+  .stat{padding:12px 5px}
+  .stat strong{font-size:18px}
+  .stat span{font-size:9px}
+  .hero{min-height:430px}
 }
 </style>
 </head>
 
 <body>
-
-<!-- =========================
-     LOADER
-========================= -->
-
-<div class="loader" id="loader">
-
- <div class="loaderCore">
-
-  <div class="loaderRing"></div>
-
-  <div class="loaderBrand">
-   BROKEN AI
-  </div>
-
-  <div class="loaderSub">
-   AI VISUAL NETWORK • INITIALIZING
-  </div>
-
- </div>
-
-</div>
-
-<canvas id="particles"></canvas>
-
-<!-- =========================
-     HEADER
-========================= -->
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
 
 <header>
+  <nav class="nav">
+    <a class="logo" href="#home">⚡ BROKEN AI</a>
+    <button class="menuBtn" id="menuBtn">☰ MENU</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#home">🏠 Home</a>
+      <a href="#profile">👤 Profile</a>
+      <a href="#studio">✨ AI Studio</a>
+      <a href="#gallery">🖼️ Gallery</a>
+      <a href="#about">ℹ️ About</a>
+      <a href="#admin">🔐 Admin</a>
+    </div>
+  </nav>
+</header>
 
-<nav class="nav">
-
- <a href="#home" class="logo">
-
-  <div class="logoIcon">
-   AI
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <span class="hero-tag">✦ AI VISUAL NETWORK • DIGITAL CREATIVE HUB ✦</span>
+    <h1>BROKEN AI<br>HIMANSHU</h1>
+    <p>Explore a new world of AI creativity. Discover professional prompts, futuristic artwork and creative digital ideas in one place.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#studio">🚀 EXPLORE AI STUDIO</a>
+      <a class="btn secondary" href="#gallery">🖼️ VIEW GALLERY</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>50+</strong><span>PRO AI PROMPTS</span></div>
+      <div class="stat"><strong>3D</strong><span>FUTURISTIC DESIGN</span></div>
+      <div class="stat"><strong>∞</strong><span>CREATIVE IDEAS</span></div>
+    </div>
   </div>
+</section>
 
-  <div class="logoText">
-
-   <span class="logoMain">
-    BROKEN AI
-   </span>
-
-   <span class="logoSub">
-    AI VISUAL NETWORK
-   </span>
-
+<section class="container section" id="profile">
+  <div class="section-head">
+    <h2>CREATOR <span class="glow">PROFILE</span></h2>
+    <p>Meet the creator behind this digital creative world.</p>
   </div>
+  <div class="panel profile-box">
+    <img id="profileImage" class="profile-img" src="profile-1.png" onerror="this.onerror=null;this.src='profile.png';" alt="Himanshu profile photo">
+    <div class="profile-name">HIMANSHU</div>
+    <p class="glow">AI CREATOR • DIGITAL DESIGNER</p>
+    <p class="small" style="margin-top:10px">Creator of BROKEN AI HIMANSHU</p>
+    <div class="hero-actions">
+      <a class="btn secondary" href="https://t.me/Brokenboy221716" target="_blank" rel="noopener">✈️ Telegram</a>
+    </div>
+  </div>
+</section>
 
- </a>
+<section class="container section" id="studio">
+  <div class="section-head">
+    <h2>AI <span class="glow">STUDIO</span></h2>
+    <p>Explore 50 professional copy-ready AI prompts.</p>
+  </div>
+  <div class="toolbar">
+    <input id="promptSearch" class="field" placeholder="🔎 Search prompts...">
+    <select id="promptCategory" class="field">
+      <option value="All">All Categories</option>
+      <option>3D Art</option>
+      <option>Portrait</option>
+      <option>Futuristic</option>
+      <option>Photography</option>
+      <option>Luxury</option>
+      <option>Social Media</option>
+    </select>
+  </div>
+  <div class="grid" id="promptGrid"></div>
+</section>
 
- <di
+<section class="container section" id="gallery">
+  <div class="section-head">
+    <h2>AI <span class="glow">GALLERY</span></h2>
+    <p>Creative images uploaded to the public gallery.</p>
+  </div>
+  <div class="toolbar">
+    <input class="field" id="gallerySearch" placeholder="🔎 Search gallery...">
+    <select class="field" id="galleryCategory">
+      <option value="All">All Images</option>
+      <option>3D Art</option><option>Portrait</option>
+      <option>Nature</option><option>Futuristic</option>
+      <option>Other</option>
+    </select>
+    <button class="btn secondary" id="showSaved">❤️ Saved</button>
+    <button class="btn secondary" id="showAll">🌐 All</button>
+  </div>
+  <div class="grid" id="galleryGrid">
+    <div class="empty">Gallery is loading...</div>
+  </div>
+</section>
+
+<section class="container section" id="about">
+  <div class="section-head">
+    <h2>ABOUT <span class="glow">US</span></h2>
+    <p>Digital creativity • AI inspiration • Modern technology</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="card-icon">🎨</div><h3>Creative AI</h3><p>Explore creative ideas and prompts for AI image creation.</p></div>
+    <div class="card"><div class="card-icon">⚡</div><h3>Modern Design</h3><p>A futuristic interface with responsive 3D-inspired visual effects.</p></div>
+    <div class="card"><div class="card-icon">🌐</div><h3>Public Gallery</h3><p>Discover images shared by the website administrator.</p></div>
+  </div>
+</section>
+
+<section class="container section" id="admin">
+  <div class="section-head">
+    <h2>ADMIN <span class="glow">CONTROL</span></h2>
+    <p>Administrator login and website content management.</p>
+  </div>
+  <div class="panel">
+    <h3>🔐 Admin Login</h3>
+    <div id="loginArea">
+      <div class="form-grid">
+        <input class="field" id="adminEmail" type="email" placeholder="Admin Email">
+        <input class="field" id="adminPassword" type="password" placeholder="Password">
+      </div>
+      <div class="admin-actions">
+        <button class="btn" id="loginBtn">LOGIN</button>
+      </div>
+      <p class="small" style="margin-top:12px">Admin login requires Firebase Authentication email/password setup.</p>
+    </div>
+    <div id="adminArea" class="hidden">
+      <p class="glow">✅ Admin logged in</p>
+      <div class="panel">
+        <h3>🖼️ Upload Gallery Images</h3>
+        <div class="form-grid">
+          <input class="field" id="galleryFiles" type="file" accept="image/*" multiple>
+          <input class="field" id="imageCaption" placeholder="Image title / caption">
+          <select class="field" id="uploadCategory">
+            <option>3D Art</option><option>Portrait</option>
+            <option>Nature</option><option>Futuristic</option><option>Other</option>
+          </select>
+        </div>
+        <div class="admin-actions">
+          <button class="btn" id="uploadBtn">⬆️ UPLOAD IMAGES</button>
+        </div>
+        <p class="small">Select multiple images together. You can upload more images again later.</p>
+      </div>
+      <div class="panel">
+        <h3>👤 Change Global Profile Photo</h3>
+        <input class="field" type="file" id="newProfilePhoto" accept="image/*">
+        <div class="admin-actions">
+          <button class="btn" id="profileUploadBtn">UPDATE PROFILE PHOTO</button>
+        </div>
+      </div>
+      <div class="admin-actions">
+        <button class="btn secondary" id="logoutBtn">LOGOUT</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>⚡ <strong>BROKEN AI HIMANSHU</strong></p>
+  <p style="margin-top:8px">Created with creativity by HIMANSHU</p>
+  <p style="margin-top:8px">© <span id="year"></span> All Rights Reserved.</p>
+</footer>
+
+<div class="modal" id="imageModal">
+  <div class="modal-content">
+    <button class="close" id="closeModal">✕ CLOSE</button>
+    <div style="clear:both;padding-top:15px">
+      <img id="modalImage" src="" alt="Gallery preview">
+      <h3 id="modalTitle" style="text-align:center;margin:15px"></h3>
+      <div class="admin-actions" style="justify-content:center">
+        <a id="modalDownload" class="btn" href="#" download>⬇️ DOWNLOAD</a>
+        <button class="btn secondary" id="modalShare">🔗 SHARE</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, query, orderBy, serverTimestamp, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+
+/* अपना Firebase Web Config यहां डालें */
+const firebaseConfig = {
+  apiKey: "YOUR_FIREBASE_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.firebasestorage.app",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_FIREBASE_APP_ID"
+};
+
+/* यहां अपना Admin Email डालें */
+const ADMIN_EMAIL = "YOUR_ADMIN_EMAIL@gmail.com";
+
+const $ = id => document.getElementById(id);
+$("year").textContent = new Date().getFullYear();
+
+function toast(message){
+  const el=$("toast");
+  el.textContent=message;
+  el.style.display="block";
+  clearTimeout(window.toastTimer);
+  window.toastTimer=setTimeout(()=>el.style.display="none",2600);
+}
+
+$("menuBtn").addEventListener("click",()=>$("navlinks").classList.toggle("open"));
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>$("navlinks").classList.remove("open")));
+
+const prompts = [
+["3D Art","Premium 3D Character","Create a premium 3D character portrait, cinematic studio lighting, realistic skin texture, detailed outfit, vibrant gradient background, ultra detailed, 4K render."],
+["3D Art","3D Name Artwork","Create a luxurious 3D typography artwork with the name [YOUR NAME], metallic chrome letters, neon cyan and purple glow, dramatic reflections, dark background, 8K quality."],
+["3D Art","Fantasy 3D World","Create a breathtaking fantasy 3D world with floating islands, glowing waterfalls, magical atmosphere, cinematic lighting, realistic textures, ultra detailed environment."],
+["3D Art","3D Cartoon Portrait","Create a high quality stylized 3D cartoon portrait based on the reference photo, preserve recognizable facial features, soft cinematic light, detailed hair and clothing."],
+["3D Art","Futuristic 3D Logo","Design a futuristic 3D logo for [BRAND NAME], glowing metallic material, cyan and violet lighting, premium studio render, clean composition."],
+["3D Art","3D Glass Sculpture","Create a transparent glass sculpture with iridescent reflections, beautiful studio lighting, realistic refraction, premium 3D render, dark luxury background."],
+["3D Art","3D Toy Figure","Create a collectible designer toy figure with detailed clothing, expressive pose, premium packaging, realistic 3D materials, professional product render."],
+["3D Art","3D Neon Room","Create a futuristic gaming room with neon cyan and purple lights, multiple screens, cinematic shadows, realistic 3D interior design."],
+["3D Art","3D Floating Objects","Create a surreal composition of floating geometric objects, glossy materials, dramatic shadows, vibrant colors, premium 3D advertising render."],
+["3D Art","3D Fantasy Hero","Create an original fantasy hero character, detailed costume, dramatic cinematic lighting, powerful composition, realistic 3D game character render."],
+
+["Portrait","Professional Portrait","Create a professional studio portrait based on the reference image, preserve facial identity, natural skin texture, balanced lighting, elegant background, high detail."],
+["Portrait","Cinematic Portrait","Create a cinematic portrait of the person in the reference photo, dramatic soft lighting, natural expression, shallow depth of field, realistic photography."],
+["Portrait","Royal Portrait","Create an elegant royal-style portrait with premium traditional clothing, tasteful accessories, cinematic golden lighting, sophisticated background."],
+["Portrait","Black And White","Create a timeless black and white portrait, rich tonal contrast, natural facial details, professional studio photography, artistic composition."],
+["Portrait","Outdoor Portrait","Create a natural outdoor portrait during golden hour, soft sunlight, beautiful background bokeh, authentic expression, realistic professional photography."],
+["Portrait","Fashion Portrait","Create a modern fashion editorial portrait based on the reference photo, stylish clothing, professional lighting, premium magazine photography."],
+["Portrait","Moody Portrait","Create a moody artistic portrait with subtle shadows, deep atmospheric background, natural skin details, cinematic color grading."],
+["Portrait","Traditional Portrait","Create a beautiful traditional outfit portrait, elegant pose, detailed fabric textures, warm lighting, refined cultural atmosphere."],
+["Portrait","Studio Headshot","Create a clean professional headshot, neutral studio background, natural expression, balanced lighting, sharp eyes, realistic detail."],
+["Portrait","Artistic Portrait","Create an artistic portrait with a creative color palette, subtle visual effects, realistic face, professional fine-art photography."],
+
+["Futuristic","Cyberpunk City","Create a futuristic cyberpunk city at night, glowing neon signs, rainy streets, reflections, cinematic atmosphere, ultra detailed environment."],
+["Futuristic","Neon Technology","Create an advanced futuristic technology concept with glowing cyan holograms, dark environment, premium sci-fi visual design."],
+["Futuristic","Future Car","Create a futuristic luxury concept car in a modern architectural environment, dramatic studio lighting, realistic reflections, high-end automotive render."],
+["Futuristic","Space Explorer","Create an original space explorer standing on an alien planet, distant galaxies, dramatic lighting, cinematic science fiction scene."],
+["Futuristic","AI Robot","Create a friendly advanced AI robot with intricate mechanical details, glowing eyes, futuristic laboratory, realistic 3D rendering."],
+["Futuristic","Digital City","Create a futuristic digital city with holographic buildings, glowing pathways, flying vehicles, atmospheric cinematic lighting."],
+["Futuristic","Sci-Fi Portal","Create a mysterious glowing energy portal in a futuristic environment, swirling light effects, dramatic atmosphere, high detail."],
+["Futuristic","Hologram Interface","Create a premium sci-fi holographic user interface with transparent panels, glowing data graphics, clean futuristic composition."],
+["Futuristic","Future Earth","Create a hopeful futuristic Earth city with green architecture, advanced transport, beautiful skyline, cinematic environmental concept art."],
+
+["Photography","Nature Photography","Create a breathtaking realistic nature photograph with beautiful natural light, detailed textures, rich but natural colors, professional composition."],
+["Photography","Mountain Landscape","Create a stunning mountain landscape at sunrise, soft golden light, atmospheric clouds, realistic textures, professional travel photography."],
+["Photography","Rainy Street","Create a cinematic rainy city street at night, reflections on wet pavement, atmospheric lighting, realistic urban photography."],
+["Photography","Macro Photography","Create an extreme macro photograph of a delicate natural subject, intricate tiny details, beautiful depth of field, professional macro lens look."],
+["Photography","Product Photography","Create premium commercial product photography for [PRODUCT], clean studio setup, controlled reflections, elegant composition, sharp detail."],
+["Photography","Sunset Photography","Create a beautiful sunset landscape with layered clouds, warm natural colors, realistic atmosphere, professional landscape photography."],
+["Photography","Food Photography","Create professional food photography of [DISH], appetizing natural lighting, detailed textures, elegant styling, premium restaurant presentation."],
+["Photography","Architecture Photography","Create a modern architectural photograph with elegant geometry, natural light, precise lines, realistic materials, professional composition."],
+
+["Luxury","Luxury Watch","Create a premium luxury watch product advertisement, polished metal, detailed dial, dramatic black and gold lighting, elegant reflections."],
+["Luxury","Royal Interior","Create an elegant luxury interior with marble surfaces, golden accents, refined furniture, warm cinematic lighting, realistic architectural render."],
+["Luxury","Luxury Perfume","Create a high-end perfume bottle advertisement, premium glass material, golden highlights, dark elegant background, professional product photography."],
+["Luxury","Premium Branding","Create a luxury brand visual identity concept, elegant typography, refined minimal layout, metallic accents, premium presentation."],
+["Luxury","Luxury Fashion","Create a premium fashion editorial scene with elegant styling, dramatic studio lighting, sophisticated background, high-end magazine aesthetic."],
+
+["Social Media","Instagram Poster","Create a professional Instagram promotional poster for [TOPIC], bold readable typography, modern layout, attractive color balance, clean design."],
+["Social Media","YouTube Thumbnail","Create an eye-catching YouTube thumbnail about [TOPIC], strong visual hierarchy, expressive subject, high contrast, clean composition."],
+["Social Media","Festival Poster","Create a beautiful festival greeting poster for [FESTIVAL], elegant decorative elements, vibrant colors, professional typography."],
+["Social Media","Motivational Poster","Create a powerful motivational social media poster with the message [QUOTE], cinematic background, bold typography, premium design."],
+["Social Media","Business Banner","Create a professional business promotional banner for [BUSINESS], modern graphics, clear text hierarchy, balanced composition."],
+["Social Media","Profile Banner","Create a futuristic personal profile banner with the name [YOUR NAME], premium neon typography, abstract 3D background, professional finish."],
+["Social Media","Event Poster","Create a modern event poster for [EVENT NAME], striking typography, creative graphics, professional layout, balanced colors."]
+];
+
+function renderPrompts(){
+  const search=$("promptSearch").value.toLowerCase();
+  const category=$("promptCategory").value;
+  const filtered=prompts.filter(p=>(category==="All"||p[0]===category)&&(p[1]+" "+p[2]).toLowerCase().includes(search));
+  $("promptGrid").innerHTML="";
+  if(!filtered.length){$("promptGrid").innerHTML='<div class="empty">No prompts found.</div>';return}
+  filtered.forEach((p,i)=>{
+    const card=document.createElement("div");
+    card.className="card prompt-card";
+    const heading=document.createElement("h3");
+    heading.textContent="✨ "+p[1];
+    const tag=document.createElement("span");
+    tag.className="small glow";
+    tag.textContent=p[0];
+    const content=document.createElement("div");
+    content.className="prompt-text";
+    content.textContent=p[2];
+    const actions=document.createElement("div");
+    actions.className="prompt-actions";
+    const copy=document.createElement("button");
+    copy.className="mini-btn";
+    copy.textContent="📋 COPY PROMPT";
+    copy.onclick=async()=>{try{await navigator.clipboard.writeText(p[2]);toast("Prompt copied!")}catch{toast("Copy not supported on this browser")}};
+    actions.append(copy);
+    card.append(tag,heading,content,actions);
+    $("promptGrid").append(card);
+  });
+}
+$("promptSearch").addEventListener("input",renderPrompts);
+$("promptCategory").addEventListener("change",renderPrompts);
+renderPrompts();
+
+const likes=JSON.parse(localStorage.getItem("brokenLikes")||"[]");
+const saves=JSON.parse(localStorage.getItem("brokenSaves")||"[]");
+let galleryItems=[];
+let showSavedOnly=false;
+let app,auth,db,storage;
+let firebaseReady=false;
+let currentUser=null;
+
+function saveLocal(){
+  localStorage.setItem("brokenLikes",JSON.stringify(likes));
+  localStorage.setItem("brokenSaves",JSON.stringify(saves));
+}
+
+function safeText(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+
+function renderGallery(){
+  const search=$("gallerySearch").value.toLowerCase();
+  const category=$("galleryCategory").value;
+  const list=galleryItems.filter(item=>{
+    const matches=(item.title||"").toLowerCase().includes(search);
+    const cat=category==="All"||item.category===category;
+    const saved=!showSavedOnly||saves.includes(item.id);
+    return matches&&cat&&saved;
+  });
+  $("galleryGrid").innerHTML="";
+  if(!list.length){$("galleryGrid").innerHTML='<div class="empty">No images found yet.</div>';return}
+  list.forEach(item=>{
+    const wrapper=document.createElement("div");
+    wrapper.className="gallery-card";
+    const card=document.createElement("div");
+    card.className="card";
+    const img=document.createElement("img");
+    img.className="gallery-img";
+    img.src=item.url;
+    img.alt=item.title||"AI artwork";
+    img.loading="lazy";
+    img.onclick=()=>openImage(item);
+    const title=document.createElement("h3");
+    title.style.marginTop="12px";
+    title.textContent=item.title||"AI Artwork";
+    const meta=document.createElement("div");
+    meta.className="gallery-meta";
+    const cat=document.createElement("span");
+    cat.textContent=item.category||"Other";
+    const actions=document.createElement("div");
+    actions.className="prompt-actions";
+    const like=document.createElement("button");
+    like.className="mini-btn";
+    like.textContent=(likes.includes(item.id)?"❤️":"🤍")+" Like";
+    like.onclick=()=>{toggleItem(likes,item.id,"brokenLikes");like.textContent=(likes.includes(item.id)?"❤️":"🤍")+" Like"};
+    const save=document.createElement("button");
+    save.className="mini-btn";
+    save.textContent=(saves.includes(item.id)?"🔖":"☆")+" Save";
+    save.onclick=()=>{toggleItem(saves,item.id,"brokenSaves");save.textContent=(saves.includes(item.id)?"🔖":"☆")+" Save";if(showSavedOnly)renderGallery()};
+    actions.append(like,save);
+    if(currentUser&&currentUser.email===ADMIN_EMAIL){
+      const del=document.createElement("button");
+      del.className="mini-btn";
+      del.textContent="🗑️ Delete";
+      del.onclick=()=>deleteImage(item.id,item.storagePath);
+      actions.append(del);
+    }
+    meta.append(cat);
+    card.append(img,title,meta,actions);
+    wrapper.append(card);
+    $("galleryGrid").append(wrapper);
+  });
+}
+function toggleItem(arr,id,key){
+  const index=arr.indexOf(id);
+  if(index>=0)arr.splice(index,1);else arr.push(id);
+  saveLocal();
+}
+$("gallerySearch").addEventListener("input",renderGallery);
+$("galleryCategory").addEventListener("change",renderGallery);
+$("showSaved").onclick=()=>{showSavedOnly=true;renderGallery()};
+$("showAll").onclick=()=>{showSavedOnly=false;renderGallery()};
+
+function openImage(item){
+  $("modalImage").src=item.url;
+  $("modalTitle").textContent=item.title||"AI Artwork";
+  $("modalDownload").href=item.url;
+  $("modalDownload").setAttribute("download",(item.title||"AI-artwork")+".jpg");
+  $("modalShare").onclick=async()=>{
+    const shareData={title:item.title||"AI Artwork",url:item.url};
+    try{if(navigator.share)await navigator.share(shareData);else{await navigator.clipboard.writeText(item.url);toast("Image link copied!")}}catch(e){}
+  };
+  $("imageModal").classList.add("show");
+}
+$("closeModal").onclick=()=>$("imageModal").classList.remove("show");
+$("imageModal").addEventListener("click",e=>{if(e.target===$("imageModal"))$("imageModal").classList.remove("show")});
+
+function configIsReady(){
+  return firebaseConfig.apiKey!=="YOUR_FIREBASE_API_KEY" &&
+         firebaseConfig.projectId!=="YOUR_PROJECT_ID";
+}
+
+if(configIsReady()){
+  try{
+    app=initializeApp(firebaseConfig);
+    auth=getAuth(app);
+    db=getFirestore(app);
+    storage=getStorage(app);
+    firebaseReady=true;
+    onAuthStateChanged(auth,user=>{
+      currentUser=user;
+      const isAdmin=!!user&&user.email===ADMIN_EMAIL;
+      $("loginArea").classList.toggle("hidden",isAdmin);
+      $("adminArea").classList.toggle("hidden",!isAdmin);
+      renderGallery();
+    });
+    loadGallery();
+    loadProfile();
+  }catch(error){
+    console.error(error);
+    toast("Firebase setup error. Check your configuration.");
+  }
+}else{
+  $("galleryGrid").innerHTML='<div class="empty">Firebase configuration डालने के बाद public gallery चालू होगी.</div>';
+  toast("Firebase configuration अभी बाकी है.");
+}
+
+async function loadGallery(){
+  if(!firebaseReady)return;
+  try{
+    const q=query(collection(db,"gallery"),orderBy("createdAt","desc"));
+    const snap=await getDocs(q);
+    galleryItems=snap.docs.map(d=>({id:d.id,...d.data()}));
+    renderGallery();
+  }catch(error){
+    console.error(error);
+    $("galleryGrid").innerHTML='<div class="empty">Gallery load नहीं हुई। Firebase settings और permissions जाँचें.</div>';
+  }
+}
+
+async function loadProfile(){
+  if(!firebaseReady)return;
+  try{
+    const snap=await getDoc(doc(db,"settings","profile"));
+    if(snap.exists()&&snap.data().url)$("profileImage").src=snap.data().url;
+  }catch(e){console.log("Profile photo not configured yet")}
+}
+
+$("loginBtn").onclick=async()=>{
+  if(!firebaseReady){toast("पहले Firebase Config भरो.");return}
+  const email=$("adminEmail").value.trim();
+  const password=$("adminPassword").value;
+  if(!email||!password){toast("Email और password भरो.");return}
+  if(email!==ADMIN_EMAIL){toast("यह Admin Email नहीं है.");return}
+  try{
+    await signInWithEmailAndPassword(auth,email,password);
+    toast("Admin login successful!");
+  }catch(e){toast("Login failed: Email या password जाँचें.");}
+};
+
+$("logoutBtn").onclick=async()=>{
+  if(!firebaseReady)return;
+  await signOut(auth);
+  toast("Logged out.");
+};
+
+$("uploadBtn").onclick=async()=>{
+  if(!currentUser||currentUser.email!==ADMIN_EMAIL){toast("Admin login जरूरी है.");return}
+  const files=$("galleryFiles").files;
+  if(!files.length){toast("पहले images select करें.");return}
+  const title=$("imageCaption").value.trim()||"AI Artwork";
+  const category=$("uploadCategory").value;
+  const btn=$("uploadBtn");
+  btn.disabled=true;
+  try{
+    for(const file of files){
+      if(!file.type.startsWith("image/"))continue;
+      const fileName=Date.now()+"_"+Math.random().toString(36).slice(2)+"_"+file.name.replace(/[^a-zA-Z0-9._-]/g,"_");
+      const path="gallery/"+fileName;
+      const storageRef=ref(storage,path);
+      await uploadBytes(storageRef,file);
+      const url=await getDownloadURL(storageRef);
+      await addDoc(collection(db,"gallery"),{
+        title,category,url,storagePath:path,
+        createdAt:serverTimestamp()
+      });
+    }
+    $("galleryFiles").value="";
+    toast("Images uploaded successfully!");
+    await loadGallery();
+  }catch(e){
+    console.error(e);
+    toast("Upload failed. Firebase Storage permissions जाँचें.");
+  }finally{btn.disabled=false}
+};
+
+$("profileUploadBtn").onclick=async()=>{
+  if(!currentUser||currentUser.email!==ADMIN_EMAIL){toast("Admin login जरूरी है.");return}
+  const file=$("newProfilePhoto").files[0];
+  if(!file){toast("Profile photo select करें.");return}
+  if(!file.type.startsWith("image/")){toast("केवल image file चुनें.");return}
+  const btn=$("profileUploadBtn");
+  btn.disabled=true;
+  try{
+    const path="profile/profile.jpg";
+    const storageRef=ref(storage,path);
+    await uploadBytes(storageRef,file);
+    const url=await getDownloadURL(storageRef);
+    await setDoc(doc(db,"settings","profile"),{url,updatedAt:serverTimestamp()});
+    $("profileImage").src=url;
+    $("newProfilePhoto").value="";
+    toast("Global profile photo updated!");
+  }catch(e){
+    console.error(e);
+    toast("Profile update failed. Firebase permissions जाँचें.");
+  }finally{btn.disabled=false}
+};
+
+async function deleteImage(id,storagePath){
+  if(!currentUser||currentUser.email!==ADMIN_EMAIL){toast("Admin only.");return}
+  if(!confirm("क्या आप यह image delete करना चाहते हैं?"))return;
+  try{
+    await deleteDoc(doc(db,"gallery",id));
+    galleryItems=galleryItems.filter(x=>x.id!==id);
+    renderGallery();
+    toast("Gallery record deleted.");
+  }catch(e){
+    console.error(e);
+    toast("Delete failed. Firebase Rules जाँचें.");
+  }
+}
+</script>
+</body>
+</html>
